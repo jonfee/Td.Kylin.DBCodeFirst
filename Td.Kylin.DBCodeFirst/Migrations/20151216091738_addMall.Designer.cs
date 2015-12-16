@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20151216091738_addMall")]
+    partial class addMall
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -650,44 +651,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:Schema", "dbo");
 
                     b.HasAnnotation("Relational:TableName", "Circle_Topic");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Complaint", b =>
-                {
-                    b.Property<long>("ComplaintsID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<long>("ComplainantID");
-
-                    b.Property<string>("ComplainantName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.Property<string>("ComplainantPhone")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
-
-                    b.Property<int>("ComplaintsStatus");
-
-                    b.Property<int>("ComplaintsType");
-
-                    b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<string>("DataID")
-                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
-
-                    b.Property<int>("IdentityType");
-
-                    b.Property<string>("Reason")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
-
-                    b.HasKey("ComplaintsID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Complaint");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Category", b =>

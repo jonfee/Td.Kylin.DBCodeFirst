@@ -1091,23 +1091,6 @@
         "runtime": {
           "lib/net45/_._": {}
         }
-      },
-      "Td.Kylin.Entity/1.0.0": {
-        "type": "project",
-        "framework": "DNX,Version=v4.5.1",
-        "dependencies": {
-          "EntityFramework.Commands": "7.0.0-rc1-final",
-          "EntityFramework.Core": "7.0.0-rc1-final",
-          "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
-          "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-final",
-          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.Abstractions": "1.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
-        }
       }
     },
     "DNXCore,Version=v5.0": {
@@ -2941,23 +2924,6 @@
         "runtime": {
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
-      },
-      "Td.Kylin.Entity/1.0.0": {
-        "type": "project",
-        "framework": "DNXCore,Version=v5.0",
-        "dependencies": {
-          "EntityFramework.Commands": "7.0.0-rc1-final",
-          "EntityFramework.Core": "7.0.0-rc1-final",
-          "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
-          "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-final",
-          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.Abstractions": "1.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
-        }
       }
     },
     "DNX,Version=v4.5.1/win7-x86": {
@@ -4049,23 +4015,6 @@
         "runtime": {
           "lib/net45/_._": {}
         }
-      },
-      "Td.Kylin.Entity/1.0.0": {
-        "type": "project",
-        "framework": "DNX,Version=v4.5.1",
-        "dependencies": {
-          "EntityFramework.Commands": "7.0.0-rc1-final",
-          "EntityFramework.Core": "7.0.0-rc1-final",
-          "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
-          "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-final",
-          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.Abstractions": "1.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
-        }
       }
     },
     "DNX,Version=v4.5.1/win7-x64": {
@@ -5156,23 +5105,6 @@
         },
         "runtime": {
           "lib/net45/_._": {}
-        }
-      },
-      "Td.Kylin.Entity/1.0.0": {
-        "type": "project",
-        "framework": "DNX,Version=v4.5.1",
-        "dependencies": {
-          "EntityFramework.Commands": "7.0.0-rc1-final",
-          "EntityFramework.Core": "7.0.0-rc1-final",
-          "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
-          "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-final",
-          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.Abstractions": "1.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       }
     },
@@ -7498,23 +7430,6 @@
         "runtime": {
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
-      },
-      "Td.Kylin.Entity/1.0.0": {
-        "type": "project",
-        "framework": "DNXCore,Version=v5.0",
-        "dependencies": {
-          "EntityFramework.Commands": "7.0.0-rc1-final",
-          "EntityFramework.Core": "7.0.0-rc1-final",
-          "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
-          "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-final",
-          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.Abstractions": "1.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
-        }
       }
     },
     "DNXCore,Version=v5.0/win7-x64": {
@@ -9839,31 +9754,10 @@
         "runtime": {
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
-      },
-      "Td.Kylin.Entity/1.0.0": {
-        "type": "project",
-        "framework": "DNXCore,Version=v5.0",
-        "dependencies": {
-          "EntityFramework.Commands": "7.0.0-rc1-final",
-          "EntityFramework.Core": "7.0.0-rc1-final",
-          "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
-          "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-final",
-          "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.Abstractions": "1.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
-        }
       }
     }
   },
   "libraries": {
-    "Td.Kylin.Entity/1.0.0": {
-      "type": "project",
-      "path": "../Td.Kylin.Entity/project.json"
-    },
     "EntityFramework.Commands/7.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
@@ -14086,8 +13980,7 @@
       "Microsoft.Extensions.Configuration.Abstractions >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Configuration.FileExtensions >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Configuration.Json >= 1.0.0-rc1-final",
-      "Microsoft.Extensions.PlatformAbstractions >= 1.0.0-rc1-final",
-      "Td.Kylin.Entity >= 1.0.0-*"
+      "Microsoft.Extensions.PlatformAbstractions >= 1.0.0-rc1-final"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []

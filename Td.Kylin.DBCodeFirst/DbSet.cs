@@ -1,5 +1,5 @@
 ﻿using Microsoft.Data.Entity;
-using Td.Kylin.DBCodeFirst.Models;
+using Td.Kylin.Entity;
 
 namespace Td.Kylin.DBCodeFirst
 {
@@ -123,7 +123,7 @@ namespace Td.Kylin.DBCodeFirst
         /// </summary>
         public DbSet<System_SMS> System_SMS { get { return Set<System_SMS>(); } }
 
-        #endregion
+#endregion
 
         #region 模块授权
 

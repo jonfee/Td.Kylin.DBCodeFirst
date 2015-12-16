@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Data.Entity;
-using Td.Kylin.DBCodeFirst.Models;
+using Td.Kylin.Entity;
 
 namespace Td.Kylin.DBCodeFirst
 {
@@ -83,15 +83,9 @@ namespace Td.Kylin.DBCodeFirst
 
             #region 摇一摇
 
-            modelBuilder.Entity<Shake_Content>().HasKey(p => new
-            {
-                p.ContentID
-            });
+            modelBuilder.Entity<Shake_Content>().HasKey(p => new { p.ContentID });
 
-            modelBuilder.Entity<Shake_UserRecord>().HasKey(p => new
-            {
-                p.RecordID
-            });
+            modelBuilder.Entity<Shake_UserRecord>().HasKey(p => new { p.RecordID });
 
             #endregion
 

@@ -1,10 +1,11 @@
-{
+﻿{
   "version": "1.0.0-*",
-  "description": "Td.Kylin.DBCodeFirst Class Library",
+  "description": "Td.Kylin.Entity Class Library",
   "authors": [ "jonfee" ],
   "tags": [ "" ],
   "projectUrl": "",
   "licenseUrl": "",
+
   "frameworks": {
     "dnx451": { },
     "dnxcore50": { }
@@ -20,10 +21,6 @@
     "Microsoft.Extensions.Configuration.Abstractions": "1.0.0-rc1-final",
     "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
     "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
-    "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final",
-    "Td.Kylin.Entity": "1.0.0-*"
-  },
-  "commands": {
-    "ef": "EntityFramework.Commands"
+    "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
   }
 }
