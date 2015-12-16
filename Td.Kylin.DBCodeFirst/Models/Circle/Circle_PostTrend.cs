@@ -1,12 +1,15 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Circle_PostTrend
-	/// </summary>
-	public partial class Circle_PostTrend
+    /// <summary>
+    /// 回复记录
+    /// </summary>
+    [Table("Circle_PostTrend", Schema = "dbo")]
+    public class Circle_PostTrend
 	{		
 		///<summary>
 		///数据ID
@@ -47,11 +50,12 @@ namespace Td.Kylin.DBCodeFirst.Models
 		///被回复的用户ID
 		///</summary>
 		public long AtUserID{get;set;}
-				
-		///<summary>
-		///内容预览
-		///</summary>
-		public string Content{get;set;}
+
+        ///<summary>
+        ///内容预览
+        ///</summary>
+        [Column(TypeName = "nvarchar"), MaxLength(255)]
+        public string Content{get;set;}
 				
 		///<summary>
 		///回帖，点赞，踩

@@ -14,7 +14,6 @@ namespace Td.Kylin.DBCodeFirst.Models
         ///<summary>
         ///用户ID
         ///</summary>
-        [Key]
         public long UserID{get;set;}
 				
 		///<summary>

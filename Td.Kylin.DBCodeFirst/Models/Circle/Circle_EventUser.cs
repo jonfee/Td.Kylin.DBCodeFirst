@@ -1,12 +1,15 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Circle_EventUser
-	/// </summary>
-	public partial class Circle_EventUser
+    /// <summary>
+    /// 社区活动报名用户
+    /// </summary>
+    [Table("Circle_EventUser", Schema = "dbo")]
+    public class Circle_EventUser
 	{		
 		///<summary>
 		///数据ID
@@ -22,11 +25,12 @@ namespace Td.Kylin.DBCodeFirst.Models
 		///用户ID
 		///</summary>
 		public long UserID{get;set;}
-				
-		///<summary>
-		///用户昵称
-		///</summary>
-		public string Username{get;set;}
+
+        ///<summary>
+        ///用户昵称
+        ///</summary>
+        [Column(TypeName = "nvarchar"), MaxLength(20)]
+        public string Username{get;set;}
 				
 		///<summary>
 		///是否需要提醒

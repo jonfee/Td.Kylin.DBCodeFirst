@@ -14,7 +14,6 @@ namespace Td.Kylin.DBCodeFirst.Models
         ///<summary>
         ///数据ID
         ///</summary>
-        [Key]
         public long DeviceID{get;set;}
 				
 		///<summary>

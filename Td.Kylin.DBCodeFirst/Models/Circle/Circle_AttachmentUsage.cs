@@ -1,12 +1,14 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Circle_AttachmentUsage
-	/// </summary>
-	public partial class Circle_AttachmentUsage
+    /// <summary>
+    /// 附件与帖子关联
+    /// </summary>
+    [Table("Circle_AttachmentUsage", Schema = "dbo")]
+    public class Circle_AttachmentUsage
 	{		
 		///<summary>
 		///附件ID

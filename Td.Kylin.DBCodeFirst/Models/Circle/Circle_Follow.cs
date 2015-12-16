@@ -1,12 +1,14 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Circle_Follow
-	/// </summary>
-	public partial class Circle_Follow
+    /// <summary>
+    /// 圈子关注
+    /// </summary>
+    [Table("Circle_Follow", Schema = "dbo")]
+    public class Circle_Follow
 	{		
 		///<summary>
 		///版面圈子ID

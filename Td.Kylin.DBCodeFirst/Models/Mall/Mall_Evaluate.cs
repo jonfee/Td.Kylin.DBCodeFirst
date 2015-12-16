@@ -1,12 +1,13 @@
-﻿
-using System;
+﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Mall_Evaluate
-	/// </summary>
-	public partial class Mall_Evaluate
+    /// <summary>
+    /// 订单商品评价
+    /// </summary>
+    [Table("Mall_Evaluate", Schema = "dbo")]
+    public class Mall_Evaluate
 	{		
 		///<summary>
 		///评价ID

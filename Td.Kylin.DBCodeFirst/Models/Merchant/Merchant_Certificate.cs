@@ -14,7 +14,6 @@ namespace Td.Kylin.DBCodeFirst.Models
         ///<summary>
         ///认证ID
         ///</summary>
-        [Key]
         public long CertificateID{get;set;}
 				
 		///<summary>

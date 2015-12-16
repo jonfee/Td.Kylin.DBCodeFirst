@@ -1,12 +1,12 @@
-﻿
-using System;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Mall_OrderProductSnapshot
-	/// </summary>
-	public partial class Mall_OrderProductSnapshot
+    /// <summary>
+    /// 订单商品快照
+    /// </summary>
+    [Table("Mall_OrderProductSnapshot", Schema = "dbo")]
+    public class Mall_OrderProductSnapshot
 	{		
 		///<summary>
 		///快照ID

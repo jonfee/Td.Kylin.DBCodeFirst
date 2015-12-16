@@ -12,7 +12,7 @@ namespace Td.Kylin.DBCodeFirst.Models
         ///<summary>
         ///广告页ID
         ///</summary>
-        [Key, Column(TypeName = "bigint")]
+        [ Column(TypeName = "bigint")]
         public int PageID { get; set; }
 
         ///<summary>

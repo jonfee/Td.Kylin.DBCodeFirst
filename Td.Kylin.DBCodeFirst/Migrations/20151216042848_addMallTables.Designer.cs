@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20151216042848_addMallTables")]
+    partial class addMallTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -665,48 +666,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:Schema", "dbo");
 
                     b.HasAnnotation("Relational:TableName", "Circle_Topic");
-                });
-
-            modelBuilder.Entity("Td.Kylin.DBCodeFirst.Models.Complaint", b =>
-                {
-                    b.Property<long>("ComplaintsID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<long>("ComplainantID");
-
-                    b.Property<string>("ComplainantName")
-                        .HasAnnotation("MaxLength", 20)
-                        .HasAnnotation("Relational:ColumnType", "nvarchar");
-
-                    b.Property<string>("ComplainantPhone")
-                        .HasAnnotation("MaxLength", 20)
-                        .HasAnnotation("Relational:ColumnType", "varchar");
-
-                    b.Property<int>("ComplaintsStatus");
-
-                    b.Property<int>("ComplaintsType");
-
-                    b.Property<string>("Content")
-                        .HasAnnotation("MaxLength", 200)
-                        .HasAnnotation("Relational:ColumnType", "nvarchar");
-
-                    b.Property<DateTime>("CreateTime");
-
-                    b.Property<string>("DataID")
-                        .HasAnnotation("MaxLength", 50)
-                        .HasAnnotation("Relational:ColumnType", "varchar");
-
-                    b.Property<int>("IdentityType");
-
-                    b.Property<string>("Reason")
-                        .HasAnnotation("MaxLength", 50)
-                        .HasAnnotation("Relational:ColumnType", "nvarchar");
-
-                    b.HasKey("ComplaintsID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Complaint");
                 });
 
             modelBuilder.Entity("Td.Kylin.DBCodeFirst.Models.Mall_Category", b =>

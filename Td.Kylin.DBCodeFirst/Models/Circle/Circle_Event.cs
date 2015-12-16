@@ -1,12 +1,15 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Circle_Event
-	/// </summary>
-	public partial class Circle_Event
+    /// <summary>
+    /// 社区活动帖信息
+    /// </summary>
+    [Table("Circle_Event", Schema = "dbo")]
+    public class Circle_Event
 	{		
 		///<summary>
 		///活动ID
@@ -37,11 +40,12 @@ namespace Td.Kylin.DBCodeFirst.Models
 		///提醒时间（单位分钟）
 		///</summary>
 		public int Remind{get;set;}
-				
-		///<summary>
-		///活动地点
-		///</summary>
-		public string Address{get;set;}
+
+        ///<summary>
+        ///活动地点
+        ///</summary>
+        [Column(TypeName = "nvarchar"), MaxLength(200)]
+        public string Address{get;set;}
 				
 		///<summary>
 		///参加活动的用户数

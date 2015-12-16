@@ -13,7 +13,6 @@ namespace Td.Kylin.DBCodeFirst.Models
         ///<summary>
         ///管理员ID
         ///</summary>
-        [Key]
         public long AdminID{get;set;}
 
         ///<summary>

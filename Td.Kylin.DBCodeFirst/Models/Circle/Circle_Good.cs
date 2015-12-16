@@ -1,12 +1,15 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Circle_Good
-	/// </summary>
-	public partial class Circle_Good
+    /// <summary>
+    /// 社区商品帖信息
+    /// </summary>
+    [Table("Circle_Good", Schema = "dbo")]
+    public class Circle_Good
 	{		
 		///<summary>
 		///商品ID
@@ -37,21 +40,24 @@ namespace Td.Kylin.DBCodeFirst.Models
 		///损耗、新旧程度
 		///</summary>
 		public int Loss{get;set;}
-				
-		///<summary>
-		///联系人
-		///</summary>
-		public string LinkMan{get;set;}
-				
-		///<summary>
-		///电话
-		///</summary>
-		public string Phone{get;set;}
-				
-		///<summary>
-		///交易地点
-		///</summary>
-		public string Address{get;set;}
+
+        ///<summary>
+        ///联系人
+        ///</summary>
+        [Column(TypeName = "nvarchar"), MaxLength(20)]
+        public string LinkMan{get;set;}
+
+        ///<summary>
+        ///电话
+        ///</summary>
+        [Column(TypeName = "varchar"), MaxLength(13)]
+        public string Phone{get;set;}
+
+        ///<summary>
+        ///交易地点
+        ///</summary>
+        [Column(TypeName = "nvarchar"), MaxLength(200)]
+        public string Address{get;set;}
 				
 		///<summary>
 		///是否已出售

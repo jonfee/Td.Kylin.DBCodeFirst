@@ -1,12 +1,14 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Mall_Category
-	/// </summary>
-	public partial class Mall_Category
+    /// <summary>
+    /// 商品分类
+    /// </summary>
+    [Table("Mall_Category",Schema ="dbo")]
+    public class Mall_Category
 	{		
 		///<summary>
 		///商品类目ID

@@ -14,7 +14,7 @@ namespace Td.Kylin.DBCodeFirst.Models
         ///<summary>
         ///广告内容ID
         ///</summary>
-        [Key, Column(TypeName = "bigint")]
+        [ Column(TypeName = "bigint")]
         public long ContentID { get; set; }
 
         ///<summary>

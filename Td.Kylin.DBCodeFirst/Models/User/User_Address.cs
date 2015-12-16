@@ -14,7 +14,6 @@ namespace Td.Kylin.DBCodeFirst.Models
         ///<summary>
         ///地址ID
         ///</summary>
-        [Key]
         public long AddressID{get;set;}
 				
 		///<summary>

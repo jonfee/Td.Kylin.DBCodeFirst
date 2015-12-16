@@ -14,7 +14,6 @@ namespace Td.Kylin.DBCodeFirst.Models
         ///<summary>
         ///商户ID
         ///</summary>
-        [Key]
         public long MerchantID{get;set;}
 
         ///<summary>

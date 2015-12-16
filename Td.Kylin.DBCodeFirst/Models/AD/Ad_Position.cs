@@ -14,7 +14,7 @@ namespace Td.Kylin.DBCodeFirst.Models
         ///<summary>
         ///广告位置ID
         ///</summary>
-        [Key, Column(TypeName = "bigint")]
+        [Column(TypeName = "bigint")]
         public long PositionID { get; set; }
 
         ///<summary>

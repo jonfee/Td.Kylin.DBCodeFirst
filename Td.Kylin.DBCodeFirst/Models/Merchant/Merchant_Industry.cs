@@ -14,7 +14,6 @@ namespace Td.Kylin.DBCodeFirst.Models
         ///<summary>
         ///行业ID
         ///</summary>
-        [Key]
         public long IndustryID{get;set;}
 
         ///<summary>

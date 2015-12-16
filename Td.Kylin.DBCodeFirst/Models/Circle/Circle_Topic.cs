@@ -1,12 +1,15 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Circle_Topic
-	/// </summary>
-	public partial class Circle_Topic
+    /// <summary>
+    /// 帖子主题
+    /// </summary>
+    [Table("Circle_Topic", Schema = "dbo")]
+    public class Circle_Topic
 	{		
 		///<summary>
 		///主题帖数据ID
@@ -27,31 +30,35 @@ namespace Td.Kylin.DBCodeFirst.Models
 		///发帖的用户ID
 		///</summary>
 		public long UserID{get;set;}
-				
-		///<summary>
-		///发帖的用户昵称
-		///</summary>
-		public string Username{get;set;}
+
+        ///<summary>
+        ///发帖的用户昵称
+        ///</summary>
+        [Column(TypeName = "nvarchar"), MaxLength(20)]
+        public string Username{get;set;}
 				
 		///<summary>
 		///帖子类型（普通、活动、商品、投票）
 		///</summary>
 		public int TopicType{get;set;}
-				
-		///<summary>
-		///帖子标题
-		///</summary>
-		public string Title{get;set;}
-				
-		///<summary>
-		///帖子内容
-		///</summary>
-		public string Content{get;set;}
-				
-		///<summary>
-		///帖子图片
-		///</summary>
-		public string Pics{get;set;}
+
+        ///<summary>
+        ///帖子标题
+        ///</summary>
+        [Column(TypeName = "nvarchar"), MaxLength(50)]
+        public string Title{get;set;}
+
+        ///<summary>
+        ///帖子内容
+        ///</summary>
+        [Column(TypeName = "nvarchar")]
+        public string Content{get;set;}
+
+        ///<summary>
+        ///帖子图片
+        ///</summary>
+        [Column(TypeName = "varchar"), MaxLength(500)]
+        public string Pics{get;set;}
 				
 		///<summary>
 		///帖子点击次数

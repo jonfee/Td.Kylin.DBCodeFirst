@@ -1,22 +1,26 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Circle_Category
-	/// </summary>
-	public partial class Circle_Category
+    /// <summary>
+    /// 圈子分类
+    /// </summary>
+    [Table("Circle_Category", Schema = "dbo")]
+    public class Circle_Category
 	{		
 		///<summary>
 		///论坛分类ID
 		///</summary>
 		public long CategoryID{get;set;}
-				
-		///<summary>
-		///论坛分类名称
-		///</summary>
-		public string Name{get;set;}
+
+        ///<summary>
+        ///论坛分类名称
+        ///</summary>
+        [Column(TypeName = "nvarchar"), MaxLength(50)]
+        public string Name{get;set;}
 				
 		///<summary>
 		///论坛分类排序

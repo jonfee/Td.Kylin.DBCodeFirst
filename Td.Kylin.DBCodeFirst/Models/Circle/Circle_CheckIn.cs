@@ -1,12 +1,14 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Circle_CheckIn
-	/// </summary>
-	public partial class Circle_CheckIn
+    /// <summary>
+    /// 签到记录
+    /// </summary>
+    [Table("Circle_CheckIn", Schema = "dbo")]
+    public class Circle_CheckIn
 	{		
 		///<summary>
 		///签到记录ID

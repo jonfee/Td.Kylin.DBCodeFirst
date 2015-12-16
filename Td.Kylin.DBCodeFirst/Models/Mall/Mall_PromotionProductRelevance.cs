@@ -1,12 +1,13 @@
-﻿
-using System;
+﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Mall_PromotionProductRelevance
-	/// </summary>
-	public partial class Mall_PromotionProductRelevance
+    /// <summary>
+    /// 促销商品关联
+    /// </summary>
+    [Table("Mall_PromotionProductRelevance", Schema = "dbo")]
+    public class Mall_PromotionProductRelevance
 	{		
 		///<summary>
 		///促销ID

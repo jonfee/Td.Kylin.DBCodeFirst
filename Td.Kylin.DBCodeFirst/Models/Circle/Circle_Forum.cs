@@ -1,12 +1,15 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Circle_Forum
-	/// </summary>
-	public partial class Circle_Forum
+    /// <summary>
+    /// 社区圈子
+    /// </summary>
+    [Table("Circle_Forum", Schema = "dbo")]
+    public class Circle_Forum
 	{		
 		///<summary>
 		///版面圈子ID
@@ -17,21 +20,24 @@ namespace Td.Kylin.DBCodeFirst.Models
 		///论坛分类ID
 		///</summary>
 		public long CategoryID{get;set;}
-				
-		///<summary>
-		///论坛名称
-		///</summary>
-		public string ForumName{get;set;}
-				
-		///<summary>
-		///论坛图标
-		///</summary>
-		public string Logo{get;set;}
-				
-		///<summary>
-		///论坛介绍
-		///</summary>
-		public string Description{get;set;}
+
+        ///<summary>
+        ///论坛名称
+        ///</summary>
+        [Column(TypeName = "nvarchar"), MaxLength(20)]
+        public string ForumName{get;set;}
+
+        ///<summary>
+        ///论坛图标
+        ///</summary>
+        [Column(TypeName = "varchar"), MaxLength(50)]
+        public string Logo{get;set;}
+
+        ///<summary>
+        ///论坛介绍
+        ///</summary>
+        [Column(TypeName = "nvarchar"), MaxLength(50)]
+        public string Description{get;set;}
 				
 		///<summary>
 		///帖子数量
@@ -62,11 +68,12 @@ namespace Td.Kylin.DBCodeFirst.Models
 		///通过总数据，日数据等计算出来的一个热度值
 		///</summary>
 		public int Hot{get;set;}
-				
-		///<summary>
-		///版主
-		///</summary>
-		public string Moderators{get;set;}
+
+        ///<summary>
+        ///版主
+        ///</summary>
+        [Column(TypeName = "nvarchar"), MaxLength(200)]
+        public string Moderators{get;set;}
 				
 		///<summary>
 		///论坛分类排序

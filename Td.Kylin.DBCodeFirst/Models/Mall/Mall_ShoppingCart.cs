@@ -1,12 +1,13 @@
-﻿
-using System;
+﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Mall_ShoppingCart
-	/// </summary>
-	public partial class Mall_ShoppingCart
+    /// <summary>
+    /// 购物车
+    /// </summary>
+    [Table("Mall_ShoppingCart", Schema = "dbo")]
+    public class Mall_ShoppingCart
 	{		
 		///<summary>
 		///购物车ID

@@ -1,12 +1,14 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.DBCodeFirst.Models
 {
-	/// <summary>
-	/// Circle_Location
-	/// </summary>
-	public partial class Circle_Location
+    /// <summary>
+    /// 帖子及评论位置
+    /// </summary>
+    [Table("Circle_Location", Schema = "dbo")]
+    public class Circle_Location
 	{		
 		///<summary>
 		///数据ID
