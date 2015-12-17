@@ -7,8 +7,8 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户附属资料
     /// </summary>
-    [Table("User_Profile", Schema = "dbo")]
-    public class User_Profile
+    [Table("User_Profiles", Schema = "dbo")]
+    public class User_Profiles
 	{
         ///<summary>
         ///用户ID

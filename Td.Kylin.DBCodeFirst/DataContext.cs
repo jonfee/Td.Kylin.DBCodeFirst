@@ -130,7 +130,7 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => p.UserID);
             });
 
-            modelBuilder.Entity<User_Profile>(entity =>
+            modelBuilder.Entity<User_Profiles>(entity =>
             {
                 entity.Property(p => p.UserID).ValueGeneratedNever();
                 entity.HasKey(p => p.UserID);

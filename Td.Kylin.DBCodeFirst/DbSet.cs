@@ -93,7 +93,7 @@ namespace Td.Kylin.DBCodeFirst
         /// <summary>
         /// 用户附属资料
         /// </summary>
-        public DbSet<User_Profile> User_Profile { get { return Set<User_Profile>(); } }
+        public DbSet<User_Profiles> User_Profiles { get { return Set<User_Profiles>(); } }
 
         /// <summary>
         /// 用户摇一摇记录
