@@ -4,7 +4,7 @@ using Microsoft.Data.Entity.Migrations;
 
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
-    public partial class initCreateDB : Migration
+    public partial class InitCreateDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

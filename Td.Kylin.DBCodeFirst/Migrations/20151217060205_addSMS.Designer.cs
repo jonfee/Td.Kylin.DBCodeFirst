@@ -8,8 +8,8 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20151216075755_addMerchant")]
-    partial class addMerchant
+    [Migration("20151217060205_addSMS")]
+    partial class addSMS
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,7 +20,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Content", b =>
                 {
                     b.Property<long>("ContentID")
-                        .ValueGeneratedOnAdd()
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<int>("ADType")
@@ -66,7 +65,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Page", b =>
                 {
                     b.Property<int>("PageID")
-                        .ValueGeneratedOnAdd()
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<string>("PageName")
@@ -85,7 +83,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Position", b =>
                 {
                     b.Property<long>("PositionID")
-                        .ValueGeneratedOnAdd()
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<int>("ADType")
@@ -124,8 +121,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Admin_Account", b =>
                 {
-                    b.Property<long>("AdminID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("AdminID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -183,8 +179,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Account", b =>
                 {
-                    b.Property<long>("MerchantID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("MerchantID");
 
                     b.Property<string>("BusinessBeginTime")
                         .HasAnnotation("Relational:ColumnType", "char(5)");
@@ -243,8 +238,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Certificate", b =>
                 {
-                    b.Property<long>("CertificateID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("CertificateID");
 
                     b.Property<long?>("AuditAdminID");
 
@@ -285,8 +279,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Industry", b =>
                 {
-                    b.Property<long>("IndustryID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("IndustryID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -307,36 +300,98 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Merchant_Industry");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.System_ModuleAuthorize", b =>
+            modelBuilder.Entity("Td.Kylin.Entity.Shake_Content", b =>
                 {
-                    b.Property<string>("ServerID")
-                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
+                    b.Property<long>("ContentID");
 
-                    b.Property<string>("ModuleID")
-                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
+                    b.Property<int>("AuditStatus");
 
-                    b.Property<string>("AppSecret")
-                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
+                    b.Property<int>("Category");
+
+                    b.Property<int>("ConfirmCount");
+
+                    b.Property<string>("Content")
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
+
+                    b.Property<decimal>("CostPrice");
+
+                    b.Property<int>("Count");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
-                    b.Property<int>("Role");
+                    b.Property<long>("DataID");
 
-                    b.Property<DateTime>("UpdateTime")
+                    b.Property<long>("DataRelateID");
+
+                    b.Property<bool>("Disable");
+
+                    b.Property<DateTime>("EndTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
-                    b.HasKey("ServerID", "ModuleID");
+                    b.Property<DateTime>("LastTime")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<int>("Number");
+
+                    b.Property<double>("Odds");
+
+                    b.Property<string>("Pic")
+                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
+
+                    b.Property<decimal>("Price");
+
+                    b.Property<long>("PushAdminID");
+
+                    b.Property<DateTime>("StartTime")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<int>("Subject");
+
+                    b.Property<string>("Title")
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+
+                    b.Property<string>("Url")
+                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
+
+                    b.HasKey("ContentID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
 
-                    b.HasAnnotation("Relational:TableName", "System_ModuleAuthorize");
+                    b.HasAnnotation("Relational:TableName", "Shake_Content");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.Shake_UserRecord", b =>
+                {
+                    b.Property<long>("RecordID");
+
+                    b.Property<long>("ContentID");
+
+                    b.Property<decimal>("CostPrice");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<DateTime?>("LastPayTime")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<decimal>("Price");
+
+                    b.Property<string>("Title")
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+
+                    b.Property<long>("UserID");
+
+                    b.HasKey("RecordID");
+
+                    b.HasAnnotation("Relational:Schema", "dbo");
+
+                    b.HasAnnotation("Relational:TableName", "Shake_UserRecord");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.System_SMS", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<Guid>("Id");
 
                     b.Property<string>("Code")
                         .HasAnnotation("Relational:ColumnType", "varchar(6)");
@@ -362,6 +417,228 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:Schema", "dbo");
 
                     b.HasAnnotation("Relational:TableName", "System_SMS");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.User_Account", b =>
+                {
+                    b.Property<long>("UserID");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<int>("DataStatus");
+
+                    b.Property<DateTime>("LastTime")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<int>("Logins");
+
+                    b.Property<string>("Mobile")
+                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
+
+                    b.Property<string>("Password")
+                        .HasAnnotation("Relational:ColumnType", "varchar(32)");
+
+                    b.Property<string>("UserPic")
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
+
+                    b.Property<string>("Username")
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+
+                    b.HasKey("UserID");
+
+                    b.HasAnnotation("Relational:Schema", "dbo");
+
+                    b.HasAnnotation("Relational:TableName", "User_Account");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.User_Address", b =>
+                {
+                    b.Property<long>("AddressID");
+
+                    b.Property<string>("Address")
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+
+                    b.Property<int>("AddressType");
+
+                    b.Property<int>("AddressUseType");
+
+                    b.Property<string>("Community")
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<bool>("IsDefault");
+
+                    b.Property<float>("Latitude");
+
+                    b.Property<string>("Linkman")
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+
+                    b.Property<float>("Longitude");
+
+                    b.Property<string>("Phone")
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
+
+                    b.Property<string>("PostCode")
+                        .HasAnnotation("Relational:ColumnType", "char(6)");
+
+                    b.Property<long>("UserID");
+
+                    b.HasKey("AddressID");
+
+                    b.HasAnnotation("Relational:Schema", "dbo");
+
+                    b.HasAnnotation("Relational:TableName", "User_Address");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.User_Device", b =>
+                {
+                    b.Property<long>("DeviceID");
+
+                    b.Property<string>("DeviceName")
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+
+                    b.Property<DateTime>("LastTime")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<int>("Logins");
+
+                    b.Property<int?>("OS");
+
+                    b.Property<long>("UserID");
+
+                    b.Property<string>("Version")
+                        .HasAnnotation("Relational:ColumnType", "varchar(15)");
+
+                    b.HasKey("DeviceID");
+
+                    b.HasAnnotation("Relational:Schema", "dbo");
+
+                    b.HasAnnotation("Relational:TableName", "User_Device");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.User_Forum", b =>
+                {
+                    b.Property<long>("UserID");
+
+                    b.Property<int>("ClassicsCount");
+
+                    b.Property<int>("DeleteCount");
+
+                    b.Property<int>("DeleteReplyCount");
+
+                    b.Property<int>("DislikeCount");
+
+                    b.Property<DateTime>("LastRead")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<int>("ReplyCount");
+
+                    b.Property<int>("Role");
+
+                    b.Property<int>("Score");
+
+                    b.Property<int>("SupportCount");
+
+                    b.Property<int>("TopicCount");
+
+                    b.Property<int>("TrendsCount");
+
+                    b.HasKey("UserID");
+
+                    b.HasAnnotation("Relational:Schema", "dbo");
+
+                    b.HasAnnotation("Relational:TableName", "User_Forum");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.User_LocationTrack", b =>
+                {
+                    b.Property<long>("TrackID");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<float>("Latitude");
+
+                    b.Property<float>("Longitude");
+
+                    b.Property<long>("UserID");
+
+                    b.HasKey("TrackID");
+
+                    b.HasAnnotation("Relational:Schema", "dbo");
+
+                    b.HasAnnotation("Relational:TableName", "User_LocationTrack");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.User_Online", b =>
+                {
+                    b.Property<long>("UserID");
+
+                    b.Property<DateTime>("ActiveTime")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<float>("Latitude");
+
+                    b.Property<DateTime>("LoginTime");
+
+                    b.Property<float>("Longitude");
+
+                    b.Property<string>("Token")
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
+
+                    b.HasKey("UserID");
+
+                    b.HasAnnotation("Relational:Schema", "dbo");
+
+                    b.HasAnnotation("Relational:TableName", "User_Online");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.User_Profile", b =>
+                {
+                    b.Property<long>("UserID");
+
+                    b.Property<DateTime>("BothBirthday")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<string>("PresentAddress")
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+
+                    b.Property<int>("Sex");
+
+                    b.Property<string>("Signature")
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+
+                    b.HasKey("UserID");
+
+                    b.HasAnnotation("Relational:Schema", "dbo");
+
+                    b.HasAnnotation("Relational:TableName", "User_Profile");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.User_ShakeRecord", b =>
+                {
+                    b.Property<long>("UserID");
+
+                    b.Property<int>("Count");
+
+                    b.Property<DateTime>("LastTime")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.Property<int>("LimitCount");
+
+                    b.Property<int>("TodayCount");
+
+                    b.Property<DateTime>("UpdatetTime")
+                        .HasAnnotation("Relational:ColumnType", "datetime");
+
+                    b.HasKey("UserID");
+
+                    b.HasAnnotation("Relational:Schema", "dbo");
+
+                    b.HasAnnotation("Relational:TableName", "User_ShakeRecord");
                 });
         }
     }

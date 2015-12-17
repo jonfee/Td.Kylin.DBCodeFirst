@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.Data.Entity.Migrations;
-using Microsoft.Data.Entity.Metadata;
 
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
@@ -14,8 +13,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    CategoryID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    CategoryID = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     DeleteTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(100)", nullable: true),
@@ -35,8 +33,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    TagID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    TagID = table.Column<long>(nullable: false),
                     CategoryID = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     OrderNo = table.Column<int>(nullable: false),
@@ -53,8 +50,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    EvaluateID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    EvaluateID = table.Column<long>(nullable: false),
                     Contents = table.Column<string>(type: "nvarchar(200)", nullable: true),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     EvaluateLevel = table.Column<int>(nullable: false),
@@ -88,8 +84,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    OrderID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    OrderID = table.Column<long>(nullable: false),
                     ActualOrderAmount = table.Column<decimal>(nullable: false),
                     CancelTime = table.Column<DateTime>(type: "datetime", nullable: true),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -124,8 +119,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    SnapshotID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    SnapshotID = table.Column<long>(nullable: false),
                     BuyCounts = table.Column<int>(nullable: false),
                     CategoryID = table.Column<long>(nullable: false),
                     Code = table.Column<string>(type: "varchar(18)", nullable: true),
@@ -157,8 +151,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    ProductID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ProductID = table.Column<long>(nullable: false),
                     CategoryID = table.Column<long>(nullable: false),
                     Code = table.Column<string>(type: "varchar(18)", nullable: true),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -189,8 +182,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    SkuID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    SkuID = table.Column<long>(nullable: false),
                     Img = table.Column<string>(type: "varchar(100)", nullable: true),
                     Inventory = table.Column<int>(nullable: false),
                     IsDelete = table.Column<bool>(nullable: false),
@@ -210,8 +202,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    PromotionID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    PromotionID = table.Column<long>(nullable: false),
                     BeginTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -231,8 +222,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    ConfigID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ConfigID = table.Column<long>(nullable: false),
                     MinMoney = table.Column<decimal>(nullable: false),
                     PromotionID = table.Column<long>(nullable: false),
                     Value = table.Column<string>(type: "nvarchar(50)", nullable: true)
@@ -261,8 +251,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    CartID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    CartID = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Number = table.Column<int>(nullable: false),
                     ProductID = table.Column<long>(nullable: false),

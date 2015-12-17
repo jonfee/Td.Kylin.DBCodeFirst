@@ -8,8 +8,8 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20151216083428_addCircle")]
-    partial class addCircle
+    [Migration("20151217060141_addShake")]
+    partial class addShake
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,7 +20,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Content", b =>
                 {
                     b.Property<long>("ContentID")
-                        .ValueGeneratedOnAdd()
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<int>("ADType")
@@ -66,7 +65,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Page", b =>
                 {
                     b.Property<int>("PageID")
-                        .ValueGeneratedOnAdd()
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<string>("PageName")
@@ -85,7 +83,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Position", b =>
                 {
                     b.Property<long>("PositionID")
-                        .ValueGeneratedOnAdd()
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<int>("ADType")
@@ -124,8 +121,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Admin_Account", b =>
                 {
-                    b.Property<long>("AdminID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("AdminID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -181,482 +177,9 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Admin_Permission");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_Attachment", b =>
-                {
-                    b.Property<long>("AttachmentID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("DeleteTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<string>("FilePath")
-                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
-
-                    b.Property<long>("FileSize");
-
-                    b.Property<string>("FileType")
-                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
-
-                    b.Property<string>("Filename")
-                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<bool>("IsImage");
-
-                    b.Property<DateTime>("UploadTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<long>("UserID");
-
-                    b.HasKey("AttachmentID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_Attachment");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_AttachmentUsage", b =>
-                {
-                    b.Property<long>("AttachmentID");
-
-                    b.Property<long>("PostID");
-
-                    b.HasKey("AttachmentID", "PostID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_AttachmentUsage");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_Category", b =>
-                {
-                    b.Property<long>("CategoryID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<DateTime?>("DeleteTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<bool>("Disabled");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
-
-                    b.Property<int>("OrderNo");
-
-                    b.HasKey("CategoryID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_Category");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_CheckIn", b =>
-                {
-                    b.Property<long>("CheckID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("CheckTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<long>("UserId");
-
-                    b.HasKey("CheckID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_CheckIn");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_Event", b =>
-                {
-                    b.Property<long>("EventID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Address")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<DateTime>("EndTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<int>("EventStatus");
-
-                    b.Property<int>("Remind");
-
-                    b.Property<DateTime>("StartTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<long>("TopicID");
-
-                    b.Property<int>("UserCount");
-
-                    b.Property<long>("UserID");
-
-                    b.HasKey("EventID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_Event");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_EventUser", b =>
-                {
-                    b.Property<long>("EventUserId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<long>("EventID");
-
-                    b.Property<bool>("NeedRemind");
-
-                    b.Property<long>("UserID");
-
-                    b.Property<string>("Username")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.HasKey("EventUserId");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_EventUser");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_Follow", b =>
-                {
-                    b.Property<long>("ForumID");
-
-                    b.Property<long>("UserID");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<DateTime>("LastTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.HasKey("ForumID", "UserID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_Follow");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_Forum", b =>
-                {
-                    b.Property<long>("ForumID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("Attention");
-
-                    b.Property<long>("CategoryID");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<DateTime?>("DeleteTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<string>("Description")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
-
-                    b.Property<bool>("Disabled");
-
-                    b.Property<string>("ForumName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.Property<int>("Hot");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<string>("Logo")
-                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
-
-                    b.Property<string>("Moderators")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
-
-                    b.Property<int>("OrderNo");
-
-                    b.Property<int>("PassLevel");
-
-                    b.Property<int>("PostLevel");
-
-                    b.Property<int>("PostType");
-
-                    b.Property<int>("ReplyCount");
-
-                    b.Property<int>("TodayReplyCount");
-
-                    b.Property<int>("TodayTopicCount");
-
-                    b.Property<int>("TopicCount");
-
-                    b.HasKey("ForumID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_Forum");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_Good", b =>
-                {
-                    b.Property<long>("GoodID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Address")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<string>("LinkMan")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.Property<int>("Loss");
-
-                    b.Property<decimal>("Original");
-
-                    b.Property<string>("Phone")
-                        .HasAnnotation("Relational:ColumnType", "varchar(13)");
-
-                    b.Property<decimal>("Price");
-
-                    b.Property<bool>("Saled");
-
-                    b.Property<long>("TopicID");
-
-                    b.Property<long>("UserID");
-
-                    b.HasKey("GoodID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_Good");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_Level", b =>
-                {
-                    b.Property<long>("LevelID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<bool>("Enable");
-
-                    b.Property<int>("Min");
-
-                    b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
-
-                    b.HasKey("LevelID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_Level");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_Location", b =>
-                {
-                    b.Property<long>("LocationID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<float>("Latitude");
-
-                    b.Property<float>("Longitude");
-
-                    b.Property<long>("PostID");
-
-                    b.Property<long>("TopicID");
-
-                    b.HasKey("LocationID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_Location");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_Post", b =>
-                {
-                    b.Property<long>("PostID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(max)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<int>("Dislike");
-
-                    b.Property<string>("Pics")
-                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
-
-                    b.Property<int>("Reviews");
-
-                    b.Property<int>("Support");
-
-                    b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
-
-                    b.Property<long>("TopicID");
-
-                    b.Property<long>("UserID");
-
-                    b.Property<string>("Username")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.HasKey("PostID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_Post");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_PostTrend", b =>
-                {
-                    b.Property<long>("TrendsID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("Action");
-
-                    b.Property<long>("AtUserID");
-
-                    b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<bool>("Disable");
-
-                    b.Property<bool>("IsRead");
-
-                    b.Property<bool>("IsReplyTopic");
-
-                    b.Property<long>("PostID");
-
-                    b.Property<long>("PostUserID");
-
-                    b.Property<long>("RespondID");
-
-                    b.Property<long>("TopicID");
-
-                    b.Property<long>("UserID");
-
-                    b.HasKey("TrendsID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_PostTrend");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_Respond", b =>
-                {
-                    b.Property<long>("RespondID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<long>("PostID");
-
-                    b.Property<long>("ReplyUserID");
-
-                    b.Property<string>("ReplyUsername")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.Property<long>("TopicID");
-
-                    b.Property<int>("Type");
-
-                    b.Property<long>("UserID");
-
-                    b.Property<string>("Username")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.HasKey("RespondID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_Respond");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Circle_Topic", b =>
-                {
-                    b.Property<long>("TopicID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("AuditStatus");
-
-                    b.Property<int>("ClickCount");
-
-                    b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(max)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<DateTime?>("DeleteTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<int>("DislikeCount");
-
-                    b.Property<int>("EventCount");
-
-                    b.Property<long>("FirstPostID");
-
-                    b.Property<long>("ForumID");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<long?>("ItemId");
-
-                    b.Property<int>("LikeCount");
-
-                    b.Property<int>("Loss");
-
-                    b.Property<string>("Pics")
-                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
-
-                    b.Property<int>("PostCount");
-
-                    b.Property<decimal>("Price");
-
-                    b.Property<int>("TagStatus");
-
-                    b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
-
-                    b.Property<int>("TopicType");
-
-                    b.Property<long>("UserID");
-
-                    b.Property<string>("Username")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.HasKey("TopicID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Circle_Topic");
-                });
-
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Account", b =>
                 {
-                    b.Property<long>("MerchantID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("MerchantID");
 
                     b.Property<string>("BusinessBeginTime")
                         .HasAnnotation("Relational:ColumnType", "char(5)");
@@ -715,8 +238,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Certificate", b =>
                 {
-                    b.Property<long>("CertificateID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("CertificateID");
 
                     b.Property<long?>("AuditAdminID");
 
@@ -757,8 +279,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Industry", b =>
                 {
-                    b.Property<long>("IndustryID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("IndustryID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -781,8 +302,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Shake_Content", b =>
                 {
-                    b.Property<long>("ContentID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("ContentID");
 
                     b.Property<int>("AuditStatus");
 
@@ -843,8 +363,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Shake_UserRecord", b =>
                 {
-                    b.Property<long>("RecordID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("RecordID");
 
                     b.Property<long>("ContentID");
 
@@ -870,67 +389,9 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Shake_UserRecord");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.System_ModuleAuthorize", b =>
-                {
-                    b.Property<string>("ServerID")
-                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
-
-                    b.Property<string>("ModuleID")
-                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
-
-                    b.Property<string>("AppSecret")
-                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<int>("Role");
-
-                    b.Property<DateTime>("UpdateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.HasKey("ServerID", "ModuleID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "System_ModuleAuthorize");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.System_SMS", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Code")
-                        .HasAnnotation("Relational:ColumnType", "varchar(6)");
-
-                    b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<DateTime>("Expires")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<string>("Phone")
-                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
-
-                    b.Property<int>("Type");
-
-                    b.Property<bool>("Used");
-
-                    b.HasKey("Id");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "System_SMS");
-                });
-
             modelBuilder.Entity("Td.Kylin.Entity.User_Account", b =>
                 {
-                    b.Property<long>("UserID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("UserID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -963,8 +424,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Address", b =>
                 {
-                    b.Property<long>("AddressID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("AddressID");
 
                     b.Property<string>("Address")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
@@ -1005,8 +465,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Device", b =>
                 {
-                    b.Property<long>("DeviceID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("DeviceID");
 
                     b.Property<string>("DeviceName")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
@@ -1032,8 +491,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Forum", b =>
                 {
-                    b.Property<long>("UserID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("UserID");
 
                     b.Property<int>("ClassicsCount");
 
@@ -1067,8 +525,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_LocationTrack", b =>
                 {
-                    b.Property<long>("TrackID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("TrackID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1088,8 +545,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Online", b =>
                 {
-                    b.Property<long>("UserID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("UserID");
 
                     b.Property<DateTime>("ActiveTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1112,8 +568,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Profile", b =>
                 {
-                    b.Property<long>("UserID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("UserID");
 
                     b.Property<DateTime>("BothBirthday")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1135,8 +590,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_ShakeRecord", b =>
                 {
-                    b.Property<long>("UserID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("UserID");
 
                     b.Property<int>("Count");
 

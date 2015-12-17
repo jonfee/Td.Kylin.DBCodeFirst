@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.Data.Entity.Migrations;
-using Microsoft.Data.Entity.Metadata;
 
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
@@ -14,8 +13,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    MerchantID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    MerchantID = table.Column<long>(nullable: false),
                     BusinessBeginTime = table.Column<string>(type: "char(5)", nullable: true),
                     BusinessEndTime = table.Column<string>(type: "char(5)", nullable: true),
                     CertificateStatus = table.Column<int>(nullable: false),
@@ -44,8 +42,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    CertificateID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    CertificateID = table.Column<long>(nullable: false),
                     AuditAdminID = table.Column<long>(nullable: true),
                     AuditAdminName = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     AuditRemark = table.Column<string>(type: "nvarchar(200)", nullable: true),
@@ -68,8 +65,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    IndustryID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    IndustryID = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Disabled = table.Column<bool>(nullable: false),
                     Name = table.Column<string>(type: "nvarchar(20)", nullable: true),

@@ -19,7 +19,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Content", b =>
                 {
                     b.Property<long>("ContentID")
-                        .ValueGeneratedOnAdd()
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<int>("ADType")
@@ -65,7 +64,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Page", b =>
                 {
                     b.Property<int>("PageID")
-                        .ValueGeneratedOnAdd()
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<string>("PageName")
@@ -84,7 +82,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Position", b =>
                 {
                     b.Property<long>("PositionID")
-                        .ValueGeneratedOnAdd()
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<int>("ADType")
@@ -123,8 +120,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Admin_Account", b =>
                 {
-                    b.Property<long>("AdminID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("AdminID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -230,8 +226,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Category", b =>
                 {
-                    b.Property<long>("CategoryID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("CategoryID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -257,8 +252,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_CheckIn", b =>
                 {
-                    b.Property<long>("CheckID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("CheckID");
 
                     b.Property<DateTime>("CheckTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -274,8 +268,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Event", b =>
                 {
-                    b.Property<long>("EventID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("EventID");
 
                     b.Property<string>("Address")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
@@ -308,8 +301,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_EventUser", b =>
                 {
-                    b.Property<long>("EventUserId")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("EventUserId");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -351,8 +343,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Forum", b =>
                 {
-                    b.Property<long>("ForumID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("ForumID");
 
                     b.Property<int>("Attention");
 
@@ -407,8 +398,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Good", b =>
                 {
-                    b.Property<long>("GoodID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("GoodID");
 
                     b.Property<string>("Address")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
@@ -443,8 +433,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Level", b =>
                 {
-                    b.Property<long>("LevelID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("LevelID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -465,8 +454,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Location", b =>
                 {
-                    b.Property<long>("LocationID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("LocationID");
 
                     b.Property<float>("Latitude");
 
@@ -485,8 +473,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Post", b =>
                 {
-                    b.Property<long>("PostID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("PostID");
 
                     b.Property<string>("Content")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(max)");
@@ -522,8 +509,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_PostTrend", b =>
                 {
-                    b.Property<long>("TrendsID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("TrendsID");
 
                     b.Property<int>("Action");
 
@@ -560,8 +546,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Respond", b =>
                 {
-                    b.Property<long>("RespondID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("RespondID");
 
                     b.Property<string>("Content")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
@@ -594,8 +579,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Topic", b =>
                 {
-                    b.Property<long>("TopicID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("TopicID");
 
                     b.Property<int>("AuditStatus");
 
@@ -654,8 +638,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Complaint", b =>
                 {
-                    b.Property<long>("ComplaintsID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("ComplaintsID");
 
                     b.Property<long>("ComplainantID");
 
@@ -692,8 +675,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Category", b =>
                 {
-                    b.Property<long>("CategoryID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("CategoryID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -727,8 +709,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_CategoryTag", b =>
                 {
-                    b.Property<long>("TagID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("TagID");
 
                     b.Property<long>("CategoryID");
 
@@ -753,8 +734,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Evaluate", b =>
                 {
-                    b.Property<long>("EvaluateID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("EvaluateID");
 
                     b.Property<string>("Contents")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
@@ -803,8 +783,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Order", b =>
                 {
-                    b.Property<long>("OrderID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("OrderID");
 
                     b.Property<decimal>("ActualOrderAmount");
 
@@ -876,8 +855,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_OrderProductSnapshot", b =>
                 {
-                    b.Property<long>("SnapshotID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("SnapshotID");
 
                     b.Property<int>("BuyCounts");
 
@@ -940,8 +918,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Product", b =>
                 {
-                    b.Property<long>("ProductID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("ProductID");
 
                     b.Property<long>("CategoryID");
 
@@ -1002,8 +979,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_ProductSKU", b =>
                 {
-                    b.Property<long>("SkuID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("SkuID");
 
                     b.Property<string>("Img")
                         .HasAnnotation("Relational:ColumnType", "varchar(100)");
@@ -1035,8 +1011,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Promotion", b =>
                 {
-                    b.Property<long>("PromotionID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("PromotionID");
 
                     b.Property<DateTime>("BeginTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1071,8 +1046,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_PromotionConfig", b =>
                 {
-                    b.Property<long>("ConfigID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("ConfigID");
 
                     b.Property<decimal>("MinMoney");
 
@@ -1110,8 +1084,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_ShoppingCart", b =>
                 {
-                    b.Property<long>("CartID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("CartID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1136,8 +1109,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Account", b =>
                 {
-                    b.Property<long>("MerchantID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("MerchantID");
 
                     b.Property<string>("BusinessBeginTime")
                         .HasAnnotation("Relational:ColumnType", "char(5)");
@@ -1196,8 +1168,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Certificate", b =>
                 {
-                    b.Property<long>("CertificateID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("CertificateID");
 
                     b.Property<long?>("AuditAdminID");
 
@@ -1238,8 +1209,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Industry", b =>
                 {
-                    b.Property<long>("IndustryID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("IndustryID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1262,8 +1232,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Shake_Content", b =>
                 {
-                    b.Property<long>("ContentID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("ContentID");
 
                     b.Property<int>("AuditStatus");
 
@@ -1324,8 +1293,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Shake_UserRecord", b =>
                 {
-                    b.Property<long>("RecordID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("RecordID");
 
                     b.Property<long>("ContentID");
 
@@ -1379,8 +1347,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.System_SMS", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<Guid>("Id");
 
                     b.Property<string>("Code")
                         .HasAnnotation("Relational:ColumnType", "varchar(6)");
@@ -1410,8 +1377,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Account", b =>
                 {
-                    b.Property<long>("UserID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("UserID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1444,8 +1410,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Address", b =>
                 {
-                    b.Property<long>("AddressID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("AddressID");
 
                     b.Property<string>("Address")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
@@ -1486,8 +1451,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Device", b =>
                 {
-                    b.Property<long>("DeviceID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("DeviceID");
 
                     b.Property<string>("DeviceName")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
@@ -1513,8 +1477,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Forum", b =>
                 {
-                    b.Property<long>("UserID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("UserID");
 
                     b.Property<int>("ClassicsCount");
 
@@ -1548,8 +1511,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_LocationTrack", b =>
                 {
-                    b.Property<long>("TrackID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("TrackID");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1569,8 +1531,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Online", b =>
                 {
-                    b.Property<long>("UserID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("UserID");
 
                     b.Property<DateTime>("ActiveTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1593,8 +1554,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Profile", b =>
                 {
-                    b.Property<long>("UserID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("UserID");
 
                     b.Property<DateTime>("BothBirthday")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1616,8 +1576,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.User_ShakeRecord", b =>
                 {
-                    b.Property<long>("UserID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("UserID");
 
                     b.Property<int>("Count");
 

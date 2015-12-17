@@ -123,7 +123,7 @@ namespace Td.Kylin.DBCodeFirst
         /// </summary>
         public DbSet<System_SMS> System_SMS { get { return Set<System_SMS>(); } }
 
-#endregion
+        #endregion
 
         #region 模块授权
 
@@ -277,7 +277,7 @@ namespace Td.Kylin.DBCodeFirst
 
         #endregion
 
-        #region
+        #region 投诉/举报
 
         /// <summary>
         /// 投诉/举报
@@ -285,5 +285,11 @@ namespace Td.Kylin.DBCodeFirst
         public DbSet<Complaint> Complaint { get { return Set<Complaint>(); } }
 
         #endregion
+
+        //#region 限时福利
+
+        //public DbSet<Merchant_Welfare> Merchant_Welfare { get { return Set<Merchant_Welfare>(); } }
+
+        //#endregion
     }
 }

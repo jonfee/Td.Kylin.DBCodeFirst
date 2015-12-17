@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.Data.Entity.Migrations;
-using Microsoft.Data.Entity.Metadata;
 
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
@@ -14,8 +13,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    ComplaintsID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ComplaintsID = table.Column<long>(nullable: false),
                     ComplainantID = table.Column<long>(nullable: false),
                     ComplainantName = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     ComplainantPhone = table.Column<string>(type: "varchar(20)", nullable: true),

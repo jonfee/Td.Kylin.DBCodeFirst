@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.Data.Entity.Migrations;
-using Microsoft.Data.Entity.Metadata;
 
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
@@ -9,13 +8,13 @@ namespace Td.Kylin.DBCodeFirst.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema("dbo");
             migrationBuilder.CreateTable(
                 name: "Ad_Content",
                 schema: "dbo",
                 columns: table => new
                 {
-                    ContentID = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ContentID = table.Column<long>(type: "bigint", nullable: false),
                     ADType = table.Column<int>(type: "int", nullable: false),
                     AdminID = table.Column<long>(type: "bigint", nullable: false),
                     Body = table.Column<string>(type: "nvarchar(255)", nullable: true),
@@ -37,8 +36,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    PageID = table.Column<int>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    PageID = table.Column<int>(type: "bigint", nullable: false),
                     PageName = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     PlatformType = table.Column<int>(type: "int", nullable: false)
                 },
@@ -51,8 +49,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    PositionID = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    PositionID = table.Column<long>(type: "bigint", nullable: false),
                     ADType = table.Column<int>(type: "int", nullable: false),
                     Code = table.Column<string>(type: "varchar(10)", nullable: true),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),

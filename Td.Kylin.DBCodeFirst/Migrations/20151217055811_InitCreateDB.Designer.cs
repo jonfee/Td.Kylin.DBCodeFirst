@@ -8,8 +8,8 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20151216073503_initCreateDB")]
-    partial class initCreateDB
+    [Migration("20151217055811_InitCreateDB")]
+    partial class InitCreateDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

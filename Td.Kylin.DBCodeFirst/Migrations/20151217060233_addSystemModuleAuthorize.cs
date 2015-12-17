@@ -8,7 +8,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.EnsureSchema("dbo");
             migrationBuilder.CreateTable(
                 name: "System_ModuleAuthorize",
                 schema: "dbo",

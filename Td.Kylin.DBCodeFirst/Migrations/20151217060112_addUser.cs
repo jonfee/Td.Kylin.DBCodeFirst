@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.Data.Entity.Migrations;
-using Microsoft.Data.Entity.Metadata;
 
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
@@ -14,8 +13,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    UserID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    UserID = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     DataStatus = table.Column<int>(nullable: false),
                     LastTime = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -34,8 +32,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    AddressID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    AddressID = table.Column<long>(nullable: false),
                     Address = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     AddressType = table.Column<int>(nullable: false),
                     AddressUseType = table.Column<int>(nullable: false),
@@ -58,8 +55,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    DeviceID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    DeviceID = table.Column<long>(nullable: false),
                     DeviceName = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     LastTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Logins = table.Column<int>(nullable: false),
@@ -76,8 +72,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    UserID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    UserID = table.Column<long>(nullable: false),
                     ClassicsCount = table.Column<int>(nullable: false),
                     DeleteCount = table.Column<int>(nullable: false),
                     DeleteReplyCount = table.Column<int>(nullable: false),
@@ -99,8 +94,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    TrackID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    TrackID = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Latitude = table.Column<float>(nullable: false),
                     Longitude = table.Column<float>(nullable: false),
@@ -115,8 +109,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    UserID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    UserID = table.Column<long>(nullable: false),
                     ActiveTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Latitude = table.Column<float>(nullable: false),
                     LoginTime = table.Column<DateTime>(nullable: false),
@@ -132,8 +125,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    UserID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    UserID = table.Column<long>(nullable: false),
                     BothBirthday = table.Column<DateTime>(type: "datetime", nullable: false),
                     PresentAddress = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     Sex = table.Column<int>(nullable: false),
@@ -148,8 +140,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    UserID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    UserID = table.Column<long>(nullable: false),
                     Count = table.Column<int>(nullable: false),
                     LastTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     LimitCount = table.Column<int>(nullable: false),

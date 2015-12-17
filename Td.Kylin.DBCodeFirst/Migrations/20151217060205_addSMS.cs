@@ -16,8 +16,8 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     Id = table.Column<Guid>(nullable: false),
                     Code = table.Column<string>(type: "varchar(6)", nullable: true),
                     Content = table.Column<string>(type: "nvarchar(200)", nullable: true),
-                    CreateTime = table.Column<DateTime>(nullable: false),
-                    Expires = table.Column<DateTime>(nullable: false),
+                    CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Expires = table.Column<DateTime>(type: "datetime", nullable: false),
                     Phone = table.Column<string>(type: "varchar(11)", nullable: true),
                     Type = table.Column<int>(nullable: false),
                     Used = table.Column<bool>(nullable: false)

@@ -47,8 +47,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    CategoryID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    CategoryID = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     DeleteTime = table.Column<DateTime>(type: "datetime", nullable: true),
                     Disabled = table.Column<bool>(nullable: false),
@@ -65,8 +64,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    CheckID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    CheckID = table.Column<long>(nullable: false),
                     CheckTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     UserId = table.Column<long>(nullable: false)
                 },
@@ -79,8 +77,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    EventID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    EventID = table.Column<long>(nullable: false),
                     Address = table.Column<string>(type: "nvarchar(200)", nullable: true),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     EndTime = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -100,8 +97,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    EventUserId = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    EventUserId = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     EventID = table.Column<long>(nullable: false),
                     NeedRemind = table.Column<bool>(nullable: false),
@@ -131,8 +127,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    ForumID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ForumID = table.Column<long>(nullable: false),
                     Attention = table.Column<int>(nullable: false),
                     CategoryID = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -162,8 +157,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    GoodID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    GoodID = table.Column<long>(nullable: false),
                     Address = table.Column<string>(type: "nvarchar(200)", nullable: true),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     LinkMan = table.Column<string>(type: "nvarchar(20)", nullable: true),
@@ -184,8 +178,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    LevelID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    LevelID = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Enable = table.Column<bool>(nullable: false),
                     Min = table.Column<int>(nullable: false),
@@ -200,8 +193,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    LocationID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    LocationID = table.Column<long>(nullable: false),
                     Latitude = table.Column<float>(nullable: false),
                     Longitude = table.Column<float>(nullable: false),
                     PostID = table.Column<long>(nullable: false),
@@ -216,8 +208,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    PostID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    PostID = table.Column<long>(nullable: false),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Dislike = table.Column<int>(nullable: false),
@@ -238,8 +229,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    TrendsID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    TrendsID = table.Column<long>(nullable: false),
                     Action = table.Column<int>(nullable: false),
                     AtUserID = table.Column<long>(nullable: false),
                     Content = table.Column<string>(type: "nvarchar(255)", nullable: true),
@@ -262,8 +252,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    RespondID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    RespondID = table.Column<long>(nullable: false),
                     Content = table.Column<string>(type: "nvarchar(255)", nullable: true),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     PostID = table.Column<long>(nullable: false),
@@ -283,8 +272,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    TopicID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    TopicID = table.Column<long>(nullable: false),
                     AuditStatus = table.Column<int>(nullable: false),
                     ClickCount = table.Column<int>(nullable: false),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: true),

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.Data.Entity.Migrations;
-using Microsoft.Data.Entity.Metadata;
 
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
@@ -14,8 +13,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    ContentID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ContentID = table.Column<long>(nullable: false),
                     AuditStatus = table.Column<int>(nullable: false),
                     Category = table.Column<int>(nullable: false),
                     ConfirmCount = table.Column<int>(nullable: false),
@@ -47,14 +45,13 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    RecordID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    RecordID = table.Column<long>(nullable: false),
                     ContentID = table.Column<long>(nullable: false),
                     CostPrice = table.Column<decimal>(nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     LastPayTime = table.Column<DateTime>(type: "datetime", nullable: true),
                     Price = table.Column<decimal>(nullable: false),
-                    Title = table.Column<string>(nullable: true),
+                    Title = table.Column<string>(type: "nvarchar(50)", nullable: true),
                     UserID = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
