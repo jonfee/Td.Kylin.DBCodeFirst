@@ -90,6 +90,11 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => p.CertificateID);
             });
 
+            modelBuilder.Entity<Merchant_Business>(entity =>
+            {
+                entity.HasKey(p => new { p.MerchantID, p.BusinessID });
+            });
+
             #endregion
 
             #region 用户
@@ -396,6 +401,22 @@ namespace Td.Kylin.DBCodeFirst
             modelBuilder.Entity<Welfare_PartUser>(entity =>
             {
                 entity.HasKey(p => new { p.StageID, p.UserID });
+            });
+
+            #endregion
+
+            #region 商家服务（上门/预约）
+
+            modelBuilder.Entity<MerchService_Category>(entity =>
+            {
+                entity.Property(p => p.CategoryID).ValueGeneratedNever();
+                entity.HasKey(p => p.CategoryID);
+            });
+
+            modelBuilder.Entity<MerchService_Business>(entity =>
+            {
+                entity.Property(p => p.BusinessID).ValueGeneratedNever();
+                entity.HasKey(p => p.BusinessID);
             });
 
             #endregion

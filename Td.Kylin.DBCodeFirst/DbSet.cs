@@ -56,6 +56,11 @@ namespace Td.Kylin.DBCodeFirst
         /// </summary>
         public DbSet<Merchant_Certificate> Merchant_Certificate { get { return Set<Merchant_Certificate>(); } }
 
+        /// <summary>
+        /// 商家业务关联
+        /// </summary>
+        public DbSet<Merchant_Business> Merchant_Business { get { return Set<Merchant_Business>(); } }
+
         #endregion
 
         #region 用户
@@ -322,6 +327,20 @@ namespace Td.Kylin.DBCodeFirst
         /// 福利参与人员
         /// </summary>
         public DbSet<Welfare_PartUser> Welfare_PartUser { get { return Set<Welfare_PartUser>(); } }
+
+        #endregion
+
+        #region 商家服务（上门/预约相关）
+
+        /// <summary>
+        /// 商家服务分类
+        /// </summary>
+        public DbSet<MerchService_Category> MerchService_Category { get { return Set<MerchService_Category>(); } }
+
+        /// <summary>
+        /// 商家服务下的业务
+        /// </summary>
+        public DbSet<MerchService_Business> MerchService_Business { get { return Set<MerchService_Business>(); } }
 
         #endregion
     }
