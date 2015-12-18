@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Td.Kylin.Entity.Welfare
+namespace Td.Kylin.Entity
 {
     /// <summary>
     /// 优惠券福利信息（从）

@@ -51,16 +51,31 @@ namespace Td.Kylin.Entity
 		public int DataStatus{get;set;}
 
         ///<summary>
-        ///注册时间
-        ///</summary>
-        [Column(TypeName = "datetime")]
-        public DateTime CreateTime{get;set;}
-
-        ///<summary>
         ///用户头像
         ///</summary>
         [Column(TypeName = "varchar(50)")]
         public string UserPic{get;set;}
-				
-	}
+
+        /// <summary>
+        /// 账户余额（不含冻结资金）
+        /// </summary>
+        public decimal Balance { get; set; }
+
+        /// <summary>
+        /// 冻结资金
+        /// </summary>
+        public decimal FreezeMoney { get; set; }
+
+        /// <summary>
+        /// 支付密码
+        /// </summary>
+        public string PaymentPassword { get; set; }
+
+        ///<summary>
+        ///注册时间
+        ///</summary>
+        [Column(TypeName = "datetime")]
+        public DateTime CreateTime { get; set; }
+
+    }
 }

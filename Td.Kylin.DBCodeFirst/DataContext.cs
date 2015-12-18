@@ -142,6 +142,12 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => p.UserID);
             });
 
+            modelBuilder.Entity<User_TradeRecords>(entity =>
+            {
+                entity.Property(p => p.TradeID).ValueGeneratedNever();
+                entity.HasKey(p => p.TradeID);
+            });
+
             #endregion
 
             #region 摇一摇
@@ -263,7 +269,11 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => new { p.AttachmentID, p.PostID });
             });
 
-            modelBuilder.Entity<Circle_Attachment>().HasKey(p => p.AttachmentID);
+            modelBuilder.Entity<Circle_Attachment>(entity =>
+            {
+                entity.Property(p => p.AttachmentID).ValueGeneratedNever();
+                entity.HasKey(p => p.AttachmentID);
+            });
 
             #endregion
 
@@ -351,15 +361,44 @@ namespace Td.Kylin.DBCodeFirst
 
             #endregion
 
-            //#region 限时福利
+            #region 限时福利
 
-            //modelBuilder.Entity<Merchant_Welfare>(entity =>
-            //{
-            //    entity.Property(p => p.WelfareID).ValueGeneratedNever();
-            //    entity.HasKey(p => p.WelfareID);
-            //});
+            modelBuilder.Entity<Merchant_Welfare>(entity =>
+            {
+                entity.Property(p => p.WelfareID).ValueGeneratedNever();
+                entity.HasKey(p => p.WelfareID);
+            });
 
-            //#endregion
+            modelBuilder.Entity<Welfare_Coupon>(entity =>
+            {
+                entity.Property(p => p.WelfareID).ValueGeneratedNever();
+                entity.HasKey(p => p.WelfareID);
+            });
+
+            modelBuilder.Entity<Welfare_Goods>(entity =>
+            {
+                entity.Property(p => p.WelfareID).ValueGeneratedNever();
+                entity.HasKey(p => p.WelfareID);
+            });
+
+            modelBuilder.Entity<Welfare_DonatedGoods>(entity =>
+            {
+                entity.Property(p => p.WelfareID).ValueGeneratedNever();
+                entity.HasKey(p => p.WelfareID);
+            });
+
+            modelBuilder.Entity<Welfare_Stage>(entity =>
+            {
+                entity.Property(p => p.StageID).ValueGeneratedNever();
+                entity.HasKey(p => p.StageID);
+            });
+
+            modelBuilder.Entity<Welfare_PartUser>(entity =>
+            {
+                entity.HasKey(p => new { p.StageID, p.UserID });
+            });
+
+            #endregion
         }
     }
 }

@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20151218015217_addUserTradeRecords_andColumnForUserAccount")]
+    partial class addUserTradeRecords_andColumnForUserAccount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -178,7 +179,8 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Attachment", b =>
                 {
-                    b.Property<long>("AttachmentID");
+                    b.Property<long>("AttachmentID")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("DeleteTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1229,57 +1231,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Merchant_Industry");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.Merchant_Welfare", b =>
-                {
-                    b.Property<long>("WelfareID");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<int>("DrawNumber");
-
-                    b.Property<DateTime>("ExpiryEndTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<DateTime>("ExpiryStartTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<string>("Intro")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<long>("MerchantID");
-
-                    b.Property<string>("MerchantName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
-
-                    b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
-
-                    b.Property<int>("Number");
-
-                    b.Property<string>("Picture")
-                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
-
-                    b.Property<string>("Regular")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
-
-                    b.Property<int>("Status");
-
-                    b.Property<int>("SurplusNumber");
-
-                    b.Property<int>("WelfareType");
-
-                    b.Property<int>("WinNumber");
-
-                    b.HasKey("WelfareID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Merchant_Welfare");
-                });
-
             modelBuilder.Entity("Td.Kylin.Entity.Shake_Content", b =>
                 {
                     b.Property<long>("ContentID");
@@ -1676,126 +1627,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:Schema", "dbo");
 
                     b.HasAnnotation("Relational:TableName", "User_TradeRecords");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Welfare_Coupon", b =>
-                {
-                    b.Property<long>("WelfareID");
-
-                    b.Property<decimal>("FaceMoney");
-
-                    b.Property<int>("LimitNumber");
-
-                    b.Property<decimal>("MinAccount");
-
-                    b.Property<bool>("MustUseForOriginalPrice");
-
-                    b.Property<int>("UseType");
-
-                    b.HasKey("WelfareID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Welfare_Coupon");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Welfare_DonatedGoods", b =>
-                {
-                    b.Property<long>("WelfareID");
-
-                    b.Property<int>("DrawType");
-
-                    b.Property<decimal>("Price");
-
-                    b.Property<string>("Tag")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
-
-                    b.HasKey("WelfareID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Welfare_DonatedGoods");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Welfare_Goods", b =>
-                {
-                    b.Property<long>("WelfareID");
-
-                    b.Property<decimal>("DiscountPrice");
-
-                    b.Property<int>("DrawType");
-
-                    b.Property<decimal>("OriginalPrice");
-
-                    b.Property<string>("Tag")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
-
-                    b.HasKey("WelfareID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Welfare_Goods");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Welfare_PartUser", b =>
-                {
-                    b.Property<long>("StageID");
-
-                    b.Property<long>("UserID");
-
-                    b.Property<DateTime?>("AwardTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<bool>("IsAward");
-
-                    b.Property<bool>("IsWin");
-
-                    b.Property<string>("PartCode")
-                        .HasAnnotation("Relational:ColumnType", "varchar(16)");
-
-                    b.HasKey("StageID", "UserID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Welfare_PartUser");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Welfare_Stage", b =>
-                {
-                    b.Property<long>("StageID");
-
-                    b.Property<int>("AcceptNumber");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<bool>("Enabled");
-
-                    b.Property<DateTime>("LotteryTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<int>("Number");
-
-                    b.Property<int>("PartNumber");
-
-                    b.Property<DateTime>("StartTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<DateTime>("StopTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<long>("WelfareID");
-
-                    b.Property<int>("WinNumber");
-
-                    b.HasKey("StageID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Welfare_Stage");
                 });
         }
     }

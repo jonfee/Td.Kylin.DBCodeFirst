@@ -100,6 +100,11 @@ namespace Td.Kylin.DBCodeFirst
         /// </summary>
         public DbSet<User_ShakeRecord> User_ShakeRecord { get { return Set<User_ShakeRecord>(); } }
 
+        /// <summary>
+        /// 用户交易记录
+        /// </summary>
+        public DbSet<User_TradeRecords> User_TradeRecords { get { return Set<User_TradeRecords>(); } }
+
         #endregion
 
         #region 摇一摇
@@ -286,10 +291,38 @@ namespace Td.Kylin.DBCodeFirst
 
         #endregion
 
-        //#region 限时福利
+        #region 限时福利
 
-        //public DbSet<Merchant_Welfare> Merchant_Welfare { get { return Set<Merchant_Welfare>(); } }
+        /// <summary>
+        /// 商家福利
+        /// </summary>
+        public DbSet<Merchant_Welfare> Merchant_Welfare { get { return Set<Merchant_Welfare>(); } }
 
-        //#endregion
+        /// <summary>
+        /// 优惠券福利信息
+        /// </summary>
+        public DbSet<Welfare_Coupon> Welfare_Coupon { get { return Set<Welfare_Coupon>(); } }
+
+        /// <summary>
+        /// 折扣商品福利信息
+        /// </summary>
+        public DbSet<Welfare_Goods> Welfare_Goods { get { return Set<Welfare_Goods>(); } }
+
+        /// <summary>
+        /// 赠送商品福利信息
+        /// </summary>
+        public DbSet<Welfare_DonatedGoods> Welfare_DonatedGoods { get { return Set<Welfare_DonatedGoods>(); } }
+
+        /// <summary>
+        /// 福利分期
+        /// </summary>
+        public DbSet<Welfare_Stage> Welfare_Stage { get{ return Set<Welfare_Stage>(); } }
+
+        /// <summary>
+        /// 福利参与人员
+        /// </summary>
+        public DbSet<Welfare_PartUser> Welfare_PartUser { get { return Set<Welfare_PartUser>(); } }
+
+        #endregion
     }
 }

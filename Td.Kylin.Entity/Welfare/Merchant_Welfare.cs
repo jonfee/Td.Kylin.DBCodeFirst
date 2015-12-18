@@ -14,6 +14,17 @@ namespace Td.Kylin.Entity
         /// </summary>
         public long WelfareID { get; set; }
 
+        ///<summary>
+        ///商户ID
+        ///</summary>
+        public long MerchantID { get; set; }
+
+        ///<summary>
+        ///商户名称
+        ///</summary>
+        [Column(TypeName = "nvarchar(50)")]
+        public string MerchantName { get; set; }
+
         /// <summary>
         /// 福利类型
         /// </summary>
@@ -32,19 +43,24 @@ namespace Td.Kylin.Entity
         public string Picture { get; set; }
 
         /// <summary>
-        /// 发放数量
+        /// 商家预发放数量
         /// </summary>
         public int Number { get; set; }
 
         /// <summary>
-        /// 领取数量
+        /// 剩余可用数量
         /// </summary>
-        public int DrawNumber { get; set; }
+        public int SurplusNumber { get; set; }
 
         /// <summary>
-        /// 使用数量
+        /// 总计已中奖数量
         /// </summary>
-        public int UseNumber { get; set; }
+        public int WinNumber { get; set; }
+
+        /// <summary>
+        /// 总计已领取数量
+        /// </summary>
+        public int DrawNumber { get; set; }
 
         /// <summary>
         /// 福利介绍
@@ -71,9 +87,14 @@ namespace Td.Kylin.Entity
         public DateTime ExpiryEndTime { get; set; }
 
         /// <summary>
-        /// 审核状态
+        /// 福利状态
         /// </summary>
-        public int AuditStatus { get; set; }
+        public int Status { get; set; }
+
+        /// <summary>
+        /// 是否已删除
+        /// </summary>
+        public bool IsDelete { get; set; }
 
         /// <summary>
         /// 创建时间
