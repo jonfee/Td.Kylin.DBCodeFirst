@@ -27,11 +27,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 服务开通时间
         /// </summary>
+        [Column(TypeName = "datetime")]
         public DateTime? OpenServiceTime { get; set; }
 
         /// <summary>
         /// 数据创建时间
         /// </summary>
+        [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
     }
 }

@@ -330,6 +330,20 @@ namespace Td.Kylin.DBCodeFirst
 
         #endregion
 
+        #region 商家商品
+
+        /// <summary>
+        /// 商家自定义商品分类
+        /// </summary>
+        public DbSet<MerchGoods_Category> MerchGoods_Category { get { return Set<MerchGoods_Category>(); } }
+
+        /// <summary>
+        /// 商家发布的商品
+        /// </summary>
+        public DbSet<MerchGoods_Goods> MerchGoods_Goods { get { return Set<MerchGoods_Goods>(); } }
+
+        #endregion
+
         #region 商家服务（上门/预约相关）
 
         /// <summary>

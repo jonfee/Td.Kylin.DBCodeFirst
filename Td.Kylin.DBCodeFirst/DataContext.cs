@@ -420,6 +420,22 @@ namespace Td.Kylin.DBCodeFirst
             });
 
             #endregion
+
+            #region 商家商品
+
+            modelBuilder.Entity<MerchGoods_Category>(entity =>
+            {
+                entity.Property(p => p.CategoryID).ValueGeneratedNever();
+                entity.HasKey(p => p.CategoryID);
+            });
+
+            modelBuilder.Entity<MerchGoods_Goods>(entity =>
+            {
+                entity.Property(p => p.GoodsID).ValueGeneratedNever();
+                entity.HasKey(p => p.GoodsID);
+            });
+
+            #endregion
         }
     }
 }
