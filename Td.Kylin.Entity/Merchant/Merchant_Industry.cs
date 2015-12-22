@@ -30,7 +30,7 @@ namespace Td.Kylin.Entity
 		///<summary>
 		///排序
 		///</summary>
-		public bool OrderNo{get;set;}
+		public int OrderNo{get;set;}
 				
 		///<summary>
 		///是否禁用

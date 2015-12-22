@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 商家业务关联
+    /// 商家业务
     /// </summary>
     [Table("Merchant_Business", Schema = "dbo")]
     public class Merchant_Business
@@ -20,9 +20,24 @@ namespace Td.Kylin.Entity
         public long BusinessID { get; set; }
 
         /// <summary>
-        /// 服务使用状态
+        /// 业务状态
         /// </summary>
-        public int UseStatus { get; set; }
+        public int ServiceStatus { get; set; }
+
+        /// <summary>
+        /// 审核的管理员ID
+        /// </summary>
+        public long AuditAdminID { get; set; }
+
+        /// <summary>
+        /// 审核的管理员名称
+        /// </summary>
+        public string AudtiAdminName { get; set; }
+
+        /// <summary>
+        /// 审核备注说明
+        /// </summary>
+        public string AuditRemark { get; set; }
 
         /// <summary>
         /// 服务开通时间

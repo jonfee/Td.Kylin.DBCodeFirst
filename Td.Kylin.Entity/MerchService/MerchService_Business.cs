@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 商家服务类目下的业务
+    /// 系统提供的商家上门/预约业务
     /// </summary>
     [Table("MerchService_Business", Schema = "dbo")]
     public class MerchService_Business
@@ -15,9 +15,9 @@ namespace Td.Kylin.Entity
         public long BusinessID { get; set; }
 
         /// <summary>
-        /// 所属服务分类
+        /// 所属行业
         /// </summary>
-        public long CategoryID { get; set; }
+        public long IndustryID { get; set; }
 
         /// <summary>
         /// 业务名称
@@ -31,6 +31,11 @@ namespace Td.Kylin.Entity
         public int BusinessType { get; set; }
 
         /// <summary>
+        /// 是否已开通服务（未开通时表示不能进行业务操作，如：上门服务|预约服务）
+        /// </summary>
+        public bool IsOpenService { get; set; }
+
+        /// <summary>
         /// 图标
         /// </summary>
         [Column(TypeName = "varchar(100)")]
@@ -40,11 +45,6 @@ namespace Td.Kylin.Entity
         /// 排序值
         /// </summary>
         public int OrderNo { get; set; }
-
-        /// <summary>
-        /// 是否已开通服务（未开通时表示不能进行业务操作，如：上门服务|预约服务）
-        /// </summary>
-        public bool IsOpenService { get; set; }
 
         /// <summary>
         /// 是否被禁用

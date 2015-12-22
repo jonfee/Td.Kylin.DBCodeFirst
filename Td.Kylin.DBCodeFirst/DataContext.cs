@@ -153,6 +153,12 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => p.TradeID);
             });
 
+            modelBuilder.Entity<User_Resume>(entity =>
+            {
+                entity.Property(p => p.ResumeID).ValueGeneratedNever();
+                entity.HasKey(p => p.ResumeID);
+            });
+
             #endregion
 
             #region 摇一摇
@@ -302,7 +308,7 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => p.EvaluateID);
             });
 
-            modelBuilder.Entity<Mall_EvaluateStatistic>(entity =>
+            modelBuilder.Entity<Mall_EvaluateStatistics>(entity =>
             {
                 entity.HasKey(p => new { p.ProductID, p.EvaluateLevel });
             });
@@ -405,22 +411,6 @@ namespace Td.Kylin.DBCodeFirst
 
             #endregion
 
-            #region 商家服务（上门/预约）
-
-            modelBuilder.Entity<MerchService_Category>(entity =>
-            {
-                entity.Property(p => p.CategoryID).ValueGeneratedNever();
-                entity.HasKey(p => p.CategoryID);
-            });
-
-            modelBuilder.Entity<MerchService_Business>(entity =>
-            {
-                entity.Property(p => p.BusinessID).ValueGeneratedNever();
-                entity.HasKey(p => p.BusinessID);
-            });
-
-            #endregion
-
             #region 商家商品
 
             modelBuilder.Entity<MerchGoods_Category>(entity =>
@@ -433,6 +423,37 @@ namespace Td.Kylin.DBCodeFirst
             {
                 entity.Property(p => p.GoodsID).ValueGeneratedNever();
                 entity.HasKey(p => p.GoodsID);
+            });
+
+            #endregion
+
+            #region 平台提供的商家服务业务
+
+            modelBuilder.Entity<MerchService_Business>(entity =>
+            {
+                entity.Property(p => p.BusinessID).ValueGeneratedNever();
+                entity.HasKey(p => p.BusinessID);
+            });
+
+            #endregion
+
+            #region 招聘
+
+            modelBuilder.Entity<Job_Category>(entity =>
+            {
+                entity.Property(p => p.CategoryID).ValueGeneratedNever();
+                entity.HasKey(p => p.CategoryID);
+            });
+
+            modelBuilder.Entity<Job_Recruitment>(entity =>
+            {
+                entity.Property(p => p.RecruitmentID).ValueGeneratedNever();
+                entity.HasKey(p => p.RecruitmentID);
+            });
+
+            modelBuilder.Entity<Job_Apply>(entity =>
+            {
+                entity.HasKey(p => new { p.RecruitmentID, p.ResumeID });
             });
 
             #endregion

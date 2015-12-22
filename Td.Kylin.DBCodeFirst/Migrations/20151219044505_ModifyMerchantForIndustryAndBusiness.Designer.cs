@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20151219044505_ModifyMerchantForIndustryAndBusiness")]
+    partial class ModifyMerchantForIndustryAndBusiness
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -672,113 +673,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Complaint");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.Job_Apply", b =>
-                {
-                    b.Property<long>("RecruitmentID");
-
-                    b.Property<long>("ResumeID");
-
-                    b.Property<long>("ApplyStatus");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<DateTime>("UpdateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.HasKey("RecruitmentID", "ResumeID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Job_Apply");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Job_Category", b =>
-                {
-                    b.Property<long>("CategoryID");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.Property<long>("OrderNo");
-
-                    b.Property<long>("ParentID");
-
-                    b.HasKey("CategoryID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Job_Category");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Job_Recruitment", b =>
-                {
-                    b.Property<long>("RecruitmentID");
-
-                    b.Property<int>("ApplyCount");
-
-                    b.Property<string>("ContactEmail")
-                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
-
-                    b.Property<string>("ContactMan")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.Property<string>("ContactPhoto")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<int>("Description")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(max)");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<bool>("IsUnShelve");
-
-                    b.Property<string>("JobName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.Property<int>("JobType");
-
-                    b.Property<DateTime>("LastRefreshTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<int>("LookCount");
-
-                    b.Property<int>("MaxAge");
-
-                    b.Property<int>("MaxMonthly");
-
-                    b.Property<long>("MerchantID");
-
-                    b.Property<int>("MinAge");
-
-                    b.Property<int>("MinEducation");
-
-                    b.Property<int>("MinJobYearsType");
-
-                    b.Property<int>("MinMonthly");
-
-                    b.Property<int>("Sex");
-
-                    b.Property<int>("TagStatus");
-
-                    b.Property<int>("Welfares");
-
-                    b.Property<string>("WordAddress")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
-
-                    b.HasKey("RecruitmentID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Job_Recruitment");
-                });
-
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Category", b =>
                 {
                     b.Property<long>("CategoryID");
@@ -872,7 +766,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Mall_Evaluate");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.Mall_EvaluateStatistics", b =>
+            modelBuilder.Entity("Td.Kylin.Entity.Mall_EvaluateStatistic", b =>
                 {
                     b.Property<long>("ProductID");
 
@@ -884,7 +778,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.HasAnnotation("Relational:Schema", "dbo");
 
-                    b.HasAnnotation("Relational:TableName", "Mall_EvaluateStatistics");
+                    b.HasAnnotation("Relational:TableName", "Mall_EvaluateStatistic");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Order", b =>
@@ -1277,12 +1171,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<long>("BusinessID");
-
-                    b.Property<long>("AuditAdminID");
-
-                    b.Property<string>("AuditRemark");
-
-                    b.Property<string>("AudtiAdminName");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1853,65 +1741,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:Schema", "dbo");
 
                     b.HasAnnotation("Relational:TableName", "User_Profiles");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.User_Resume", b =>
-                {
-                    b.Property<long>("ResumeID");
-
-                    b.Property<int>("ApplyCount");
-
-                    b.Property<DateTime>("Both")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<string>("ContactPhoto")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<int>("Disabled");
-
-                    b.Property<int>("HopeSalary");
-
-                    b.Property<string>("Intro")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(max)");
-
-                    b.Property<string>("JobName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.Property<int>("JobYearsType");
-
-                    b.Property<int>("JoinTime");
-
-                    b.Property<DateTime>("LastRefreshTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<int>("LookCount");
-
-                    b.Property<int>("MaxEducation");
-
-                    b.Property<string>("Photo")
-                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
-
-                    b.Property<string>("RealName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.Property<int>("ResumeStatus");
-
-                    b.Property<int>("Sex");
-
-                    b.Property<DateTime>("UpdateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<string>("WantWordArea")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
-
-                    b.HasKey("ResumeID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "User_Resume");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_ShakeRecord", b =>

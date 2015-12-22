@@ -57,7 +57,7 @@ namespace Td.Kylin.DBCodeFirst
         public DbSet<Merchant_Certificate> Merchant_Certificate { get { return Set<Merchant_Certificate>(); } }
 
         /// <summary>
-        /// 商家业务关联
+        /// 商家业务
         /// </summary>
         public DbSet<Merchant_Business> Merchant_Business { get { return Set<Merchant_Business>(); } }
 
@@ -109,6 +109,11 @@ namespace Td.Kylin.DBCodeFirst
         /// 用户交易记录
         /// </summary>
         public DbSet<User_TradeRecords> User_TradeRecords { get { return Set<User_TradeRecords>(); } }
+
+        /// <summary>
+        /// 用户简历
+        /// </summary>
+        public DbSet<User_Resume> User_Resume { get { return Set<User_Resume>(); } }
 
         #endregion
 
@@ -243,7 +248,7 @@ namespace Td.Kylin.DBCodeFirst
         /// <summary>
         /// 商品评价统计
         /// </summary>
-        public DbSet<Mall_EvaluateStatistic> Mall_EvaluateStatistic { get { return Set<Mall_EvaluateStatistic>(); } }
+        public DbSet<Mall_EvaluateStatistics> Mall_EvaluateStatistics { get { return Set<Mall_EvaluateStatistics>(); } }
 
         /// <summary>
         /// 订单
@@ -321,7 +326,7 @@ namespace Td.Kylin.DBCodeFirst
         /// <summary>
         /// 福利分期
         /// </summary>
-        public DbSet<Welfare_Stage> Welfare_Stage { get{ return Set<Welfare_Stage>(); } }
+        public DbSet<Welfare_Stage> Welfare_Stage { get { return Set<Welfare_Stage>(); } }
 
         /// <summary>
         /// 福利参与人员
@@ -344,17 +349,31 @@ namespace Td.Kylin.DBCodeFirst
 
         #endregion
 
-        #region 商家服务（上门/预约相关）
-
-        /// <summary>
-        /// 商家服务分类
-        /// </summary>
-        public DbSet<MerchService_Category> MerchService_Category { get { return Set<MerchService_Category>(); } }
+        #region 平台提供的商家服务业务
 
         /// <summary>
         /// 商家服务下的业务
         /// </summary>
         public DbSet<MerchService_Business> MerchService_Business { get { return Set<MerchService_Business>(); } }
+
+        #endregion
+
+        #region 招聘
+
+        /// <summary>
+        /// 岗位类型
+        /// </summary>
+        public DbSet<Job_Category> Job_Category { get { return Set<Job_Category>(); } }
+
+        /// <summary>
+        /// 招聘信息
+        /// </summary>
+        public DbSet<Job_Recruitment> Job_Recruitment { get { return Set<Job_Recruitment>(); } }
+
+        /// <summary>
+        /// 招聘职位投递/申请
+        /// </summary>
+        public DbSet<Job_Apply> Job_Apply { get { return Set<Job_Apply>(); } }
 
         #endregion
     }

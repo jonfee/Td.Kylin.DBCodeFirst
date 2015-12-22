@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20151219091546_ModifyJobRecruitment")]
+    partial class ModifyJobRecruitment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -872,7 +873,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Mall_Evaluate");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.Mall_EvaluateStatistics", b =>
+            modelBuilder.Entity("Td.Kylin.Entity.Mall_EvaluateStatistic", b =>
                 {
                     b.Property<long>("ProductID");
 
@@ -884,7 +885,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.HasAnnotation("Relational:Schema", "dbo");
 
-                    b.HasAnnotation("Relational:TableName", "Mall_EvaluateStatistics");
+                    b.HasAnnotation("Relational:TableName", "Mall_EvaluateStatistic");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Order", b =>
