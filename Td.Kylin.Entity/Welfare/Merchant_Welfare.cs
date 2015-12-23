@@ -97,6 +97,23 @@ namespace Td.Kylin.Entity
         public int Status { get; set; }
 
         /// <summary>
+        /// 审核说明
+        /// </summary>
+        [Column(TypeName = "nvarchar(200)")]
+        public string AuditRemark { get; set; }
+
+        /// <summary>
+        /// 审核的管理员ID
+        /// </summary>
+        public long AuditAdminID { get; set; }
+
+        /// <summary>
+        /// 审核的管理员名称
+        /// </summary>
+        [Column(TypeName = "nvarchar(20)")]
+        public string AuditAdminName { get; set; }
+
+        /// <summary>
         /// 是否已删除
         /// </summary>
         public bool IsDelete { get; set; }
