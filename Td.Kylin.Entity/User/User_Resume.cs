@@ -60,6 +60,11 @@ namespace Td.Kylin.Entity
         public string WantWordArea { get; set; }
 
         /// <summary>
+        /// 职位类别ID
+        /// </summary>
+        public long CategoryID { get; set;}
+
+        /// <summary>
         /// 职位名称
         /// </summary>
         [Column(TypeName = "nvarchar(20)")]
@@ -100,6 +105,11 @@ namespace Td.Kylin.Entity
         /// 是否禁用
         /// </summary>
         public int Disabled { get; set; }
+
+        /// <summary>
+        /// 是否已删除
+        /// </summary>
+        public bool IsDelete { get; set; }
 
         /// <summary>
         /// 创建时间

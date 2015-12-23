@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20151222120757_addColumnForMerchantWelfare_PartNumber")]
+    partial class addColumnForMerchantWelfare_PartNumber
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -683,12 +684,8 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
-                    b.Property<bool>("MerchantIsDelete");
-
                     b.Property<DateTime>("UpdateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<bool>("UserIsDelete");
 
                     b.HasKey("RecruitmentID", "ResumeID");
 
@@ -701,8 +698,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 {
                     b.Property<long>("CategoryID");
 
-                    b.Property<int>("ApplyCount");
-
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
@@ -712,12 +707,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<long>("OrderNo");
 
                     b.Property<long>("ParentID");
-
-                    b.Property<int>("RecruitmentCount");
-
-                    b.Property<int>("ResumeCount");
-
-                    b.Property<int>("TagStatus");
 
                     b.HasKey("CategoryID");
 
@@ -731,8 +720,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<long>("RecruitmentID");
 
                     b.Property<int>("ApplyCount");
-
-                    b.Property<long>("CategoryID");
 
                     b.Property<string>("ContactEmail")
                         .HasAnnotation("Relational:ColumnType", "varchar(50)");
@@ -1363,9 +1350,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<bool>("Disabled");
 
-                    b.Property<string>("Icon")
-                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
-
                     b.Property<string>("Name")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
@@ -1883,8 +1867,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<DateTime>("Both")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
-                    b.Property<long>("CategoryID");
-
                     b.Property<string>("ContactPhoto")
                         .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
@@ -1897,8 +1879,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<string>("Intro")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(max)");
-
-                    b.Property<bool>("IsDelete");
 
                     b.Property<string>("JobName")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");

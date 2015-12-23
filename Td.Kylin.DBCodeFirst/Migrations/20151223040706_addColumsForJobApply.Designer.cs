@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20151223040706_addColumsForJobApply")]
+    partial class addColumsForJobApply
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")

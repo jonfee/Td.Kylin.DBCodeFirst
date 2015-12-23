@@ -53,6 +53,11 @@ namespace Td.Kylin.Entity
         public int SurplusNumber { get; set; }
 
         /// <summary>
+        /// 总参与人数
+        /// </summary>
+        public int PartNumber { get; set; }
+
+        /// <summary>
         /// 总计已中奖数量
         /// </summary>
         public int WinNumber { get; set; }

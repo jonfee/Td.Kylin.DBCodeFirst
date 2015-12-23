@@ -20,6 +20,11 @@ namespace Td.Kylin.Entity
         public long MerchantID { get; set; }
 
         /// <summary>
+        /// 职位类别ID
+        /// </summary>
+        public long CategoryID { get; set; }
+
+        /// <summary>
         /// 职位名称
         /// </summary>
         [Column(TypeName = "nvarchar(20)")]

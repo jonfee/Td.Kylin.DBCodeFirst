@@ -31,6 +31,12 @@ namespace Td.Kylin.Entity
 		///排序
 		///</summary>
 		public int OrderNo{get;set;}
+
+        /// <summary>
+        /// 图标
+        /// </summary>
+        [Column(TypeName = "varchar(100)")]
+        public string Icon { get; set; }
 				
 		///<summary>
 		///是否禁用

@@ -31,6 +31,26 @@ namespace Td.Kylin.Entity
         public long OrderNo { get; set; }
 
         /// <summary>
+        /// 总简历数
+        /// </summary>
+        public int ResumeCount { get; set; }
+
+        /// <summary>
+        /// 总招聘数
+        /// </summary>
+        public int RecruitmentCount { get; set; }
+
+        /// <summary>
+        /// 历史投递次数
+        /// </summary>
+        public int ApplyCount { get; set; }
+
+        /// <summary>
+        /// 标识状态集（热门）
+        /// </summary>
+        public int TagStatus { get; set; }
+
+        /// <summary>
         /// 数据创建时间
         /// </summary>
         [Column(TypeName ="datetime")]

@@ -25,6 +25,16 @@ namespace Td.Kylin.Entity
         public long ApplyStatus { get; set; }
 
         /// <summary>
+        /// 商家已删除投递记录
+        /// </summary>
+        public bool MerchantIsDelete { get; set; }
+
+        /// <summary>
+        /// 用户已删除投递记录
+        /// </summary>
+        public bool UserIsDelete { get; set; }
+
+        /// <summary>
         /// 投递/申请时间
         /// </summary>
         [Column(TypeName ="datetime")]
