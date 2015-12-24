@@ -23,6 +23,11 @@ namespace Td.Kylin.Entity
         public string PartCode { get; set; }
 
         /// <summary>
+        /// 是否设置提醒
+        /// </summary>
+        public bool IsRemind { get; set; }
+
+        /// <summary>
         /// 是否中奖
         /// </summary>
         public bool IsWin { get; set; }
