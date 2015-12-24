@@ -7,9 +7,9 @@ namespace Td.Kylin.Entity
     public class Welfare_PartUser
     {
         /// <summary>
-        /// 福利发放ID
+        /// 福利发放分期ID
         /// </summary>
-        public long StageID { get; set; }
+        public long PhasesID { get; set; }
 
         /// <summary>
         /// 参与用户ID
@@ -21,11 +21,6 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName = "varchar(16)")]
         public string PartCode { get; set; }
-
-        /// <summary>
-        /// 是否设置提醒
-        /// </summary>
-        public bool IsRemind { get; set; }
 
         /// <summary>
         /// 是否中奖

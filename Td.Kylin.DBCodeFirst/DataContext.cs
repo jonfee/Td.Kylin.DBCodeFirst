@@ -406,7 +406,12 @@ namespace Td.Kylin.DBCodeFirst
 
             modelBuilder.Entity<Welfare_PartUser>(entity =>
             {
-                entity.HasKey(p => new { p.StageID, p.UserID });
+                entity.HasKey(p => new { p.PhasesID, p.UserID });
+            });
+
+            modelBuilder.Entity<Welfare_Remind>(entity =>
+            {
+                entity.HasKey(p => new { p.PhasesID, p.UserID });
             });
 
             #endregion

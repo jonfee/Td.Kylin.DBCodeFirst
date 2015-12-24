@@ -333,6 +333,11 @@ namespace Td.Kylin.DBCodeFirst
         /// </summary>
         public DbSet<Welfare_PartUser> Welfare_PartUser { get { return Set<Welfare_PartUser>(); } }
 
+        /// <summary>
+        /// 福利开放参与前需要提醒的名称
+        /// </summary>
+        public DbSet<Welfare_Remind> Welfare_Remind { get { return Set<Welfare_Remind>(); } }
+
         #endregion
 
         #region 商家商品
