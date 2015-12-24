@@ -326,7 +326,7 @@ namespace Td.Kylin.DBCodeFirst
         /// <summary>
         /// 福利分期
         /// </summary>
-        public DbSet<Welfare_Stage> Welfare_Stage { get { return Set<Welfare_Stage>(); } }
+        public DbSet<Welfare_Phases> Welfare_Phases { get { return Set<Welfare_Phases>(); } }
 
         /// <summary>
         /// 福利参与人员

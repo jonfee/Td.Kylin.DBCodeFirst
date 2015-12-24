@@ -398,10 +398,10 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => p.WelfareID);
             });
 
-            modelBuilder.Entity<Welfare_Stage>(entity =>
+            modelBuilder.Entity<Welfare_Phases>(entity =>
             {
-                entity.Property(p => p.StageID).ValueGeneratedNever();
-                entity.HasKey(p => p.StageID);
+                entity.Property(p => p.PhasesID).ValueGeneratedNever();
+                entity.HasKey(p => p.PhasesID);
             });
 
             modelBuilder.Entity<Welfare_PartUser>(entity =>

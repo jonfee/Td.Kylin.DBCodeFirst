@@ -6,13 +6,13 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家福利分期
     /// </summary>
-    [Table("Welfare_Stage", Schema = "dbo")]
-    public class Welfare_Stage
+    [Table("Welfare_Phases", Schema = "dbo")]
+    public class Welfare_Phases
     {
         /// <summary>
         /// 福利发放ID
         /// </summary>
-        public long StageID { get; set; }
+        public long PhasesID { get; set; }
 
         /// <summary>
         /// 福利ID
