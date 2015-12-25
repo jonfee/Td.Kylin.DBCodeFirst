@@ -438,6 +438,16 @@ namespace Td.Kylin.DBCodeFirst
 
             #endregion
 
+            #region 商家服务
+
+            modelBuilder.Entity<MerchService_Goods>(entity =>
+            {
+                entity.Property(p => p.MerchantServiceID).ValueGeneratedNever();
+                entity.HasKey(p => p.MerchantServiceID);
+            });
+
+            #endregion
+
             #region 平台提供的商家服务业务
 
             modelBuilder.Entity<KylinService_Business>(entity =>

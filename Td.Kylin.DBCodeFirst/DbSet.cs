@@ -359,6 +359,15 @@ namespace Td.Kylin.DBCodeFirst
 
         #endregion
 
+        #region 商家服务
+
+        /// <summary>
+        /// 商家发布的服务
+        /// </summary>
+        public DbSet<MerchService_Goods> MerchService_Goods { get { return Set<MerchService_Goods>(); } }
+
+        #endregion
+
         #region 平台提供的商家服务业务
 
         /// <summary>

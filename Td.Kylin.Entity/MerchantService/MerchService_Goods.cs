@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Td.Kylin.Entity.MerchantService
+namespace Td.Kylin.Entity
 {
     /// <summary>
     /// 商家服务型产品
@@ -15,7 +12,7 @@ namespace Td.Kylin.Entity.MerchantService
         /// <summary>
         /// 服务产品ID
         /// </summary>
-        public long ServiceID { get; set; }
+        public long MerchantServiceID { get; set; }
 
         /// <summary>
         /// 商家ID
