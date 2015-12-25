@@ -364,7 +364,7 @@ namespace Td.Kylin.DBCodeFirst
         /// <summary>
         /// 商家服务下的业务
         /// </summary>
-        public DbSet<MerchService_Business> MerchService_Business { get { return Set<MerchService_Business>(); } }
+        public DbSet<KylinService_Business> KylinService_Business { get { return Set<KylinService_Business>(); } }
 
         #endregion
 

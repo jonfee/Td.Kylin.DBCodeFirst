@@ -31,6 +31,11 @@ namespace Td.Kylin.Entity
         public int OrderNo { get; set;}
 
         /// <summary>
+        /// 是否已删除
+        /// </summary>
+        public bool IsDelete { get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [Column(TypeName = "datetime")]

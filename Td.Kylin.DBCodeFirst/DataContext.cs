@@ -440,7 +440,7 @@ namespace Td.Kylin.DBCodeFirst
 
             #region 平台提供的商家服务业务
 
-            modelBuilder.Entity<MerchService_Business>(entity =>
+            modelBuilder.Entity<KylinService_Business>(entity =>
             {
                 entity.Property(p => p.BusinessID).ValueGeneratedNever();
                 entity.HasKey(p => p.BusinessID);
