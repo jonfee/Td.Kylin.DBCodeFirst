@@ -27,6 +27,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 服务主题（服务项目名称）
         /// </summary>
+        [Column(TypeName = "varchar(20)")]
         public long Title { get; set; }
 
         /// <summary>
@@ -42,6 +43,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 服务说明/描述
         /// </summary>
+        [Column(TypeName = "varchar(500)")]
         public string Description { get; set; }
 
         /// <summary>
@@ -72,6 +74,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
+        [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
     }
 }
