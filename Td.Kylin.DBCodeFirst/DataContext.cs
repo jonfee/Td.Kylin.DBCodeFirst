@@ -159,6 +159,12 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => p.ResumeID);
             });
 
+            modelBuilder.Entity<User_Welfare>(entity =>
+            {
+                entity.Property(p => p.ConsumerCode).ValueGeneratedNever();
+                entity.HasKey(p => p.ConsumerCode);
+            });
+
             #endregion
 
             #region 摇一摇

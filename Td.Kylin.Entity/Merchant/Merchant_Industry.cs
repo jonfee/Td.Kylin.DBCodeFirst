@@ -33,6 +33,11 @@ namespace Td.Kylin.Entity
 		public int OrderNo{get;set;}
 
         /// <summary>
+        /// 标识状态集（如：推荐等，以2的N次方存储状态值和）
+        /// </summary>
+        public int TagStatus { get; set; }
+
+        /// <summary>
         /// 图标
         /// </summary>
         [Column(TypeName = "varchar(100)")]

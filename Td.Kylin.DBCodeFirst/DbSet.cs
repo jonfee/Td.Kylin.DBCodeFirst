@@ -115,6 +115,11 @@ namespace Td.Kylin.DBCodeFirst
         /// </summary>
         public DbSet<User_Resume> User_Resume { get { return Set<User_Resume>(); } }
 
+        /// <summary>
+        /// 用户福利
+        /// </summary>
+        public DbSet<User_Welfare> User_Welfare { get { return Set<User_Welfare>(); } }
+
         #endregion
 
         #region 摇一摇

@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20151224112918_addColumnForUserWelfare_CreateTime")]
+    partial class addColumnForUserWelfare_CreateTime
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -1373,8 +1374,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<long>("ParentID");
 
-                    b.Property<int>("TagStatus");
-
                     b.HasKey("IndustryID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -2002,8 +2001,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<DateTime?>("AwardTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime>("CreateTime");
 
                     b.Property<DateTime>("ExpiryEndTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -2029,8 +2027,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Picture")
                         .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
-                    b.Property<DateTime?>("UseTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime?>("UseTime");
 
                     b.Property<long>("UserID");
 

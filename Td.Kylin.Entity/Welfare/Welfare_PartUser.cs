@@ -19,7 +19,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 参与编号
         /// </summary>
-        [Column(TypeName = "varchar(16)")]
+        [Column(TypeName = "varchar(12)")]
         public string PartCode { get; set; }
 
         /// <summary>
