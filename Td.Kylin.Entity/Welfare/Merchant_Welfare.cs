@@ -114,6 +114,12 @@ namespace Td.Kylin.Entity
         public string AuditAdminName { get; set; }
 
         /// <summary>
+        /// 审核时间
+        /// </summary>
+        [Column(TypeName = "datetime")]
+        public DateTime? AuditTime { get; set; }
+
+        /// <summary>
         /// 是否已删除
         /// </summary>
         public bool IsDelete { get; set; }
