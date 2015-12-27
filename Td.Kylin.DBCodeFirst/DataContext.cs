@@ -442,8 +442,8 @@ namespace Td.Kylin.DBCodeFirst
 
             modelBuilder.Entity<MerchService_Goods>(entity =>
             {
-                entity.Property(p => p.MerchantServiceID).ValueGeneratedNever();
-                entity.HasKey(p => p.MerchantServiceID);
+                entity.Property(p => p.ServiceGoodsID).ValueGeneratedNever();
+                entity.HasKey(p => p.ServiceGoodsID);
             });
 
             #endregion

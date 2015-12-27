@@ -12,7 +12,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 服务产品ID
         /// </summary>
-        public long MerchantServiceID { get; set; }
+        public long ServiceGoodsID { get; set; }
 
         /// <summary>
         /// 商家ID
@@ -23,6 +23,11 @@ namespace Td.Kylin.Entity
         /// 所属业务ID
         /// </summary>
         public long BusinessID { get; set; }
+
+        /// <summary>
+        /// 业务类型（如：上门|预约）
+        /// </summary>
+        public int BusinessType { get; set; }
 
         /// <summary>
         /// 服务主题（服务项目名称）
@@ -47,7 +52,7 @@ namespace Td.Kylin.Entity
         public string Description { get; set; }
 
         /// <summary>
-        /// 预约金
+        /// 预约服务时的预约金，上门服务无此配置项
         /// </summary>
         public decimal SubscriptionPrice { get; set; }
 
