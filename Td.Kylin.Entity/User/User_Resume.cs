@@ -109,7 +109,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 是否禁用
         /// </summary>
-        public int Disabled { get; set; }
+        public bool Disabled { get; set; }
 
         /// <summary>
         /// 是否已删除
