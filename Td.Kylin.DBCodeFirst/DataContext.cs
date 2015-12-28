@@ -477,6 +477,12 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => new { p.RecruitmentID, p.ResumeID });
             });
 
+            modelBuilder.Entity<Job_Searcher>(entity =>
+            {
+                entity.Property(p => p.SearcherID).ValueGeneratedNever();
+                entity.HasKey(p => p.SearcherID);
+            });
+
             #endregion
         }
     }

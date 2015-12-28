@@ -394,6 +394,11 @@ namespace Td.Kylin.DBCodeFirst
         /// </summary>
         public DbSet<Job_Apply> Job_Apply { get { return Set<Job_Apply>(); } }
 
+        /// <summary>
+        /// 职位搜索器
+        /// </summary>
+        public DbSet<Job_Searcher> Job_Searcher { get { return Set<Job_Searcher>(); } }
+
         #endregion
     }
 }
