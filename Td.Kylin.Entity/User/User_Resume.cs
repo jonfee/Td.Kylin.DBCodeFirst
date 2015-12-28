@@ -15,6 +15,11 @@ namespace Td.Kylin.Entity
         public long ResumeID { get; set; }
 
         /// <summary>
+        /// 用户ID
+        /// </summary>
+        public long UserID { get; set; }
+
+        /// <summary>
         /// 姓名
         /// </summary>
         [Column(TypeName ="nvarchar(20)")]
