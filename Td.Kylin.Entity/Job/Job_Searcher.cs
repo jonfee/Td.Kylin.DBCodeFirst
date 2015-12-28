@@ -75,6 +75,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
+        [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
     }
 }
