@@ -14,12 +14,6 @@ namespace Td.Kylin.Entity
         public long WelfareID { get; set; }
 
         /// <summary>
-        /// 标签
-        /// </summary>
-        [Column(TypeName = "nvarchar(10)")]
-        public string Tag { get; set; }
-
-        /// <summary>
         /// 价值
         /// </summary>
         public decimal Price { get; set; }

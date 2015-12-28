@@ -43,6 +43,12 @@ namespace Td.Kylin.Entity
         public string Picture { get; set; }
 
         /// <summary>
+        /// 标签
+        /// </summary>
+        [Column(TypeName = "nvarchar(10)")]
+        public string Tag { get; set; }
+
+        /// <summary>
         /// 商家预发放数量
         /// </summary>
         public int Number { get; set; }

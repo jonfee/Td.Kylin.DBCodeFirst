@@ -33,7 +33,7 @@ namespace Td.Kylin.Entity
         /// 服务主题（服务项目名称）
         /// </summary>
         [Column(TypeName = "varchar(20)")]
-        public long Title { get; set; }
+        public string Title { get; set; }
 
         /// <summary>
         /// 原价
