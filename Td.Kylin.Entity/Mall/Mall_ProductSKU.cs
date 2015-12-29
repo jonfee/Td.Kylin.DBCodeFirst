@@ -50,6 +50,11 @@ namespace Td.Kylin.Entity
 		///销售价
 		///</summary>
 		public decimal SalePrice{get;set;}
+
+        /// <summary>
+        /// 标识状态集
+        /// </summary>
+        public int TagStatus { get; set; }
 				
 		///<summary>
 		///是否已逻辑删除
