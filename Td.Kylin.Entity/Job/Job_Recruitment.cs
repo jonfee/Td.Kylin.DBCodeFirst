@@ -33,7 +33,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 招聘人数
         /// </summary>
-        public int Number { get; set; }
+        public int Count { get; set; }
 
         /// <summary>
         /// 最少提供月薪
