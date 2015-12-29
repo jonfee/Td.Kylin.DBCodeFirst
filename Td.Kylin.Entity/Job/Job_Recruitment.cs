@@ -31,6 +31,11 @@ namespace Td.Kylin.Entity
         public string JobName { get; set; }
 
         /// <summary>
+        /// 招聘人数
+        /// </summary>
+        public int Number { get; set; }
+
+        /// <summary>
         /// 最少提供月薪
         /// </summary>
         public int MinMonthly { get; set; }
