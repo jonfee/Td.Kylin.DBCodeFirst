@@ -22,7 +22,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 投递状态
         /// </summary>
-        public long ApplyStatus { get; set; }
+        public int ApplyStatus { get; set; }
 
         /// <summary>
         /// 商家已删除投递记录
