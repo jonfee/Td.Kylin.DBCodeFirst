@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20151229092008_addColumnForUserWelfare_Tag")]
+    partial class addColumnForUserWelfare_Tag
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -2105,8 +2106,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsAward");
-
-                    b.Property<bool>("IsDelete");
 
                     b.Property<bool>("IsUsed");
 

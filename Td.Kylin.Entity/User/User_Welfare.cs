@@ -53,6 +53,12 @@ namespace Td.Kylin.Entity
         public string Name { get; set; }
 
         /// <summary>
+        /// 标签
+        /// </summary>
+        [Column(TypeName = "nvarchar(10)")]
+        public string Tag { get; set; }
+
+        /// <summary>
         /// 图片
         /// </summary>
         [Column(TypeName = "varchar(100)")]
@@ -85,6 +91,11 @@ namespace Td.Kylin.Entity
         /// 是否已使用
         /// </summary>
         public bool IsUsed { get; set; }
+
+        /// <summary>
+        /// 是否已删除
+        /// </summary>
+        public bool IsDelete { get; set; }
 
         /// <summary>
         /// 使用的时间
