@@ -4,15 +4,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 商家业务
+    /// 服务职员业务关联
     /// </summary>
-    [Table("Merchant_Business", Schema = "dbo")]
-    public class Merchant_Business
+    [Table("Worker_Business", Schema = "dbo")]
+    public class Worker_Business
     {
         ///<summary>
-        ///商户ID
+        /// 服务职员ID
         ///</summary>
-        public long MerchantID { get; set; }
+        public long WorkerID { get; set; }
 
         /// <summary>
         /// 业务ID

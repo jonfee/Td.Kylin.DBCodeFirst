@@ -54,11 +54,12 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "nvarchar(200)")]
         public string AuditRemark{get;set;}
-				
-		///<summary>
-		///审核时间
-		///</summary>
-		public DateTime? AuditTime{get;set;}
+
+        ///<summary>
+        ///审核时间
+        ///</summary>
+        [Column(TypeName = "datetime")]
+        public DateTime? AuditTime{get;set;}
 				
 		///<summary>
 		///审核的管理员ID

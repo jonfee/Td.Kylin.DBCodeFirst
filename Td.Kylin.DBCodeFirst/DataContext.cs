@@ -484,6 +484,43 @@ namespace Td.Kylin.DBCodeFirst
             });
 
             #endregion
+
+            #region 服务职员
+
+            modelBuilder.Entity< Worker_Account>(entity =>
+            {
+                entity.Property(p => p.WorkerID).ValueGeneratedNever();
+                entity.HasKey(p => p.WorkerID);
+            });
+
+            modelBuilder.Entity<Worker_Certification>(entity =>
+            {
+                entity.Property(p => p.CertificateID).ValueGeneratedNever();
+                entity.HasKey(p => p.CertificateID);
+            });
+
+            modelBuilder.Entity<Worker_Business>(entity =>
+            {
+                entity.HasKey(p => new { p.WorkerID, p.BusinessID });
+            });
+
+            modelBuilder.Entity<Worker_Company>(entity =>
+            {
+                entity.HasKey(p => new { p.WorkerID, p.MerchantID });
+            });
+
+            modelBuilder.Entity<Worker_Profile>(entity =>
+            {
+                entity.Property(p => p.WorkerID).ValueGeneratedNever();
+                entity.HasKey(p => p.WorkerID);
+            });
+
+            modelBuilder.Entity<Worker_CompanyBusiness>(entity =>
+            {
+                entity.HasKey(p => new { p.WorkerID, p.MerchantID, p.BusinessID });
+            });
+
+            #endregion
         }
     }
 }

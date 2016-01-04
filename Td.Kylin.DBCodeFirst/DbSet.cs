@@ -400,5 +400,39 @@ namespace Td.Kylin.DBCodeFirst
         public DbSet<Job_Searcher> Job_Searcher { get { return Set<Job_Searcher>(); } }
 
         #endregion
+
+        #region 服务职员
+
+        /// <summary>
+        /// 服务职员账户
+        /// </summary>
+        public DbSet<Worker_Account> Worker_Account { get { return Set<Worker_Account>(); } }
+
+        /// <summary>
+        /// 服务职员认证信息
+        /// </summary>
+        public DbSet<Worker_Certification> Worker_Certification { get { return Set<Worker_Certification>(); } }
+
+        /// <summary>
+        /// 服务职员业务
+        /// </summary>
+        public DbSet<Worker_Business> Worker_Business { get { return Set<Worker_Business>(); } }
+
+        /// <summary>
+        /// 服务职员所服务的企业（商家）
+        /// </summary>
+        public DbSet<Worker_Company> Worker_Company { get { return Set<Worker_Company>(); } }
+
+        /// <summary>
+        /// 服务职员附属信息
+        /// </summary>
+        public DbSet<Worker_Profile> Worker_Profile { get { return Set<Worker_Profile>(); } }
+
+        /// <summary>
+        /// 服务职员在企业（商家）中的业务关系
+        /// </summary>
+        public DbSet<Worker_CompanyBusiness> Worker_CompanyBusiness { get { return Set<Worker_CompanyBusiness>(); } }
+
+        #endregion
     }
 }
