@@ -36,6 +36,16 @@ namespace Td.Kylin.Entity
         public bool IsOpenService { get; set; }
 
         /// <summary>
+        /// 报价方式（枚举：线下报价｜下单时报价｜上门时报价等）
+        /// </summary>
+        public int QuoteWays { get; set; }
+
+        /// <summary>
+        /// 是否允许个人开展业务
+        /// </summary>
+        public bool AllowPerson { get; set; }
+
+        /// <summary>
         /// 图标
         /// </summary>
         [Column(TypeName = "varchar(100)")]

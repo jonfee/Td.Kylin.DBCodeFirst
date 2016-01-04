@@ -456,6 +456,17 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => p.BusinessID);
             });
 
+            modelBuilder.Entity<KylinService_BusinessOptions>(entity =>
+            {
+                entity.Property(p => p.OptionID).ValueGeneratedNever();
+                entity.HasKey(p => p.OptionID);
+            });
+
+            modelBuilder.Entity<KylinService_BusinessConfig>(entity =>
+            {
+                entity.HasKey(p => new { p.BusinessID, p.OptionID });
+            });
+
             #endregion
 
             #region 招聘

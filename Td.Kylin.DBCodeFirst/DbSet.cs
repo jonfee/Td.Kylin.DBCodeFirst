@@ -371,9 +371,19 @@ namespace Td.Kylin.DBCodeFirst
         #region 平台提供的商家服务业务
 
         /// <summary>
-        /// 商家服务下的业务
+        /// 平台提供的服务业务
         /// </summary>
         public DbSet<KylinService_Business> KylinService_Business { get { return Set<KylinService_Business>(); } }
+
+        /// <summary>
+        /// 平台服务业务子项
+        /// </summary>
+        public DbSet<KylinService_BusinessOptions> KylinService_BusinessOptions { get { return Set<KylinService_BusinessOptions>(); } }
+
+        /// <summary>
+        /// 平台服务价格配置
+        /// </summary>
+        public DbSet<KylinService_BusinessConfig> KylinService_BusinessConfig { get { return Set<KylinService_BusinessConfig>(); } }
 
         #endregion
 
