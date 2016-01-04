@@ -61,6 +61,11 @@ namespace Td.Kylin.DBCodeFirst
         /// </summary>
         public DbSet<Merchant_Business> Merchant_Business { get { return Set<Merchant_Business>(); } }
 
+        /// <summary>
+        /// 商家交易记录
+        /// </summary>
+        public DbSet<Merchant_TradeRecords> Merchant_TradeRecords { get { return Set<Merchant_TradeRecords>(); } }
+
         #endregion
 
         #region 用户
@@ -387,6 +392,15 @@ namespace Td.Kylin.DBCodeFirst
 
         #endregion
 
+        #region 上门预约服务订单
+
+        /// <summary>
+        /// 服务订单
+        /// </summary>
+        public DbSet<KylinService_Order> KylinService_Order { get { return Set<KylinService_Order>(); } }
+
+        #endregion
+
         #region 招聘
 
         /// <summary>
@@ -442,6 +456,11 @@ namespace Td.Kylin.DBCodeFirst
         /// 服务职员在企业（商家）中的业务关系
         /// </summary>
         public DbSet<Worker_CompanyBusiness> Worker_CompanyBusiness { get { return Set<Worker_CompanyBusiness>(); } }
+
+        /// <summary>
+        /// 服务职员交易记录
+        /// </summary>
+        public DbSet<Worker_TradeRecords> Worker_TradeRecords { get { return Set<Worker_TradeRecords>(); } }
 
         #endregion
     }

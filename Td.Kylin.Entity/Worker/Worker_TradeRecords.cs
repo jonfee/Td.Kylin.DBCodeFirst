@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 用户交易记录
+    /// 服务职员交易记录
     /// </summary>
-    [Table("User_TradeRecords",Schema ="dbo")]
-    public class User_TradeRecords
+    [Table("Worker_TradeRecords",Schema ="dbo")]
+    public class Worker_TradeRecords
     {
         /// <summary>
         /// 交易ID
@@ -15,12 +15,12 @@ namespace Td.Kylin.Entity
         public long TradeID { get; set; }
 
         ///<summary>
-        ///用户ID
+        ///服务职员ID
         ///</summary>
-        public long UserID { get; set; }
+        public long WorkerID { get; set; }
 
         /// <summary>
-        /// 交易类型（如：购买商品，充值等）
+        /// 交易类型（如：服务销售｜提现等）
         /// </summary>
         public int TradeType { get; set; }
 

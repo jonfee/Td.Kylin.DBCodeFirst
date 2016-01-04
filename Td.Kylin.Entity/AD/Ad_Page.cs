@@ -12,8 +12,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///广告页ID
         ///</summary>
-        [ Column(TypeName = "bigint")]
-        public int PageID { get; set; }
+        public long PageID { get; set; }
 
         ///<summary>
         ///所属平台（客户端、商家端、员工端）

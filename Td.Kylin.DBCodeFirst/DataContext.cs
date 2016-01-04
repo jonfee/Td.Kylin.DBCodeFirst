@@ -95,6 +95,12 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => new { p.MerchantID, p.BusinessID });
             });
 
+            modelBuilder.Entity<Merchant_TradeRecords>(entity =>
+            {
+                entity.Property(p => p.TradeID).ValueGeneratedNever();
+                entity.HasKey(p => p.TradeID);
+            });
+
             #endregion
 
             #region 用户
@@ -469,6 +475,16 @@ namespace Td.Kylin.DBCodeFirst
 
             #endregion
 
+            #region 上门预约服务订单
+
+            modelBuilder.Entity<KylinService_Order>(entity =>
+           {
+               entity.Property(p => p.OrderID).ValueGeneratedNever();
+               entity.HasKey(p => p.OrderID);
+           });
+
+            #endregion
+
             #region 招聘
 
             modelBuilder.Entity<Job_Category>(entity =>
@@ -498,11 +514,11 @@ namespace Td.Kylin.DBCodeFirst
 
             #region 服务职员
 
-            modelBuilder.Entity< Worker_Account>(entity =>
-            {
-                entity.Property(p => p.WorkerID).ValueGeneratedNever();
-                entity.HasKey(p => p.WorkerID);
-            });
+            modelBuilder.Entity<Worker_Account>(entity =>
+           {
+               entity.Property(p => p.WorkerID).ValueGeneratedNever();
+               entity.HasKey(p => p.WorkerID);
+           });
 
             modelBuilder.Entity<Worker_Certification>(entity =>
             {
@@ -529,6 +545,12 @@ namespace Td.Kylin.DBCodeFirst
             modelBuilder.Entity<Worker_CompanyBusiness>(entity =>
             {
                 entity.HasKey(p => new { p.WorkerID, p.MerchantID, p.BusinessID });
+            });
+
+            modelBuilder.Entity<Worker_TradeRecords>(entity =>
+            {
+                entity.Property(p => p.TradeID).ValueGeneratedNever();
+                entity.HasKey(p => p.TradeID);
             });
 
             #endregion

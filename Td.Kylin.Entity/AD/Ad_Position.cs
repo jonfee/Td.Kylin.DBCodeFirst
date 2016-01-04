@@ -44,8 +44,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///所在广告页ID
         ///</summary>
-        [Column(TypeName = "int")]
-        public int PageID { get; set; }
+        public long PageID { get; set; }
 
         ///<summary>
         ///预览效果图

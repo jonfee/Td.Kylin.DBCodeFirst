@@ -33,11 +33,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 备注/描述/说明
         /// </summary>
+        [Column(TypeName = "nvarchar(300)")]
         public string Remark { get; set; }
 
         /// <summary>
         /// 创建时间
         /// </summary>
+        [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
     }
 }

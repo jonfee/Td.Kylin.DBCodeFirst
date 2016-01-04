@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160104110701_addKylinSserviceOrder")]
+    partial class addKylinSserviceOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -899,16 +900,14 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<long>("BusinessID");
 
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime>("CreateTime");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Name")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
-                    b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
+                    b.Property<string>("Remark");
 
                     b.HasKey("OptionID");
 
@@ -927,20 +926,17 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("BusinessType");
 
-                    b.Property<DateTime?>("ConfirmTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime?>("ConfirmTime");
 
                     b.Property<long>("ConsumerCode");
 
                     b.Property<decimal>("CouponAmount");
 
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime>("CreateTime");
 
                     b.Property<int>("EvaluateLevel");
 
-                    b.Property<DateTime?>("EvaluateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime?>("EvaluateTime");
 
                     b.Property<float>("Latitude");
 
@@ -950,36 +946,29 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<long>("MerchantID");
 
-                    b.Property<string>("Mobile")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
+                    b.Property<string>("Mobile");
 
                     b.Property<int>("Number");
 
                     b.Property<long>("OptionID");
 
-                    b.Property<string>("OrderCode")
-                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
+                    b.Property<string>("OrderCode");
 
-                    b.Property<DateTime?>("PaiedTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime?>("PaiedTime");
 
                     b.Property<int>("PaymentType");
 
                     b.Property<decimal>("PrepaidAmount");
 
-                    b.Property<DateTime?>("ReceivedTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime?>("ReceivedTime");
 
                     b.Property<int>("ServerType");
 
-                    b.Property<string>("ServiceAddress")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                    b.Property<string>("ServiceAddress");
 
-                    b.Property<string>("ServiceContent")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                    b.Property<string>("ServiceContent");
 
-                    b.Property<DateTime>("ServiceStartTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime>("ServiceStartTime");
 
                     b.Property<int>("Status");
 
@@ -989,26 +978,21 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<bool>("UserDelete");
 
-                    b.Property<DateTime?>("UserFinishTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime?>("UserFinishTime");
 
                     b.Property<long>("UserID");
 
-                    b.Property<string>("UserName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                    b.Property<string>("UserName");
 
-                    b.Property<string>("UserRemark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                    b.Property<string>("UserRemark");
 
                     b.Property<bool>("WorkerDelete");
 
-                    b.Property<DateTime?>("WorkerFinishTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime?>("WorkerFinishTime");
 
                     b.Property<long>("WorkerID");
 
-                    b.Property<string>("WorkerRemark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                    b.Property<string>("WorkerRemark");
 
                     b.HasKey("OrderID");
 
@@ -1609,34 +1593,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:Schema", "dbo");
 
                     b.HasAnnotation("Relational:TableName", "Merchant_Industry");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Merchant_TradeRecords", b =>
-                {
-                    b.Property<long>("TradeID");
-
-                    b.Property<decimal>("Amount");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<long>("MerchantID");
-
-                    b.Property<int>("PaymentType");
-
-                    b.Property<string>("TradeInfo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
-
-                    b.Property<string>("TradeNo")
-                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
-
-                    b.Property<int>("TradeType");
-
-                    b.HasKey("TradeID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Merchant_TradeRecords");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Welfare", b =>
@@ -2249,16 +2205,13 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<decimal>("Amount");
 
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime>("CreateTime");
 
                     b.Property<int>("PaymentType");
 
-                    b.Property<string>("TradeInfo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                    b.Property<string>("TradeInfo");
 
-                    b.Property<string>("TradeNo")
-                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
+                    b.Property<string>("TradeNo");
 
                     b.Property<int>("TradeType");
 
@@ -2664,34 +2617,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:Schema", "dbo");
 
                     b.HasAnnotation("Relational:TableName", "Worker_Profile");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Worker_TradeRecords", b =>
-                {
-                    b.Property<long>("TradeID");
-
-                    b.Property<decimal>("Amount");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<int>("PaymentType");
-
-                    b.Property<string>("TradeInfo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
-
-                    b.Property<string>("TradeNo")
-                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
-
-                    b.Property<int>("TradeType");
-
-                    b.Property<long>("WorkerID");
-
-                    b.HasKey("TradeID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Worker_TradeRecords");
                 });
         }
     }
