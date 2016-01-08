@@ -1704,6 +1704,15 @@
           "lib/net45/_._": {}
         }
       },
+      "Td.AspNet.Utils/1.0.0-rc1-26": {
+        "type": "package",
+        "compile": {
+          "lib/dnx451/Td.AspNet.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Td.AspNet.Utils.dll": {}
+        }
+      },
       "Td.Kylin.Entity/1.0.0": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
@@ -1719,6 +1728,15 @@
           "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
           "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
+        }
+      },
+      "Td.Kylin.WebApi/1.0.0-rc1-66": {
+        "type": "package",
+        "compile": {
+          "lib/dnx451/Td.Kylin.WebApi.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Td.Kylin.WebApi.dll": {}
         }
       }
     },
@@ -4032,6 +4050,15 @@
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
       },
+      "Td.AspNet.Utils/1.0.0-rc1-26": {
+        "type": "package",
+        "compile": {
+          "lib/dnxcore50/Td.AspNet.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Td.AspNet.Utils.dll": {}
+        }
+      },
       "Td.Kylin.Entity/1.0.0": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
@@ -4047,6 +4074,15 @@
           "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
           "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
+        }
+      },
+      "Td.Kylin.WebApi/1.0.0-rc1-66": {
+        "type": "package",
+        "compile": {
+          "lib/dnxcore50/Td.Kylin.WebApi.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Td.Kylin.WebApi.dll": {}
         }
       }
     },
@@ -5755,6 +5791,15 @@
           "lib/net45/_._": {}
         }
       },
+      "Td.AspNet.Utils/1.0.0-rc1-26": {
+        "type": "package",
+        "compile": {
+          "lib/dnx451/Td.AspNet.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Td.AspNet.Utils.dll": {}
+        }
+      },
       "Td.Kylin.Entity/1.0.0": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
@@ -5770,6 +5815,15 @@
           "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
           "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
+        }
+      },
+      "Td.Kylin.WebApi/1.0.0-rc1-66": {
+        "type": "package",
+        "compile": {
+          "lib/dnx451/Td.Kylin.WebApi.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Td.Kylin.WebApi.dll": {}
         }
       }
     },
@@ -7478,6 +7532,15 @@
           "lib/net45/_._": {}
         }
       },
+      "Td.AspNet.Utils/1.0.0-rc1-26": {
+        "type": "package",
+        "compile": {
+          "lib/dnx451/Td.AspNet.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Td.AspNet.Utils.dll": {}
+        }
+      },
       "Td.Kylin.Entity/1.0.0": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
@@ -7493,6 +7556,15 @@
           "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
           "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
+        }
+      },
+      "Td.Kylin.WebApi/1.0.0-rc1-66": {
+        "type": "package",
+        "compile": {
+          "lib/dnx451/Td.Kylin.WebApi.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Td.Kylin.WebApi.dll": {}
         }
       }
     },
@@ -10306,6 +10378,15 @@
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
       },
+      "Td.AspNet.Utils/1.0.0-rc1-26": {
+        "type": "package",
+        "compile": {
+          "lib/dnxcore50/Td.AspNet.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Td.AspNet.Utils.dll": {}
+        }
+      },
       "Td.Kylin.Entity/1.0.0": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
@@ -10321,6 +10402,15 @@
           "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
           "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
+        }
+      },
+      "Td.Kylin.WebApi/1.0.0-rc1-66": {
+        "type": "package",
+        "compile": {
+          "lib/dnxcore50/Td.Kylin.WebApi.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Td.Kylin.WebApi.dll": {}
         }
       }
     },
@@ -13134,6 +13224,15 @@
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
       },
+      "Td.AspNet.Utils/1.0.0-rc1-26": {
+        "type": "package",
+        "compile": {
+          "lib/dnxcore50/Td.AspNet.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Td.AspNet.Utils.dll": {}
+        }
+      },
       "Td.Kylin.Entity/1.0.0": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
@@ -13149,6 +13248,15 @@
           "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc1-final",
           "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
+        }
+      },
+      "Td.Kylin.WebApi/1.0.0-rc1-66": {
+        "type": "package",
+        "compile": {
+          "lib/dnxcore50/Td.Kylin.WebApi.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Td.Kylin.WebApi.dll": {}
         }
       }
     }
@@ -18447,6 +18555,32 @@
         "System.Xml.XDocument.4.0.11-beta-23516.nupkg.sha512",
         "System.Xml.XDocument.nuspec"
       ]
+    },
+    "Td.AspNet.Utils/1.0.0-rc1-26": {
+      "type": "package",
+      "sha512": "+ucdFEH6BFHz/I351Pb+R79/UU1byju+qvRkJuuRdUU90TU3k2VziE/MgvWMGYnjp/dZd3Uy/aqqc4D3ycYUzw==",
+      "files": [
+        "lib/dnx451/Td.AspNet.Utils.dll",
+        "lib/dnx451/Td.AspNet.Utils.xml",
+        "lib/dnxcore50/Td.AspNet.Utils.dll",
+        "lib/dnxcore50/Td.AspNet.Utils.xml",
+        "Td.AspNet.Utils.1.0.0-rc1-26.nupkg",
+        "Td.AspNet.Utils.1.0.0-rc1-26.nupkg.sha512",
+        "Td.AspNet.Utils.nuspec"
+      ]
+    },
+    "Td.Kylin.WebApi/1.0.0-rc1-66": {
+      "type": "package",
+      "sha512": "/2BwzV/VOepShZuxK7kaoF8MJpKvE7ei3IFnCIwdXJuELhSyu4+4oWqieXr2PvLjPlEXeU3kZ097jsjVBOHtHQ==",
+      "files": [
+        "lib/dnx451/Td.Kylin.WebApi.dll",
+        "lib/dnx451/Td.Kylin.WebApi.xml",
+        "lib/dnxcore50/Td.Kylin.WebApi.dll",
+        "lib/dnxcore50/Td.Kylin.WebApi.xml",
+        "Td.Kylin.WebApi.1.0.0-rc1-66.nupkg",
+        "Td.Kylin.WebApi.1.0.0-rc1-66.nupkg.sha512",
+        "Td.Kylin.WebApi.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -18462,7 +18596,9 @@
       "Microsoft.Extensions.Logging >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Logging.Console >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Logging.Debug >= 1.0.0-rc1-final",
-      "Td.Kylin.Entity >= 1.0.0-*"
+      "Td.AspNet.Utils >= 1.0.0-rc1-26",
+      "Td.Kylin.Entity >= 1.0.0-*",
+      "Td.Kylin.WebApi >= 1.0.0-rc1-66"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []

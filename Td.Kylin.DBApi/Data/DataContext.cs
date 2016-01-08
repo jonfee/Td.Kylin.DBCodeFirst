@@ -21,9 +21,44 @@ namespace Td.Kylin.DBCodeFirst
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            #region 系统模块接口授权
+            //系统模块接口授权
+            modelBuilder.Entity<System_ModuleAuthorize>(entity =>
+            {
+                entity.HasKey(p => new { p.ServerID, p.ModuleID });
+            });
 
-            modelBuilder.Entity<System_ModuleAuthorize>().HasKey(p => new { p.ServerID, p.ModuleID });
+            //管理员账户
+            modelBuilder.Entity<Admin_Account>(entity =>
+            {
+                entity.Property(p => p.AdminID).ValueGeneratedNever();
+                entity.HasKey(p => p.AdminID);
+            });
+
+            //商家行业
+            modelBuilder.Entity<Merchant_Industry>(entity =>
+            {
+                entity.Property(p => p.IndustryID).ValueGeneratedNever();
+                entity.HasKey(p => p.IndustryID);
+            });
+
+            #region 平台提供的商家服务业务
+
+            modelBuilder.Entity<KylinService_Business>(entity =>
+            {
+                entity.Property(p => p.BusinessID).ValueGeneratedNever();
+                entity.HasKey(p => p.BusinessID);
+            });
+
+            modelBuilder.Entity<KylinService_BusinessOptions>(entity =>
+            {
+                entity.Property(p => p.OptionID).ValueGeneratedNever();
+                entity.HasKey(p => p.OptionID);
+            });
+
+            modelBuilder.Entity<KylinService_BusinessConfig>(entity =>
+            {
+                entity.HasKey(p => new { p.BusinessID, p.OptionID });
+            });
 
             #endregion
         }

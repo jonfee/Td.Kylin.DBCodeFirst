@@ -36,7 +36,7 @@ namespace Td.Kylin.Entity
         public bool IsOpenService { get; set; }
 
         /// <summary>
-        /// 报价方式（枚举：线下报价｜下单时报价｜上门时报价等）
+        /// 报价方式（枚举：下单时报价｜上门时报价等）
         /// </summary>
         public int QuoteWays { get; set; }
 
