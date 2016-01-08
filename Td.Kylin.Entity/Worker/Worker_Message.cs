@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 用户消息
+    /// 服务人员消息
     /// </summary>
-    [Table("User_Message",Schema ="dbo")]
-    public class User_Message
+    [Table("Worker_Message", Schema = "dbo")]
+    public class Worker_Message
     {
         /// <summary>
         /// 消息ID
@@ -15,9 +15,9 @@ namespace Td.Kylin.Entity
         public long MessageID { get; set; }
 
         /// <summary>
-        /// 用户ID
+        /// 服务人员ID
         /// </summary>
-        public long UserID { get; set; }
+        public long WorkerID { get; set; }
 
         /// <summary>
         /// 消息类型
@@ -55,7 +55,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 消息发送时间
         /// </summary>
-        [Column(TypeName ="datetime")]
+        [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
     }
 }

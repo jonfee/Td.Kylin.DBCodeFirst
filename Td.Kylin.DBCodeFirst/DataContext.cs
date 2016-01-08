@@ -101,6 +101,12 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => p.TradeID);
             });
 
+            modelBuilder.Entity<Merchant_Message>(entity =>
+            {
+                entity.Property(p => p.MessageID).ValueGeneratedNever();
+                entity.HasKey(p => p.MessageID);
+            });
+
             #endregion
 
             #region 用户
@@ -169,6 +175,12 @@ namespace Td.Kylin.DBCodeFirst
             {
                 entity.Property(p => p.ConsumerCode).ValueGeneratedNever();
                 entity.HasKey(p => p.ConsumerCode);
+            });
+
+            modelBuilder.Entity<User_Message>(entity =>
+            {
+                entity.Property(p => p.MessageID).ValueGeneratedNever();
+                entity.HasKey(p => p.MessageID);
             });
 
             #endregion
@@ -551,6 +563,12 @@ namespace Td.Kylin.DBCodeFirst
             {
                 entity.Property(p => p.TradeID).ValueGeneratedNever();
                 entity.HasKey(p => p.TradeID);
+            });
+
+            modelBuilder.Entity<Worker_Message>(entity =>
+            {
+                entity.Property(p => p.MessageID).ValueGeneratedNever();
+                entity.HasKey(p => p.MessageID);
             });
 
             #endregion

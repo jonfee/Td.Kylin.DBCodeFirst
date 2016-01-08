@@ -66,6 +66,11 @@ namespace Td.Kylin.DBCodeFirst
         /// </summary>
         public DbSet<Merchant_TradeRecords> Merchant_TradeRecords { get { return Set<Merchant_TradeRecords>(); } }
 
+        /// <summary>
+        /// 商家消息
+        /// </summary>
+        public DbSet<Merchant_Message> Merchant_Message { get { return Set<Merchant_Message>(); } }
+
         #endregion
 
         #region 用户
@@ -124,6 +129,11 @@ namespace Td.Kylin.DBCodeFirst
         /// 用户福利
         /// </summary>
         public DbSet<User_Welfare> User_Welfare { get { return Set<User_Welfare>(); } }
+
+        /// <summary>
+        /// 用户消息
+        /// </summary>
+        public DbSet<User_Message> User_Message { get { return Set<User_Message>(); } }
 
         #endregion
 
@@ -461,6 +471,11 @@ namespace Td.Kylin.DBCodeFirst
         /// 服务职员交易记录
         /// </summary>
         public DbSet<Worker_TradeRecords> Worker_TradeRecords { get { return Set<Worker_TradeRecords>(); } }
+
+        /// <summary>
+        /// 服务人员消息
+        /// </summary>
+        public DbSet<Worker_Message> Worker_Message { get { return Set<Worker_Message>(); } }
 
         #endregion
     }
