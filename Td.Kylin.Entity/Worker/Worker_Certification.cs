@@ -17,7 +17,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         /// 服务职员ID
         ///</summary>
-        public long MerchantID { get; set; }
+        public long WorkerID { get; set; }
 
         ///<summary>
         ///认证类型（枚举：实名认证等，以2的N次方定义枚举）
