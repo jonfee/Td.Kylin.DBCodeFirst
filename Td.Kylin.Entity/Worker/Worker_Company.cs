@@ -20,7 +20,7 @@ namespace Td.Kylin.Entity
         public long MerchantID { get; set; }
 
         /// <summary>
-        /// 服务状态（即服务职员在商家下的服务状态，如：申请中|申请未通过|服务中|暂停服务|关系解除|黑名单等）
+        /// 服务状态（即服务职员在商家下的服务状态，如：已被邀请|已拒绝|申请中|申请未通过|服务中|暂停服务|关系解除|黑名单等）
         /// </summary>
         public int Status { get; set; }
 
