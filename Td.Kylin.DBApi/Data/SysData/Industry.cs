@@ -247,7 +247,7 @@ namespace Td.Kylin.DBApi.Data.SysData
                                  new Business {
                                      BusinessID =105109101,
                                      Name ="日常保洁",
-                                     AllowPerson =false,
+                                     AllowPerson =true,
                                      BusinessType =(int)Enum.EnumBusinessType.ShangMen,
                                      IsOpenService =true,
                                      PayerType =(int)Enum.EnumPayerType.User,
@@ -288,7 +288,15 @@ namespace Td.Kylin.DBApi.Data.SysData
                             Name = "回收",
                             Business=new Business[]
                             {
-                                new Business {BusinessID=105110101,Name="废品回收", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.ShangMen,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.Worker,QuoteWays=(int)Enum.EnumQuoteWays.Working}
+                                new Business {
+                                    BusinessID =105110101,
+                                    Name ="废品回收",
+                                    AllowPerson =true,
+                                    BusinessType =(int)Enum.EnumBusinessType.ShangMen,
+                                    IsOpenService =true,
+                                    PayerType =(int)Enum.EnumPayerType.Worker,
+                                    QuoteWays =(int)Enum.EnumQuoteWays.Working
+                                }
                             }
                         },
                         new IndustryOption{ ID = 105111, Name = "酒店"},

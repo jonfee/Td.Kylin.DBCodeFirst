@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160113031832_addColumnForMerchantGoodsGoods_MerchantID")]
+    partial class addColumnForMerchantGoodsGoods_MerchantID
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -1868,8 +1869,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<DateTime>("EndTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<bool>("IsDelete");
 
                     b.Property<DateTime>("LastTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");

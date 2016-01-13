@@ -15,6 +15,11 @@ namespace Td.Kylin.Entity
         public long GoodsID { get; set; }
 
         /// <summary>
+        /// 商家ID
+        /// </summary>
+        public long MerchantID { get; set; }
+
+        /// <summary>
         /// 商品名称
         /// </summary>
         [Column(TypeName = "nvarchar(30)")]

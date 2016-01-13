@@ -104,6 +104,11 @@ namespace Td.Kylin.Entity
         ///</summary>
         public bool Disable { get; set; }
 
+        /// <summary>
+        /// 是否已删除
+        /// </summary>
+        public bool IsDelete { get; set; }
+
         ///<summary>
         ///开始时间
         ///</summary>
