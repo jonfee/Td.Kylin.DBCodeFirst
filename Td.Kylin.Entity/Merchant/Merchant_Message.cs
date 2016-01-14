@@ -25,6 +25,12 @@ namespace Td.Kylin.Entity
         public int MessageType { get; set; }
 
         /// <summary>
+        /// 关联的数据ID
+        /// </summary>
+        [Column(TypeName = "varchar(36)")]
+        public string RefDataID { get; set; }
+
+        /// <summary>
         /// 消息主题
         /// </summary>
         [Column(TypeName = "nvarchar(30)")]
