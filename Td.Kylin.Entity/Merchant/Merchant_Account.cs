@@ -105,11 +105,16 @@ namespace Td.Kylin.Entity
 		///商家账户状态（枚举：正常，锁定等）
 		///</summary>
 		public int DataStatus{get;set;}
-				
-		///<summary>
-		///商家认证状态（枚举：法人已认证，营业执照已认证等，以2的N次方定义枚举并累计状态值）
-		///</summary>
-		public int CertificateStatus{get;set;}
+
+        /// <summary>
+        /// 抢单模式
+        /// </summary>
+        public int OrderMode { get; set; }
+
+        ///<summary>
+        ///商家认证状态（枚举：法人已认证，营业执照已认证等，以2的N次方定义枚举并累计状态值）
+        ///</summary>
+        public int CertificateStatus{get;set;}
 
         ///<summary>
         ///创建时间
