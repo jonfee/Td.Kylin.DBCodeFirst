@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160115134859_addColumnForKylinServiceOrder_CancelTime")]
+    partial class addColumnForKylinServiceOrder_CancelTime
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -1462,8 +1463,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 {
                     b.Property<long>("MerchantID");
 
-                    b.Property<decimal>("Balance");
-
                     b.Property<string>("BusinessBeginTime")
                         .HasAnnotation("Relational:ColumnType", "char(5)");
 
@@ -1479,8 +1478,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<string>("Description")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
-
-                    b.Property<decimal>("FreezeMoney");
 
                     b.Property<long>("IndustryID");
 
@@ -2551,8 +2548,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<decimal>("FreezeMoney");
 
                     b.Property<string>("LoginPassword")
                         .HasAnnotation("Relational:ColumnType", "varchar(50)");

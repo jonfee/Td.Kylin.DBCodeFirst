@@ -30,11 +30,16 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName = "varchar(50)")]
         public string LoginPassword { get; set; }
-
+        
         /// <summary>
-        /// 账户余额
+        /// 账户余额（不含冻结资金）
         /// </summary>
         public decimal Balance { get; set; }
+
+        /// <summary>
+        /// 冻结资金
+        /// </summary>
+        public decimal FreezeMoney { get; set; }
 
         /// <summary>
         /// 账户状态

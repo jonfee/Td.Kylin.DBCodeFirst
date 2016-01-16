@@ -95,11 +95,21 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "varchar(500)")]
         public string Pics{get;set;}
-				
-		///<summary>
-		///商户信息来源（枚举：注册商家、资料收录等）
-		///</summary>
-		public int SourceType{get;set;}
+
+        /// <summary>
+        /// 账户余额（不含冻结资金）
+        /// </summary>
+        public decimal Balance { get; set; }
+
+        /// <summary>
+        /// 冻结资金
+        /// </summary>
+        public decimal FreezeMoney { get; set; }
+
+        ///<summary>
+        ///商户信息来源（枚举：注册商家、资料收录等）
+        ///</summary>
+        public int SourceType{get;set;}
 				
 		///<summary>
 		///商家账户状态（枚举：正常，锁定等）

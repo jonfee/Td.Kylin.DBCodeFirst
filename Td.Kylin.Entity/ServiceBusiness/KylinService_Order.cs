@@ -154,6 +154,12 @@ namespace Td.Kylin.Entity
         public DateTime CreateTime { get; set; }
 
         /// <summary>
+        /// 订单取消时间
+        /// </summary>
+        [Column(TypeName = "datetime")]
+        public DateTime? CancelTime { get; set; }
+
+        /// <summary>
         /// 商家接单时间
         /// </summary>
         [Column(TypeName = "datetime")]
