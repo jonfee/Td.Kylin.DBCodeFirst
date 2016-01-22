@@ -57,6 +57,11 @@ namespace Td.Kylin.Entity
         public int MinMonthly { get; set; }
 
         /// <summary>
+        /// 最高月薪
+        /// </summary>
+        public int MaxMonthly { get; set; }
+
+        /// <summary>
         /// 福利待遇（枚举：五险一金|房补等，以2的N次方定义枚举）
         /// </summary>
         public int Welfares { get; set; }
