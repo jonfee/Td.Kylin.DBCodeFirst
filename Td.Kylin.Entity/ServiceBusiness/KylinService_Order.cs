@@ -166,6 +166,12 @@ namespace Td.Kylin.Entity
         public DateTime? ReceivedTime { get; set; }
 
         /// <summary>
+        /// 派单时间
+        /// </summary>
+        [Column(TypeName = "datetime")]
+        public DateTime? AllotTime { get; set; }
+
+        /// <summary>
         /// 订单确定时间（即双方达成一致，默认为商家接单时间）
         /// </summary>
         [Column(TypeName = "datetime")]
