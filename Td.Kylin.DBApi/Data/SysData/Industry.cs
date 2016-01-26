@@ -299,7 +299,7 @@ namespace Td.Kylin.DBApi.Data.SysData
                                 }
                             }
                         },
-                        new IndustryOption{ ID = 105111, Name = "酒店"},
+                        new IndustryOption{ ID = 105111, Name = "装修设计"},
                         new IndustryOption{ ID = 105112, Name = "公司企业"},
                         new IndustryOption{ ID = 105113, Name = "手机维修"},
                         new IndustryOption{
