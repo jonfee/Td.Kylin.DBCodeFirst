@@ -23,6 +23,7 @@ namespace Td.Kylin.DBApi.Data.SysData
                 list.Add(new System_ModuleAuthorize { ServerID = "S0100", ModuleID = "U001", AppSecret = "a2228c69-119f-499f-aefc-be089fed409c", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
                 list.Add(new System_ModuleAuthorize { ServerID = "S0100", ModuleID = "U002", AppSecret = "ab11176a-224b-48f7-b669-436794546e49", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
                 list.Add(new System_ModuleAuthorize { ServerID = "S0100", ModuleID = "U003", AppSecret = "93bc82d1-bd41-4892-b3f5-0e7a554eff64", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
+                list.Add(new System_ModuleAuthorize { ServerID = "S0100", ModuleID = "V001", AppSecret = "bd4182d1-93bc-8942-f5b3-ff640e7a554e", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
                 list.Add(new System_ModuleAuthorize { ServerID = "S0200", ModuleID = "T001", AppSecret = "960a08e0-9447-4530-bf59-4506873126dd", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
                 list.Add(new System_ModuleAuthorize { ServerID = "S0200", ModuleID = "T002", AppSecret = "ee55cb51-8e95-4afc-92ec-58958782e4ed", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
                 list.Add(new System_ModuleAuthorize { ServerID = "S0200", ModuleID = "T003", AppSecret = "3d16024f-d7fb-4f64-b0f1-72d0112671ea", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });

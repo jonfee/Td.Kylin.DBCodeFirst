@@ -307,13 +307,13 @@ namespace Td.Kylin.DBApi.Data.SysData
                             Name = "汽车服务",
                             Business=new Business[]
                             {
-                                new Business {BusinessID=105114101,Name="到店洗车", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
+                                new Business {BusinessID=105114101,Name="到店洗车", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.CreateOrder},
                                 new Business {BusinessID=105114102,Name="汽车保养", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                                new Business {BusinessID=105114103,Name="汽车美容", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
+                                new Business {BusinessID=105114103,Name="汽车美容", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.CreateOrder},
                                 new Business {BusinessID=105114104,Name="汽车维修", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                                new Business {BusinessID=105114105,Name="汽车轮胎", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
+                                new Business {BusinessID=105114105,Name="汽车轮胎", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.CreateOrder},
                                 new Business {BusinessID=105114106,Name="汽车改装", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                                new Business {BusinessID=105114107,Name="汽车救援", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working}
+                                new Business {BusinessID=105114107,Name="汽车救援", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.CreateOrder}
                             }
                         },
                         new IndustryOption{ ID = 105115, Name = "代驾"},

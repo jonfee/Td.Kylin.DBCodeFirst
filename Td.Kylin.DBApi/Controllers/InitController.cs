@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNet.Mvc;
+using System;
+using System.IO;
 using Td.Kylin.DBApi.Data;
 using Td.Kylin.WebApi;
 
@@ -43,6 +45,38 @@ namespace Td.Kylin.DBApi.Controllers
             var result = InitProvider.InitIndustry();
 
             return KylinOk(result);
+        }
+
+        [HttpGet("img")]
+        public IActionResult GetImgUrl(int width, int height)
+        {
+            string img = @"http://139.129.194.132:9000/users/headphoto/6236979476647968772.jpg";
+
+            string newImg = GetThumbnailPath(img, width, height);
+
+            return Ok(newImg);
+        }
+
+        /// <summary>
+        /// 获取缩略图地址
+        /// </summary>
+        /// <param name="imgUrl">原图地址，如：/upload/photo/aaa.jpg</param>
+        /// <param name="width">缩略图宽度（px）</param>
+        /// <param name="height">缩略图高度（px）</param>
+        /// <returns></returns>
+        public string GetThumbnailPath(string imgUrl, int width, int height)
+        {
+            if (string.IsNullOrEmpty(imgUrl)) return string.Empty;
+
+            string[] arr = imgUrl.Split(new[] { @"\", @"/" }, StringSplitOptions.RemoveEmptyEntries);
+
+            int len = arr.Length;
+
+            string fn = arr[len - 1];
+
+            arr[len - 1] = string.Format("T_W{0}H{1}_{2}", width, height, fn);
+
+            return Path.Combine(arr).ToLower();
         }
     }
 }
