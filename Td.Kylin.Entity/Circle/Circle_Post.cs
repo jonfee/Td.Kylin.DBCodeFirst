@@ -9,8 +9,8 @@ namespace Td.Kylin.Entity
     /// 社区评论
     /// </summary>
     [Table("Circle_Post", Schema = "dbo")]
-    public class Circle_Post
-	{		
+    public class Circle_Post : BaseEntity
+    {		
 		///<summary>
 		///数据ID
 		///</summary>

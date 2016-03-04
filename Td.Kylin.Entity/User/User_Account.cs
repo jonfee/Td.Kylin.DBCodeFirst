@@ -9,8 +9,8 @@ namespace Td.Kylin.Entity
     /// 用户账户
     /// </summary>
     [Table("User_Account",Schema ="dbo")]
-    public class User_Account
-	{
+    public class User_Account : BaseEntity
+    {
         ///<summary>
         ///用户ID
         ///</summary>

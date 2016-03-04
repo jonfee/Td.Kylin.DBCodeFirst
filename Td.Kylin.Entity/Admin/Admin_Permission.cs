@@ -8,8 +8,8 @@ namespace Td.Kylin.Entity
     /// 管理员权限
     /// </summary>
     [Table("Admin_Permission",Schema ="dbo")]
-    public class Admin_Permission
-	{
+    public class Admin_Permission : BaseEntity
+    {
         ///<summary>
         ///管理员ID
         ///</summary>

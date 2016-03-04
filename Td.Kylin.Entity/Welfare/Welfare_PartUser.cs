@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Td.Kylin.Entity
 {
     [Table("Welfare_PartUser",Schema ="dbo")]
-    public class Welfare_PartUser
+    public class Welfare_PartUser : BaseEntity
     {
         /// <summary>
         /// 福利发放分期ID

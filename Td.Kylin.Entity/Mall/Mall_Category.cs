@@ -8,8 +8,8 @@ namespace Td.Kylin.Entity
     /// 商品分类
     /// </summary>
     [Table("Mall_Category",Schema ="dbo")]
-    public class Mall_Category
-	{		
+    public class Mall_Category : BaseEntity
+    {		
 		///<summary>
 		///商品类目ID
 		///</summary>

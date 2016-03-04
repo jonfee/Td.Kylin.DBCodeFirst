@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160304082149_AddAreaOperator")]
+    partial class AddAreaOperator
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -141,10 +142,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Realname")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<string>("UserPic")
                         .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
@@ -171,10 +168,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<bool>("DataStatus");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.HasKey("AdminID", "ModuleID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -200,10 +193,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<string>("LoginPassword")
                         .HasAnnotation("Relational:ColumnType", "varchar(50)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.HasKey("OperatorID");
 
@@ -249,10 +238,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Remark")
                         .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.HasKey("OperatorID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -290,10 +275,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Remark")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<DateTime>("StartTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
@@ -326,10 +307,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<bool>("IsImage");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<DateTime>("UploadTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
@@ -347,10 +324,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<long>("AttachmentID");
 
                     b.Property<long>("PostID");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.HasKey("AttachmentID", "PostID");
 
@@ -378,10 +351,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("OrderNo");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.HasKey("CategoryID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -395,10 +364,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<DateTime>("CheckTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<long>("UserId");
 
@@ -425,10 +390,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<int>("EventStatus");
 
                     b.Property<int>("Remind");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime>("StartTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -457,10 +418,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<bool>("NeedRemind");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<long>("UserID");
 
                     b.Property<string>("Username")
@@ -484,10 +441,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<DateTime>("LastTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.HasKey("ForumID", "UserID");
 
@@ -538,10 +491,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("ReplyCount");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("TodayReplyCount");
 
                     b.Property<int>("TodayTopicCount");
@@ -577,10 +526,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<decimal>("Price");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<bool>("Saled");
 
                     b.Property<long>("TopicID");
@@ -608,10 +553,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Name")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.HasKey("LevelID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -628,10 +569,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<float>("Longitude");
 
                     b.Property<long>("PostID");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<long>("TopicID");
 
@@ -658,10 +595,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<int>("Reviews");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("Support");
 
@@ -708,10 +641,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<long>("RespondID");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<long>("TopicID");
 
                     b.Property<long>("UserID");
@@ -739,10 +668,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<string>("ReplyUsername")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<long>("TopicID");
 
@@ -800,10 +725,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<decimal>("Price");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("TagStatus");
 
                     b.Property<string>("Title")
@@ -853,10 +774,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Reason")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.HasKey("ComplaintsID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -876,10 +793,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("MerchantIsDelete");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime>("UpdateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -912,10 +825,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<int>("RecruitmentCount");
 
                     b.Property<int>("ResumeCount");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("TagStatus");
 
@@ -979,10 +888,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("MinMonthly");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("Sex");
 
                     b.Property<int>("TagStatus");
@@ -1022,10 +927,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<int>("MinMonthly");
 
                     b.Property<int>("PublishDays");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("SearcherName")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
@@ -1075,10 +976,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("QuoteWays");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("TagStatus");
 
                     b.HasKey("BusinessID");
@@ -1096,10 +993,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<string>("Remark")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<decimal>("UnitPrice");
 
@@ -1131,10 +1024,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<string>("Remark")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.HasKey("OptionID");
 
@@ -1201,10 +1090,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<DateTime?>("ReceivedTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("ServerType");
 
@@ -1280,10 +1165,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("ProductNumber");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.HasKey("CategoryID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -1303,10 +1184,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<int>("OrderNo");
 
                     b.Property<int>("ProductNumber");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("SearchTimes");
 
@@ -1343,10 +1220,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<DateTime?>("ReplyTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<long>("SnapshotID");
 
                     b.Property<long>("UserID");
@@ -1365,10 +1238,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<int>("EvaluateLevel");
 
                     b.Property<int>("Counts");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.HasKey("ProductID", "EvaluateLevel");
 
@@ -1429,10 +1298,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Remark")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<DateTime?>("ShipTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
@@ -1491,10 +1356,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<string>("Publisher")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<decimal>("SalePrice");
 
@@ -1559,10 +1420,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Publisher")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("SalesStatus");
 
                     b.Property<int>("SoldNumber");
@@ -1599,10 +1456,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<decimal>("MarketPrice");
 
                     b.Property<long>("ProductID");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("SKU")
                         .HasAnnotation("Relational:ColumnType", "varchar(18)");
@@ -1651,10 +1504,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("PromotionType");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.HasKey("PromotionID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -1669,10 +1518,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<decimal>("MinMoney");
 
                     b.Property<long>("PromotionID");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Value")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
@@ -1695,10 +1540,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("MaxNumber");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("SoldNumber");
 
                     b.HasKey("PromotionID", "ProductID");
@@ -1718,10 +1559,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<int>("Number");
 
                     b.Property<long>("ProductID");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<long>("SkuID");
 
@@ -1790,10 +1627,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Pics")
                         .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("SourceType");
 
                     b.Property<string>("Street")
@@ -1825,10 +1658,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<DateTime?>("OpenServiceTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("ServiceStatus");
 
@@ -1874,10 +1703,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Pics")
                         .HasAnnotation("Relational:ColumnType", "varchar(300)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.HasKey("CertificateID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -1903,10 +1728,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<int>("OrderNo");
 
                     b.Property<long>("ParentID");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("TagStatus");
 
@@ -1938,10 +1759,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("RefDataID")
                         .HasAnnotation("Relational:ColumnType", "varchar(36)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<string>("Sign")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
@@ -1967,10 +1784,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<int>("PaymentType");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("TradeInfo")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
@@ -2036,10 +1849,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Regular")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("Status");
 
                     b.Property<int>("SurplusNumber");
@@ -2074,10 +1883,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("OrderNo");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.HasKey("CategoryID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -2109,10 +1914,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<string>("Pic")
                         .HasAnnotation("Relational:ColumnType", "varchar(100)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("SaleNumber");
 
@@ -2150,10 +1951,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<decimal>("OriginalPrice");
 
                     b.Property<decimal>("Price");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("SaleNumber");
 
@@ -2216,10 +2013,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<long>("PushAdminID");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<DateTime>("StartTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
@@ -2253,10 +2046,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<decimal>("Price");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Title")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
@@ -2310,10 +2099,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("Role");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<DateTime>("UpdateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
@@ -2342,10 +2127,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<string>("Phone")
                         .HasAnnotation("Relational:ColumnType", "varchar(11)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("Type");
 
@@ -2383,10 +2164,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "varchar(32)");
 
                     b.Property<string>("PaymentPassword");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("UserPic")
                         .HasAnnotation("Relational:ColumnType", "varchar(50)");
@@ -2433,10 +2210,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("PostCode")
                         .HasAnnotation("Relational:ColumnType", "char(6)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<long>("UserID");
 
                     b.HasKey("AddressID");
@@ -2459,10 +2232,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<int>("Logins");
 
                     b.Property<int?>("OS");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<long>("UserID");
 
@@ -2495,10 +2264,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("Role");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("Score");
 
                     b.Property<int>("SupportCount");
@@ -2524,10 +2289,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<float>("Latitude");
 
                     b.Property<float>("Longitude");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<long>("UserID");
 
@@ -2557,10 +2318,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("RefDataID")
                         .HasAnnotation("Relational:ColumnType", "varchar(36)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<string>("Sign")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
@@ -2589,10 +2346,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<float>("Longitude");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<string>("Token")
                         .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
@@ -2612,10 +2365,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<string>("PresentAddress")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("Sex");
 
@@ -2677,10 +2426,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("ResumeStatus");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("Sex");
 
                     b.Property<DateTime>("UpdateTime")
@@ -2709,10 +2454,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("LimitCount");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("TodayCount");
 
                     b.Property<DateTime>("UpdatetTime")
@@ -2735,10 +2476,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("PaymentType");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("TradeInfo")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
@@ -2793,10 +2530,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Picture")
                         .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<string>("Tag")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
 
@@ -2828,10 +2561,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<bool>("MustUseForOriginalPrice");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("UseType");
 
                     b.HasKey("WelfareID");
@@ -2849,10 +2578,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<decimal>("Price");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.HasKey("WelfareID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -2869,10 +2594,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<int>("DrawType");
 
                     b.Property<decimal>("OriginalPrice");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.HasKey("WelfareID");
 
@@ -2900,10 +2621,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("PartCode")
                         .HasAnnotation("Relational:ColumnType", "varchar(12)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.HasKey("PhasesID", "UserID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -2928,10 +2645,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<int>("Number");
 
                     b.Property<int>("PartNumber");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime>("StartTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -2960,10 +2673,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.HasKey("PhasesID", "UserID");
 
@@ -2995,10 +2704,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("RegistType");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("WorkerType");
 
                     b.HasKey("WorkerID");
@@ -3027,10 +2732,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<DateTime?>("OpenServiceTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("ServiceStatus");
 
@@ -3074,10 +2775,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Pics")
                         .HasAnnotation("Relational:ColumnType", "varchar(300)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<long>("WorkerID");
 
                     b.HasKey("CertificateID");
@@ -3098,10 +2795,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("Status");
 
@@ -3135,10 +2828,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<string>("Photo");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.HasKey("WorkerID", "MerchantID", "BusinessID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
@@ -3164,10 +2853,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<string>("RefDataID")
                         .HasAnnotation("Relational:ColumnType", "varchar(36)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Sign")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
@@ -3226,10 +2911,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Photo")
                         .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
                     b.Property<int>("Sex");
 
                     b.Property<bool>("SpringFestivalIsBack");
@@ -3254,10 +2935,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("PaymentType");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("TradeInfo")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(100)");

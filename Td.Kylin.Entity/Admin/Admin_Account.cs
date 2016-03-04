@@ -7,8 +7,8 @@ namespace Td.Kylin.Entity
     /// 管理员账户
     /// </summary>
     [Table("Admin_Account", Schema ="dbo")]
-    public class Admin_Account
-	{
+    public class Admin_Account : BaseEntity
+    {
         ///<summary>
         ///管理员ID
         ///</summary>

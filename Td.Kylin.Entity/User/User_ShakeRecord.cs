@@ -8,8 +8,8 @@ namespace Td.Kylin.Entity
     /// 用户摇一摇记录
     /// </summary>
     [Table("User_ShakeRecord", Schema = "dbo")]
-    public class User_ShakeRecord
-	{
+    public class User_ShakeRecord : BaseEntity
+    {
         ///<summary>
         ///用户ID
         ///</summary>

@@ -8,8 +8,8 @@ namespace Td.Kylin.Entity
     /// 帖子及评论位置
     /// </summary>
     [Table("Circle_Location", Schema = "dbo")]
-    public class Circle_Location
-	{		
+    public class Circle_Location : BaseEntity
+    {		
 		///<summary>
 		///数据ID
 		///</summary>

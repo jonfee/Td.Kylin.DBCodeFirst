@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 商家服务型产品
     /// </summary>
     [Table("MerchService_Goods", Schema = "dbo")]
-    public class MerchService_Goods
+    public class MerchService_Goods : BaseEntity
     {
         /// <summary>
         /// 服务产品ID

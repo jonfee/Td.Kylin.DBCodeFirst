@@ -6,8 +6,8 @@ namespace Td.Kylin.Entity
     /// 商品SKU
     /// </summary>
     [Table("Mall_ProductSKU", Schema = "dbo")]
-    public class Mall_ProductSKU
-	{		
+    public class Mall_ProductSKU : BaseEntity
+    {		
 		///<summary>
 		///Sku编号ID
 		///</summary>

@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// 赠送的商品福利信息（从）
     /// </summary>
     [Table("Welfare_DonatedGoods", Schema = "dbo")]
-    public class Welfare_DonatedGoods
+    public class Welfare_DonatedGoods : BaseEntity
     {
         /// <summary>
         /// 优惠券福利ID

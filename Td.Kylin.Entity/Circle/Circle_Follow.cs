@@ -8,8 +8,8 @@ namespace Td.Kylin.Entity
     /// 圈子关注
     /// </summary>
     [Table("Circle_Follow", Schema = "dbo")]
-    public class Circle_Follow
-	{		
+    public class Circle_Follow : BaseEntity
+    {		
 		///<summary>
 		///版面圈子ID
 		///</summary>

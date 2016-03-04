@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 服务人员消息
     /// </summary>
     [Table("Worker_Message", Schema = "dbo")]
-    public class Worker_Message
+    public class Worker_Message : BaseEntity
     {
         /// <summary>
         /// 消息ID

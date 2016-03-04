@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 自定义商品分类
     /// </summary>
     [Table("MerchGoods_Category",Schema ="dbo")]
-    public class MerchGoods_Category
+    public class MerchGoods_Category : BaseEntity
     {
         /// <summary>
         /// 自定义分类ID

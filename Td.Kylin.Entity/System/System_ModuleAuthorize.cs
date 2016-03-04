@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// 系统模块接口授权
     /// </summary>
     [Table("System_ModuleAuthorize", Schema = "dbo")]
-    public class System_ModuleAuthorize
+    public class System_ModuleAuthorize : BaseEntity
     {
         ///<summary>
         ///服务系统编号（系统硬编码代号）

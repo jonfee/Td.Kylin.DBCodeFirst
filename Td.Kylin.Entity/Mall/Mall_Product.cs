@@ -7,8 +7,8 @@ namespace Td.Kylin.Entity
     /// 商品
     /// </summary>
     [Table("Mall_Product", Schema = "dbo")]
-    public class Mall_Product
-	{		
+    public class Mall_Product : BaseEntity
+    {		
 		///<summary>
 		///商品ID
 		///</summary>

@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 福利开放参与前的提醒名单
     /// </summary>
     [Table("Welfare_Remind", Schema = "dbo")]
-    public class Welfare_Remind
+    public class Welfare_Remind : BaseEntity
     {
         /// <summary>
         /// 福利发放分期ID

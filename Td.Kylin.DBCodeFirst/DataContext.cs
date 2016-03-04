@@ -572,6 +572,34 @@ namespace Td.Kylin.DBCodeFirst
             });
 
             #endregion
+
+            #region 区域
+            modelBuilder.Entity<System_Area>(entity =>
+            {
+                entity.Property(p => p.AreaID).ValueGeneratedNever();
+                entity.HasKey(p => p.AreaID);
+            });
+            #endregion
+
+            #region 运营商
+            //运营商
+            modelBuilder.Entity<Area_Operator>(entity =>
+            {
+                entity.Property(p => p.OperatorID).ValueGeneratedNever();
+                entity.HasKey(p => p.OperatorID);
+            });
+            //运营商附属信息
+            modelBuilder.Entity<Area_OperatorProfile>(entity =>
+            {
+                entity.Property(p => p.OperatorID).ValueGeneratedNever();
+                entity.HasKey(p => p.OperatorID);
+            });
+            //运营商及运营的区域关联
+            modelBuilder.Entity<Area_OperatorRelation>(entity =>
+            {
+                entity.HasKey(p => new { p.OperatorID, p.AreaID });
+            });
+            #endregion
         }
     }
 }

@@ -9,8 +9,8 @@ namespace Td.Kylin.Entity
     /// 用户地址库
     /// </summary>
     [Table("User_Address",Schema ="dbo")]
-    public class User_Address
-	{
+    public class User_Address : BaseEntity
+    {
         ///<summary>
         ///地址ID
         ///</summary>

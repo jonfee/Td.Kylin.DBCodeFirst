@@ -9,8 +9,8 @@ namespace Td.Kylin.Entity
     /// 回复记录
     /// </summary>
     [Table("Circle_PostTrend", Schema = "dbo")]
-    public class Circle_PostTrend
-	{		
+    public class Circle_PostTrend : BaseEntity
+    {		
 		///<summary>
 		///数据ID
 		///</summary>

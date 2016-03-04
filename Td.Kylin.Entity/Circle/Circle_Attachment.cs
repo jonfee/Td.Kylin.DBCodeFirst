@@ -9,8 +9,8 @@ namespace Td.Kylin.Entity
     /// 社区帖子附件
     /// </summary>
     [Table("Circle_Attachment",Schema ="dbo")]
-    public class Circle_Attachment
-	{		
+    public class Circle_Attachment : BaseEntity
+    {		
 		///<summary>
 		///数据ID
 		///</summary>

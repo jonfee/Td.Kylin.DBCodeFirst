@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// 商品分类标签
     /// </summary>
     [Table("Mall_CategoryTag", Schema = "dbo")]
-    public class Mall_CategoryTag
+    public class Mall_CategoryTag : BaseEntity
     {
         ///<summary>
         ///标签ID

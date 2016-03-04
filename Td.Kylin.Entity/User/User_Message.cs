@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 用户消息
     /// </summary>
     [Table("User_Message",Schema ="dbo")]
-    public class User_Message
+    public class User_Message : BaseEntity
     {
         /// <summary>
         /// 消息ID

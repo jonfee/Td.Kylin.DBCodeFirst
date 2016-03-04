@@ -8,8 +8,8 @@ namespace Td.Kylin.Entity
     /// 用户位置轨迹
     /// </summary>
     [Table("User_LocationTrack", Schema = "dbo")]
-    public class User_LocationTrack
-	{
+    public class User_LocationTrack : BaseEntity
+    {
         ///<summary>
         ///数据ID
         ///</summary>

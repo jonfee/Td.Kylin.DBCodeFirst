@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// 系统短信
     /// </summary>
     [Table("System_SMS", Schema = "dbo")]
-    public class System_SMS
+    public class System_SMS : BaseEntity
     {
         ///<summary>
         ///数据ID

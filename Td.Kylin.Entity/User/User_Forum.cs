@@ -9,8 +9,8 @@ namespace Td.Kylin.Entity
     /// 用户社区信息
     /// </summary>
     [Table("User_Forum", Schema = "dbo")]
-    public class User_Forum
-	{
+    public class User_Forum : BaseEntity
+    {
         ///<summary>
         ///用户ID
         ///</summary>

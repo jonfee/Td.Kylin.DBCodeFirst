@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 服务职员交易记录
     /// </summary>
     [Table("Worker_TradeRecords",Schema ="dbo")]
-    public class Worker_TradeRecords
+    public class Worker_TradeRecords : BaseEntity
     {
         /// <summary>
         /// 交易ID

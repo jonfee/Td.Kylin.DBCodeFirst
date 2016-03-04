@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 服务职员业务关联
     /// </summary>
     [Table("Worker_Business", Schema = "dbo")]
-    public class Worker_Business
+    public class Worker_Business : BaseEntity
     {
         ///<summary>
         /// 服务职员ID

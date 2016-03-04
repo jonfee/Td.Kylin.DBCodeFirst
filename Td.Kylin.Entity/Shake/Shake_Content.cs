@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// 摇一摇数据内容
     /// </summary>
     [Table("Shake_Content", Schema = "dbo")]
-    public partial class Shake_Content
+    public partial class Shake_Content : BaseEntity
     {
         ///<summary>
         ///主题ID

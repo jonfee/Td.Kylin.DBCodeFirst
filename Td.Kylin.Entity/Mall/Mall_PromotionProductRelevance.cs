@@ -7,8 +7,8 @@ namespace Td.Kylin.Entity
     /// 促销商品关联
     /// </summary>
     [Table("Mall_PromotionProductRelevance", Schema = "dbo")]
-    public class Mall_PromotionProductRelevance
-	{		
+    public class Mall_PromotionProductRelevance : BaseEntity
+    {		
 		///<summary>
 		///促销ID
 		///</summary>

@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// 摇一摇记录
     /// </summary>
     [Table("Shake_UserRecord", Schema = "dbo")]
-    public partial class Shake_UserRecord
+    public partial class Shake_UserRecord : BaseEntity
     {
         ///<summary>
         ///记录ID

@@ -9,8 +9,8 @@ namespace Td.Kylin.Entity
     /// 社区用户等级规则
     /// </summary>
     [Table("Circle_Level", Schema = "dbo")]
-    public class Circle_Level
-	{		
+    public class Circle_Level : BaseEntity
+    {		
 		///<summary>
 		///数据ID
 		///</summary>

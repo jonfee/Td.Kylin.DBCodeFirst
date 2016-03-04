@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// 用户在线记录
     /// </summary>
     [Table("User_Online", Schema = "dbo")]
-    public class User_Online
+    public class User_Online : BaseEntity
     {
         ///<summary>
         ///用户ID

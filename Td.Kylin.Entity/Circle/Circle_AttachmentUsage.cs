@@ -8,8 +8,8 @@ namespace Td.Kylin.Entity
     /// 附件与帖子关联
     /// </summary>
     [Table("Circle_AttachmentUsage", Schema = "dbo")]
-    public class Circle_AttachmentUsage
-	{		
+    public class Circle_AttachmentUsage : BaseEntity
+    {		
 		///<summary>
 		///附件ID
 		///</summary>

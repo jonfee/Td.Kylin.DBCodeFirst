@@ -8,8 +8,8 @@ namespace Td.Kylin.Entity
     /// 签到记录
     /// </summary>
     [Table("Circle_CheckIn", Schema = "dbo")]
-    public class Circle_CheckIn
-	{		
+    public class Circle_CheckIn : BaseEntity
+    {		
 		///<summary>
 		///签到记录ID
 		///</summary>

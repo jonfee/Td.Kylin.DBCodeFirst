@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 上门/预约订单
     /// </summary>
     [Table("KylinService_Order", Schema = "dbo")]
-    public class KylinService_Order
+    public class KylinService_Order : BaseEntity
     {
         /// <summary>
         /// 订单ID

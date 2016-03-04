@@ -1,22 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Td.Kylin.Entity.Area
+namespace Td.Kylin.Entity
 {
     /// <summary>
     /// 区域表
     /// </summary>
+    [Table("System_Area", Schema ="dbo")]
     public class System_Area
     {
         /// <summary>
         /// 区域ID
         /// </summary>
-        public long AreaID { get; set; }
+        public int AreaID { get; set; }
         /// <summary>
         /// 地区名称
         /// </summary>
+        [Column(TypeName ="nvarchar(15)")]
         public string AreaName { get; set; }
         /// <summary>
         /// 父ID（1级为0）
@@ -27,8 +27,14 @@ namespace Td.Kylin.Entity.Area
         /// </summary>
         public int AreaLevel { get; set; }
         /// <summary>
+        /// 区域路径（如：110000|110100|110101）
+        /// </summary>
+        [Column(TypeName = "varchar(100)")]
+        public string AreaPath { get; set; }
+        /// <summary>
         /// 更新时间
         /// </summary>
+        [Column(TypeName = "datetime")]
         public DateTime UpdateTime { get; set; }
     }
 }

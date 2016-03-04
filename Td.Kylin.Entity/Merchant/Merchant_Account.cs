@@ -8,8 +8,8 @@ namespace Td.Kylin.Entity
     /// 商家账户信息
     /// </summary>
     [Table("Merchant_Account", Schema = "dbo")]
-    public class Merchant_Account
-	{
+    public class Merchant_Account : BaseEntity
+    {
         ///<summary>
         ///商户ID
         ///</summary>

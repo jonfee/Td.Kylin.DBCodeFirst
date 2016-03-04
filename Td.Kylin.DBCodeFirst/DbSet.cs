@@ -478,5 +478,29 @@ namespace Td.Kylin.DBCodeFirst
         public DbSet<Worker_Message> Worker_Message { get { return Set<Worker_Message>(); } }
 
         #endregion
+
+        #region 区域
+        /// <summary>
+        /// 区域
+        /// </summary>
+        public DbSet<System_Area> System_Area { get { return Set<System_Area>(); } }
+        #endregion
+
+        #region 运营商
+        /// <summary>
+        /// 运营商
+        /// </summary>
+        public DbSet<Area_Operator> Area_Operator { get { return Set<Area_Operator>(); } }
+
+        /// <summary>
+        /// 运营商附属信息
+        /// </summary>
+        public DbSet<Area_OperatorProfile> Area_OperatorProfile { get { return Set<Area_OperatorProfile>(); } }
+
+        /// <summary>
+        /// 运营商及运营区域关联
+        /// </summary>
+        public DbSet<Area_OperatorRelation> Area_OperatorRelation { get { return Set<Area_OperatorRelation>(); } }
+        #endregion
     }
 }

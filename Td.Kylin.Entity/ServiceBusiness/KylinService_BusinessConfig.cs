@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 平台服务价格配置
     /// </summary>
     [Table("KylinService_BusinessConfig", Schema = "dbo")]
-    public class KylinService_BusinessConfig
+    public class KylinService_BusinessConfig : BaseEntity
     {
         /// <summary>
         /// 所属业务ID

@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 用户福利
     /// </summary>
     [Table("User_Welfare",Schema ="dbo")]
-    public class User_Welfare
+    public class User_Welfare : BaseEntity
     {
         /// <summary>
         /// 福利消费码

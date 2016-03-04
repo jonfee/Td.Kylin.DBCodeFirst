@@ -9,8 +9,8 @@ namespace Td.Kylin.Entity
     /// 用户使用设备
     /// </summary>
     [Table("User_Device",Schema ="dbo")]
-    public class User_Device
-	{
+    public class User_Device : BaseEntity
+    {
         ///<summary>
         ///数据ID
         ///</summary>

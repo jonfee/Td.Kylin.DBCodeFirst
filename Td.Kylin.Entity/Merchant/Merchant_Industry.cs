@@ -9,8 +9,8 @@ namespace Td.Kylin.Entity
     /// 商家所属行业
     /// </summary>
     [Table("Merchant_Industry",Schema ="dbo")]
-    public class Merchant_Industry
-	{
+    public class Merchant_Industry : BaseEntity
+    {
         ///<summary>
         ///行业ID
         ///</summary>

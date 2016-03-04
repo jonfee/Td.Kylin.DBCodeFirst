@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 招聘信息
     /// </summary>
     [Table("Job_Recruitment", Schema = "dbo")]
-    public class Job_Recruitment
+    public class Job_Recruitment : BaseEntity
     {
         /// <summary>
         /// 招聘ID

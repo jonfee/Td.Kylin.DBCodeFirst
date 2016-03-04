@@ -9,8 +9,8 @@ namespace Td.Kylin.Entity
     /// 社区活动帖信息
     /// </summary>
     [Table("Circle_Event", Schema = "dbo")]
-    public class Circle_Event
-	{		
+    public class Circle_Event : BaseEntity
+    {		
 		///<summary>
 		///活动ID
 		///</summary>

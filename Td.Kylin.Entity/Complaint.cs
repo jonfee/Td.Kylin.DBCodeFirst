@@ -9,8 +9,8 @@ namespace Td.Kylin.Entity
     /// 投诉/举报
     /// </summary>
     [Table("Complaint", Schema = "dbo")]
-    public class Complaint
-	{		
+    public class Complaint : BaseEntity
+    {		
 		///<summary>
 		///投诉ID
 		///</summary>

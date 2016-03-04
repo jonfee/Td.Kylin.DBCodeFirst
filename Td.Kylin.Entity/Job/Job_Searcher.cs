@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 职位搜索器
     /// </summary>
     [Table("Job_Searcher",Schema ="dbo")]
-    public class Job_Searcher
+    public class Job_Searcher : BaseEntity
     {
         /// <summary>
         /// 搜索器ID

@@ -7,8 +7,8 @@ namespace Td.Kylin.Entity
     /// 购物车
     /// </summary>
     [Table("Mall_ShoppingCart", Schema = "dbo")]
-    public class Mall_ShoppingCart
-	{		
+    public class Mall_ShoppingCart : BaseEntity
+    {		
 		///<summary>
 		///购物车ID
 		///</summary>

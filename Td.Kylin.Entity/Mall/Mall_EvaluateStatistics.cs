@@ -7,8 +7,8 @@ namespace Td.Kylin.Entity
     /// 商品评价统计
     /// </summary>
     [Table("Mall_EvaluateStatistics", Schema = "dbo")]
-    public class Mall_EvaluateStatistics
-	{		
+    public class Mall_EvaluateStatistics : BaseEntity
+    {		
 		///<summary>
 		///商品ID
 		///</summary>

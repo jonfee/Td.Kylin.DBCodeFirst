@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// 岗位类型
     /// </summary>
     [Table("Job_Category",Schema ="dbo")]
-    public class Job_Category
+    public class Job_Category : BaseEntity
     {
         /// <summary>
         /// 岗位分类ID
