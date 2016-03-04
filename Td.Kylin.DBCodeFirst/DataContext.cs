@@ -80,8 +80,7 @@ namespace Td.Kylin.DBCodeFirst
 
             modelBuilder.Entity<Merchant_Account>(entity =>
             {
-                entity.Property(p => p.MerchantID).ValueGeneratedNever();
-                entity.HasKey(p => p.MerchantID);
+                entity.HasKey(p => new { p.MerchantID, p.AreaID });
             });
 
             modelBuilder.Entity<Merchant_Certificate>(entity =>
@@ -450,8 +449,7 @@ namespace Td.Kylin.DBCodeFirst
 
             modelBuilder.Entity<MerchGoods_Goods>(entity =>
             {
-                entity.Property(p => p.GoodsID).ValueGeneratedNever();
-                entity.HasKey(p => p.GoodsID);
+                entity.HasKey(p => new { p.GoodsID, p.AreaID });
             });
 
             #endregion
@@ -460,8 +458,8 @@ namespace Td.Kylin.DBCodeFirst
 
             modelBuilder.Entity<MerchService_Goods>(entity =>
             {
-                entity.Property(p => p.ServiceGoodsID).ValueGeneratedNever();
-                entity.HasKey(p => p.ServiceGoodsID);
+                entity.HasKey(p => new { p.ServiceGoodsID, p.AreaID });
+
             });
 
             #endregion
