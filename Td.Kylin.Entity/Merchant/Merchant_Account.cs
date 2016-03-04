@@ -10,6 +10,10 @@ namespace Td.Kylin.Entity
     [Table("Merchant_Account", Schema = "dbo")]
     public class Merchant_Account : BaseEntity
     {
+        /// <summary>
+        /// 区域ID
+        /// </summary>
+        public int AreaID { get; set; }
         ///<summary>
         ///商户ID
         ///</summary>
