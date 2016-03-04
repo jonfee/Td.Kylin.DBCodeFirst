@@ -10,6 +10,10 @@ namespace Td.Kylin.Entity
     public class MerchGoods_Goods : BaseEntity
     {
         /// <summary>
+        /// 区域ID
+        /// </summary>
+        public int AreaID { get; set; }
+        /// <summary>
         /// 商品ID
         /// </summary>
         public long GoodsID { get; set; }
