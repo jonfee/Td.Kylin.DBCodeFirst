@@ -14,4 +14,4 @@ namespace Td.Kylin.Entity
         public byte[] RowVersion { get; set; }
     }
 }
-   
+     

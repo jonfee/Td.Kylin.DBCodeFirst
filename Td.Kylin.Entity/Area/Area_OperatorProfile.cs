@@ -15,7 +15,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 手机号
         /// </summary>
-        [Column(TypeName = "varchar(11)")]
+        [Column(TypeName = "varchar(11)")] 
         public string Mobile { get; set; }
         /// <summary>
         /// 图片
