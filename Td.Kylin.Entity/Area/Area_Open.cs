@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Td.Kylin.Entity.Area
+namespace Td.Kylin.Entity
 {
     /// <summary>
     /// 开通区域表信息

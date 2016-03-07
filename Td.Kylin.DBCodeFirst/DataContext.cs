@@ -577,6 +577,11 @@ namespace Td.Kylin.DBCodeFirst
                 entity.Property(p => p.AreaID).ValueGeneratedNever();
                 entity.HasKey(p => p.AreaID);
             });
+            modelBuilder.Entity<Area_Open>(entity =>
+            {
+                entity.Property(p => p.AreaID).ValueGeneratedNever();
+                entity.HasKey(p => p.AreaID);
+            });
             #endregion
 
             #region 运营商
