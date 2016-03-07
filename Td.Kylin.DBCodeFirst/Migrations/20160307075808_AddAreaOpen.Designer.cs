@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160307075808_AddAreaOpen")]
+    partial class AddAreaOpen
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -1820,7 +1821,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Street")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
-                    b.HasKey("MerchantID");
+                    b.HasKey("MerchantID", "AreaID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
 
@@ -2143,7 +2144,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("Status");
 
-                    b.HasKey("GoodsID");
+                    b.HasKey("GoodsID", "AreaID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
 
@@ -2189,7 +2190,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("Title")
                         .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
-                    b.HasKey("ServiceGoodsID");
+                    b.HasKey("ServiceGoodsID", "AreaID");
 
                     b.HasAnnotation("Relational:Schema", "dbo");
 
