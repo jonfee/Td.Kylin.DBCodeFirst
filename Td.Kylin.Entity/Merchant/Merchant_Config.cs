@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -43,5 +44,16 @@ namespace Td.Kylin.Entity
         /// 更新日期
         /// </summary>
         public DateTime UpdateTime { get; set; }
+        ///<summary>
+        ///营业开始时间（格式：07:30）
+        ///</summary>
+        [Column(TypeName = "char(5)")]
+        public string BusinessBeginTime { get; set; }
+
+        ///<summary>
+        ///营业结束时间（格式：23:00）
+        ///</summary>
+        [Column(TypeName = "char(5)")]
+        public string BusinessEndTime { get; set; }
     }
 }
