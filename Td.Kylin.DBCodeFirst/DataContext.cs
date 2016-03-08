@@ -108,6 +108,11 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => p.MessageID);
             });
 
+            modelBuilder.Entity<Merchant_Config>(entity =>
+            {
+                entity.Property(p => p.MerchantID).ValueGeneratedNever();
+                entity.HasKey(p => p.MerchantID);
+            });
             #endregion
 
             #region 用户

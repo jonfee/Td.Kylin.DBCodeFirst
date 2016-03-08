@@ -80,5 +80,10 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
+
+        /// <summary>
+        ///  商品规格
+        /// </summary>
+        public string Specification { get; set; }
     }
 }
