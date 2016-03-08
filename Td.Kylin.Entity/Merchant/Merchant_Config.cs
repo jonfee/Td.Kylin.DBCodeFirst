@@ -49,11 +49,14 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "char(5)")]
         public string BusinessBeginTime { get; set; }
-
         ///<summary>
         ///营业结束时间（格式：23:00）
         ///</summary>
         [Column(TypeName = "char(5)")]
         public string BusinessEndTime { get; set; }
+        /// <summary>
+        /// 是否在线交易
+        /// </summary>
+        public bool IsTransaction { get; set; }
     }
 }
