@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160304095515_UpdateMerchant")]
+    partial class UpdateMerchant
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -180,25 +181,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.HasAnnotation("Relational:Schema", "dbo");
 
                     b.HasAnnotation("Relational:TableName", "Admin_Permission");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Area_Open", b =>
-                {
-                    b.Property<int>("AreaID");
-
-                    b.Property<string>("AreaName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(15)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<bool>("Status");
-
-                    b.HasKey("AreaID");
-
-                    b.HasAnnotation("Relational:Schema", "dbo");
-
-                    b.HasAnnotation("Relational:TableName", "Area_Open");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Area_Operator", b =>
@@ -2299,18 +2281,13 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 {
                     b.Property<int>("AreaID");
 
+                    b.Property<int>("AreaLevel");
+
                     b.Property<string>("AreaName")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(15)");
 
-                    b.Property<int>("Depth");
-
-                    b.Property<bool>("HasChild");
-
-                    b.Property<string>("Layer")
+                    b.Property<string>("AreaPath")
                         .HasAnnotation("Relational:ColumnType", "varchar(100)");
-
-                    b.Property<string>("NameSpell")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("ParentID");
 
