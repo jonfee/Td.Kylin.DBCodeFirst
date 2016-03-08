@@ -70,6 +70,10 @@ namespace Td.Kylin.DBCodeFirst
         /// 商家消息
         /// </summary>
         public DbSet<Merchant_Message> Merchant_Message { get { return Set<Merchant_Message>(); } }
+        /// <summary>
+        /// 商家配置
+        /// </summary>
+        public DbSet<Merchant_Config> Merchant_Config { get { return Set<Merchant_Config>(); } }
 
         #endregion
 
@@ -484,6 +488,7 @@ namespace Td.Kylin.DBCodeFirst
         /// 区域
         /// </summary>
         public DbSet<System_Area> System_Area { get { return Set<System_Area>(); } }
+        public DbSet<Area_Open> Area_Open { get { return Set<Area_Open>(); } }
         #endregion
 
         #region 运营商

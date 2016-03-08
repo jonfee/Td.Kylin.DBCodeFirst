@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Td.Kylin.Entity
+{
+    public class Merchant_Config
+    {
+        /// <summary>
+        /// 商家ID
+        /// </summary>
+        public long MerchantID { get; set; }
+        /// <summary>
+        /// 非营业时间是否可下单
+        /// </summary>
+        public bool ExceedOrderTime { get; set; }
+        /// <summary>
+        /// 是否支持配送
+        /// </summary>
+        public bool IsDelivery { get; set; }
+        /// <summary>
+        /// 配送范围（半径范围）
+        /// </summary>
+        public int Scope { get; set; }
+        /// <summary>
+        /// 起送金额
+        /// </summary>
+        public decimal StartMoney { get; set; }
+        /// <summary>
+        /// 配送费
+        /// </summary>
+        public decimal DeliveryMoney { get; set; }
+        /// <summary>
+        /// 满多少免配送费
+        /// </summary>
+        public decimal ExemptDelivery { get; set; }
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string ExceedOrderRemark { get; set; }
+        /// <summary>
+        /// 更新日期
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+    }
+}
