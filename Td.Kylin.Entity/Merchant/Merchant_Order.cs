@@ -19,6 +19,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 订单编号
         /// </summary>
+        [Column(TypeName = "varchar(18)")]
         public string OrderCode { get; set; }
         /// <summary>
         /// 商家ID
@@ -102,10 +103,14 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 发货说明
         /// </summary>
+        [Column(TypeName = "varchar(100)")]
+
         public string SendRemark { get; set; }
         /// <summary>
         /// 收货说明
         /// </summary>
+        [Column(TypeName = "varchar(100)")]
+
         public string ReceivedRemark { get; set; }
         ///<summary>
         ///买家已删除

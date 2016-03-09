@@ -35,6 +35,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         ///  商品规格
         /// </summary>
+        [Column(TypeName = "varchar(30)")]
         public string Specification { get; set; }
 
         ///<summary>
