@@ -146,6 +146,11 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "nvarchar(200)")]
         public string Remark { get; set; }
+        ///<summary>
+        ///买家备注
+        ///</summary>
+        [Column(TypeName = "varchar(100)")]
+        public string CancelRemark { get; set; }
 
     }
 }
