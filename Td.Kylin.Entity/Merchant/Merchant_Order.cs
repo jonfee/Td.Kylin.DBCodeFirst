@@ -19,7 +19,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 订单编号
         /// </summary>
-        [Column(TypeName = "varchar(18)")]
+        [Column(TypeName ="varchar(18)")]
         public string OrderCode { get; set; }
         /// <summary>
         /// 商家ID
@@ -55,10 +55,11 @@ namespace Td.Kylin.Entity
         ///买家用户ID
         ///</summary>
         public long UserID { get; set; }
-        /// <summary>
-        /// 收货地址ID
-        /// </summary>
-        public long AddressID { get; set; }
+        ///<summary>
+        ///收货信息（包括收货地址联系人电话等）
+        ///</summary>
+        [Column(TypeName = "nvarchar(200)")]
+        public string DeliveryInfo { get; set; }
 
         ///<summary>
         ///支付类型
