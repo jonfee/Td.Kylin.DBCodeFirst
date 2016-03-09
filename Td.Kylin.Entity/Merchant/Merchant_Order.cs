@@ -107,12 +107,6 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "varchar(100)")]
 
         public string SendRemark { get; set; }
-        /// <summary>
-        /// 收货说明
-        /// </summary>
-        [Column(TypeName = "varchar(100)")]
-
-        public string ReceivedRemark { get; set; }
         ///<summary>
         ///买家已删除
         ///</summary>
