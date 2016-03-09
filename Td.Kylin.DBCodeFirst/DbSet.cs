@@ -74,6 +74,14 @@ namespace Td.Kylin.DBCodeFirst
         /// 商家配置
         /// </summary>
         public DbSet<Merchant_Config> Merchant_Config { get { return Set<Merchant_Config>(); } }
+        /// <summary>
+        /// 商家订单快照
+        /// </summary>
+        public DbSet<Merchant_OrderSnapshot> Merchant_OrderSnapshot { get { return Set<Merchant_OrderSnapshot>(); } }
+        /// <summary>
+        /// 商家订单表
+        /// </summary>
+        public DbSet<Merchant_Order> Merchant_Order { get { return Set<Merchant_Order>(); } }
 
         #endregion
 

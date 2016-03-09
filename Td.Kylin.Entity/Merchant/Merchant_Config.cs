@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Td.Kylin.Entity
 {
-    public class Merchant_Config
+    public class Merchant_Config : BaseEntity
     {
         /// <summary>
         /// 商家ID

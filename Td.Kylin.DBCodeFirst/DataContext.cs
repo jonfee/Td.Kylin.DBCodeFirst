@@ -107,11 +107,23 @@ namespace Td.Kylin.DBCodeFirst
                 entity.Property(p => p.MessageID).ValueGeneratedNever();
                 entity.HasKey(p => p.MessageID);
             });
-
+            //商家配置表
             modelBuilder.Entity<Merchant_Config>(entity =>
             {
                 entity.Property(p => p.MerchantID).ValueGeneratedNever();
                 entity.HasKey(p => p.MerchantID);
+            });
+            //商家订单表
+            modelBuilder.Entity<Merchant_Order>(entity =>
+            {
+                entity.Property(p => p.OrderID).ValueGeneratedNever();
+                entity.HasKey(p => p.OrderID);
+            });
+            //商家订单快照
+            modelBuilder.Entity<Merchant_OrderSnapshot>(entity =>
+            {
+                entity.Property(p => p.SnapshotID).ValueGeneratedNever();
+                entity.HasKey(p => p.SnapshotID);
             });
             #endregion
 
