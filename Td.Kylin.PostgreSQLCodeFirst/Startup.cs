@@ -4,12 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.Http;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Data.Entity;
 
-namespace Td.Kylin.DBCodeFirst
+namespace Td.Kylin.PostgreSQLCodeFirst
 {
     public class Startup
     {
@@ -31,9 +32,12 @@ namespace Td.Kylin.DBCodeFirst
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddEntityFramework()
-               .AddSqlServer()
+               .AddNpgsql()
                .AddDbContext<DataContext>(options =>
-                   options.UseSqlServer(Configuration["Data:DefaultConnectionString"]));
+                   options.UseNpgsql(Configuration["Data:DefaultConnectionString"]));
         }
+
+        // Entry point for the application.
+        public static void Main(string[] args) => WebApplication.Run<Startup>(args);
     }
 }

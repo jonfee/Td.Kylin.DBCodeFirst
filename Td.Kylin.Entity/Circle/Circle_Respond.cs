@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 评论回复（帖中帖）
     /// </summary>
-    [Table("Circle_Respond", Schema = "dbo")]
+    [Table("Circle_Respond")]
     public class Circle_Respond : BaseEntity
     {		
 		///<summary>

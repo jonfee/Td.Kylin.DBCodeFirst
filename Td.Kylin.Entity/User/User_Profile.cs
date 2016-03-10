@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户附属资料
     /// </summary>
-    [Table("User_Profiles", Schema = "dbo")]
+    [Table("User_Profiles")]
     public class User_Profiles : BaseEntity
     {
         ///<summary>

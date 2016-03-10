@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 圈子关注
     /// </summary>
-    [Table("Circle_Follow", Schema = "dbo")]
+    [Table("Circle_Follow")]
     public class Circle_Follow : BaseEntity
     {		
 		///<summary>

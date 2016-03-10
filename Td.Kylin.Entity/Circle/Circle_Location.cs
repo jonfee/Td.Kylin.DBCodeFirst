@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 帖子及评论位置
     /// </summary>
-    [Table("Circle_Location", Schema = "dbo")]
+    [Table("Circle_Location")]
     public class Circle_Location : BaseEntity
     {		
 		///<summary>

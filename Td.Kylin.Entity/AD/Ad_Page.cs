@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 广告页面
     /// </summary>
-    [Table("Ad_Page", Schema = "dbo")]
+    [Table("Ad_Page")]
     public class Ad_Page
     {
         ///<summary>

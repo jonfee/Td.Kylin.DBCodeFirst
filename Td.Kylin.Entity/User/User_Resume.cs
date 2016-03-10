@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户简历
     /// </summary>
-    [Table("User_Resume", Schema = "dbo")]
+    [Table("User_Resume")]
     public class User_Resume : BaseEntity
     {
         /// <summary>

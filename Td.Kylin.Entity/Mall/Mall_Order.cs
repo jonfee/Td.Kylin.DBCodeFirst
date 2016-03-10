@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 订单
     /// </summary>
-    [Table("Mall_Order", Schema = "dbo")]
+    [Table("Mall_Order")]
     public class Mall_Order : BaseEntity
     {
         ///<summary>

@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家优惠福利（主）
     /// </summary>
-    [Table("Merchant_Welfare", Schema = "dbo")]
+    [Table("Merchant_Welfare")]
     public class Merchant_Welfare : BaseEntity
     {
         /// <summary>

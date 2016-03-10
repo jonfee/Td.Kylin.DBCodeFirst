@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家消息
     /// </summary>
-    [Table("Merchant_Message", Schema = "dbo")]
+    [Table("Merchant_Message")]
     public class Merchant_Message : BaseEntity
     {
         /// <summary>

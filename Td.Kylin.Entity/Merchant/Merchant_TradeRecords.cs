@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家交易记录
     /// </summary>
-    [Table("Merchant_TradeRecords", Schema = "dbo")]
+    [Table("Merchant_TradeRecords")]
     public class Merchant_TradeRecords : BaseEntity
     {
         /// <summary>

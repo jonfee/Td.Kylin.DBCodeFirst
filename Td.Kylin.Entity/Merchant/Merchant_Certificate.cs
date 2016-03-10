@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家认证表
     /// </summary>
-    [Table("Merchant_Certificate", Schema = "dbo")]
+    [Table("Merchant_Certificate")]
     public class Merchant_Certificate : BaseEntity
     {
         ///<summary>

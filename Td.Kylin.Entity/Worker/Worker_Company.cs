@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 服务职员所服务的企业（商家）
     /// </summary>
-    [Table("Worker_Company", Schema = "dbo")]
+    [Table("Worker_Company")]
     public class Worker_Company : BaseEntity
     {
         /// <summary>

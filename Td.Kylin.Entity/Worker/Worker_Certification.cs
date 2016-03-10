@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 服务职员认证信息
     /// </summary>
-    [Table("Worker_Certification", Schema = "dbo")]
+    [Table("Worker_Certification")]
     public class Worker_Certification : BaseEntity
     {
         ///<summary>

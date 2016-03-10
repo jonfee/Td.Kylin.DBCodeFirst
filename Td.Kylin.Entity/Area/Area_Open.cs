@@ -9,7 +9,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 开通区域表信息
     /// </summary>
-    [Table("Area_Open", Schema = "dbo")]
+    [Table("Area_Open")]
     public class Area_Open
     {
         /// <summary>

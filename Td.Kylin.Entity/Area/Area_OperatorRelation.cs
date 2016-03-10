@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 区域运营关系表
     /// </summary>
-    [Table("Area_OperatorRelation", Schema = "dbo")]
+    [Table("Area_OperatorRelation")]
     public class Area_OperatorRelation : BaseEntity
     {
         /// <summary>

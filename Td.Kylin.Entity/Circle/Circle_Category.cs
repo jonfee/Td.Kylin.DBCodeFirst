@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 圈子分类
     /// </summary>
-    [Table("Circle_Category", Schema = "dbo")]
+    [Table("Circle_Category")]
     public class Circle_Category : BaseEntity
     {		
 		///<summary>

@@ -9,7 +9,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家订单快照
     /// </summary>
-    [Table("Merchant_OrderSnapshot", Schema = "dbo")]
+    [Table("Merchant_OrderSnapshot")]
     public class Merchant_OrderSnapshot : BaseEntity
     {
         ///<summary>

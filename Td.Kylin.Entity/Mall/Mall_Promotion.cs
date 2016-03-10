@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 促销
     /// </summary>
-    [Table("Mall_Promotion", Schema = "dbo")]
+    [Table("Mall_Promotion")]
     public class Mall_Promotion : BaseEntity
     {		
 		///<summary>

@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家福利分期
     /// </summary>
-    [Table("Welfare_Phases", Schema = "dbo")]
+    [Table("Welfare_Phases")]
     public class Welfare_Phases : BaseEntity
     {
         /// <summary>

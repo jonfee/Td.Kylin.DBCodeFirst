@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 区域表
     /// </summary>
-    [Table("System_Area", Schema = "dbo")]
+    [Table("System_Area")]
     public class System_Area
     {
         /// <summary>

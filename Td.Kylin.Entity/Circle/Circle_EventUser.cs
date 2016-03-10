@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 社区活动报名用户
     /// </summary>
-    [Table("Circle_EventUser", Schema = "dbo")]
+    [Table("Circle_EventUser")]
     public class Circle_EventUser : BaseEntity
     {		
 		///<summary>

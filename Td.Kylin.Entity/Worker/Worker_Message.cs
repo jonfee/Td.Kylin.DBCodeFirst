@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 服务人员消息
     /// </summary>
-    [Table("Worker_Message", Schema = "dbo")]
+    [Table("Worker_Message")]
     public class Worker_Message : BaseEntity
     {
         /// <summary>

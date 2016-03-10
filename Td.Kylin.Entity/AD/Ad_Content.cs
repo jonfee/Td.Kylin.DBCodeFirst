@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 广告内容
     /// </summary>
-    [Table("Ad_Content", Schema = "dbo")]
+    [Table("Ad_Content")]
     public class Ad_Content
     {
         ///<summary>
