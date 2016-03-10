@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商品分类
     /// </summary>
-    [Table("Mall_Category",Schema ="dbo")]
+    [Table("Mall_Category")]
     public class Mall_Category : BaseEntity
     {		
 		///<summary>
@@ -18,7 +18,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///类目名称
         ///</summary>
-        [Column(TypeName ="nvarchar(20)")]
+        [Column(TypeName ="varchar(20)")]
         public string Name{get;set;}
 
         ///<summary>
@@ -30,7 +30,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///类目描述
         ///</summary>
-        [Column(TypeName = "nvarchar(100)")]
+        [Column(TypeName = "varchar(100)")]
         public string Description{get;set;}
 				
 		///<summary>
@@ -56,13 +56,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///数据建立时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 
         ///<summary>
         ///数据删除删除时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime DeleteTime{get;set;}
 				
 	}

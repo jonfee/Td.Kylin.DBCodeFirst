@@ -19,7 +19,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///等级名称
         ///</summary>
-        [Column(TypeName = "nvarchar(10)")]
+        [Column(TypeName = "varchar(10)")]
         public string Name{get;set;}
 				
 		///<summary>
@@ -35,7 +35,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///创建时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

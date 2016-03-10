@@ -33,7 +33,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商品简要信息
         ///</summary>
-        [Column(TypeName = "nvarchar(100)")]
+        [Column(TypeName = "varchar(100)")]
         public string ProductInfo { get; set; }
 
         ///<summary>
@@ -64,7 +64,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///收货信息（包括收货地址联系人电话等）
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string DeliveryInfo { get; set; }
 
         ///<summary>
@@ -80,37 +80,37 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///下单时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///支付时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? PayTime { get; set; }
 
         ///<summary>
         ///取消时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? CancelTime { get; set; }
 
         ///<summary>
         ///发货时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? ShipTime { get; set; }
 
         ///<summary>
         ///收货时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? ReceivedTime { get; set; }
 
         ///<summary>
         ///评价时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? EvaluateTime { get; set; }
 
         ///<summary>
@@ -126,13 +126,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///必须支付的时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? NeedPayTime { get; set; }
 
         ///<summary>
         ///物流承运公司
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string ExpressCompany { get; set; }
 
         ///<summary>
@@ -144,7 +144,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///买家备注
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string Remark { get; set; }
         
 

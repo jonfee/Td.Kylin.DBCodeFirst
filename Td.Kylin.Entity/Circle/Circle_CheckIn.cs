@@ -23,7 +23,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///签到时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CheckTime{get;set;}
 				
 	}

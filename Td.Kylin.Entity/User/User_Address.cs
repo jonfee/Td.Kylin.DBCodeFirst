@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户地址库
     /// </summary>
-    [Table("User_Address",Schema ="dbo")]
+    [Table("User_Address")]
     public class User_Address : BaseEntity
     {
         ///<summary>
@@ -34,13 +34,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///小区/区域
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Community{get;set;}
 
         ///<summary>
         ///详细地址
         ///</summary>
-        [Column(TypeName = "nvarchar(100)")]
+        [Column(TypeName = "varchar(100)")]
         public string Address{get;set;}
 
         ///<summary>
@@ -62,7 +62,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///联系人
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Linkman{get;set;}
 
         ///<summary>
@@ -79,7 +79,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///数据创建时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

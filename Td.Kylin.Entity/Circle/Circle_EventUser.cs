@@ -29,7 +29,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///用户昵称
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Username{get;set;}
 				
 		///<summary>
@@ -40,7 +40,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///报名时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

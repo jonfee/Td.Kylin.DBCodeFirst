@@ -39,7 +39,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///最后活动时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime ActiveTime { get; set; }
 
     }

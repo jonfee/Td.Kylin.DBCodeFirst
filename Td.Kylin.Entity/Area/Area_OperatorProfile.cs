@@ -25,7 +25,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///联系人
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string LinkMan { get; set; }
         /// <summary>
         /// 联系电话
@@ -67,7 +67,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///公司地址
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string LocationPlace { get; set; }
     }
 }

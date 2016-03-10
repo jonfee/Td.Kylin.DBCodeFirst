@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 岗位类型
     /// </summary>
-    [Table("Job_Category",Schema ="dbo")]
+    [Table("Job_Category")]
     public class Job_Category : BaseEntity
     {
         /// <summary>
@@ -17,7 +17,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 岗位名称
         /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Name { get; set; }
 
         /// <summary>
@@ -53,7 +53,6 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 数据创建时间
         /// </summary>
-        [Column(TypeName ="datetime")]
         public DateTime CreateTime { get; set; }
 
     }

@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家所属行业
     /// </summary>
-    [Table("Merchant_Industry",Schema ="dbo")]
+    [Table("Merchant_Industry")]
     public class Merchant_Industry : BaseEntity
     {
         ///<summary>
@@ -19,7 +19,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///行业名称
         ///</summary>
-        [Column(TypeName ="nvarchar(20)")]
+        [Column(TypeName ="varchar(20)")]
         public string Name{get;set;}
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///创建时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

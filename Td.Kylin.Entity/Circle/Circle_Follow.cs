@@ -23,13 +23,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///最后活跃时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime LastTime{get;set;}
 
         ///<summary>
         ///关注时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

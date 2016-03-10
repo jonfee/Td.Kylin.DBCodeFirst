@@ -41,7 +41,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商品名称
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string Name { get; set; }
         ///<summary>
 		///市场价

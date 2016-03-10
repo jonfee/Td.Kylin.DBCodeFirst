@@ -28,7 +28,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///标题
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Title { get; set; }
 
         ///<summary>
@@ -44,13 +44,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///最后支付时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? LastPayTime { get; set; }
 
         ///<summary>
         ///建立时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
 
     }

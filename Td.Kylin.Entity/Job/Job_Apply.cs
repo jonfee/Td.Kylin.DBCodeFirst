@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 招聘职位投递/申请
     /// </summary>
-    [Table("Job_Apply",Schema ="dbo")]
+    [Table("Job_Apply")]
     public class Job_Apply : BaseEntity
     {
         /// <summary>
@@ -37,13 +37,12 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 投递/申请时间
         /// </summary>
-        [Column(TypeName ="datetime")]
         public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 更新时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime UpdateTime { get; set; }
     }
 }

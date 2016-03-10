@@ -22,7 +22,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 业务名称
         /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Name { get; set; }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 数据创建时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

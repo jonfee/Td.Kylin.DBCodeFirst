@@ -22,7 +22,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 子项名称
         /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Name { get; set; }
 
         /// <summary>
@@ -33,13 +33,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 备注/描述/说明
         /// </summary>
-        [Column(TypeName = "nvarchar(300)")]
+        [Column(TypeName = "varchar(300)")]
         public string Remark { get; set; }
 
         /// <summary>
         /// 创建时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

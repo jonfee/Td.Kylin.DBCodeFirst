@@ -29,19 +29,19 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///用户昵称
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Username{get;set;}
 
         ///<summary>
         ///帖子标题，回帖无标题
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Title{get;set;}
 
         ///<summary>
         ///内容
         ///</summary>
-        [Column(TypeName = "nvarchar(max)")]
+        [Column(TypeName = "text")]
         public string Content{get;set;}
 
         ///<summary>
@@ -68,7 +68,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///数据建立时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

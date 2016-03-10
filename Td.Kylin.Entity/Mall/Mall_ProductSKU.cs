@@ -21,7 +21,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///规格名称
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Specs{get;set;}
 
         ///<summary>

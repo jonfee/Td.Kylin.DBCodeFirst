@@ -17,7 +17,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商品名称
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string Name{get;set;}
 
         ///<summary>
@@ -40,13 +40,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商家名称
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string VenderName{get;set;}
 
         ///<summary>
         ///发布者
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Publisher{get;set;}
 				
 		///<summary>
@@ -69,7 +69,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商品详情描述
         ///</summary>
-        [Column(TypeName = "nvarchar(max)")]
+        [Column(TypeName = "text")]
         public string Description{get;set;}
 				
 		///<summary>
@@ -110,13 +110,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///数据建立时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 
         ///<summary>
         ///最后更新时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime UpdateTime{get;set;}
 				
 		///<summary>

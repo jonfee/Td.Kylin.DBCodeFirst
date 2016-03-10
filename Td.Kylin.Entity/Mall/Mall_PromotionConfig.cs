@@ -27,7 +27,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///优惠的具体配置内容
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Value{get;set;}
 				
 	}

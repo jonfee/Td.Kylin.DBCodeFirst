@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 自定义商品分类
     /// </summary>
-    [Table("MerchGoods_Category",Schema ="dbo")]
+    [Table("MerchGoods_Category")]
     public class MerchGoods_Category : BaseEntity
     {
         /// <summary>
@@ -17,7 +17,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 自定义分类名称
         /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Name { get; set; }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

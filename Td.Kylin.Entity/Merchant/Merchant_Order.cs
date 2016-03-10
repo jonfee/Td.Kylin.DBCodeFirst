@@ -58,7 +58,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///收货信息（包括收货地址联系人电话等）
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string DeliveryInfo { get; set; }
 
         ///<summary>
@@ -73,33 +73,33 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///下单时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///支付时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? PayTime { get; set; }
         ///<summary>
         ///取消时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? CancelTime { get; set; }
         /// <summary>
         /// 发货时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? SendTime { get; set; }
         ///<summary>
         ///收货时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? ReceivedTime { get; set; }
         ///<summary>
         ///评价时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? EvaluateTime { get; set; }
         /// <summary>
         /// 发货说明
@@ -119,7 +119,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///买家备注
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string Remark { get; set; }
         ///<summary>
         ///取消订单说明
