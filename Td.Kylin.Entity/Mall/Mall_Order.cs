@@ -146,6 +146,7 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "nvarchar(200)")]
         public string Remark { get; set; }
+        
 
     }
 }

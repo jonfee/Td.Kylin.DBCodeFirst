@@ -8,9 +8,10 @@ using Td.Kylin.DBCodeFirst;
 namespace Td.Kylin.DBCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160309111556_AddMerchantOrderColumnCancelRemark")]
+    partial class AddMerchantOrderColumnCancelRemark
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -2013,9 +2014,6 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<long>("OrderID");
 
                     b.Property<decimal>("ActualOrderAmount");
-
-                    b.Property<string>("CancelRemark")
-                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<DateTime?>("CancelTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
