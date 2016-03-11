@@ -85,5 +85,10 @@ namespace Td.Kylin.Entity
         ///  商品规格
         /// </summary>
         public string Specification { get; set; }
+
+        /// <summary>
+        /// 商品描述
+        /// </summary>
+        public string Description { get; set; }
     }
 }
