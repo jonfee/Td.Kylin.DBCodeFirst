@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 服务职员附属资料
     /// </summary>
-    [Table("Worker_Profile", Schema = "dbo")]
+    [Table("Worker_Profile")]
     public class Worker_Profile : BaseEntity
     {
         /// <summary>
@@ -17,7 +17,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 姓名
         /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Name { get; set; }
 
         /// <summary>
@@ -40,13 +40,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 籍贯
         /// </summary>
-        [Column(TypeName = "nvarchar(10)")]
+        [Column(TypeName = "varchar(10)")]
         public string JiGuan { get; set; }
 
         /// <summary>
         /// 出生日期
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime Birthdate { get; set; }
 
         /// <summary>
@@ -63,13 +63,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 民族
         /// </summary>
-        [Column(TypeName = "nvarchar(10)")]
+        [Column(TypeName = "varchar(10)")]
         public string Nation { get; set; }
 
         /// <summary>
         /// 所在地
         /// </summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Address { get; set; }
 
         /// <summary>
@@ -95,19 +95,19 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 简介
         /// </summary>
-        [Column(TypeName = "nvarchar(max)")]
+        [Column(TypeName = "text")]
         public string Intro { get; set; }
 
         /// <summary>
         /// 创建时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 最后修改时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime UpdateTime { get; set; }
     }
 }

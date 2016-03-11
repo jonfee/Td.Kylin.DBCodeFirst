@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 购物车
     /// </summary>
-    [Table("Mall_ShoppingCart", Schema = "dbo")]
+    [Table("Mall_ShoppingCart")]
     public class Mall_ShoppingCart : BaseEntity
     {		
 		///<summary>
@@ -37,13 +37,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///加入购物车时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 
         ///<summary>
         ///最后更新时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime UpdateTime{get;set;}
 				
 	}

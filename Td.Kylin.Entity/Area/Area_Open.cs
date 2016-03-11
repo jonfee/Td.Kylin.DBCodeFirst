@@ -9,7 +9,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 开通区域表信息
     /// </summary>
-    [Table("Area_Open", Schema = "dbo")]
+    [Table("Area_Open")]
     public class Area_Open
     {
         /// <summary>
@@ -19,7 +19,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 地区名称
         /// </summary>
-        [Column(TypeName = "nvarchar(15)")]
+        [Column(TypeName = "varchar(15)")]
         public string AreaName { get; set; }
         /// <summary>
         /// 状态
@@ -28,7 +28,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

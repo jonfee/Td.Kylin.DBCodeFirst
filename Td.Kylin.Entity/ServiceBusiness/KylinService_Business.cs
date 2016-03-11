@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 系统提供的商家上门/预约业务
     /// </summary>
-    [Table("KylinService_Business", Schema = "dbo")]
+    [Table("KylinService_Business")]
     public class KylinService_Business : BaseEntity
     {
         /// <summary>
@@ -22,7 +22,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 业务名称
         /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Name { get; set; }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 数据创建时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

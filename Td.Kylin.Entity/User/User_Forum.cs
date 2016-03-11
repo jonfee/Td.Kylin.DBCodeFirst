@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户社区信息
     /// </summary>
-    [Table("User_Forum", Schema = "dbo")]
+    [Table("User_Forum")]
     public class User_Forum : BaseEntity
     {
         ///<summary>
@@ -69,7 +69,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///最后查看数据动态时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime LastRead{get;set;}
 				
 	}

@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 社区活动帖信息
     /// </summary>
-    [Table("Circle_Event", Schema = "dbo")]
+    [Table("Circle_Event")]
     public class Circle_Event : BaseEntity
     {		
 		///<summary>
@@ -29,13 +29,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///开始时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime StartTime{get;set;}
 
         ///<summary>
         ///结束时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime EndTime{get;set;}
 				
 		///<summary>
@@ -46,7 +46,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///活动地点
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string Address{get;set;}
 				
 		///<summary>
@@ -62,7 +62,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///帖子发布时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

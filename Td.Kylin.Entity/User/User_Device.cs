@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户使用设备
     /// </summary>
-    [Table("User_Device",Schema ="dbo")]
+    [Table("User_Device")]
     public class User_Device : BaseEntity
     {
         ///<summary>
@@ -24,7 +24,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///设备类型(如：iphone 6s,小米 5S)
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string DeviceName{get;set;}
 				
 		///<summary>
@@ -46,7 +46,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///最后活动时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime LastTime{get;set;}
 				
 	}

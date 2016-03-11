@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 服务职员所服务的企业（商家）
     /// </summary>
-    [Table("Worker_Company", Schema = "dbo")]
+    [Table("Worker_Company")]
     public class Worker_Company : BaseEntity
     {
         /// <summary>
@@ -27,19 +27,19 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 数据创建时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 审核时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? AuditTime { get; set; }
 
         /// <summary>
         /// 最后更新时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime UpdateTime { get; set; }
 
     }

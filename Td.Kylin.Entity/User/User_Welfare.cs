@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户福利
     /// </summary>
-    [Table("User_Welfare",Schema ="dbo")]
+    [Table("User_Welfare")]
     public class User_Welfare : BaseEntity
     {
         /// <summary>
@@ -43,19 +43,19 @@ namespace Td.Kylin.Entity
         ///<summary>
         /// 福利提供商户名称
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string MerchantName { get; set; }
 
         /// <summary>
         /// 福利名称
         /// </summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Name { get; set; }
 
         /// <summary>
         /// 标签
         /// </summary>
-        [Column(TypeName = "nvarchar(10)")]
+        [Column(TypeName = "varchar(10)")]
         public string Tag { get; set; }
 
         /// <summary>
@@ -67,13 +67,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 有效期（起）
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime ExpiryStartTime { get; set; }
 
         /// <summary>
         /// 有效期（止）
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime ExpiryEndTime { get; set; }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 领取时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? AwardTime { get; set; }
 
         /// <summary>
@@ -100,13 +100,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 使用的时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? UseTime { get; set; }
 
         /// <summary>
         /// 创建时间（获得时间）
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

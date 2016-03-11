@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户账户
     /// </summary>
-    [Table("User_Account",Schema ="dbo")]
+    [Table("User_Account")]
     public class User_Account : BaseEntity
     {
         ///<summary>
@@ -25,7 +25,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///用户名（昵称，逻辑唯一不允许修改）
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Username{get;set;}
 
         ///<summary>
@@ -42,7 +42,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///最后登录时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime LastTime{get;set;}
 				
 		///<summary>
@@ -74,7 +74,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///注册时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
 
     }

@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 平台服务价格配置
     /// </summary>
-    [Table("KylinService_BusinessConfig", Schema = "dbo")]
+    [Table("KylinService_BusinessConfig")]
     public class KylinService_BusinessConfig : BaseEntity
     {
         /// <summary>
@@ -32,13 +32,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 备注/说明
         /// </summary>
-        [Column(TypeName = "nvarchar(300)")]
+        [Column(TypeName = "varchar(300)")]
         public string Remark { get; set; }
 
         /// <summary>
         /// 最后更新时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime UpdateTime { get; set; }
     }
 }

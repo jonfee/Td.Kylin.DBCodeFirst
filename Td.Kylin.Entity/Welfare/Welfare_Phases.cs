@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家福利分期
     /// </summary>
-    [Table("Welfare_Phases", Schema = "dbo")]
+    [Table("Welfare_Phases")]
     public class Welfare_Phases : BaseEntity
     {
         /// <summary>
@@ -47,19 +47,19 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 接受参与时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime StartTime { get; set; }
 
         /// <summary>
         /// 停止参与时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime StopTime { get; set; }
 
         /// <summary>
         /// 开奖时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime LotteryTime { get; set; }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 数据创建时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

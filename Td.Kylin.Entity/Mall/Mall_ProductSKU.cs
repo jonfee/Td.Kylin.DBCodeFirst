@@ -5,7 +5,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商品SKU
     /// </summary>
-    [Table("Mall_ProductSKU", Schema = "dbo")]
+    [Table("Mall_ProductSKU")]
     public class Mall_ProductSKU : BaseEntity
     {		
 		///<summary>
@@ -21,7 +21,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///规格名称
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Specs{get;set;}
 
         ///<summary>

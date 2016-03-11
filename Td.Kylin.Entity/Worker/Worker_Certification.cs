@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 服务职员认证信息
     /// </summary>
-    [Table("Worker_Certification", Schema = "dbo")]
+    [Table("Worker_Certification")]
     public class Worker_Certification : BaseEntity
     {
         ///<summary>
@@ -27,7 +27,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///主体名称（如：姓名等）
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Name { get; set; }
 
         ///<summary>
@@ -50,13 +50,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///审核说明
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string AuditRemark { get; set; }
 
         ///<summary>
         ///审核时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? AuditTime { get; set; }
 
         ///<summary>
@@ -67,7 +67,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///审核的管理员名称
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string AuditAdminName { get; set; }
 
         ///<summary>
@@ -78,7 +78,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///申请时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

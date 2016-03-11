@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 广告页面
     /// </summary>
-    [Table("Ad_Page", Schema = "dbo")]
+    [Table("Ad_Page")]
     public class Ad_Page
     {
         ///<summary>
@@ -23,7 +23,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///页面名称
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string PageName { get; set; }
 
     }

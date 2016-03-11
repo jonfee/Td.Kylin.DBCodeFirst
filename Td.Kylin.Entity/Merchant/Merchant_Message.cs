@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家消息
     /// </summary>
-    [Table("Merchant_Message", Schema = "dbo")]
+    [Table("Merchant_Message")]
     public class Merchant_Message : BaseEntity
     {
         /// <summary>
@@ -33,19 +33,19 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 消息主题
         /// </summary>
-        [Column(TypeName = "nvarchar(30)")]
+        [Column(TypeName = "varchar(30)")]
         public string Title { get; set; }
 
         /// <summary>
         /// 消息内容
         /// </summary>
-        [Column(TypeName = "nvarchar(500)")]
+        [Column(TypeName = "varchar(500)")]
         public string Content { get; set; }
 
         /// <summary>
         /// 签名（如：某某物业集团）
         /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Sign { get; set; }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 消息发送时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

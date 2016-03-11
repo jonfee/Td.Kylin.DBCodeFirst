@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 社区圈子
     /// </summary>
-    [Table("Circle_Forum", Schema = "dbo")]
+    [Table("Circle_Forum")]
     public class Circle_Forum : BaseEntity
     {		
 		///<summary>
@@ -24,7 +24,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///论坛名称
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string ForumName{get;set;}
 
         ///<summary>
@@ -36,7 +36,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///论坛介绍
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Description{get;set;}
 				
 		///<summary>
@@ -72,7 +72,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///版主
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string Moderators{get;set;}
 				
 		///<summary>
@@ -98,7 +98,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///逻辑删除时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? DeleteTime{get;set;}
 				
 		///<summary>
@@ -114,7 +114,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///数据建立时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

@@ -15,7 +15,7 @@ namespace Td.Kylin.DBCodeFirst
     {
         public static IConfigurationRoot Configuration { get; private set; }
 
-        public Startup(IHostingEnvironment evt,IApplicationEnvironment appEvn)
+        public Startup(IHostingEnvironment evt, IApplicationEnvironment appEvn)
         {
             var builder = new ConfigurationBuilder().SetBasePath(appEvn.ApplicationBasePath)
                .AddJsonFile("config.json");

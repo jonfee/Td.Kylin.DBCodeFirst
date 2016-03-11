@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 社区商品帖信息
     /// </summary>
-    [Table("Circle_Good", Schema = "dbo")]
+    [Table("Circle_Good")]
     public class Circle_Good : BaseEntity
     {		
 		///<summary>
@@ -44,7 +44,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///联系人
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string LinkMan{get;set;}
 
         ///<summary>
@@ -56,7 +56,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///交易地点
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string Address{get;set;}
 				
 		///<summary>
@@ -67,7 +67,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///帖子发布时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

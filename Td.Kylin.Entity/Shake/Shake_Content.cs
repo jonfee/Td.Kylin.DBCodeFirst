@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 摇一摇数据内容
     /// </summary>
-    [Table("Shake_Content", Schema = "dbo")]
+    [Table("Shake_Content")]
     public partial class Shake_Content : BaseEntity
     {
         ///<summary>
@@ -43,7 +43,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///标题
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Title { get; set; }
 
         ///<summary>
@@ -55,7 +55,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///内容
         ///</summary>
-        [Column(TypeName = "nvarchar(255)")]
+        [Column(TypeName = "varchar(255)")]
         public string Content { get; set; }
 
         ///<summary>
@@ -112,25 +112,25 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///开始时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime StartTime { get; set; }
 
         ///<summary>
         ///结束时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime EndTime { get; set; }
 
         ///<summary>
         ///最后使用时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime LastTime { get; set; }
 
         ///<summary>
         ///建立时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
 
     }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.Entity
 {
-    [Table("Welfare_PartUser",Schema ="dbo")]
+    [Table("Welfare_PartUser")]
     public class Welfare_PartUser : BaseEntity
     {
         /// <summary>
@@ -35,13 +35,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 领奖时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? AwardTime { get; set; }
 
         /// <summary>
         /// 数据创建时间（即参与时间）
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

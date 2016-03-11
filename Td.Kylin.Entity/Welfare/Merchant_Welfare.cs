@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家优惠福利（主）
     /// </summary>
-    [Table("Merchant_Welfare", Schema = "dbo")]
+    [Table("Merchant_Welfare")]
     public class Merchant_Welfare : BaseEntity
     {
         /// <summary>
@@ -22,7 +22,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商户名称
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string MerchantName { get; set; }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 福利名称
         /// </summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Name { get; set; }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 标签
         /// </summary>
-        [Column(TypeName = "nvarchar(10)")]
+        [Column(TypeName = "varchar(10)")]
         public string Tag { get; set; }
 
         /// <summary>
@@ -76,25 +76,25 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 福利介绍
         /// </summary>
-        [Column(TypeName = "nvarchar(500)")]
+        [Column(TypeName = "varchar(500)")]
         public string Intro { get; set; }
 
         /// <summary>
         /// 使用/规则说明
         /// </summary>
-        [Column(TypeName = "nvarchar(500)")]
+        [Column(TypeName = "varchar(500)")]
         public string Regular { get; set; }
 
         /// <summary>
         /// 有效期（起）
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime ExpiryStartTime { get; set; }
 
         /// <summary>
         /// 有效期（止）
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime ExpiryEndTime { get; set; }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 审核说明
         /// </summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string AuditRemark { get; set; }
 
         /// <summary>
@@ -116,13 +116,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 审核的管理员名称
         /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string AuditAdminName { get; set; }
 
         /// <summary>
         /// 审核时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? AuditTime { get; set; }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

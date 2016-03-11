@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 广告位
     /// </summary>
-    [Table("Ad_Position", Schema = "dbo")]
+    [Table("Ad_Position")]
     public class Ad_Position
     {
         ///<summary>
@@ -26,13 +26,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///广告位名称
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Name { get; set; }
 
         ///<summary>
         ///广告位说明
         ///</summary>
-        [Column(TypeName = "nvarchar(255)")]
+        [Column(TypeName = "varchar(255)")]
         public string Intro { get; set; }
 
         ///<summary>
@@ -61,13 +61,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///是否启用
         ///</summary>
-        [Column(TypeName = "bit")]
+        
         public bool Enable { get; set; }
 
         ///<summary>
         ///建立时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
 
     }

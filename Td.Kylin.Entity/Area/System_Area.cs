@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 区域表
     /// </summary>
-    [Table("System_Area", Schema = "dbo")]
+    [Table("System_Area")]
     public class System_Area
     {
         /// <summary>
@@ -16,7 +16,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 地区名称
         /// </summary>
-        [Column(TypeName = "nvarchar(15)")]
+        [Column(TypeName = "varchar(15)")]
         public string AreaName { get; set; }
         /// <summary>
         /// 父ID（1级为0）
@@ -43,7 +43,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 更新时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime UpdateTime { get; set; }
 
 

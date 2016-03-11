@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家账户信息
     /// </summary>
-    [Table("Merchant_Account", Schema = "dbo")]
+    [Table("Merchant_Account")]
     public class Merchant_Account : BaseEntity
     {
         /// <summary>
@@ -34,7 +34,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商户名称
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Name { get; set; }
 
         ///<summary>
@@ -45,13 +45,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商户位置
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string LocationPlace { get; set; }
 
         ///<summary>
         ///街道详细地址
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Street { get; set; }
 
         ///<summary>
@@ -67,7 +67,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///联系人
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string LinkMan { get; set; }
 
         ///<summary>
@@ -79,7 +79,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商户介绍
         ///</summary>
-        [Column(TypeName = "nvarchar(500)")]
+        [Column(TypeName = "varchar(500)")]
         public string Description { get; set; }
 
         ///<summary>
@@ -121,7 +121,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///创建时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
 
     }

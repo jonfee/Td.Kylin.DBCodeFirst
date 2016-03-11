@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户附属资料
     /// </summary>
-    [Table("User_Profiles", Schema = "dbo")]
+    [Table("User_Profiles")]
     public class User_Profiles : BaseEntity
     {
         ///<summary>
@@ -23,19 +23,19 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///出生日期
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime BothBirthday{get;set;}
 
         ///<summary>
         ///现居地
         ///</summary>
-        [Column(TypeName = "nvarchar(100)")]
+        [Column(TypeName = "varchar(100)")]
         public string PresentAddress{get;set;}
 
         ///<summary>
         ///个性签名
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string Signature{get;set;}
 				
 	}

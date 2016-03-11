@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 福利开放参与前的提醒名单
     /// </summary>
-    [Table("Welfare_Remind", Schema = "dbo")]
+    [Table("Welfare_Remind")]
     public class Welfare_Remind : BaseEntity
     {
         /// <summary>
@@ -22,7 +22,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 数据创建时间（即参与时间）
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

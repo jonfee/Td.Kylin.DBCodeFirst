@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 帖子主题
     /// </summary>
-    [Table("Circle_Topic", Schema = "dbo")]
+    [Table("Circle_Topic")]
     public class Circle_Topic : BaseEntity
     {		
 		///<summary>
@@ -34,7 +34,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///发帖的用户昵称
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Username{get;set;}
 				
 		///<summary>
@@ -45,13 +45,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///帖子标题
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Title{get;set;}
 
         ///<summary>
         ///帖子内容
         ///</summary>
-        [Column(TypeName = "nvarchar(max)")]
+        [Column(TypeName = "text")]
         public string Content{get;set;}
 
         ///<summary>
@@ -113,7 +113,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///逻辑删除时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime? DeleteTime{get;set;}
 				
 		///<summary>
@@ -124,7 +124,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///帖子发布时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

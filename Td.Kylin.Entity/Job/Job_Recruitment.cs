@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 招聘信息
     /// </summary>
-    [Table("Job_Recruitment", Schema = "dbo")]
+    [Table("Job_Recruitment")]
     public class Job_Recruitment : BaseEntity
     {
         /// <summary>
@@ -27,7 +27,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 职位名称
         /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string JobName { get; set; }
 
         /// <summary>
@@ -83,19 +83,19 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 职位描述
         /// </summary>
-        [Column(TypeName = "nvarchar(max)")]
+        [Column(TypeName = "text")]
         public int Description { get; set; }
 
         /// <summary>
         /// 工作地点
         /// </summary>
-        [Column(TypeName = "nvarchar(100)")]
+        [Column(TypeName = "varchar(100)")]
         public string WordAddress { get; set; }
 
         /// <summary>
         /// 联系人
         /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string ContactMan { get; set; }
 
         /// <summary>
@@ -138,13 +138,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 发布时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 最后刷新时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime LastRefreshTime { get; set; }
     }
 }

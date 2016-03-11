@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 职位搜索器
     /// </summary>
-    [Table("Job_Searcher",Schema ="dbo")]
+    [Table("Job_Searcher")]
     public class Job_Searcher : BaseEntity
     {
         /// <summary>
@@ -22,7 +22,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 搜索器名称
         /// </summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string SearcherName { get; set; }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 职位名称
         /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string JobName { get; set; }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 工作地点
         /// </summary>
-        [Column(TypeName = "nvarchar(100)")]
+        [Column(TypeName = "varchar(100)")]
         public string WordAddress { get; set; }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 管理员账户
     /// </summary>
-    [Table("Admin_Account", Schema ="dbo")]
+    [Table("Admin_Account")]
     public class Admin_Account : BaseEntity
     {
         ///<summary>
@@ -17,7 +17,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///登陆账号
         ///</summary>
-        [Column(TypeName ="nvarchar(20)")]
+        [Column(TypeName ="varchar(20)")]
         public string Username{get;set;}
 
         ///<summary>
@@ -29,7 +29,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///真实姓名
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Realname{get;set;}
 				
 		///<summary>
@@ -45,7 +45,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///最后登录时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime LastTime{get;set;}
 
         ///<summary>
@@ -62,7 +62,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///建立时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 
         ///<summary>

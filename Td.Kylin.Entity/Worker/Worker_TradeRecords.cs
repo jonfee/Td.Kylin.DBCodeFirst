@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 服务职员交易记录
     /// </summary>
-    [Table("Worker_TradeRecords",Schema ="dbo")]
+    [Table("Worker_TradeRecords")]
     public class Worker_TradeRecords : BaseEntity
     {
         /// <summary>
@@ -32,7 +32,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 交易信息
         /// </summary>
-        [Column(TypeName = "nvarchar(100)")]
+        [Column(TypeName = "varchar(100)")]
         public string TradeInfo { get; set; }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 数据产生时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

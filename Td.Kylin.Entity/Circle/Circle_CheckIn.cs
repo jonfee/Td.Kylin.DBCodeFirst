@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 签到记录
     /// </summary>
-    [Table("Circle_CheckIn", Schema = "dbo")]
+    [Table("Circle_CheckIn")]
     public class Circle_CheckIn : BaseEntity
     {		
 		///<summary>
@@ -23,7 +23,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///签到时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CheckTime{get;set;}
 				
 	}

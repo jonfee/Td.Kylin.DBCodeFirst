@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商家服务型产品
     /// </summary>
-    [Table("MerchService_Goods", Schema = "dbo")]
+    [Table("MerchService_Goods")]
     public class MerchService_Goods : BaseEntity
     {
         /// <summary>
@@ -83,7 +83,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

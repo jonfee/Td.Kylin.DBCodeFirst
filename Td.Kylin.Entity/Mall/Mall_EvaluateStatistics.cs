@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 商品评价统计
     /// </summary>
-    [Table("Mall_EvaluateStatistics", Schema = "dbo")]
+    [Table("Mall_EvaluateStatistics")]
     public class Mall_EvaluateStatistics : BaseEntity
     {		
 		///<summary>

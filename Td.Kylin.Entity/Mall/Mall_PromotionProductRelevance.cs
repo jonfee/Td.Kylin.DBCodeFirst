@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 促销商品关联
     /// </summary>
-    [Table("Mall_PromotionProductRelevance", Schema = "dbo")]
+    [Table("Mall_PromotionProductRelevance")]
     public class Mall_PromotionProductRelevance : BaseEntity
     {		
 		///<summary>
@@ -32,7 +32,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///创建时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

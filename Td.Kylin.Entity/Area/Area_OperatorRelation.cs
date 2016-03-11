@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 区域运营关系表
     /// </summary>
-    [Table("Area_OperatorRelation", Schema = "dbo")]
+    [Table("Area_OperatorRelation")]
     public class Area_OperatorRelation : BaseEntity
     {
         /// <summary>
@@ -21,12 +21,12 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 运营开始时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime StartTime { get; set; }
         /// <summary>
         /// 运营结束时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime EndTime { get; set; }
         /// <summary>
         /// 合同号
@@ -36,7 +36,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///联系人
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string LinkMan { get; set; }
         /// <summary>
         /// 邮箱
@@ -56,12 +56,12 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 备注说明
         /// </summary>
-        [Column(TypeName = "nvarchar(300)")]
+        [Column(TypeName = "varchar(300)")]
         public string Remark { get; set; }
         /// <summary>
         /// 创建日期
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
     }
 }

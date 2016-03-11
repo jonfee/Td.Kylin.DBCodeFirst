@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 投诉/举报
     /// </summary>
-    [Table("Complaint", Schema = "dbo")]
+    [Table("Complaint")]
     public class Complaint : BaseEntity
     {		
 		///<summary>
@@ -30,13 +30,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///原因
         ///</summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Reason{get;set;}
 
         ///<summary>
         ///投诉详述
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string Content{get;set;}
 				
 		///<summary>
@@ -52,7 +52,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///投诉人名称
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string ComplainantName{get;set;}
 
         ///<summary>
@@ -69,7 +69,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///投诉时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

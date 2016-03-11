@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 系统短信
     /// </summary>
-    [Table("System_SMS", Schema = "dbo")]
+    [Table("System_SMS")]
     public class System_SMS : BaseEntity
     {
         ///<summary>
@@ -29,7 +29,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///短信内容
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string Content { get; set; }
 
         ///<summary>
@@ -46,13 +46,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///过期时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime Expires { get; set; }
 
         ///<summary>
         ///建立时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime { get; set; }
 
     }

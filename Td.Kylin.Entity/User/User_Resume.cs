@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户简历
     /// </summary>
-    [Table("User_Resume", Schema = "dbo")]
+    [Table("User_Resume")]
     public class User_Resume : BaseEntity
     {
         /// <summary>
@@ -22,7 +22,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 姓名
         /// </summary>
-        [Column(TypeName ="nvarchar(20)")]
+        [Column(TypeName ="varchar(20)")]
         public string RealName { get; set; }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 出生日期
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime Both { get; set; }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 意向工作区域
         /// </summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string WantWordArea { get; set; }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 职位名称
         /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string JobName { get; set; }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 自我评述
         /// </summary>
-        [Column(TypeName = "nvarchar(max)")]
+        [Column(TypeName = "text")]
         public string Intro { get; set; }
 
         /// <summary>
@@ -118,20 +118,18 @@ namespace Td.Kylin.Entity
 
         /// <summary>
         /// 创建时间
-        /// </summary>
-        [Column(TypeName = "datetime")]
+        /// </summary>        
         public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 最后更新时间
-        /// </summary>
-        [Column(TypeName = "datetime")]
+        /// </summary>        
         public DateTime UpdateTime { get; set; }
 
         /// <summary>
         /// 最后刷新时间
         /// </summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime LastRefreshTime { get; set; }
     }
 }

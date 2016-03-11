@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 评论回复（帖中帖）
     /// </summary>
-    [Table("Circle_Respond", Schema = "dbo")]
+    [Table("Circle_Respond")]
     public class Circle_Respond : BaseEntity
     {		
 		///<summary>
@@ -39,13 +39,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///用户名
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string Username{get;set;}
 
         ///<summary>
         ///内容
         ///</summary>
-        [Column(TypeName = "nvarchar(255)")]
+        [Column(TypeName = "varchar(255)")]
         public string Content{get;set;}
 				
 		///<summary>
@@ -56,13 +56,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///回应的用户名
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "varchar(20)")]
         public string ReplyUsername{get;set;}
 
         ///<summary>
         ///数据建立时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

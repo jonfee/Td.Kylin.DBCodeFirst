@@ -8,7 +8,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 社区帖子附件
     /// </summary>
-    [Table("Circle_Attachment",Schema ="dbo")]
+    [Table("Circle_Attachment")]
     public class Circle_Attachment : BaseEntity
     {		
 		///<summary>
@@ -52,7 +52,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///上传时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime UploadTime{get;set;}
 				
 		///<summary>
@@ -63,7 +63,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///逻辑删除时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime DeleteTime{get;set;}
 				
 	}

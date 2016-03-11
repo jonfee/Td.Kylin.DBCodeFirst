@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户摇一摇记录
     /// </summary>
-    [Table("User_ShakeRecord", Schema = "dbo")]
+    [Table("User_ShakeRecord")]
     public class User_ShakeRecord : BaseEntity
     {
         ///<summary>
@@ -33,13 +33,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///最后一次摇的时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime LastTime{get;set;}
 
         ///<summary>
         ///更新时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime UpdatetTime{get;set;}
 				
 	}

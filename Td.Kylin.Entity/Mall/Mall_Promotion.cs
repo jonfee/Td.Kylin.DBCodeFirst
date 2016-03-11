@@ -6,7 +6,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 促销
     /// </summary>
-    [Table("Mall_Promotion", Schema = "dbo")]
+    [Table("Mall_Promotion")]
     public class Mall_Promotion : BaseEntity
     {		
 		///<summary>
@@ -17,7 +17,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///促销名称
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "varchar(200)")]
         public string Name{get;set;}
 
         ///<summary>
@@ -29,19 +29,19 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///详细描述
         ///</summary>
-        [Column(TypeName = "nvarchar(max)")]
+        [Column(TypeName = "text")]
         public string Description{get;set;}
 
         ///<summary>
         ///开始时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime BeginTime{get;set;}
 
         ///<summary>
         ///结束时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime EndTime{get;set;}
 				
 		///<summary>
@@ -62,7 +62,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///创建时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

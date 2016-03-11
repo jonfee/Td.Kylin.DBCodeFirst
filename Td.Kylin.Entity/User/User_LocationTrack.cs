@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户位置轨迹
     /// </summary>
-    [Table("User_LocationTrack", Schema = "dbo")]
+    [Table("User_LocationTrack")]
     public class User_LocationTrack : BaseEntity
     {
         ///<summary>
@@ -33,7 +33,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///建立时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}

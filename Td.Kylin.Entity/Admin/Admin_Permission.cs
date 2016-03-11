@@ -7,7 +7,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 管理员权限
     /// </summary>
-    [Table("Admin_Permission",Schema ="dbo")]
+    [Table("Admin_Permission")]
     public class Admin_Permission : BaseEntity
     {
         ///<summary>
@@ -30,7 +30,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///建立时间
         ///</summary>
-        [Column(TypeName = "datetime")]
+        
         public DateTime CreateTime{get;set;}
 				
 	}
