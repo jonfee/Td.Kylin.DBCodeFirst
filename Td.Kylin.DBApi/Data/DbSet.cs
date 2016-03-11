@@ -38,5 +38,10 @@ namespace Td.Kylin.DBCodeFirst
         public DbSet<KylinService_BusinessConfig> KylinService_BusinessConfig { get { return Set<KylinService_BusinessConfig>(); } }
 
         #endregion
+
+        /// <summary>
+        /// 全国区域
+        /// </summary>
+        public DbSet<System_Area> System_Area { get { return Set<System_Area>(); } }
     }
 }

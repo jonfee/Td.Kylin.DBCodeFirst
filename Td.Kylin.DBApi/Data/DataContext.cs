@@ -16,7 +16,8 @@ namespace Td.Kylin.DBCodeFirst
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connection = Startup.Configuration["Data:DefaultConnectionString"];
-            optionsBuilder.UseSqlServer(connection);
+            //optionsBuilder.UseSqlServer(connection);
+            optionsBuilder.UseNpgsql(connection);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -60,6 +61,14 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => new { p.BusinessID, p.OptionID });
             });
 
+            #endregion
+
+            #region 区域
+            modelBuilder.Entity<System_Area>(entity =>
+            {
+                entity.Property(p => p.AreaID).ValueGeneratedNever();
+                entity.HasKey(p => p.AreaID);
+            });
             #endregion
         }
     }

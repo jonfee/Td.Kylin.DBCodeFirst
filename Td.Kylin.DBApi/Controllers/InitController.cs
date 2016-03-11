@@ -47,6 +47,16 @@ namespace Td.Kylin.DBApi.Controllers
             return KylinOk(result);
         }
 
+        [HttpGet("area")]
+        public IActionResult InitArea()
+        {
+            var result = InitProvider.InitArea();
+
+            string txt = string.Format("本次共初始化 {0} 个区域",result);
+
+            return KylinOk(result);
+        }
+
         [HttpGet("img")]
         public IActionResult GetImgUrl(int width, int height)
         {

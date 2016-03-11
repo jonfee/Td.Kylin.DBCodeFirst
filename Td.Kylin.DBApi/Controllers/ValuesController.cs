@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
-using Td.Kylin.DBApi.Data.PostgreSql;
 
 namespace Td.Kylin.DBApi.Controllers
 {

@@ -180,5 +180,23 @@ namespace Td.Kylin.DBApi.Data
                 }
             }
         }
+
+        public static int InitArea()
+        {
+            using (var db = new DataContext())
+            {
+                var list = db.System_Area.ToList();
+
+                if (null != list && list.Count > 0)
+                {
+                    db.System_Area.RemoveRange(list);
+                    db.SaveChanges();
+                }
+
+                db.System_Area.AddRange(SysData.AreaCity.AreaList);
+
+                return db.SaveChanges();
+            }
+        }
     }
 }
