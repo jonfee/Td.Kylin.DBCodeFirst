@@ -80,37 +80,37 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///下单时间
         ///</summary>
-        
+
         public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///支付时间
         ///</summary>
-        
+
         public DateTime? PayTime { get; set; }
 
         ///<summary>
         ///取消时间
         ///</summary>
-        
+
         public DateTime? CancelTime { get; set; }
 
         ///<summary>
         ///发货时间
         ///</summary>
-        
+
         public DateTime? ShipTime { get; set; }
 
         ///<summary>
         ///收货时间
         ///</summary>
-        
+
         public DateTime? ReceivedTime { get; set; }
 
         ///<summary>
         ///评价时间
         ///</summary>
-        
+
         public DateTime? EvaluateTime { get; set; }
 
         ///<summary>
@@ -126,7 +126,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///必须支付的时间
         ///</summary>
-        
+
         public DateTime? NeedPayTime { get; set; }
 
         ///<summary>
@@ -146,7 +146,8 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "varchar(200)")]
         public string Remark { get; set; }
-        
+
+        public int AreaID { get; set; }
 
     }
 }

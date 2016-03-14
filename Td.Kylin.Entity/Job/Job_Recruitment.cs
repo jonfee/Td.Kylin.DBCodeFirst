@@ -84,7 +84,7 @@ namespace Td.Kylin.Entity
         /// 职位描述
         /// </summary>
         [Column(TypeName = "text")]
-        public int Description { get; set; }
+        public string Description { get; set; }
 
         /// <summary>
         /// 工作地点
