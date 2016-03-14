@@ -873,7 +873,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<DateTime>("CreateTime");
 
-                    b.Property<int>("Description")
+                    b.Property<string>("Description")
                         .HasAnnotation("Relational:ColumnType", "text");
 
                     b.Property<bool>("IsDelete");
@@ -1268,6 +1268,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<decimal>("ActualOrderAmount");
 
+                    b.Property<int>("AreaID");
+
                     b.Property<DateTime?>("CancelTime");
 
                     b.Property<DateTime>("CreateTime");
@@ -1397,6 +1399,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Product", b =>
                 {
                     b.Property<long>("ProductID");
+
+                    b.Property<int>("AreaID");
 
                     b.Property<long>("CategoryID");
 
@@ -2051,6 +2055,9 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<DateTime>("CreateTime");
 
+                    b.Property<string>("Description")
+                        .HasAnnotation("Relational:ColumnType", "varchar(140)");
+
                     b.Property<int>("EvaluateCount");
 
                     b.Property<int>("Inventory");
@@ -2065,7 +2072,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.Property<decimal>("OriginalPrice");
 
                     b.Property<string>("Pic")
-                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2075,7 +2082,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<decimal>("SalePrice");
 
-                    b.Property<string>("Specification");
+                    b.Property<string>("Specification")
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<int>("Status");
 

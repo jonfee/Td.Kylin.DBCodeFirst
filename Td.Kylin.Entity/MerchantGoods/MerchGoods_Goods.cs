@@ -84,13 +84,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         ///  商品规格
         /// </summary>
-        [Column(TypeName = "nvarchar(30)")]
+        [Column(TypeName = "varchar(30)")]
         public string Specification { get; set; }
 
         /// <summary>
         /// 商品描述
         /// </summary>
-        [Column(TypeName = "nvarchar(140)")]
+        [Column(TypeName = "varchar(140)")]
 
         public string Description { get; set; }
     }
