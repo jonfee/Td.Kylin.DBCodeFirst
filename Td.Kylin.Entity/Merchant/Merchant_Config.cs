@@ -47,12 +47,12 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///营业开始时间（格式：07:30）
         ///</summary>
-        [Column(TypeName = "char(5)")]
+        [Column(TypeName = "varchar(10)")]
         public string BusinessBeginTime { get; set; }
         ///<summary>
         ///营业结束时间（格式：23:00）
         ///</summary>
-        [Column(TypeName = "char(5)")]
+        [Column(TypeName = "varchar(10)")]
         public string BusinessEndTime { get; set; }
         /// <summary>
         /// 是否在线交易
