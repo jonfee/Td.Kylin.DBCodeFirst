@@ -47,7 +47,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 图片
         /// </summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "varchar(200)")]
         public string Pic { get; set; }
 
         /// <summary>
@@ -84,11 +84,14 @@ namespace Td.Kylin.Entity
         /// <summary>
         ///  商品规格
         /// </summary>
+        [Column(TypeName = "varchar(30)")]
         public string Specification { get; set; }
 
         /// <summary>
         /// 商品描述
         /// </summary>
+        [Column(TypeName = "varchar(140)")]
+
         public string Description { get; set; }
     }
 }
