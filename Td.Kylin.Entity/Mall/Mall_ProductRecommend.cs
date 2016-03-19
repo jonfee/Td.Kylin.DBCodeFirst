@@ -28,5 +28,9 @@ namespace Td.Kylin.Entity
         /// 是否推荐 true为推荐|false为不推荐
         /// </summary>
         public bool IsRecommend { get; set; }
+        /// <summary>
+        /// 排序
+        /// </summary>
+        public int OrderNo { get; set; } 
     }
 }

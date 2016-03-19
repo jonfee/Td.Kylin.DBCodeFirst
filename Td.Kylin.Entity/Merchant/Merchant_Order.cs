@@ -24,7 +24,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 商家ID
         /// </summary>
-        public long MerchatID { get; set; }
+        public long MerchantID { get; set; }
         /// <summary>
         /// 优惠券ID 
         /// </summary>
