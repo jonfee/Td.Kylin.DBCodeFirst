@@ -321,6 +321,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 购物车
         /// </summary>
         public DbSet<Mall_ShoppingCart> Mall_ShoppingCart { get { return Set<Mall_ShoppingCart>(); } }
+        /// <summary>
+        /// 商品推荐表
+        /// </summary>
+        public DbSet<Mall_ProductRecommend> Mall_ProductRecommend { get { return Set<Mall_ProductRecommend>(); } }
 
         #endregion
 

@@ -129,11 +129,11 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 经度
         /// </summary>
-        public float Longitude { get; set; }
+        public Single Longitude { get; set; }
         /// <summary>
         /// 纬度
         /// </summary>
-        public float Latitude { get; set; }
+        public Single Latitude { get; set; }
 
     }
 }

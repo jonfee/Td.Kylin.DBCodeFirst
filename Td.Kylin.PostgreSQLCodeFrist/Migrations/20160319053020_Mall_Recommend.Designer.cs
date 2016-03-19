@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160319053020_Mall_Recommend")]
+    partial class Mall_Recommend
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -1457,21 +1458,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.HasKey("ProductID");
 
                     b.HasAnnotation("Relational:TableName", "Mall_Product");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Mall_ProductRecommend", b =>
-                {
-                    b.Property<int>("RecommendID");
-
-                    b.Property<long>("ProductID");
-
-                    b.Property<bool>("IsRecommend");
-
-                    b.Property<int>("WhoRecommend");
-
-                    b.HasKey("RecommendID", "ProductID");
-
-                    b.HasAnnotation("Relational:TableName", "Mall_ProductRecommend");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_ProductSKU", b =>

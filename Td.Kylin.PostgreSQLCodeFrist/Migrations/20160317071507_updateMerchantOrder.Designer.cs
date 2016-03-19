@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160317071507_updateMerchantOrder")]
+    partial class updateMerchantOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -1459,21 +1460,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Mall_Product");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.Mall_ProductRecommend", b =>
-                {
-                    b.Property<int>("RecommendID");
-
-                    b.Property<long>("ProductID");
-
-                    b.Property<bool>("IsRecommend");
-
-                    b.Property<int>("WhoRecommend");
-
-                    b.HasKey("RecommendID", "ProductID");
-
-                    b.HasAnnotation("Relational:TableName", "Mall_ProductRecommend");
-                });
-
             modelBuilder.Entity("Td.Kylin.Entity.Mall_ProductSKU", b =>
                 {
                     b.Property<long>("SkuID");
@@ -1589,13 +1575,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 {
                     b.Property<long>("CartID");
 
-                    b.Property<int>("AreaID");
-
                     b.Property<DateTime>("CreateTime");
-
-                    b.Property<int>("MallID");
-
-                    b.Property<long>("MerchantID");
 
                     b.Property<int>("Number");
 

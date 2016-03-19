@@ -401,6 +401,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.Property(p => p.CartID).ValueGeneratedNever();
                 entity.HasKey(p => p.CartID);
             });
+            modelBuilder.Entity<Mall_ProductRecommend>(entity =>
+            {
+                entity.HasKey(p => new { p.RecommendID, p.ProductID });
+            });
 
             #endregion
 
