@@ -7,6 +7,7 @@ namespace Td.Kylin.Entity
     /// 服务职员交易记录
     /// </summary>
     [Table("Worker_TradeRecords")]
+    [Obsolete("用户账户统一后无需此模型，即将删除")]
     public class Worker_TradeRecords : BaseEntity
     {
         /// <summary>
@@ -17,7 +18,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///服务职员ID
         ///</summary>
-        public long WorkerID { get; set; }
+        public long UserID { get; set; }
 
         /// <summary>
         /// 交易类型（如：服务销售｜提现等）

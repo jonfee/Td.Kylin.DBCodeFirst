@@ -567,7 +567,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                entity.HasKey(p => p.WorkerID);
            });
 
-            modelBuilder.Entity<Worker_Certification>(entity =>
+            modelBuilder.Entity<User_Certification>(entity =>
             {
                 entity.Property(p => p.CertificateID).ValueGeneratedNever();
                 entity.HasKey(p => p.CertificateID);
@@ -575,35 +575,23 @@ namespace Td.Kylin.PostgreSQLCodeFirst
 
             modelBuilder.Entity<Worker_Business>(entity =>
             {
-                entity.HasKey(p => new { p.WorkerID, p.BusinessID });
+                entity.HasKey(p => new { p.UserID, p.BusinessID });
             });
 
             modelBuilder.Entity<Worker_Company>(entity =>
             {
-                entity.HasKey(p => new { p.WorkerID, p.MerchantID });
+                entity.HasKey(p => new { p.UserID, p.MerchantID });
             });
 
             modelBuilder.Entity<Worker_Profile>(entity =>
             {
-                entity.Property(p => p.WorkerID).ValueGeneratedNever();
-                entity.HasKey(p => p.WorkerID);
+                entity.Property(p => p.UserID).ValueGeneratedNever();
+                entity.HasKey(p => p.UserID);
             });
 
             modelBuilder.Entity<Worker_CompanyBusiness>(entity =>
             {
-                entity.HasKey(p => new { p.WorkerID, p.MerchantID, p.BusinessID });
-            });
-
-            modelBuilder.Entity<Worker_TradeRecords>(entity =>
-            {
-                entity.Property(p => p.TradeID).ValueGeneratedNever();
-                entity.HasKey(p => p.TradeID);
-            });
-
-            modelBuilder.Entity<Worker_Message>(entity =>
-            {
-                entity.Property(p => p.MessageID).ValueGeneratedNever();
-                entity.HasKey(p => p.MessageID);
+                entity.HasKey(p => new { p.UserID, p.MerchantID, p.BusinessID });
             });
 
             #endregion

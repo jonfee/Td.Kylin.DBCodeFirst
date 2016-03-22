@@ -471,7 +471,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// <summary>
         /// 服务职员认证信息
         /// </summary>
-        public DbSet<Worker_Certification> Worker_Certification { get { return Set<Worker_Certification>(); } }
+        public DbSet<User_Certification> User_Certification { get { return Set<User_Certification>(); } }
 
         /// <summary>
         /// 服务职员业务
@@ -492,16 +492,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 服务职员在企业（商家）中的业务关系
         /// </summary>
         public DbSet<Worker_CompanyBusiness> Worker_CompanyBusiness { get { return Set<Worker_CompanyBusiness>(); } }
-
-        /// <summary>
-        /// 服务职员交易记录
-        /// </summary>
-        public DbSet<Worker_TradeRecords> Worker_TradeRecords { get { return Set<Worker_TradeRecords>(); } }
-
-        /// <summary>
-        /// 服务人员消息
-        /// </summary>
-        public DbSet<Worker_Message> Worker_Message { get { return Set<Worker_Message>(); } }
 
         #endregion
 

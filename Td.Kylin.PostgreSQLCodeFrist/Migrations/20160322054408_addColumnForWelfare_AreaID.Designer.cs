@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160322054408_addColumnForWelfare_AreaID")]
+    partial class addColumnForWelfare_AreaID
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -2430,8 +2431,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<decimal>("FreezeMoney");
 
-                    b.Property<int>("IdentityType");
-
                     b.Property<DateTime>("LastTime");
 
                     b.Property<int>("Logins");
@@ -2499,48 +2498,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.HasKey("AddressID");
 
                     b.HasAnnotation("Relational:TableName", "User_Address");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.User_Certification", b =>
-                {
-                    b.Property<long>("CertificateID");
-
-                    b.Property<long?>("AuditAdminID");
-
-                    b.Property<string>("AuditAdminName")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
-
-                    b.Property<string>("AuditRemark")
-                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
-
-                    b.Property<int>("AuditStatus");
-
-                    b.Property<DateTime?>("AuditTime");
-
-                    b.Property<string>("CertNo")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
-
-                    b.Property<int>("CertificateType");
-
-                    b.Property<DateTime>("CreateTime");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
-
-                    b.Property<string>("Pics")
-                        .HasAnnotation("Relational:ColumnType", "varchar(300)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
-                    b.Property<long>("UserID");
-
-                    b.HasKey("CertificateID");
-
-                    b.HasAnnotation("Relational:TableName", "User_Certification");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Device", b =>
@@ -2690,27 +2647,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<DateTime>("BothBirthday");
-
-                    b.Property<string>("CardID")
-                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
-
-                    b.Property<string>("JiGuan")
-                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
-
-                    b.Property<int>("MandarinLevel");
-
-                    b.Property<int>("MaritalStatus");
-
-                    b.Property<int>("MaxEducation");
-
-                    b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
-
-                    b.Property<string>("Nation")
-                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
-
-                    b.Property<string>("Phone")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("PresentAddress")
                         .HasAnnotation("Relational:ColumnType", "varchar(100)");
@@ -3070,7 +3006,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Worker_Business", b =>
                 {
-                    b.Property<long>("UserID");
+                    b.Property<long>("WorkerID");
 
                     b.Property<long>("BusinessID");
 
@@ -3092,14 +3028,56 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<int>("ServiceStatus");
 
-                    b.HasKey("UserID", "BusinessID");
+                    b.HasKey("WorkerID", "BusinessID");
 
                     b.HasAnnotation("Relational:TableName", "Worker_Business");
                 });
 
+            modelBuilder.Entity("Td.Kylin.Entity.Worker_Certification", b =>
+                {
+                    b.Property<long>("CertificateID");
+
+                    b.Property<long?>("AuditAdminID");
+
+                    b.Property<string>("AuditAdminName")
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
+
+                    b.Property<string>("AuditRemark")
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
+
+                    b.Property<int>("AuditStatus");
+
+                    b.Property<DateTime?>("AuditTime");
+
+                    b.Property<string>("CertNo")
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
+
+                    b.Property<int>("CertificateType");
+
+                    b.Property<DateTime>("CreateTime");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("Name")
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
+
+                    b.Property<string>("Pics")
+                        .HasAnnotation("Relational:ColumnType", "varchar(300)");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate();
+
+                    b.Property<long>("WorkerID");
+
+                    b.HasKey("CertificateID");
+
+                    b.HasAnnotation("Relational:TableName", "Worker_Certification");
+                });
+
             modelBuilder.Entity("Td.Kylin.Entity.Worker_Company", b =>
                 {
-                    b.Property<long>("UserID");
+                    b.Property<long>("WorkerID");
 
                     b.Property<long>("MerchantID");
 
@@ -3115,14 +3093,14 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<DateTime>("UpdateTime");
 
-                    b.HasKey("UserID", "MerchantID");
+                    b.HasKey("WorkerID", "MerchantID");
 
                     b.HasAnnotation("Relational:TableName", "Worker_Company");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Worker_CompanyBusiness", b =>
                 {
-                    b.Property<long>("UserID");
+                    b.Property<long>("WorkerID");
 
                     b.Property<long>("MerchantID");
 
@@ -3144,21 +3122,82 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
-                    b.HasKey("UserID", "MerchantID", "BusinessID");
+                    b.HasKey("WorkerID", "MerchantID", "BusinessID");
 
                     b.HasAnnotation("Relational:TableName", "Worker_CompanyBusiness");
                 });
 
+            modelBuilder.Entity("Td.Kylin.Entity.Worker_Message", b =>
+                {
+                    b.Property<long>("MessageID");
+
+                    b.Property<string>("Content")
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
+
+                    b.Property<DateTime>("CreateTime");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<bool>("IsRead");
+
+                    b.Property<int>("MessageType");
+
+                    b.Property<string>("RefDataID")
+                        .HasAnnotation("Relational:ColumnType", "varchar(36)");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate();
+
+                    b.Property<string>("Sign")
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
+
+                    b.Property<string>("Title")
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
+
+                    b.Property<long>("WorkerID");
+
+                    b.HasKey("MessageID");
+
+                    b.HasAnnotation("Relational:TableName", "Worker_Message");
+                });
+
             modelBuilder.Entity("Td.Kylin.Entity.Worker_Profile", b =>
                 {
-                    b.Property<long>("UserID");
+                    b.Property<long>("WorkerID");
+
+                    b.Property<string>("Address")
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<int>("BeginWorkYear");
+
+                    b.Property<DateTime>("Birthdate");
+
+                    b.Property<string>("CardID")
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
                     b.Property<DateTime>("CreateTime");
 
                     b.Property<string>("Intro")
                         .HasAnnotation("Relational:ColumnType", "text");
+
+                    b.Property<string>("JiGuan")
+                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
+
+                    b.Property<int>("MandarinLevel");
+
+                    b.Property<int>("MaritalStatus");
+
+                    b.Property<int>("MaxEducation");
+
+                    b.Property<string>("Name")
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
+
+                    b.Property<string>("Nation")
+                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
+
+                    b.Property<string>("Phone")
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("Photo")
                         .HasAnnotation("Relational:ColumnType", "varchar(100)");
@@ -3167,13 +3206,44 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
+                    b.Property<int>("Sex");
+
                     b.Property<bool>("SpringFestivalIsBack");
 
                     b.Property<DateTime>("UpdateTime");
 
-                    b.HasKey("UserID");
+                    b.HasKey("WorkerID");
 
                     b.HasAnnotation("Relational:TableName", "Worker_Profile");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.Worker_TradeRecords", b =>
+                {
+                    b.Property<long>("TradeID");
+
+                    b.Property<decimal>("Amount");
+
+                    b.Property<DateTime>("CreateTime");
+
+                    b.Property<int>("PaymentType");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate();
+
+                    b.Property<string>("TradeInfo")
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
+
+                    b.Property<string>("TradeNo")
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
+
+                    b.Property<int>("TradeType");
+
+                    b.Property<long>("WorkerID");
+
+                    b.HasKey("TradeID");
+
+                    b.HasAnnotation("Relational:TableName", "Worker_TradeRecords");
                 });
         }
     }

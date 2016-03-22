@@ -33,11 +33,16 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "varchar(32)")]
         public string Password{get;set;}
-				
-		///<summary>
-		///登陆次数
-		///</summary>
-		public int Logins{get;set;}
+
+        /// <summary>
+        /// 用户所有身份（1普通用户，2企业员工，4个人服务者，8配送员）
+        /// </summary>
+        public int IdentityType { get; set; }
+
+        ///<summary>
+        ///登陆次数
+        ///</summary>
+        public int Logins{get;set;}
 
         ///<summary>
         ///最后登录时间

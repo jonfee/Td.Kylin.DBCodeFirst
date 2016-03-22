@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 服务职员认证信息
+    /// 认证信息
     /// </summary>
-    [Table("Worker_Certification")]
-    public class Worker_Certification : BaseEntity
+    [Table("User_Certification")]
+    public class User_Certification : BaseEntity
     {
         ///<summary>
         /// 认证ID
@@ -17,7 +17,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         /// 服务职员ID
         ///</summary>
-        public long WorkerID { get; set; }
+        public long UserID { get; set; }
 
         ///<summary>
         ///认证类型（枚举：实名认证等，以2的N次方定义枚举）
