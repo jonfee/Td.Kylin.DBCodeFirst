@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 商品推荐表
+    /// 淘一淘商品推荐
     /// </summary>
     [Table("Mall_ProductRecommend")]
     public class Mall_ProductRecommend

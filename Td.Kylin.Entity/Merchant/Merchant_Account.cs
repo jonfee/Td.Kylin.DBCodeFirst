@@ -19,6 +19,11 @@ namespace Td.Kylin.Entity
         ///</summary>
         public long MerchantID { get; set; }
 
+        /// <summary>
+        /// 代理商ID
+        /// </summary>
+        public long AgentID { get; set; }
+
         ///<summary>
         ///手机号码（唯一）
         ///</summary>
