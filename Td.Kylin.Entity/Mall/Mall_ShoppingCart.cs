@@ -57,8 +57,8 @@ namespace Td.Kylin.Entity
         public int AreaID { get; set; }
 
         /// <summary>
-        /// 0为B2C自营 1为商家
+        /// 所属商城类型（1为B2C区域自营，2为企业微商城）
         /// </summary>
-        public int MallID { get; set; }
+        public int MallType { get; set; }
     }
 }
