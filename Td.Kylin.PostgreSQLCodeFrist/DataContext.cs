@@ -328,6 +328,11 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.HasKey(p => p.AttachmentID);
             });
 
+            modelBuilder.Entity<Circle_AreaForum>(entity =>
+            {
+                entity.HasKey(p => new { p.AreaID, p.ForumID });
+            });
+
             #endregion
 
             #region 自营商城

@@ -258,6 +258,11 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// </summary>
         public DbSet<Circle_Attachment> Circle_Attachment { get { return Set<Circle_Attachment>(); } }
 
+        /// <summary>
+        /// 区域社区圈子
+        /// </summary>
+        public DbSet<Circle_AreaForum> Circle_AreaForum { get { return Set<Circle_AreaForum>(); } }
+
         #endregion
 
         #region 自营商城
