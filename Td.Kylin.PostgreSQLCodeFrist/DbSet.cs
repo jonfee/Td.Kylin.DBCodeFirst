@@ -519,5 +519,24 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// </summary>
         public DbSet<Area_OperatorRelation> Area_OperatorRelation { get { return Set<Area_OperatorRelation>(); } }
         #endregion
+
+        #region 代理商
+
+        /// <summary>
+        /// 代理商帐户
+        /// </summary>
+        public DbSet<Agent_Account> Agent_Account { get { return Set<Agent_Account>(); } }
+
+        /// <summary>
+        /// 代理商帐户附属信息
+        /// </summary>
+        public DbSet<Agent_Profile> Agent_Profile { get { return Set<Agent_Profile>(); } }
+
+        /// <summary>
+        /// 代理商代理区域关联
+        /// </summary>
+        public DbSet<Agent_AreaRelation> Agent_AreaRelation { get { return Set<Agent_AreaRelation>(); } }
+
+        #endregion
     }
 }

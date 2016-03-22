@@ -628,6 +628,30 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.HasKey(p => new { p.OperatorID, p.AreaID });
             });
             #endregion
+
+            #region 代理商
+
+            //代理商
+            modelBuilder.Entity<Agent_Account>(entity =>
+            {
+                entity.Property(p => p.AgentID).ValueGeneratedNever();
+                entity.HasKey(p => p.AgentID);
+            });
+
+            //代理商附属信息
+            modelBuilder.Entity<Agent_Profile>(entity =>
+            {
+                entity.Property(p => p.AgentID).ValueGeneratedNever();
+                entity.HasKey(p => p.AgentID);
+            });
+
+            //代理商代理区域关联
+            modelBuilder.Entity<Agent_AreaRelation>(entity =>
+            {
+                entity.HasKey(p => new { p.AgentID, p.AgentAreaID });
+            });
+
+            #endregion
         }
     }
 }
