@@ -9,7 +9,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropPrimaryKey(name: "PK_Circle_Follow", table: "Circle_Follow");
-            migrationBuilder.DropColumn(name: "MerchatID", table: "Merchant_Order");
             migrationBuilder.DropColumn(name: "Attention", table: "Circle_Forum");
             migrationBuilder.DropColumn(name: "Hot", table: "Circle_Forum");
             migrationBuilder.DropColumn(name: "Moderators", table: "Circle_Forum");
@@ -105,11 +104,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
             migrationBuilder.DropColumn(name: "AreaID", table: "Ad_Content");
             migrationBuilder.DropColumn(name: "OrderNo", table: "Ad_Content");
             migrationBuilder.DropTable("Circle_AreaForum");
-            migrationBuilder.AddColumn<long>(
-                name: "MerchatID",
-                table: "Merchant_Order",
-                nullable: false,
-                defaultValue: 0L);
             migrationBuilder.AddColumn<int>(
                 name: "Attention",
                 table: "Circle_Forum",

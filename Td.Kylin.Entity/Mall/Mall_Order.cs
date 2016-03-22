@@ -152,7 +152,5 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "varchar(200)")]
         public string Remark { get; set; }
 
-        public int AreaID { get; set; }
-
     }
 }

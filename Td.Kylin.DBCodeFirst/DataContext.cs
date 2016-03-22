@@ -290,7 +290,7 @@ namespace Td.Kylin.DBCodeFirst
 
             modelBuilder.Entity<Circle_Follow>(entity =>
             {
-                entity.HasKey(p => new { p.ForumID, p.UserID });
+                entity.HasKey(p => new { p.AreaForumID, p.UserID });
             });
 
             modelBuilder.Entity<Circle_EventUser>(entity =>
