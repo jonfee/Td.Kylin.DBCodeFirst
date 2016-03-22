@@ -47,16 +47,17 @@ namespace Td.Kylin.Entity
         public DateTime UpdateTime { get; set; }
 
         /// <summary>
-        /// 商家ID
+        /// 商家ID（B2C自营商城时，商家ID为0）
         /// </summary>
         public long MerchantID { get; set; }
 
         /// <summary>
-        /// 区域ID
+        /// 区域ID（或商家所属区域ID）
         /// </summary>
         public int AreaID { get; set; }
+
         /// <summary>
-        /// 0为自营 1为商家
+        /// 0为B2C自营 1为商家
         /// </summary>
         public int MallID { get; set; }
     }

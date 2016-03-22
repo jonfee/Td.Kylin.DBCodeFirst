@@ -31,6 +31,11 @@ namespace Td.Kylin.Entity
         ///</summary>
         public long CategoryID { get; set; }
 
+        /// <summary>
+        /// 所属区域ID
+        /// </summary>
+        public int AreaID { get; set; }
+
         ///<summary>
         ///标签ID集合
         ///</summary>
@@ -123,10 +128,6 @@ namespace Td.Kylin.Entity
         ///促销ID
         ///</summary>
         public long? PromotionID { get; set; }
-        /// <summary>
-        /// 区域ID
-        /// </summary>
-        public int AreaID { get; set; }
 
     }
 }

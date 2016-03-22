@@ -14,6 +14,11 @@ namespace Td.Kylin.Entity
         ///</summary>
         public long OrderID { get; set; }
 
+        /// <summary>
+        /// 所属区域ID
+        /// </summary>
+        public int AreaID { get; set; }
+
         ///<summary>
         ///订单类型
         ///</summary>
