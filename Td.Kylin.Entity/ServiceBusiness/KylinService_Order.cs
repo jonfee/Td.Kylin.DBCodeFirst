@@ -31,6 +31,11 @@ namespace Td.Kylin.Entity
         public long MerchantID { get; set; }
 
         /// <summary>
+        /// 区域ID
+        /// </summary>
+        public int AreaID { get; set; }
+
+        /// <summary>
         /// 服务职员ID（未抢单前为0）
         /// </summary>
         public long WorkerID { get; set; }
