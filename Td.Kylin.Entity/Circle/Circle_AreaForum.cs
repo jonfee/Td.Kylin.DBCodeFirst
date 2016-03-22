@@ -9,6 +9,11 @@ namespace Td.Kylin.Entity
     [Table("Circle_AreaForum")]
     public class Circle_AreaForum
     {
+        ///<summary>
+		/// 区域圈子ID
+		///</summary>
+		public long AreaForumID { get; set; }
+
         /// <summary>
         /// 所属区域ID
         /// </summary>

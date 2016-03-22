@@ -330,7 +330,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst
 
             modelBuilder.Entity<Circle_AreaForum>(entity =>
             {
-                entity.HasKey(p => new { p.AreaID, p.ForumID });
+                entity.Property(p => p.AreaForumID).ValueGeneratedNever();
+                entity.HasKey(p => p.AreaForumID);
             });
 
             #endregion
