@@ -20,7 +20,7 @@ namespace Td.Kylin.Entity
         public int AreaID { get; set; }
 
         ///<summary>
-        ///版面圈子ID
+        /// 版面圈子ID
         ///</summary>
         public long ForumID { get; set; }
 

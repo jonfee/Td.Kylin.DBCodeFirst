@@ -20,11 +20,16 @@ namespace Td.Kylin.Entity
 		///首层评论ID
 		///</summary>
 		public long FirstPostID{get;set;}
-				
-		///<summary>
-		///归属版面ID
+
+        ///<summary>
+		/// 区域圈子ID
 		///</summary>
-		public long ForumID{get;set;}
+		public long AreaForumID { get; set; }
+
+        ///<summary>
+        /// 归属版面ID
+        ///</summary>
+        public long ForumID{get;set;}
 				
 		///<summary>
 		///发帖的用户ID
