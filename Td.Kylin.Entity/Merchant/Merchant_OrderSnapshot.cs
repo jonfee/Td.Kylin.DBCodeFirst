@@ -63,5 +63,10 @@ namespace Td.Kylin.Entity
         /// </summary>
         public long CategoryID { get; set; }
 
+        /// <summary>
+        /// 所属系统商品分类（MerchantGoods_SystemCategory.CategoryID）
+        /// </summary>
+        public long SystemCategoryID { get; set; }
+
     }
 }

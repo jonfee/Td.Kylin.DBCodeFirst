@@ -42,6 +42,11 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         #region 商家
 
         /// <summary>
+        /// 商家商品系统分类
+        /// </summary>
+        public DbSet<MerchantGoods_SystemCategory> MerchantGoods_SystemCategory { get { return Set<MerchantGoods_SystemCategory>(); } }
+
+        /// <summary>
         /// 商家所属行业
         /// </summary>
         public DbSet<Merchant_Industry> Merchant_Industry { get { return Set<Merchant_Industry>(); } }

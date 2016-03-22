@@ -72,6 +72,12 @@ namespace Td.Kylin.PostgreSQLCodeFirst
 
             #region 商家
 
+            modelBuilder.Entity<MerchantGoods_SystemCategory>(entity =>
+            {
+                entity.Property(p => p.CategoryID).ValueGeneratedNever();
+                entity.HasKey(p => p.CategoryID);
+            });
+
             modelBuilder.Entity<Merchant_Industry>(entity =>
             {
                 entity.Property(p => p.IndustryID).ValueGeneratedNever();

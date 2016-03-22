@@ -30,7 +30,12 @@ namespace Td.Kylin.Entity
         public string Name { get; set; }
 
         /// <summary>
-        /// 所属自定义分类
+        /// 所属系统商品分类（MerchantGoods_SystemCategory.CategoryID）
+        /// </summary>
+        public long SystemCategoryID { get; set; }
+
+        /// <summary>
+        /// 所属自定义分类（未选择时为0）
         /// </summary>
         public long CategoryID { get; set; }
 
