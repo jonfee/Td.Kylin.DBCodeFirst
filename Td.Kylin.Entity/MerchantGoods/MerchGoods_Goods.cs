@@ -98,5 +98,14 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "varchar(140)")]
 
         public string Description { get; set; }
+        ///<summary>
+        ///纬度
+        ///</summary>
+        public Single Latitude { get; set; }
+
+        ///<summary>
+        ///经度
+        ///</summary>
+        public Single Longitude { get; set; }
     }
 }
