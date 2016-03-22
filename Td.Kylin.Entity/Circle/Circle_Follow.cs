@@ -9,16 +9,16 @@ namespace Td.Kylin.Entity
     /// </summary>
     [Table("Circle_Follow")]
     public class Circle_Follow : BaseEntity
-    {		
-		///<summary>
-		///版面圈子ID
-		///</summary>
-		public long ForumID{get;set;}
-				
-		///<summary>
-		///关注用户ID
-		///</summary>
-		public long UserID{get;set;}
+    {
+        ///<summary>
+        /// 区域圈子ID
+        ///</summary>
+        public long AreaForumID { get; set; }
+
+        ///<summary>
+        ///关注用户ID
+        ///</summary>
+        public long UserID{get;set;}
 
         ///<summary>
         ///最后活跃时间
