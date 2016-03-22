@@ -166,6 +166,95 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Admin_Permission");
                 });
 
+            modelBuilder.Entity("Td.Kylin.Entity.Agent_Account", b =>
+                {
+                    b.Property<long>("AgentID");
+
+                    b.Property<int>("AccountStatus");
+
+                    b.Property<decimal>("Balance");
+
+                    b.Property<DateTime>("CreateTime");
+
+                    b.Property<decimal>("FreezeMoney");
+
+                    b.Property<string>("LoginPassword")
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
+
+                    b.Property<string>("Mobile")
+                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
+
+                    b.Property<string>("Name")
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
+
+                    b.Property<int>("OperatorAreaID");
+
+                    b.Property<string>("PaymentPassword")
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate();
+
+                    b.HasKey("AgentID");
+
+                    b.HasAnnotation("Relational:TableName", "Agent_Account");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.Agent_AreaRelation", b =>
+                {
+                    b.Property<long>("AgentID");
+
+                    b.Property<int>("AgentAreaID");
+
+                    b.Property<DateTime>("CreateTime");
+
+                    b.Property<DateTime>("EndTime");
+
+                    b.Property<string>("Remark")
+                        .HasAnnotation("Relational:ColumnType", "varchar(300)");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate();
+
+                    b.Property<DateTime>("StartTime");
+
+                    b.HasKey("AgentID", "AgentAreaID");
+
+                    b.HasAnnotation("Relational:TableName", "Agent_AreaRelation");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.Agent_Profile", b =>
+                {
+                    b.Property<long>("AgentID");
+
+                    b.Property<string>("BusinessLicensePhoto")
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
+
+                    b.Property<string>("IDCardNo")
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
+
+                    b.Property<string>("IDCardPhotoBack")
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
+
+                    b.Property<string>("IDCardPhotoFront")
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
+
+                    b.Property<string>("LinkMan")
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
+
+                    b.Property<string>("LinkPhone")
+                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
+
+                    b.Property<string>("Remark")
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
+
+                    b.HasKey("AgentID");
+
+                    b.HasAnnotation("Relational:TableName", "Agent_Profile");
+                });
+
             modelBuilder.Entity("Td.Kylin.Entity.Area_Open", b =>
                 {
                     b.Property<int>("AreaID");
@@ -266,19 +355,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<DateTime>("CreateTime");
 
-                    b.Property<string>("Email")
-                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
-
                     b.Property<DateTime>("EndTime");
-
-                    b.Property<string>("LinkMan")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
-
-                    b.Property<string>("Mobile")
-                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
-
-                    b.Property<string>("PhoneNo")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("Remark")
                         .HasAnnotation("Relational:ColumnType", "varchar(300)");
@@ -1673,6 +1750,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Account", b =>
                 {
                     b.Property<long>("MerchantID");
+
+                    b.Property<long>("AgentID");
 
                     b.Property<int>("AreaID");
 
