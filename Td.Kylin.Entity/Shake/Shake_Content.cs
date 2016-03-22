@@ -15,8 +15,13 @@ namespace Td.Kylin.Entity
         ///</summary>
         public long ContentID { get; set; }
 
+        /// <summary>
+        /// 区域ID
+        /// </summary>
+        public int AreaID { get; set; }
+
         ///<summary>
-        ///推荐管理员ID
+        ///推荐管理员ID（区域管理员）
         ///</summary>
         public long PushAdminID { get; set; }
 
