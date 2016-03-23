@@ -5,6 +5,20 @@ namespace Td.Kylin.PostgreSQLCodeFirst
 {
     public partial class DataContext
     {
+        #region 全局
+
+        /// <summary>
+        /// 模块授权
+        /// </summary>
+        public DbSet<System_ModuleAuthorize> System_ModuleAuthorize { get { return Set<System_ModuleAuthorize>(); } }
+
+        /// <summary>
+        /// 全局配置
+        /// </summary>
+        public DbSet<System_GlobalResources> System_GlobalResources { get { return Set<System_GlobalResources>(); } }
+
+        #endregion
+
         #region 广告
 
         /// <summary>
@@ -174,15 +188,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 系统短信
         /// </summary>
         public DbSet<System_SMS> System_SMS { get { return Set<System_SMS>(); } }
-
-        #endregion
-
-        #region 模块授权
-
-        /// <summary>
-        /// 模块授权
-        /// </summary>
-        public DbSet<System_ModuleAuthorize> System_ModuleAuthorize { get { return Set<System_ModuleAuthorize>(); } }
 
         #endregion
 

@@ -20,6 +20,22 @@ namespace Td.Kylin.PostgreSQLCodeFirst
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            #region 全局
+
+            //系统模块接口授权
+            modelBuilder.Entity<System_ModuleAuthorize>(entity =>
+            {
+                entity.HasKey(p => new { p.ServerID, p.ModuleID });
+            });
+
+            //系统全局配置
+            modelBuilder.Entity<System_GlobalResources>(entity =>
+            {
+                entity.HasKey(p => new { p.ResourceType, p.ResourceKey });
+            });
+
+            #endregion
+
             #region 广告
 
             //广告页
@@ -231,15 +247,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst
             {
                 entity.Property(p => p.Id).ValueGeneratedNever();
                 entity.HasKey(p => p.Id);
-            });
-
-            #endregion
-
-            #region 系统模块接口授权
-
-            modelBuilder.Entity<System_ModuleAuthorize>(entity =>
-            {
-                entity.HasKey(p => new { p.ServerID, p.ModuleID });
             });
 
             #endregion
