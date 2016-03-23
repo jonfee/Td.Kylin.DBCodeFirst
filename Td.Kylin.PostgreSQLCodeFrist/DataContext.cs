@@ -414,17 +414,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst
             {
                 entity.HasKey(p => new { p.PromotionID, p.ProductID });
             });
-
-            modelBuilder.Entity<Mall_ShoppingCart>(entity =>
-            {
-                entity.Property(p => p.CartID).ValueGeneratedNever();
-                entity.HasKey(p => p.CartID);
-            });
-            modelBuilder.Entity<Tao_ProductRecommend>(entity =>
-            {
-                entity.HasKey(p => new { p.MallType, p.ProductID });
-            });
-
             #endregion
 
             #region 投诉/举报
@@ -656,6 +645,21 @@ namespace Td.Kylin.PostgreSQLCodeFirst
             modelBuilder.Entity<Agent_AreaRelation>(entity =>
             {
                 entity.HasKey(p => new { p.AgentID, p.AgentAreaID });
+            });
+
+            #endregion
+
+            #region 淘一淘及购物车
+
+            modelBuilder.Entity<Mall_ShoppingCart>(entity =>
+            {
+                entity.Property(p => p.CartID).ValueGeneratedNever();
+                entity.HasKey(p => p.CartID);
+            });
+
+            modelBuilder.Entity<Tao_ProductRecommend>(entity =>
+            {
+                entity.HasKey(p => new { p.MallType, p.ProductID, p.RecommendType });
             });
 
             #endregion
