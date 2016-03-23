@@ -32,6 +32,12 @@ namespace Td.Kylin.Entity
         public string CategoryPath { get; set; }
 
         /// <summary>
+        /// 图标
+        /// </summary>
+        [Column(TypeName = "varchar(100)")]
+        public string Icon { get; set; }
+
+        /// <summary>
         /// 排序值
         /// </summary>
         public int OrderNo { get; set; }
