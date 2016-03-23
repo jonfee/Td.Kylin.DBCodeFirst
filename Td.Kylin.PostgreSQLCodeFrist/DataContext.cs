@@ -34,6 +34,12 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.HasKey(p => new { p.ResourceType, p.ResourceKey });
             });
 
+            //平台对区域抽成配置
+            modelBuilder.Entity<Area_PlatformCommission>(entity =>
+            {
+                entity.HasKey(p => new { p.AreaID, p.CommissionItem });
+            });
+
             #endregion
 
             #region 广告

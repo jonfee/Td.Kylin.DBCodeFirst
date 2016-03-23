@@ -17,6 +17,11 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// </summary>
         public DbSet<System_GlobalResources> System_GlobalResources { get { return Set<System_GlobalResources>(); } }
 
+        /// <summary>
+        /// 平台对区域抽成配置
+        /// </summary>
+        public DbSet<Area_PlatformCommission> Area_PlatformCommission { get { return Set<Area_PlatformCommission>(); } }
+
         #endregion
 
         #region 广告
