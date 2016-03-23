@@ -83,6 +83,11 @@ namespace Td.Kylin.Entity
 
         #endregion
 
+        /// <summary>
+        /// 区域运营数（即有多少区域在使用及运营）
+        /// </summary>
+        public int OperatorNumber { get; set; }
+
         ///<summary>
         ///发帖类型2n次方
         ///</summary>
