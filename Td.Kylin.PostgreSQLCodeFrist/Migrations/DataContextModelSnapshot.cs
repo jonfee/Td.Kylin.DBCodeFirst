@@ -366,6 +366,18 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<DateTime>("StartTime");
 
+                    b.Property<string>("Mobile")
+                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
+
+                    b.Property<string>("PhoneNo")
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
+
+                    b.Property<string>("LinkMan")
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
+
+                    b.Property<string>("Email")
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
+
                     b.HasKey("OperatorID", "AreaID");
 
                     b.HasAnnotation("Relational:TableName", "Area_OperatorRelation");
