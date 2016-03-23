@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160323063500_updateMerchantOrderSnapshot")]
+    partial class updateMerchantOrderSnapshot
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -365,18 +366,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime>("StartTime");
-
-                    b.Property<string>("Mobile")
-                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
-
-                    b.Property<string>("PhoneNo")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
-
-                    b.Property<string>("LinkMan")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
-
-                    b.Property<string>("Email")
-                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.HasKey("OperatorID", "AreaID");
 
