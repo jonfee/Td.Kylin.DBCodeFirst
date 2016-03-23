@@ -8,7 +8,7 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20160322110355_addTable_Agent")]
+    [Migration("20160323020255_addTable_Agent")]
     partial class addTable_Agent
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
