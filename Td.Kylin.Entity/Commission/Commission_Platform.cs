@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 平台对区域抽成配置
+    /// 平台对区域交易抽成配置
     /// </summary>
-    [Table("Area_PlatformCommission")]
-    public class Area_PlatformCommission
+    [Table("Commission_Platform")]
+    public class Commission_Platform
     {
         /// <summary>
         /// 区域ID
@@ -18,7 +18,7 @@ namespace Td.Kylin.Entity
         public int AreaID { get; set; }
 
         /// <summary>
-        /// 抽成项（如：B2C订单|商家商品订单|上门预约服务订单）
+        /// 抽成项（如：B2C订单金额抽成|商家订单交易佣金抽成）
         /// </summary>
         public int CommissionItem { get; set; }
 

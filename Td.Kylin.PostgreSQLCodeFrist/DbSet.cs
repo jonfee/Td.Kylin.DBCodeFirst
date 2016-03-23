@@ -17,10 +17,25 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// </summary>
         public DbSet<System_GlobalResources> System_GlobalResources { get { return Set<System_GlobalResources>(); } }
 
+
+        #endregion
+
+        #region 抽成
+
         /// <summary>
         /// 平台对区域抽成配置
         /// </summary>
-        public DbSet<Area_PlatformCommission> Area_PlatformCommission { get { return Set<Area_PlatformCommission>(); } }
+        public DbSet<Commission_Platform> Area_PlatformCommission { get { return Set<Commission_Platform>(); } }
+
+        /// <summary>
+        /// 区域运营商默认抽成配置
+        /// </summary>
+        public DbSet<Commission_OperatorDefault> Commission_OperatorDefault { get { return Set<Commission_OperatorDefault>(); } }
+
+        /// <summary>
+        /// 区域运营商对商家抽成配置
+        /// </summary>
+          public DbSet<Commission_OperatorFromMerchant> Commission_OperatorFromMerchant { get { return Set<Commission_OperatorFromMerchant>(); } }
 
         #endregion
 
@@ -529,6 +544,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 运营商及运营区域关联
         /// </summary>
         public DbSet<Area_OperatorRelation> Area_OperatorRelation { get { return Set<Area_OperatorRelation>(); } }
+
+        
         #endregion
 
         #region 代理商
