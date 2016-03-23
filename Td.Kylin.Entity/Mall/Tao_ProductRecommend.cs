@@ -20,9 +20,19 @@ namespace Td.Kylin.Entity
         public long ProductID { get; set; }
 
         /// <summary>
-        /// 推荐标识状态集（与对应的商品标识状态同）
+        /// 推荐类型
         /// </summary>
-        public int TagTypes { get; set; }
+        public int RecommendType { get; set; }
+
+        /// <summary>
+        /// 开始时间（为null表示不限制）
+        /// </summary>
+        public DateTime? BeginTime { get; set; }
+
+        /// <summary>
+        /// 结束时间（为null表示不限制）
+        /// </summary>
+        public DateTime? EndTime { get; set; }
 
         /// <summary>
         /// B2C区域或所属商家的区域ID
