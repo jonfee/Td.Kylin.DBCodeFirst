@@ -78,8 +78,7 @@ namespace Td.Kylin.Entity
 
         ///<summary>
         ///注册时间
-        ///</summary>
-        
+        ///</summary>        
         public DateTime CreateTime { get; set; }
 
     }

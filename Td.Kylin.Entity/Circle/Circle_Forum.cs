@@ -10,34 +10,34 @@ namespace Td.Kylin.Entity
     /// </summary>
     [Table("Circle_Forum")]
     public class Circle_Forum : BaseEntity
-    {		
-		///<summary>
-		///版面圈子ID
-		///</summary>
-		public long ForumID{get;set;}
-				
-		///<summary>
-		///论坛分类ID
-		///</summary>
-		public long CategoryID{get;set;}
+    {
+        ///<summary>
+        ///版面圈子ID
+        ///</summary>
+        public long ForumID { get; set; }
+
+        ///<summary>
+        ///论坛分类ID
+        ///</summary>
+        public long CategoryID { get; set; }
 
         ///<summary>
         ///论坛名称
         ///</summary>
         [Column(TypeName = "varchar(20)")]
-        public string ForumName{get;set;}
+        public string ForumName { get; set; }
 
         ///<summary>
         ///论坛图标
         ///</summary>
         [Column(TypeName = "varchar(50)")]
-        public string Logo{get;set;}
+        public string Logo { get; set; }
 
         ///<summary>
         ///论坛介绍
         ///</summary>
         [Column(TypeName = "varchar(50)")]
-        public string Description{get;set;}
+        public string Description { get; set; }
 
         #region 待删除
         /////<summary>
@@ -81,43 +81,43 @@ namespace Td.Kylin.Entity
         /////</summary>
         //public int OrderNo{get;set;}
 
-        /////<summary>
-        /////发帖类型2n次方
-        /////</summary>
-        //public int PostType{get;set;}
-
-        /////<summary>
-        /////发帖等级限制
-        /////</summary>
-        //public int PostLevel{get;set;}
-
-        /////<summary>
-        /////不需要审核等级限制
-        /////</summary>
-        //public int PassLevel{get;set;}
-
         #endregion
+
+        ///<summary>
+        ///发帖类型2n次方
+        ///</summary>
+        public int PostType { get; set; }
+
+        ///<summary>
+        ///发帖等级限制
+        ///</summary>
+        public int PostLevel { get; set; }
+
+        ///<summary>
+        ///不需要审核等级限制
+        ///</summary>
+        public int PassLevel { get; set; }
 
         ///<summary>
         ///逻辑删除时间
         ///</summary>
-        public DateTime? DeleteTime{get;set;}
-				
-		///<summary>
-		///是否禁用
-		///</summary>
-		public bool Disabled{get;set;}
-				
-		///<summary>
-		///是否逻辑删除
-		///</summary>
-		public bool IsDelete{get;set;}
+        public DateTime? DeleteTime { get; set; }
+
+        ///<summary>
+        ///是否禁用
+        ///</summary>
+        public bool Disabled { get; set; }
+
+        ///<summary>
+        ///是否逻辑删除
+        ///</summary>
+        public bool IsDelete { get; set; }
 
         ///<summary>
         ///数据建立时间
         ///</summary>
-        
-        public DateTime CreateTime{get;set;}
-				
-	}
+
+        public DateTime CreateTime { get; set; }
+
+    }
 }

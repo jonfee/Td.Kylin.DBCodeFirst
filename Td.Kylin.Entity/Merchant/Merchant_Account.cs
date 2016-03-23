@@ -10,10 +10,6 @@ namespace Td.Kylin.Entity
     [Table("Merchant_Account")]
     public class Merchant_Account : BaseEntity
     {
-        /// <summary>
-        /// 区域ID
-        /// </summary>
-        public int AreaID { get; set; }
         ///<summary>
         ///商户ID
         ///</summary>
@@ -23,6 +19,17 @@ namespace Td.Kylin.Entity
         /// 代理商ID
         /// </summary>
         public long AgentID { get; set; }
+
+        /// <summary>
+        /// 区域ID（一般为区县ID）
+        /// </summary>
+        public int AreaID { get; set; }
+
+        /// <summary>
+        /// 区域路径（如：110000|110100|110101）
+        /// </summary>
+        [Column(TypeName = "varchar(100)")]
+        public string AreaLayer { get; set; }
 
         ///<summary>
         ///手机号码（唯一）

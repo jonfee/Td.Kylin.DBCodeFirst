@@ -51,6 +51,11 @@ namespace Td.Kylin.Entity
 		///</summary>
 		public decimal SalePrice{get;set;}
 
+        ///<summary>
+        ///销售状态
+        ///</summary>
+        public int SalesStatus { get; set; }
+
         /// <summary>
         /// 标识状态集
         /// </summary>
