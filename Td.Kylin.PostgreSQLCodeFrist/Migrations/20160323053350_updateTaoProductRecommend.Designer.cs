@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160323053350_updateTaoProductRecommend")]
+    partial class updateTaoProductRecommend
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -2514,8 +2515,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<int>("TagTypes");
-
-                    b.Property<DateTime>("UpdateTime");
 
                     b.HasKey("MallType", "ProductID");
 

@@ -9,28 +9,32 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 淘一淘商品推荐
     /// </summary>
-    [Table("Mall_ProductRecommend")]
-    public class Mall_ProductRecommend
+    [Table("Tao_ProductRecommend")]
+    public class Tao_ProductRecommend
     {
         /// <summary>
-        /// 推荐ID-推荐页面地址枚举值
+        /// 所属商城类型（1为B2C区域自营，2为企业微商城）
         /// </summary>
-        public int RecommendID { get; set; }
+        public int MallType { get; set; }
+
         /// <summary>
-        /// 关联商品ID-B2C商品ID 、 商家商品ID
+        /// 商品ID（B2C或商家商品）
         /// </summary>
         public long ProductID { get; set; }
+
         /// <summary>
-        /// 0为B2C，1为商家
+        /// 推荐标识状态集（与对应的商品标识状态同）
         /// </summary>
-        public int WhoRecommend { get; set; }
+        public int TagTypes { get; set; }
+
         /// <summary>
-        /// 是否推荐 true为推荐|false为不推荐
+        /// B2C区域或所属商家的区域ID
         /// </summary>
-        public bool IsRecommend { get; set; }
+        public int AreaID { get; set; }
+
         /// <summary>
-        /// 排序
+        /// 最后更新时间
         /// </summary>
-        public int OrderNo { get; set; } 
+        public DateTime UpdateTime { get; set; }
     }
 }
