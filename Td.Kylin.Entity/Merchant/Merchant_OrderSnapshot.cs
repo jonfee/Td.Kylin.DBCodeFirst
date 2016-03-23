@@ -68,5 +68,9 @@ namespace Td.Kylin.Entity
         /// </summary>
         public long SystemCategoryID { get; set; }
 
+        ///<summary>
+        ///是否已评价
+        ///</summary>
+        public bool HasEvaluate { get; set; }
     }
 }
