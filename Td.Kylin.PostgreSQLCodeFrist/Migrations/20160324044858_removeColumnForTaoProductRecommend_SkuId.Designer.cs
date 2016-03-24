@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160324044858_removeColumnForTaoProductRecommend_SkuId")]
+    partial class removeColumnForTaoProductRecommend_SkuId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -2598,8 +2599,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.Property<DateTime?>("EndTime");
 
                     b.Property<int>("MallType");
-
-                    b.Property<int>("OrderNo");
 
                     b.Property<long>("ProductID");
 

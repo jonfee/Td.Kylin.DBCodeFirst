@@ -35,11 +35,6 @@ namespace Td.Kylin.Entity
         public int RecommendType { get; set; }
 
         /// <summary>
-        /// 规格ID
-        /// </summary>
-        public long SkuID { get; set; }
-
-        /// <summary>
         /// 开始时间（为null表示不限制）
         /// </summary>
         public DateTime? BeginTime { get; set; }
@@ -48,7 +43,7 @@ namespace Td.Kylin.Entity
         /// 结束时间（为null表示不限制）
         /// </summary>
         public DateTime? EndTime { get; set; }
-
+        
         /// <summary>
         /// 排序
         /// </summary>
