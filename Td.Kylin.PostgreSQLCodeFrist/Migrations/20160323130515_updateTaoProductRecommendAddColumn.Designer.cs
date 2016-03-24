@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160323130515_updateTaoProductRecommendAddColumn")]
+    partial class updateTaoProductRecommendAddColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -886,59 +887,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.HasKey("TopicID");
 
                     b.HasAnnotation("Relational:TableName", "Circle_Topic");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Commission_OperatorDefault", b =>
-                {
-                    b.Property<int>("AreaID");
-
-                    b.Property<int>("CommissionItem");
-
-                    b.Property<int>("CommissionType");
-
-                    b.Property<DateTime>("UpdateTime");
-
-                    b.Property<decimal>("Value");
-
-                    b.HasKey("AreaID", "CommissionItem");
-
-                    b.HasAnnotation("Relational:TableName", "Commission_OperatorDefault");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Commission_OperatorFromMerchant", b =>
-                {
-                    b.Property<int>("AreaID");
-
-                    b.Property<long>("MerchantID");
-
-                    b.Property<int>("CommissionItem");
-
-                    b.Property<int>("CommissionType");
-
-                    b.Property<DateTime>("UpdateTime");
-
-                    b.Property<decimal>("Value");
-
-                    b.HasKey("AreaID", "MerchantID", "CommissionItem");
-
-                    b.HasAnnotation("Relational:TableName", "Commission_OperatorFromMerchant");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Commission_Platform", b =>
-                {
-                    b.Property<int>("AreaID");
-
-                    b.Property<int>("CommissionItem");
-
-                    b.Property<int>("CommissionType");
-
-                    b.Property<DateTime>("UpdateTime");
-
-                    b.Property<decimal>("Value");
-
-                    b.HasKey("AreaID", "CommissionItem");
-
-                    b.HasAnnotation("Relational:TableName", "Commission_Platform");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Complaint", b =>
@@ -2589,7 +2537,11 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Tao_ProductRecommend", b =>
                 {
-                    b.Property<long>("RecommendID");
+                    b.Property<int>("MallType");
+
+                    b.Property<long>("ProductID");
+
+                    b.Property<int>("RecommendType");
 
                     b.Property<int>("AreaID");
 
@@ -2597,21 +2549,11 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<DateTime?>("EndTime");
 
-                    b.Property<int>("MallType");
-
-                    b.Property<long>("ProductID");
-
-                    b.Property<int>("RecommendType");
-
-                    b.Property<long>("SKUID");
-
-                    b.Property<DateTime?>("EndTime");
-
                     b.Property<long>("SkuID");
 
                     b.Property<DateTime>("UpdateTime");
 
-                    b.HasKey("RecommendID");
+                    b.HasKey("MallType", "ProductID", "RecommendType");
 
                     b.HasAnnotation("Relational:TableName", "Tao_ProductRecommend");
                 });
