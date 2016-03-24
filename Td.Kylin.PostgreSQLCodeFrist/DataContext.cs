@@ -682,7 +682,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst
 
             modelBuilder.Entity<Tao_ProductRecommend>(entity =>
             {
-                entity.HasKey(p => new { p.MallType, p.ProductID, p.RecommendType });
+                entity.Property(p => p.RecommendID).ValueGeneratedNever();
+                entity.HasKey(p => p.RecommendID);
             });
 
             #endregion
