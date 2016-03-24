@@ -36,6 +36,28 @@ namespace Td.Kylin.PostgreSQLCodeFirst
 
             #endregion
 
+            #region 抽成
+
+            //平台对区域抽成配置
+            modelBuilder.Entity<Commission_Platform>(entity =>
+            {
+                entity.HasKey(p => new { p.AreaID, p.CommissionItem });
+            });
+
+            //区域运营商对区域下交易默认抽成配置
+            modelBuilder.Entity<Commission_OperatorDefault>(entity =>
+            {
+                entity.HasKey(p => new { p.AreaID, p.CommissionItem });
+            });
+            
+            //区域运营商对商家的抽成配置
+            modelBuilder.Entity<Commission_OperatorFromMerchant>(entity =>
+            {
+                entity.HasKey(p => new { p.AreaID, p.MerchantID, p.CommissionItem });
+            });
+
+            #endregion
+
             #region 广告
 
             //广告页
@@ -623,6 +645,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst
             {
                 entity.HasKey(p => new { p.OperatorID, p.AreaID });
             });
+            
             #endregion
 
             #region 代理商
