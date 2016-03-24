@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 区域运营商默认抽成配置
+    /// 运营商（区域）默认抽成配置
     /// </summary>
     [Table("Commission_OperatorDefault")]
     public class Commission_OperatorDefault

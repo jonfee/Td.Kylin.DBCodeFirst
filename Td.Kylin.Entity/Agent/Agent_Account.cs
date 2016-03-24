@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Td.Kylin.Entity
 {
+    /// <summary>
+    /// 代理商账户
+    /// </summary>
     [Table("Agent_Account")]
     public class Agent_Account : BaseEntity
     {
@@ -19,12 +22,19 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName = "varchar(50)")]
         public string Name { get; set; }
+        
 
         /// <summary>
-        /// 绑定手机号码（可用于登录）
+        /// 绑定手机号码
         /// </summary>
         [Column(TypeName = "varchar(11)")]
         public string Mobile { get; set; }
+
+        /// <summary>
+        /// 登录账号
+        /// </summary>
+        [Column(TypeName = "varchar(20)")]
+        public string LoginAccount { get; set; }
 
         /// <summary>
         /// 登录密码

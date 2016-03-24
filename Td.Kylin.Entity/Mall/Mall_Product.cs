@@ -93,7 +93,7 @@ namespace Td.Kylin.Entity
         public int SalesStatus { get; set; }
 
         ///<summary>
-        ///标识状态集（推荐，新品，人气）
+        ///标识状态集（新品，人气）
         ///</summary>
         public int TagStatus { get; set; }
 

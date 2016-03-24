@@ -11,6 +11,7 @@ namespace Td.Kylin.DBApi.Controllers
     [Route("api/init")]
     public class InitController : BaseController
     {
+        #region 初始化模块授权
         /// <summary>
         /// 初始化模块授权
         /// </summary>
@@ -22,7 +23,9 @@ namespace Td.Kylin.DBApi.Controllers
 
             return Ok(string.Format("共初始化接口授权 {0} 项", rows));
         }
+        #endregion
 
+        #region 初始化超级管理员
         /// <summary>
         /// 初始化超级管理员
         /// </summary>
@@ -38,7 +41,13 @@ namespace Td.Kylin.DBApi.Controllers
 
             return Ok(string.Format("超级管理初始化成功！账号：{0}，密码：{1}", account, pwd));
         }
+        #endregion
 
+        #region 初始化商家行业
+        /// <summary>
+        /// 初始化商家行业
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("industry")]
         public IActionResult InitIndustry()
         {
@@ -46,7 +55,13 @@ namespace Td.Kylin.DBApi.Controllers
 
             return KylinOk(result);
         }
+        #endregion
 
+        #region 初始化全国行政地区
+        /// <summary>
+        /// 初始化全国行政地区
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("area")]
         public IActionResult InitArea()
         {
@@ -56,6 +71,11 @@ namespace Td.Kylin.DBApi.Controllers
 
             return KylinOk(result);
         }
+        #endregion
+
+        #region 初始化系统默认配置
+
+        #endregion
 
         [HttpGet("img")]
         public IActionResult GetImgUrl(int width, int height)
