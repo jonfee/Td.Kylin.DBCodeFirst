@@ -1424,6 +1424,8 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<string>("MainPic")
                         .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
+                    b.Property<long>("MerchantID");
+
                     b.Property<string>("Name")
                         .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
@@ -1575,7 +1577,13 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                 {
                     b.Property<long>("CartID");
 
+                    b.Property<int>("AreaID");
+
                     b.Property<DateTime>("CreateTime");
+
+                    b.Property<int>("MallID");
+
+                    b.Property<long>("MerchatID");
 
                     b.Property<int>("Number");
 
@@ -1734,18 +1742,18 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("BusinessBeginTime")
-                        .HasAnnotation("Relational:ColumnType", "char(5)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(5)");
 
                     b.Property<string>("BusinessEndTime")
-                        .HasAnnotation("Relational:ColumnType", "char(5)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(5)");
 
-                    b.Property<decimal>("DeliveryMoney");
+                    b.Property<int>("DeliveryMoney");
 
                     b.Property<string>("ExceedOrderRemark");
 
                     b.Property<bool>("ExceedOrderTime");
 
-                    b.Property<decimal>("ExemptDelivery");
+                    b.Property<int>("ExemptDelivery");
 
                     b.Property<bool>("IsDelivery");
 
@@ -1757,7 +1765,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("Scope");
 
-                    b.Property<decimal>("StartMoney");
+                    b.Property<int>("StartMoney");
 
                     b.Property<DateTime>("UpdateTime");
 
@@ -2057,7 +2065,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<DateTime>("CreateTime");
 
                     b.Property<string>("Description")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(140)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(140)");
 
                     b.Property<int>("EvaluateCount");
 
@@ -2084,7 +2092,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<decimal>("SalePrice");
 
                     b.Property<string>("Specification")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<int>("Status");
 

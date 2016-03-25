@@ -123,10 +123,15 @@ namespace Td.Kylin.Entity
         ///促销ID
         ///</summary>
         public long? PromotionID { get; set; }
+
+        /// <summary>
+        /// 商家ID
+        /// </summary>
+        public long MerchantID { get; set; }
+
         /// <summary>
         /// 区域ID
         /// </summary>
         public int AreaID { get; set; }
-
     }
 }

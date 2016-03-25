@@ -37,14 +37,26 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///加入购物车时间
         ///</summary>
-        
         public DateTime CreateTime{get;set;}
 
         ///<summary>
         ///最后更新时间
         ///</summary>
-        
         public DateTime UpdateTime{get;set;}
-				
-	}
+
+        /// <summary>
+        /// 商家ID
+        /// </summary>
+        public long MerchatID { get; set; }
+
+        /// <summary>
+        /// 区域ID
+        /// </summary>
+        public int AreaID { get; set; }
+
+        /// <summary>
+        /// 商城ID，0是B2C，1是商家
+        /// </summary>
+        public int MallID { get; set; }
+    }
 }
