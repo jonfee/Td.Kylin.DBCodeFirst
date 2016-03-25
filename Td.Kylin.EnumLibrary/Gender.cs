@@ -3,7 +3,7 @@
     /// <summary>
     /// 性别
     /// </summary>
-    public enum Sex
+    public enum Gender
     {
         /// <summary>
         /// 保密
