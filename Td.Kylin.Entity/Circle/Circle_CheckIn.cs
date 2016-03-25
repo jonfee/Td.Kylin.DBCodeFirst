@@ -25,6 +25,21 @@ namespace Td.Kylin.Entity
         ///</summary>
         
         public DateTime CheckTime{get;set;}
-				
-	}
+
+        /// <summary>
+        /// 签到时所在的区域ID
+        /// </summary>
+        public int AreaID { get; set; }
+
+        ///<summary>
+		///纬度
+		///</summary>
+		public Single Latitude { get; set; }
+
+        ///<summary>
+        ///经度
+        ///</summary>
+        public Single Longitude { get; set; }
+
+    }
 }

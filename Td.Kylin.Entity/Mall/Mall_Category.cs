@@ -15,6 +15,11 @@ namespace Td.Kylin.Entity
 		///</summary>
 		public long CategoryID{get;set;}
 
+        /// <summary>
+        /// 所属区域ID
+        /// </summary>
+        public int AreaID { get; set; }
+
         ///<summary>
         ///类目名称
         ///</summary>

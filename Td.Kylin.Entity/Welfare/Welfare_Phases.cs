@@ -20,6 +20,11 @@ namespace Td.Kylin.Entity
         public long WelfareID { get; set; }
 
         /// <summary>
+        /// 区域ID
+        /// </summary>
+        public int AreaID { get; set; }
+
+        /// <summary>
         /// 福利类型
         /// </summary>
         public int WelfareType { get; set; }

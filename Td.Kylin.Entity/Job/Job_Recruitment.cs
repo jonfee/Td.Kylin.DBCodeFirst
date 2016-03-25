@@ -20,6 +20,11 @@ namespace Td.Kylin.Entity
         public long MerchantID { get; set; }
 
         /// <summary>
+        /// 商家所属区域ID
+        /// </summary>
+        public int MerchantAreaID { get; set; }
+
+        /// <summary>
         /// 职位类别ID
         /// </summary>
         public long CategoryID { get; set; }

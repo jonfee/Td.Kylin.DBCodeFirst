@@ -12,7 +12,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 服务职员ID
         /// </summary>
-        public long WorkerID { get; set; }
+        public long UserID { get; set; }
 
         /// <summary>
         /// 所属商家ID

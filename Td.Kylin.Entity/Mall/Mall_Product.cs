@@ -31,6 +31,11 @@ namespace Td.Kylin.Entity
         ///</summary>
         public long CategoryID { get; set; }
 
+        /// <summary>
+        /// 所属区域ID
+        /// </summary>
+        public int AreaID { get; set; }
+
         ///<summary>
         ///标签ID集合
         ///</summary>
@@ -88,7 +93,7 @@ namespace Td.Kylin.Entity
         public int SalesStatus { get; set; }
 
         ///<summary>
-        ///标识状态集（推荐，新品，人气，摇一摇）
+        ///标识状态集（新品，人气）
         ///</summary>
         public int TagStatus { get; set; }
 
@@ -124,14 +129,5 @@ namespace Td.Kylin.Entity
         ///</summary>
         public long? PromotionID { get; set; }
 
-        /// <summary>
-        /// 商家ID
-        /// </summary>
-        public long MerchantID { get; set; }
-
-        /// <summary>
-        /// 区域ID
-        /// </summary>
-        public int AreaID { get; set; }
     }
 }

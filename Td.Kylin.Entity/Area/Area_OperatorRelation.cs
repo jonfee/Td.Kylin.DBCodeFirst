@@ -33,26 +33,7 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName = "varchar(20)")]
         public string CompactNumber { get; set; }
-        ///<summary>
-        ///联系人
-        ///</summary>
-        [Column(TypeName = "varchar(20)")]
-        public string LinkMan { get; set; }
-        /// <summary>
-        /// 邮箱
-        /// </summary>
-        [Column(TypeName = "varchar(50)")]
-        public string Email { get; set; }
-        /// <summary>
-        /// 手机号
-        /// </summary>
-        [Column(TypeName = "varchar(11)")]
-        public string Mobile { get; set; }
-        /// <summary>
-        /// 联系电话
-        /// </summary>
-        [Column(TypeName = "varchar(20)")]
-        public string PhoneNo { get; set; }
+        
         /// <summary>
         /// 备注说明
         /// </summary>

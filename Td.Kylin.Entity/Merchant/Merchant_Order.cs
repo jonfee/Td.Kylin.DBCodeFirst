@@ -19,12 +19,12 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 订单编号
         /// </summary>
-        [Column(TypeName ="varchar(18)")]
+        [Column(TypeName = "varchar(18)")]
         public string OrderCode { get; set; }
         /// <summary>
         /// 商家ID
         /// </summary>
-        public long MerchatID { get; set; }
+        public long MerchantID { get; set; }
         /// <summary>
         /// 优惠券ID 
         /// </summary>
@@ -73,33 +73,33 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///下单时间
         ///</summary>
-        
+
         public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///支付时间
         ///</summary>
-        
+
         public DateTime? PayTime { get; set; }
         ///<summary>
         ///取消时间
         ///</summary>
-        
+
         public DateTime? CancelTime { get; set; }
         /// <summary>
         /// 发货时间
         /// </summary>
-        
+
         public DateTime? SendTime { get; set; }
         ///<summary>
         ///收货时间
         ///</summary>
-        
+
         public DateTime? ReceivedTime { get; set; }
         ///<summary>
         ///评价时间
         ///</summary>
-        
+
         public DateTime? EvaluateTime { get; set; }
         /// <summary>
         /// 发货说明
@@ -126,7 +126,14 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "varchar(100)")]
         public string CancelRemark { get; set; }
-
+        /// <summary>
+        /// 经度
+        /// </summary>
+        public Single Longitude { get; set; }
+        /// <summary>
+        /// 纬度
+        /// </summary>
+        public Single Latitude { get; set; }
 
     }
 }

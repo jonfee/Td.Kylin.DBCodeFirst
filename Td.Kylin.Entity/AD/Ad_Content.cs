@@ -17,6 +17,11 @@ namespace Td.Kylin.Entity
         [ Column(TypeName = "bigint")]
         public long ContentID { get; set; }
 
+        /// <summary>
+        /// 所属区域ID
+        /// </summary>
+        public int AreaID { get; set; }
+
         ///<summary>
         ///归属广告位
         ///</summary>
@@ -78,9 +83,14 @@ namespace Td.Kylin.Entity
         public DateTime EndTime { get; set; }
 
         ///<summary>
+		///排序值
+		///</summary>
+		public int OrderNo { get; set; }
+
+        ///<summary>
         ///建立时间
         ///</summary>
-        
+
         public DateTime CreateTime { get; set; }
 
     }

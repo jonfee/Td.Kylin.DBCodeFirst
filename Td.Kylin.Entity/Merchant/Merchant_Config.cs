@@ -27,15 +27,15 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 起送金额
         /// </summary>
-        public int StartMoney { get; set; }
+        public decimal StartMoney { get; set; }
         /// <summary>
         /// 配送费
         /// </summary>
-        public int DeliveryMoney { get; set; }
+        public decimal DeliveryMoney { get; set; }
         /// <summary>
         /// 满多少免配送费
         /// </summary>
-        public int ExemptDelivery { get; set; }
+        public decimal ExemptDelivery { get; set; }
         /// <summary>
         /// 描述
         /// </summary>
@@ -47,12 +47,12 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///营业开始时间（格式：07:30）
         ///</summary>
-        [Column(TypeName = "varchar(5)")]
+        [Column(TypeName = "varchar(10)")]
         public string BusinessBeginTime { get; set; }
         ///<summary>
         ///营业结束时间（格式：23:00）
         ///</summary>
-        [Column(TypeName = "varchar(5)")]
+        [Column(TypeName = "varchar(10)")]
         public string BusinessEndTime { get; set; }
         /// <summary>
         /// 是否在线交易

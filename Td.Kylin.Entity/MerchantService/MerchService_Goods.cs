@@ -10,10 +10,6 @@ namespace Td.Kylin.Entity
     public class MerchService_Goods : BaseEntity
     {
         /// <summary>
-        /// 区域ID
-        /// </summary>
-        public int AreaID { get; set; }
-        /// <summary>
         /// 服务产品ID
         /// </summary>
         public long ServiceGoodsID { get; set; }
@@ -22,6 +18,17 @@ namespace Td.Kylin.Entity
         /// 商家ID
         /// </summary>
         public long MerchantID { get; set; }
+
+        /// <summary>
+        /// 所属商家的区域ID（一般为区县ID）
+        /// </summary>
+        public int AreaID { get; set; }
+
+        /// <summary>
+        /// 区域路径（如：110000|110100|110101）
+        /// </summary>
+        [Column(TypeName = "varchar(100)")]
+        public string AreaLayer { get; set; }
 
         /// <summary>
         /// 所属业务ID
