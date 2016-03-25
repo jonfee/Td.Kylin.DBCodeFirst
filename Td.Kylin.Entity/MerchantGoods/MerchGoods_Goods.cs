@@ -95,7 +95,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
-        
+
         public DateTime CreateTime { get; set; }
 
         /// <summary>
@@ -119,5 +119,9 @@ namespace Td.Kylin.Entity
         ///经度
         ///</summary>
         public Single Longitude { get; set; }
+        /// <summary>
+        /// 点击率
+        /// </summary>
+        public int Click { get; set; }
     }
 }

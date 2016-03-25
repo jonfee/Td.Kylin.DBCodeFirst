@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160324133655_UpdateDatabse1.0.102.0")]
+    partial class UpdateDatabse101020
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -1595,8 +1596,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<long>("CategoryID");
 
-                    b.Property<int>("Click");
-
                     b.Property<string>("Code")
                         .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
@@ -2301,8 +2300,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<long>("CategoryID");
-
-                    b.Property<int>("Click");
 
                     b.Property<DateTime>("CreateTime");
 
