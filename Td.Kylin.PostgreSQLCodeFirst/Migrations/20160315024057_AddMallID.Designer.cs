@@ -3,18 +3,18 @@ using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
-using Td.Kylin.DBCodeFirst;
+using Td.Kylin.PostgreSQLCodeFirst;
 
-namespace Td.Kylin.DBCodeFirst.Migrations
+namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160315024057_AddMallID")]
+    partial class AddMallID
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
 
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Content", b =>
                 {
@@ -1742,18 +1742,18 @@ namespace Td.Kylin.DBCodeFirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("BusinessBeginTime")
-                        .HasAnnotation("Relational:ColumnType", "varchar(5)");
+                        .HasAnnotation("Relational:ColumnType", "char(5)");
 
                     b.Property<string>("BusinessEndTime")
-                        .HasAnnotation("Relational:ColumnType", "varchar(5)");
+                        .HasAnnotation("Relational:ColumnType", "char(5)");
 
-                    b.Property<int>("DeliveryMoney");
+                    b.Property<decimal>("DeliveryMoney");
 
                     b.Property<string>("ExceedOrderRemark");
 
                     b.Property<bool>("ExceedOrderTime");
 
-                    b.Property<int>("ExemptDelivery");
+                    b.Property<decimal>("ExemptDelivery");
 
                     b.Property<bool>("IsDelivery");
 
@@ -1765,7 +1765,7 @@ namespace Td.Kylin.DBCodeFirst.Migrations
 
                     b.Property<int>("Scope");
 
-                    b.Property<int>("StartMoney");
+                    b.Property<decimal>("StartMoney");
 
                     b.Property<DateTime>("UpdateTime");
 
