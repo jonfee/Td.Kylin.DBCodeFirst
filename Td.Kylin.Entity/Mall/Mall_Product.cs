@@ -36,6 +36,12 @@ namespace Td.Kylin.Entity
         /// </summary>
         public int AreaID { get; set; }
 
+
+        /// <summary>
+        /// 商家ID
+        /// </summary>
+        public long MerchantID { get; set; }
+
         ///<summary>
         ///标签ID集合
         ///</summary>
