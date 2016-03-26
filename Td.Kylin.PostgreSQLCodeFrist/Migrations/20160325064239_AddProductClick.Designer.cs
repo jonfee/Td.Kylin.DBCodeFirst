@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160325064239_AddProductClick")]
+    partial class AddProductClick
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -1615,6 +1616,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<string>("MainPic")
                         .HasAnnotation("Relational:ColumnType", "varchar(100)");
+
+                    b.Property<long>("MerchantID");
 
                     b.Property<string>("Name")
                         .HasAnnotation("Relational:ColumnType", "varchar(200)");

@@ -37,10 +37,6 @@ namespace Td.Kylin.Entity
         public int AreaID { get; set; }
 
 
-        /// <summary>
-        /// 商家ID
-        /// </summary>
-        public long MerchantID { get; set; }
 
         ///<summary>
         ///标签ID集合
@@ -134,6 +130,10 @@ namespace Td.Kylin.Entity
         ///促销ID
         ///</summary>
         public long? PromotionID { get; set; }
+        /// <summary>
+        /// 点击率
+        /// </summary>
+        public int Click { get; set; }
 
     }
 }
