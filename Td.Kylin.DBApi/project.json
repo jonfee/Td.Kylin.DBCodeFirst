@@ -19,7 +19,9 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
     "Td.AspNet.Utils": "1.0.0-rc1-26",
     "Td.Kylin.Entity": "1.0.0-*",
-    "Td.Kylin.WebApi": "1.0.0-rc1-66"
+    "Td.Kylin.WebApi": "1.0.0-rc1-66",
+    "Td.CoreLibrary": "1.0.3-beta",
+    "Td.Kylin.EnumLibrary": "1.0.0-*"
   },
 
   "commands": {

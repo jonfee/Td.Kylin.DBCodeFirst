@@ -26,7 +26,7 @@ namespace Td.Kylin.Entity
         public long ParentCategoryID { get; set; }
 
         /// <summary>
-        /// 层级路径
+        /// 分类层级路径（如：1|2|3）
         /// </summary>
         [Column(TypeName = "varchar(50)")]
         public string CategoryPath { get; set; }

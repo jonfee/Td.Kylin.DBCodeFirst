@@ -69,12 +69,24 @@ namespace Td.Kylin.DBApi.Controllers
 
             string txt = string.Format("本次共初始化 {0} 个区域",result);
 
-            return KylinOk(result);
+            return KylinOk(txt);    
         }
         #endregion
 
         #region 初始化系统默认配置
+        /// <summary>
+        /// 初始化全局配置項
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("globalconfig")]
+        public IActionResult InitGlobalConfig()
+        {
+            var result = InitProvider.InitGlobalConfig();
 
+            string txt = string.Format("本次共初始化 {0} 个全局配置项", result);
+
+            return KylinOk(txt);
+        }
         #endregion
 
         [HttpGet("img")]

@@ -181,6 +181,10 @@ namespace Td.Kylin.DBApi.Data
             }
         }
 
+        /// <summary>
+        /// 初始化全国地区
+        /// </summary>
+        /// <returns></returns>
         public static int InitArea()
         {
             using (var db = new DataContext())
@@ -195,6 +199,26 @@ namespace Td.Kylin.DBApi.Data
 
                 db.System_Area.AddRange(SysData.AreaCity.AreaList);
 
+                return db.SaveChanges();
+            }
+        }
+
+        /// <summary>
+        /// 初始化全局配置
+        /// </summary>
+        public static int InitGlobalConfig()
+        {
+            using (var db = new DataContext())
+            {
+                var list = db.System_GlobalResources.ToList();
+
+                if (null != list && list.Count > 0)
+                {
+                    db.System_GlobalResources.RemoveRange(list);
+                    db.SaveChanges();
+                }
+
+                db.System_GlobalResources.AddRange(SysData.GlobalConfig.GlobalResources);
                 return db.SaveChanges();
             }
         }

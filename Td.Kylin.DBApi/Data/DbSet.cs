@@ -5,6 +5,16 @@ namespace Td.Kylin.DBCodeFirst
 {
     public partial class DataContext
     {
+        #region 全局
+        
+        /// <summary>
+        /// 全局配置
+        /// </summary>
+        public DbSet<System_GlobalResources> System_GlobalResources { get { return Set<System_GlobalResources>(); } }
+
+
+        #endregion
+
         /// <summary>
         /// 模块授权
         /// </summary>

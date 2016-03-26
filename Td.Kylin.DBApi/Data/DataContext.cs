@@ -70,6 +70,22 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => p.AreaID);
             });
             #endregion
+
+            #region 全局
+
+            //系统模块接口授权
+            modelBuilder.Entity<System_ModuleAuthorize>(entity =>
+            {
+                entity.HasKey(p => new { p.ServerID, p.ModuleID });
+            });
+
+            //系统全局配置
+            modelBuilder.Entity<System_GlobalResources>(entity =>
+            {
+                entity.HasKey(p => new { p.ResourceType, p.ResourceKey });
+            });
+
+            #endregion
         }
     }
 }
