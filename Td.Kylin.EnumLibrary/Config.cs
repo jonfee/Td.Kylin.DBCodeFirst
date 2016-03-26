@@ -28,9 +28,9 @@ namespace Td.Kylin.EnumLibrary
         [Description("短信模板")]
         SMS = 8,
         /// <summary>
-        /// 默认区域抽成配置
+        /// 区域抽成默认配置
         /// </summary>
-        [Description("默认区域抽成配置")]
+        [Description("区域抽成默认配置")]
         AreaCommission = 16
     }
 
@@ -40,14 +40,14 @@ namespace Td.Kylin.EnumLibrary
     public enum PlatformCommissionOption
     {
         /// <summary>
-        /// B2C区域直营商城订单抽成
+        /// 运营商订单抽成
         /// </summary>
-        [Description("B2C区域直营商城订单抽成")]
+        [Description("运营商订单抽成")]
         B2COrder = 1,
         /// <summary>
-        /// 区域对商户订单交易佣金后抽成
+        /// 区域商家订单抽成
         /// </summary>
-        [Description("区域对商户订单交易佣金后抽成")]
+        [Description("区域商家订单抽成")]
         AreaCommissionByMerchantOrder = 2
     }
 
@@ -86,64 +86,64 @@ namespace Td.Kylin.EnumLibrary
     public enum GlobalTimeConfigOption
     {
         /// <summary>
-        /// 社区活动开始提醒时间
+        /// 社区活动开始时间提醒
         /// </summary>
-        [Description("社区活动开始提醒时间")]
+        [Description("社区活动开始时间提醒")]
         CircleEventRemind = 1,
         /// <summary>
-        /// 限时福利报名提醒时间
+        /// 限时福利报名时间提醒
         /// </summary>
-        [Description("限时福利报名提醒时间")]
+        [Description("限时福利报名时间提醒")]
         WelfareApplyRemind = 2,
         /// <summary>
-        /// B2C商城订单等待支付时间
+        /// 运营商订单支付有效时间
         /// </summary>
-        [Description("B2C商城订单等待支付时间")]
+        [Description("运营商订单支付有效时间")]
         B2COrderWaitPayment = 3,
         /// <summary>
-        /// B2C商城订单等待收货时间
+        /// 运营商订单自动确认收货时间
         /// </summary>
-        [Description("B2C商城订单等待收货时间")]
+        [Description("运营商订单自动确认收货时间")]
         B2COrderWaitReceive = 4,
         /// <summary>
-        /// B2C商城订单等待评价时间
+        /// 运营商订单自动评价时间
         /// </summary>
-        [Description("B2C商城订单等待评价时间")]
+        [Description("运营商订单自动评价时间")]
         B2COrderEvaluate = 5,
         /// <summary>
-        /// 商户商品订单等待支付时间
+        /// 商户商品订单支付有效时间
         /// </summary>
-        [Description("商户商品订单等待支付时间")]
+        [Description("商户商品订单支付有效时间")]
         MerchantOrderWaitPayment = 6,
         /// <summary>
-        /// 商户商品订单等待收货时间
+        /// 商户商品订单自动确认收货时间
         /// </summary>
-        [Description("商户商品订单等待收货时间")]
+        [Description("商户商品订单自动确认收货时间")]
         MerchantOrderWaitReceive = 7,
         /// <summary>
-        /// 商户商品订单等待评价时间
+        /// 商户商品订单自动评价时间
         /// </summary>
-        [Description("商户商品订单等待评价时间")]
+        [Description("商户商品订单自动评价时间")]
         MerchantOrderWaitEvaluate = 8,
         /// <summary>
-        /// 上门预约服务等待支付时间
+        /// 商家服务订单支付有效时间
         /// </summary>
-        [Description("上门预约服务等待支付时间")]
+        [Description("商家服务订单支付有效时间")]
         ServiceOrderWaitPayment = 9,
         /// <summary>
-        /// 上门预约服务等待用户完成时间
+        /// 商家服务订单自动确认完成时间
         /// </summary>
-        [Description("上门预约服务等待用户完成时间")]
+        [Description("商家服务订单自动确认完成时间")]
         ServiceOrderWaitUserDone = 10,
         /// <summary>
-        /// 上门预约服务等待评价时间
+        /// 商家服务订单自动评价时间
         /// </summary>
-        [Description("上门预约服务等待评价时间")]
+        [Description("商家服务订单自动评价时间")]
         ServiceOrderWaitUserEvaluate = 11,
         /// <summary>
-        /// 摇一摇商品下单后等待支付时间
+        /// 摇一摇商品订单支付有效时间
         /// </summary>
-        [Description("摇一摇商品下单后等待支付时间")]
+        [Description("摇一摇商品订单支付有效时间")]
         ShakeB2COrderWaitPayment = 12,
         /// <summary>
         /// 短信验证码有效时间
@@ -183,9 +183,9 @@ namespace Td.Kylin.EnumLibrary
         [Description("商家取消服务订单")]
         MerchantCancelServiceOrder = 5,
         /// <summary>
-        /// 个人服务人员确认订单
+        /// 本地服务人员确认订单
         /// </summary>
-        [Description("个人服务人员确认订单")]
+        [Description("本地服务人员确认订单")]
         PersonalSureServiceOrder = 6,
         /// <summary>
         /// 超时未支付取消订单
@@ -198,9 +198,9 @@ namespace Td.Kylin.EnumLibrary
         [Description("接单提示")]
         OrderReceiving = 8,
         /// <summary>
-        /// 上门预约订单即将开始提醒
+        /// 商家服务订单即将开始提醒
         /// </summary>
-        [Description("上门预约订单即将开始提醒")]
+        [Description("商家服务订单即将开始提醒")]
         ServiceOrderBeforTime = 9,
         /// <summary>
         /// 余额支付成功扣款
