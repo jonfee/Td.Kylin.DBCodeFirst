@@ -1,4 +1,6 @@
-﻿namespace Td.Kylin.EnumLibrary
+﻿using Td.ComponentModel;
+
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// B2C评价等级
@@ -8,22 +10,27 @@
         /// <summary>
         /// 不满意
         /// </summary>
-        Dissatisfaction=1,
+        [Description("不满意")]
+        Dissatisfaction = 1,
         /// <summary>
         /// 一般
         /// </summary>
-        General=2,
+        [Description("一般")]
+        General =2,
         /// <summary>
         /// 还行
         /// </summary>
-        NotTooBad=3,
+        [Description("还行")]
+        NotTooBad =3,
         /// <summary>
         /// 满意
         /// </summary>
-        Satisfaction=4,
+        [Description("满意")]
+        Satisfaction =4,
         /// <summary>
         /// 非常满意
         /// </summary>
-        VerySatisfaction=5
+        [Description("非常满意")]
+        VerySatisfaction =5
     }
 }

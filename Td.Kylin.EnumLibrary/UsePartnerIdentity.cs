@@ -1,4 +1,6 @@
-﻿namespace Td.Kylin.EnumLibrary
+﻿using Td.ComponentModel;
+
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 使用者身份
@@ -8,14 +10,17 @@
         /// <summary>
         /// 普通用户
         /// </summary>
-        DefaultUser=1,
+        [Description("普通用户")]
+        DefaultUser = 1,
         /// <summary>
         /// 商家
         /// </summary>
-        Merchant=2,
+        [Description("商家")]
+        Merchant = 2,
         /// <summary>
         /// 员工
         /// </summary>
-        Worker=3
+        [Description("员工")]
+        Worker = 3
     }
 }

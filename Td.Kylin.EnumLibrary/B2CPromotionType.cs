@@ -1,4 +1,6 @@
-﻿namespace Td.Kylin.EnumLibrary
+﻿using Td.ComponentModel;
+
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// B2C促销类型
@@ -8,10 +10,12 @@
         /// <summary>
         /// 直降
         /// </summary>
-        Plummet=1,
+        [Description("直降")]
+        Plummet = 1,
         /// <summary>
         /// 满减
         /// </summary>
-        AfterReduction=2
+        [Description("满减")]
+        AfterReduction = 2
     }
 }

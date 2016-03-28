@@ -1,4 +1,6 @@
-﻿namespace Td.Kylin.EnumLibrary
+﻿using Td.ComponentModel;
+
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 社区用户角色
@@ -8,14 +10,17 @@
         /// <summary>
         /// 普通用户
         /// </summary>
-        Default=1,
+        [Description("普通用户")]
+        Default = 1,
         /// <summary>
         /// 版主
         /// </summary>
-        Moderator=2,
+        [Description("版主")]
+        Moderator = 2,
         /// <summary>
-        /// 超级版本
+        /// 超级版主
         /// </summary>
-        SuperModerator=4
+        [Description("超级版主")]
+        SuperModerator = 4
     }
 }

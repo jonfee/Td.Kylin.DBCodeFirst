@@ -1,4 +1,6 @@
-﻿namespace Td.Kylin.EnumLibrary
+﻿using Td.ComponentModel;
+
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 社区帖子类型
@@ -8,14 +10,17 @@
         /// <summary>
         /// 话题帖
         /// </summary>
-        HuaTi=1,
+        [Description("话题帖")]
+        HuaTi = 1,
         /// <summary>
         /// 活动帖
         /// </summary>
-        Event=2,
+        [Description("活动帖")]
+        Event = 2,
         /// <summary>
         /// 商品帖
         /// </summary>
-        Goods=4
+        [Description("商品帖")]
+        Goods = 4
     }
 }

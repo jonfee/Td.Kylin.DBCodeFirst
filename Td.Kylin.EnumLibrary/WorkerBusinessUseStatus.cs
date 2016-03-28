@@ -3,9 +3,9 @@
 namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
-    /// 商家从事业务使用状态
+    /// 个人服务者从事业务使用状态
     /// </summary>
-    public enum MerchantBusinessUseStatus
+    public enum WorkerBusinessUseStatus
     {
         /// <summary>
         /// 申请中

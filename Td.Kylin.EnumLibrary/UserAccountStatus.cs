@@ -1,4 +1,6 @@
-﻿namespace Td.Kylin.EnumLibrary
+﻿using Td.ComponentModel;
+
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 用户账号状态
@@ -8,10 +10,12 @@
         /// <summary>
         /// 正常
         /// </summary>
-        Normal=1,
+        [Description("正常")]
+        Normal = 1,
         /// <summary>
         /// 被封号
         /// </summary>
-        Banned=2
+        [Description("被封号")]
+        Banned = 2
     }
 }

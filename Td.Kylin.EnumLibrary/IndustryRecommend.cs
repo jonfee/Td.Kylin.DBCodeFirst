@@ -3,14 +3,14 @@
 namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
-    /// 地址用途
+    /// 行业推荐
     /// </summary>
-    public enum AddressUsage
+    public enum IndustryRecommend
     {
         /// <summary>
-        /// 收货
+        /// 推荐
         /// </summary>
-        [Description("收货")]
-        Receipt = 1
+        [Description("推荐")]
+        Recommend = 1
     }
 }

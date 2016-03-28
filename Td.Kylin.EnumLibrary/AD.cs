@@ -1,4 +1,6 @@
-﻿namespace Td.Kylin.EnumLibrary
+﻿using Td.ComponentModel;
+
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 广告投放终端
@@ -8,33 +10,34 @@
         /// <summary>
         /// 用户端
         /// </summary>
+        [Description("用户端")]
         UserClient = 1,
         /// <summary>
         /// 商户端
         /// </summary>
+        [Description("商户端")]
         MerchantClient = 2,
         /// <summary>
         /// 工作端
         /// </summary>
+        [Description("工作端")]
         WorkerClient = 4
     }
 
     /// <summary>
-    /// 广告内容类型
+    /// 广告展示类型
     /// </summary>
-    public enum ADContentType
+    public enum ADDisplayType
     {
         /// <summary>
-        /// 图片
+        /// 图片轮播
         /// </summary>
-        Image=1,
+        [Description("图片轮播")]
+        Viwepager = 1,
         /// <summary>
-        /// 文字
+        /// 单图显示
         /// </summary>
-        Text=2,
-        /// <summary>
-        /// 视频
-        /// </summary>
-        Vedio=4
+        [Description("单图显示")]
+        SingleImage =2
     }
 }

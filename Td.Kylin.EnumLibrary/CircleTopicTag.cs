@@ -1,4 +1,6 @@
-﻿namespace Td.Kylin.EnumLibrary
+﻿using Td.ComponentModel;
+
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 社区帖子标识
@@ -8,26 +10,32 @@
         /// <summary>
         /// 置顶
         /// </summary>
-        Top=1,
+        [Description("置顶")]
+        Top = 1,
         /// <summary>
         /// 推荐
         /// </summary>
-        Recommend=2,
+        [Description("推荐")]
+        Recommend = 2,
         /// <summary>
         /// 精华
         /// </summary>
-        Essence=4,
+        [Description("精华")]
+        Essence = 4,
         /// <summary>
         /// 热帖
         /// </summary>
-        Hot=8,
+        [Description("热帖")]
+        Hot = 8,
         /// <summary>
         /// 摇一摇申请中
         /// </summary>
-        ShakeAuditing=16,
+        [Description("摇一摇申请中")]
+        ShakeAuditing = 16,
         /// <summary>
         /// 摇一摇使用中
         /// </summary>
-        ShakeUse=32
+        [Description("摇一摇使用中")]
+        ShakeUse = 32
     }
 }

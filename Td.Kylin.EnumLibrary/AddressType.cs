@@ -1,4 +1,6 @@
-﻿namespace Td.Kylin.EnumLibrary
+﻿using Td.ComponentModel;
+
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 地址类型
@@ -8,10 +10,12 @@
         /// <summary>
         /// 家
         /// </summary>
-        Home=1,
+        [Description("家")]
+        Home =1,
         /// <summary>
         /// 公司
         /// </summary>
+        [Description("公司")]
         Company
     }
 }

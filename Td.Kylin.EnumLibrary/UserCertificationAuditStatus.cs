@@ -3,9 +3,9 @@
 namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
-    /// 商家认证审核状态
+    /// 用户认证审核状态
     /// </summary>
-    public enum MerchantCertificationAuditStatus
+    public enum UserCertificationAuditStatus
     {
         /// <summary>
         /// 审核中

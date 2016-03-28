@@ -1,4 +1,6 @@
-﻿namespace Td.Kylin.EnumLibrary
+﻿using Td.ComponentModel;
+
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 性别
@@ -8,14 +10,17 @@
         /// <summary>
         /// 保密
         /// </summary>
-        Normal=0,
+        [Description("保密")]
+        Normal = 0,
         /// <summary>
         /// 男
         /// </summary>
-        Male =1,
+        [Description("男")]
+        Male = 1,
         /// <summary>
         /// 女
         /// </summary>
-        Female =2
+        [Description("女")]
+        Female = 2
     }
 }

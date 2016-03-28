@@ -1,4 +1,6 @@
-﻿namespace Td.Kylin.EnumLibrary
+﻿using Td.ComponentModel;
+
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 商家商品标识
@@ -8,10 +10,12 @@
         /// <summary>
         /// 新品
         /// </summary>
-        New=1,
+        [Description("新品")]
+        New = 1,
         /// <summary>
         /// 人气/热卖
         /// </summary>
-        Hot=2
+        [Description("热卖")]
+        Hot = 2
     }
 }

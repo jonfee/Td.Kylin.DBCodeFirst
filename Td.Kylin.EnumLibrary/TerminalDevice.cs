@@ -1,4 +1,6 @@
-﻿namespace Td.Kylin.EnumLibrary
+﻿using Td.ComponentModel;
+
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 终端设备类型
@@ -8,14 +10,17 @@
         /// <summary>
         /// IOS
         /// </summary>
-        IOS=1,
+        [Description("IOS")]
+        IOS = 1,
         /// <summary>
         /// Android
         /// </summary>
-        Android=2,
+        [Description("Android")]
+        Android = 2,
         /// <summary>
         /// WinPhone
         /// </summary>
-        WindowsPhone=4
+        [Description("WinPhone")]
+        WindowsPhone = 4
     }
 }

@@ -3,19 +3,19 @@
 namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
-    /// 上门服务业务类型
+    /// 上门预约业务类型
     /// </summary>
-    public enum ServicesBusinessType
+    public enum BusinessServiceType
     {
         /// <summary>
         /// 上门服务
         /// </summary>
         [Description("上门服务")]
-        Visit = 1,
+        Visiting = 1,
         /// <summary>
         /// 预约服务
         /// </summary>
         [Description("预约服务")]
-        Subscribe = 2
+        Reservation = 2
     }
 }
