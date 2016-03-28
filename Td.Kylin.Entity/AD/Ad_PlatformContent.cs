@@ -1,26 +1,19 @@
-﻿
-using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 广告内容
+    /// 平台广告
     /// </summary>
-    [Table("Ad_Content")]
-    public class Ad_Content
+    [Table("Ad_PlatformContent")]
+    public class Ad_PlatformContent
     {
         ///<summary>
         ///广告内容ID
         ///</summary>
-        [ Column(TypeName = "bigint")]
+        [Column(TypeName = "bigint")]
         public long ContentID { get; set; }
-
-        /// <summary>
-        /// 所属区域ID
-        /// </summary>
-        public int AreaID { get; set; }
 
         ///<summary>
         ///归属广告位
@@ -88,6 +81,5 @@ namespace Td.Kylin.Entity
         ///建立时间
         ///</summary>
         public DateTime CreateTime { get; set; }
-
     }
 }

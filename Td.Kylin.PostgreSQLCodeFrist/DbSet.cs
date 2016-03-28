@@ -56,6 +56,16 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// </summary>
         public DbSet<Ad_Content> Ad_Content { get { return Set<Ad_Content>(); } }
 
+        /// <summary>
+        /// 平台广告
+        /// </summary>
+        public DbSet<Ad_PlatformContent> Ad_PlatformContent { get { return Set<Ad_PlatformContent>(); } }
+
+        /// <summary>
+        /// 平台广告推送到区域
+        /// </summary>
+        public DbSet<Ad_PlatformToArea> Ad_PlatformToArea { get { return Set<Ad_PlatformToArea>(); } }
+
         #endregion
 
         #region 管理员

@@ -49,7 +49,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst
             {
                 entity.HasKey(p => new { p.AreaID, p.CommissionItem });
             });
-            
+
             //区域运营商对商家的抽成配置
             modelBuilder.Entity<Commission_OperatorFromMerchant>(entity =>
             {
@@ -83,6 +83,19 @@ namespace Td.Kylin.PostgreSQLCodeFirst
             {
                 entity.Property(p => p.ContentID).ValueGeneratedNever();
                 entity.HasKey(p => p.ContentID);
+            });
+
+            //平台广告
+            modelBuilder.Entity<Ad_PlatformContent>(entity =>
+            {
+                entity.Property(p => p.ContentID).ValueGeneratedNever();
+                entity.HasKey(p => p.ContentID);
+            });
+
+            //平台广告推送到区域
+            modelBuilder.Entity<Ad_PlatformToArea>(entity =>
+            {
+                entity.HasKey(p => new { p.ContentID, p.AreaID });
             });
 
             #endregion
@@ -645,7 +658,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst
             {
                 entity.HasKey(p => new { p.OperatorID, p.AreaID });
             });
-            
+
             #endregion
 
             #region 代理商
