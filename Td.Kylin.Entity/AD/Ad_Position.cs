@@ -36,10 +36,10 @@ namespace Td.Kylin.Entity
         public string Intro { get; set; }
 
         ///<summary>
-        ///支持的广告类型
+        ///广告位展示类型（枚举：ADDisplayType）
         ///</summary>
         [Column(TypeName = "int")]
-        public int ADType { get; set; }
+        public int ADDisplayType { get; set; }
 
         ///<summary>
         ///所在广告页ID

@@ -25,6 +25,28 @@ namespace Td.Kylin.EnumLibrary
     }
 
     /// <summary>
+    /// 广告数据类型
+    /// </summary>
+    public enum ADType
+    {
+        /// <summary>
+        /// 图片
+        /// </summary>
+        [Description("图片")]
+        Image = 1,
+        /// <summary>
+        /// 文字
+        /// </summary>
+        [Description("文字")]
+        Text =2,
+        /// <summary>
+        /// 视频
+        /// </summary>
+        [Description("视频")]
+        Video = 2
+    }
+
+    /// <summary>
     /// 广告展示类型
     /// </summary>
     public enum ADDisplayType

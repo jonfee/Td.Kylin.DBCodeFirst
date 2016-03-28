@@ -35,7 +35,7 @@ namespace Td.Kylin.Entity
         public long AdminID { get; set; }
 
         ///<summary>
-        ///广告类型
+        ///广告数据类型（枚举：ADType）
         ///</summary>
         [Column(TypeName = "int")]
         public int ADType { get; set; }
