@@ -214,12 +214,12 @@ namespace Td.Kylin.DBApi.Data.SysData
                             Name = "家政",
                             Business=new Business[]
                             {
-                               new Business {BusinessID=105101101,Name="月嫂", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                               new Business {BusinessID=105101102,Name="育儿嫂", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                               new Business {BusinessID=105101103,Name="老人陪护", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                               new Business {BusinessID=105101104,Name="保姆", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                               new Business {BusinessID=105101105,Name="病患陪护", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                               new Business {BusinessID=105101106,Name="长期钟点工", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working}
+                               new Business {BusinessID=105101101,Name="月嫂", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting},
+                               new Business {BusinessID=105101102,Name="育儿嫂", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting},
+                               new Business {BusinessID=105101103,Name="老人陪护", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting},
+                               new Business {BusinessID=105101104,Name="保姆", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting},
+                               new Business {BusinessID=105101105,Name="病患陪护", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting},
+                               new Business {BusinessID=105101106,Name="长期钟点工", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting}
                             }
                         },
                         new IndustryOption{
@@ -227,10 +227,10 @@ namespace Td.Kylin.DBApi.Data.SysData
                             Name = "洗衣店",
                             Business=new Business[]
                             {
-                                new Business {BusinessID=105102101,Name="洗衣", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.ShangMen,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                                new Business {BusinessID=105102102,Name="洗鞋", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.ShangMen,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                                new Business {BusinessID=105102103,Name="居家用品", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.ShangMen,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                                new Business {BusinessID=105102104,Name="奢侈品洗护", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.ShangMen,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working}
+                                new Business {BusinessID=105102101,Name="洗衣", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Visiting,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting},
+                                new Business {BusinessID=105102102,Name="洗鞋", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Visiting,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting},
+                                new Business {BusinessID=105102103,Name="居家用品", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Visiting,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting},
+                                new Business {BusinessID=105102104,Name="奢侈品洗护", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Visiting,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting}
                             }
                         },
                         new IndustryOption{ ID = 105103, Name = "宠物"},
@@ -248,18 +248,18 @@ namespace Td.Kylin.DBApi.Data.SysData
                                      BusinessID =105109101,
                                      Name ="日常保洁",
                                      AllowPerson =true,
-                                     BusinessType =(int)Enum.EnumBusinessType.ShangMen,
+                                     BusinessType =(int)EnumLibrary.BusinessServiceType.Visiting,
                                      IsOpenService =true,
-                                     PayerType =(int)Enum.EnumPayerType.User,
-                                     QuoteWays =(int)Enum.EnumQuoteWays.CreateOrder
+                                     PayerType =(int)EnumLibrary.BusinessServicePayer.Custom,
+                                     QuoteWays =(int)EnumLibrary.BusinessServiceQuote.WhenOrder
                                  },
                                  new Business {
                                      BusinessID =105109102,
                                      Name ="油烟机清洗",
                                      AllowPerson =false,
-                                     BusinessType =(int)Enum.EnumBusinessType.ShangMen,
-                                     IsOpenService =true,PayerType=(int)Enum.EnumPayerType.User,
-                                     QuoteWays =(int)Enum.EnumQuoteWays.CreateOrder,
+                                     BusinessType =(int)EnumLibrary.BusinessServiceType.Visiting,
+                                     IsOpenService =true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,
+                                     QuoteWays =(int)EnumLibrary.BusinessServiceQuote.WhenOrder,
                                      Options=new BusinessOption[]
                                      {
                                          new BusinessOption {OptionID=105109102101,Name="中式油烟机" },
@@ -271,10 +271,10 @@ namespace Td.Kylin.DBApi.Data.SysData
                                      BusinessID =105109103,
                                      Name ="空调服务",
                                      AllowPerson =false,
-                                     BusinessType =(int)Enum.EnumBusinessType.ShangMen,
+                                     BusinessType =(int)EnumLibrary.BusinessServiceType.Visiting,
                                      IsOpenService =true,
-                                     PayerType =(int)Enum.EnumPayerType.User,
-                                     QuoteWays =(int)Enum.EnumQuoteWays.CreateOrder,
+                                     PayerType =(int)EnumLibrary.BusinessServicePayer.Custom,
+                                     QuoteWays =(int)EnumLibrary.BusinessServiceQuote.WhenOrder,
                                      Options=new BusinessOption[]
                                      {
                                          new BusinessOption {OptionID=105109103101,Name="挂式空调" },
@@ -292,10 +292,10 @@ namespace Td.Kylin.DBApi.Data.SysData
                                     BusinessID =105110101,
                                     Name ="废品回收",
                                     AllowPerson =true,
-                                    BusinessType =(int)Enum.EnumBusinessType.ShangMen,
+                                    BusinessType =(int)EnumLibrary.BusinessServiceType.Visiting,
                                     IsOpenService =true,
-                                    PayerType =(int)Enum.EnumPayerType.Worker,
-                                    QuoteWays =(int)Enum.EnumQuoteWays.Working
+                                    PayerType =(int)EnumLibrary.BusinessServicePayer.Servicer,
+                                    QuoteWays =(int)EnumLibrary.BusinessServiceQuote.WhenMeeting
                                 }
                             }
                         },
@@ -307,13 +307,13 @@ namespace Td.Kylin.DBApi.Data.SysData
                             Name = "汽车服务",
                             Business=new Business[]
                             {
-                                new Business {BusinessID=105114101,Name="到店洗车", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.CreateOrder},
-                                new Business {BusinessID=105114102,Name="汽车保养", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                                new Business {BusinessID=105114103,Name="汽车美容", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.CreateOrder},
-                                new Business {BusinessID=105114104,Name="汽车维修", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                                new Business {BusinessID=105114105,Name="汽车轮胎", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.CreateOrder},
-                                new Business {BusinessID=105114106,Name="汽车改装", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.Working},
-                                new Business {BusinessID=105114107,Name="汽车救援", AllowPerson=false,BusinessType=(int)Enum.EnumBusinessType.YuYue,IsOpenService=true,PayerType=(int)Enum.EnumPayerType.User,QuoteWays=(int)Enum.EnumQuoteWays.CreateOrder}
+                                new Business {BusinessID=105114101,Name="到店洗车", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenOrder},
+                                new Business {BusinessID=105114102,Name="汽车保养", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting},
+                                new Business {BusinessID=105114103,Name="汽车美容", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenOrder},
+                                new Business {BusinessID=105114104,Name="汽车维修", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting},
+                                new Business {BusinessID=105114105,Name="汽车轮胎", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenOrder},
+                                new Business {BusinessID=105114106,Name="汽车改装", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenMeeting},
+                                new Business {BusinessID=105114107,Name="汽车救援", AllowPerson=false,BusinessType=(int)EnumLibrary.BusinessServiceType.Reservation,IsOpenService=true,PayerType=(int)EnumLibrary.BusinessServicePayer.Custom,QuoteWays=(int)EnumLibrary.BusinessServiceQuote.WhenOrder}
                             }
                         },
                         new IndustryOption{ ID = 105115, Name = "代驾"},

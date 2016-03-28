@@ -1833,7 +1833,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.0": {
+      "Td.Kylin.EnumLibrary/1.0.0-beta": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -4330,7 +4330,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.0": {
+      "Td.Kylin.EnumLibrary/1.0.0-beta": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -6198,7 +6198,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.0": {
+      "Td.Kylin.EnumLibrary/1.0.0-beta": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -8066,7 +8066,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.0": {
+      "Td.Kylin.EnumLibrary/1.0.0-beta": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -11061,7 +11061,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.0": {
+      "Td.Kylin.EnumLibrary/1.0.0-beta": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -14056,7 +14056,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.0": {
+      "Td.Kylin.EnumLibrary/1.0.0-beta": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -14081,7 +14081,7 @@
       "type": "project",
       "path": "../Td.Kylin.Entity/project.json"
     },
-    "Td.Kylin.EnumLibrary/1.0.0": {
+    "Td.Kylin.EnumLibrary/1.0.0-beta": {
       "type": "project",
       "path": "../Td.Kylin.EnumLibrary/project.json"
     },
@@ -19524,7 +19524,7 @@
       "Td.Kylin.Entity >= 1.0.0-*",
       "Td.Kylin.WebApi >= 1.0.0-rc1-66",
       "Td.CoreLibrary >= 1.0.3-beta",
-      "Td.Kylin.EnumLibrary >= 1.0.0-*"
+      "Td.Kylin.EnumLibrary >= 1.0.0-beta"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []
