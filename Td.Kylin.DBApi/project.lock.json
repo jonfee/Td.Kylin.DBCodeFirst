@@ -1839,7 +1839,7 @@
         "dependencies": {
           "System.Runtime": "4.0.21-beta-23516",
           "System.Runtime.InteropServices": "4.0.21-beta-23516",
-          "Td.CoreLibrary": "1.0.1.2-beta"
+          "Td.CoreLibrary": "1.0.3-beta"
         }
       },
       "Td.Kylin.WebApi/1.0.0-rc1-66": {
@@ -4336,7 +4336,7 @@
         "dependencies": {
           "System.Runtime": "4.0.21-beta-23516",
           "System.Runtime.InteropServices": "4.0.21-beta-23516",
-          "Td.CoreLibrary": "1.0.1.2-beta"
+          "Td.CoreLibrary": "1.0.3-beta"
         }
       },
       "Td.Kylin.WebApi/1.0.0-rc1-66": {
@@ -6204,7 +6204,7 @@
         "dependencies": {
           "System.Runtime": "4.0.21-beta-23516",
           "System.Runtime.InteropServices": "4.0.21-beta-23516",
-          "Td.CoreLibrary": "1.0.1.2-beta"
+          "Td.CoreLibrary": "1.0.3-beta"
         }
       },
       "Td.Kylin.WebApi/1.0.0-rc1-66": {
@@ -8072,7 +8072,7 @@
         "dependencies": {
           "System.Runtime": "4.0.21-beta-23516",
           "System.Runtime.InteropServices": "4.0.21-beta-23516",
-          "Td.CoreLibrary": "1.0.1.2-beta"
+          "Td.CoreLibrary": "1.0.3-beta"
         }
       },
       "Td.Kylin.WebApi/1.0.0-rc1-66": {
@@ -11067,7 +11067,7 @@
         "dependencies": {
           "System.Runtime": "4.0.21-beta-23516",
           "System.Runtime.InteropServices": "4.0.21-beta-23516",
-          "Td.CoreLibrary": "1.0.1.2-beta"
+          "Td.CoreLibrary": "1.0.3-beta"
         }
       },
       "Td.Kylin.WebApi/1.0.0-rc1-66": {
@@ -14062,7 +14062,7 @@
         "dependencies": {
           "System.Runtime": "4.0.21-beta-23516",
           "System.Runtime.InteropServices": "4.0.21-beta-23516",
-          "Td.CoreLibrary": "1.0.1.2-beta"
+          "Td.CoreLibrary": "1.0.3-beta"
         }
       },
       "Td.Kylin.WebApi/1.0.0-rc1-66": {

@@ -66,7 +66,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.CoreLibrary/1.0.1.2-beta": {
+      "Td.CoreLibrary/1.0.3-beta": {
         "type": "package",
         "dependencies": {
           "System.Collections.Concurrent": "4.0.11-beta-23516",
@@ -556,7 +556,7 @@
           "lib/DNXCore50/System.Threading.Tasks.dll": {}
         }
       },
-      "Td.CoreLibrary/1.0.1.2-beta": {
+      "Td.CoreLibrary/1.0.3-beta": {
         "type": "package",
         "dependencies": {
           "System.Collections.Concurrent": "4.0.11-beta-23516",
@@ -658,7 +658,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.CoreLibrary/1.0.1.2-beta": {
+      "Td.CoreLibrary/1.0.3-beta": {
         "type": "package",
         "dependencies": {
           "System.Collections.Concurrent": "4.0.11-beta-23516",
@@ -762,7 +762,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.CoreLibrary/1.0.1.2-beta": {
+      "Td.CoreLibrary/1.0.3-beta": {
         "type": "package",
         "dependencies": {
           "System.Collections.Concurrent": "4.0.11-beta-23516",
@@ -1443,7 +1443,7 @@
           "lib/DNXCore50/System.Threading.Tasks.dll": {}
         }
       },
-      "Td.CoreLibrary/1.0.1.2-beta": {
+      "Td.CoreLibrary/1.0.3-beta": {
         "type": "package",
         "dependencies": {
           "System.Collections.Concurrent": "4.0.11-beta-23516",
@@ -2122,7 +2122,7 @@
           "lib/DNXCore50/System.Threading.Tasks.dll": {}
         }
       },
-      "Td.CoreLibrary/1.0.1.2-beta": {
+      "Td.CoreLibrary/1.0.3-beta": {
         "type": "package",
         "dependencies": {
           "System.Collections.Concurrent": "4.0.11-beta-23516",
@@ -3895,16 +3895,16 @@
         "System.Threading.Tasks.nuspec"
       ]
     },
-    "Td.CoreLibrary/1.0.1.2-beta": {
+    "Td.CoreLibrary/1.0.3-beta": {
       "type": "package",
-      "sha512": "3wP7l5VTCWIMDjgynXNN+LWcZsTsmL0Qb/rZZ/csUJmIECyY6JPSpykMnmy0WyalJEF7ZLRxFu0utkCOQcWVJQ==",
+      "sha512": "gjxMiHDow9ERZrKAa00+fREfBV4RgWjMHT9QaSTzOdQwWVz1HLY5sK//GLfySFAzb26EluU8+ojiktimvOUkhg==",
       "files": [
         "lib/dnx451/Td.CoreLibrary.dll",
         "lib/dnx451/Td.CoreLibrary.xml",
         "lib/dnxcore50/Td.CoreLibrary.dll",
         "lib/dnxcore50/Td.CoreLibrary.xml",
-        "Td.CoreLibrary.1.0.1.2-beta.nupkg",
-        "Td.CoreLibrary.1.0.1.2-beta.nupkg.sha512",
+        "Td.CoreLibrary.1.0.3-beta.nupkg",
+        "Td.CoreLibrary.1.0.3-beta.nupkg.sha512",
         "Td.CoreLibrary.nuspec"
       ]
     }
@@ -3913,7 +3913,7 @@
     "": [
       "System.Runtime >= 4.0.21-beta-23516",
       "System.Runtime.InteropServices >= 4.0.21-beta-23516",
-      "Td.CoreLibrary >= 1.0.1.2-beta"
+      "Td.CoreLibrary >= 1.0.3-beta"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []
