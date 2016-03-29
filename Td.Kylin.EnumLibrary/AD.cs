@@ -38,7 +38,7 @@ namespace Td.Kylin.EnumLibrary
         /// 文字
         /// </summary>
         [Description("文字")]
-        Text =2,
+        Text = 2,
         /// <summary>
         /// 视频
         /// </summary>
@@ -60,6 +60,38 @@ namespace Td.Kylin.EnumLibrary
         /// 单图显示
         /// </summary>
         [Description("单图显示")]
-        SingleImage =2
+        SingleImage = 2
+    }
+
+    /// <summary>
+    /// 广告链接类型
+    /// </summary>
+    public enum ADLinkType
+    {
+        /// <summary>
+        /// 外部链接
+        /// </summary>
+        [Description("外部链接")]
+        UrlLink = 1,
+        /// <summary>
+        /// B2C商品展示页
+        /// </summary>
+        [Description("B2C商品展示页")]
+        B2CProduct = 2,
+        /// <summary>
+        /// 商家商品展示页
+        /// </summary>
+        [Description("商家商品展示页")]
+        MerchantProduct = 4,
+        /// <summary>
+        /// 商家详情展示页
+        /// </summary>
+        [Description("商家详情展示页")]
+        MerchantDetails = 8,
+        /// <summary>
+        /// 社区活动帖子展示页
+        /// </summary>
+        [Description("社区活动帖子展示页")]
+        CircleEvent = 16
     }
 }
