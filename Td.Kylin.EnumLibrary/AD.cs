@@ -60,7 +60,17 @@ namespace Td.Kylin.EnumLibrary
         /// 单图显示
         /// </summary>
         [Description("单图显示")]
-        SingleImage = 2
+        SingleImage = 2,
+        /// <summary>
+        /// 滑动跳过
+        /// </summary>
+        [Description("滑动跳过")]
+        SlidePass =4,
+        /// <summary>
+        /// 定时跳过
+        /// </summary>
+        [Description("定时跳过")]
+        TimerPass =8
     }
 
     /// <summary>
