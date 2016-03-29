@@ -45,16 +45,21 @@ namespace Td.Kylin.EnumLibrary
         [Description("运营商订单抽成")]
         B2COrder = 1,
         /// <summary>
-        /// 区域商家订单抽成
+        /// 商户订单交易佣金抽成
         /// </summary>
-        [Description("区域商家订单抽成")]
-        AreaCommissionByMerchantOrder = 2
+        [Description("商户订单交易佣金抽成")]
+        AreaCommissionByMerchantOrder = 2,
+        /// <summary>
+        /// 个人服务者订单交易佣金抽成
+        /// </summary>
+        [Description("个人服务者订单交易佣金抽成")]
+        AreaCommissionByWorkerOrder = 4
     }
 
     /// <summary>
-    /// 区域(运营商)对区域内的交易抽成项
+    /// 区域(运营商)对区域内默认的交易抽成项
     /// </summary>
-    public enum AreaCommissionOption
+    public enum AreaDefaultCommissionOption
     {
         /// <summary>
         /// 商家商品订单抽成
@@ -62,10 +67,47 @@ namespace Td.Kylin.EnumLibrary
         [Description("商家商品订单抽成")]
         MerchantProductOrder = 1,
         /// <summary>
-        /// 商家服务订单抽成
+        /// 商家上门预约服务订单抽成
         /// </summary>
-        [Description("商家服务订单抽成")]
+        [Description("商家上门预约服务订单抽成")]
+        MerchantServiceOrder = 2,
+        /// <summary>
+        /// <summary>
+        /// 个人服务者上门预约服务订单抽成
+        /// </summary>
+        [Description("个人服务者上门预约服务订单抽成")]
+        WorkerServiceOrder = 4
+    }
+
+    /// <summary>
+    /// 区域(运营商)对区域内商家的交易抽成项
+    /// </summary>
+    public enum AreaMerchantCommissionOption
+    {
+        /// <summary>
+        /// 商家商品订单抽成
+        /// </summary>
+        [Description("商家商品订单抽成")]
+        MerchantProductOrder = 1,
+        /// <summary>
+        /// 商家上门预约服务订单抽成
+        /// </summary>
+        [Description("商家上门预约服务订单抽成")]
         MerchantServiceOrder = 2
+    }
+
+
+    /// <summary>
+    /// 区域(运营商)对区域内工作人员的交易抽成项
+    /// </summary>
+    public enum AreaWorkerCommissionOption
+    {
+        /// <summary>
+        /// <summary>
+        /// 上门预约服务订单抽成
+        /// </summary>
+        [Description("上门预约服务订单抽成")]
+        WorkerServiceOrder = 2
     }
 
     /// <summary>

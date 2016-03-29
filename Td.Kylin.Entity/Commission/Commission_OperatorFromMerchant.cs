@@ -23,7 +23,7 @@ namespace Td.Kylin.Entity
         public long MerchantID { get; set; }
 
         /// <summary>
-        /// 抽成项（如：商家商品订单抽成|商家上门预约订单抽成）
+        /// 抽成项（枚举：AreaMerchantCommissionOption，如：商家商品订单抽成|商家上门预约订单抽成）
         /// </summary>
         public int CommissionItem { get; set; }
 

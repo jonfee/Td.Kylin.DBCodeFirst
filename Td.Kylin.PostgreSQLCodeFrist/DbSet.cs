@@ -35,7 +35,12 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// <summary>
         /// 区域运营商对商家抽成配置
         /// </summary>
-          public DbSet<Commission_OperatorFromMerchant> Commission_OperatorFromMerchant { get { return Set<Commission_OperatorFromMerchant>(); } }
+        public DbSet<Commission_OperatorFromMerchant> Commission_OperatorFromMerchant { get { return Set<Commission_OperatorFromMerchant>(); } }
+
+        /// <summary>
+        /// 区域运营商对个人服务人员抽成配置
+        /// </summary>
+        public DbSet<Commission_OperatorFromWorker> Commission_OperatorFromWorker { get { return Set<Commission_OperatorFromWorker>(); } }
 
         #endregion
 
@@ -555,7 +560,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// </summary>
         public DbSet<Area_OperatorRelation> Area_OperatorRelation { get { return Set<Area_OperatorRelation>(); } }
 
-        
+
         #endregion
 
         #region 代理商

@@ -56,6 +56,12 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.HasKey(p => new { p.AreaID, p.MerchantID, p.CommissionItem });
             });
 
+            //区域运营商对个人服务者的抽成配置
+            modelBuilder.Entity<Commission_OperatorFromWorker>(entity =>
+            {
+                entity.HasKey(p => new { p.AreaID, p.UserID, p.CommissionItem });
+            });
+
             #endregion
 
             #region 广告

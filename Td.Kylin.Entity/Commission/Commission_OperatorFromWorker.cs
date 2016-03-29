@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 运营商（区域）默认抽成配置
+    /// 区域运营商对区域下工作人员抽成配置
     /// </summary>
-    [Table("Commission_OperatorDefault")]
-    public class Commission_OperatorDefault
+    [Table("Commission_OperatorFromWorker")]
+    public class Commission_OperatorFromWorker
     {
         /// <summary>
         /// 区域ID
@@ -18,7 +15,12 @@ namespace Td.Kylin.Entity
         public int AreaID { get; set; }
 
         /// <summary>
-        /// 抽成项（枚举：AreaDefaultCommissionOption，如：商家商品订单抽成|商家上门预约订单抽成）
+        /// 用户ID
+        /// </summary>
+        public long UserID { get; set; }
+
+        /// <summary>
+        /// 抽成项（枚举：AreaWorkerCommissionOption，如：上门预约订单抽成）
         /// </summary>
         public int CommissionItem { get; set; }
 
