@@ -631,6 +631,18 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.HasKey(p => new { p.UserID, p.MerchantID, p.BusinessID });
             });
 
+            modelBuilder.Entity<Worker_Message>(entity =>
+            {
+                entity.Property(p => p.MessageID).ValueGeneratedNever();
+                entity.HasKey(p => p.MessageID);
+            });
+
+            modelBuilder.Entity<Worker_TradeRecords>(entity =>
+            {
+                entity.Property(p => p.TradeID).ValueGeneratedNever();
+                entity.HasKey(p => p.TradeID);
+            });
+
             #endregion
 
             #region 区域

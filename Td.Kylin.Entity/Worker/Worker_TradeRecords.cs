@@ -7,7 +7,6 @@ namespace Td.Kylin.Entity
     /// 服务职员交易记录
     /// </summary>
     [Table("Worker_TradeRecords")]
-    [Obsolete("用户账户统一后无需此模型，即将删除")]
     public class Worker_TradeRecords : BaseEntity
     {
         /// <summary>
@@ -24,6 +23,17 @@ namespace Td.Kylin.Entity
         /// 交易类型（如：服务销售｜提现等）
         /// </summary>
         public int TradeType { get; set; }
+
+        /// <summary>
+        /// 交易对方身份（枚举：CounterpartyIdentity）
+        /// </summary>
+        public int CounterpartyIdentity { get; set; }
+
+        /// <summary>
+        /// 交易对方ID
+        /// </summary>
+        [Column(TypeName ="varchar(36)")]
+        public string CounterpartyId { get; set; }
 
         /// <summary>
         /// 交易金额

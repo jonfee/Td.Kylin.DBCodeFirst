@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160329120025_addColumn_CounterpartyIdentity")]
+    partial class addColumn_CounterpartyIdentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -2218,8 +2219,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<decimal>("Amount");
 
-                    b.Property<string>("CounterpartyId")
-                        .HasAnnotation("Relational:ColumnType", "varchar(36)");
+                    b.Property<string>("CounterpartyId");
 
                     b.Property<int>("CounterpartyIdentity");
 
@@ -3103,8 +3103,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<decimal>("Amount");
 
-                    b.Property<string>("CounterpartyId")
-                        .HasAnnotation("Relational:ColumnType", "varchar(36)");
+                    b.Property<string>("CounterpartyId");
 
                     b.Property<int>("CounterpartyIdentity");
 
@@ -3436,41 +3435,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Worker_CompanyBusiness");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.Worker_Message", b =>
-                {
-                    b.Property<long>("MessageID");
-
-                    b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
-
-                    b.Property<DateTime>("CreateTime");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<bool>("IsRead");
-
-                    b.Property<int>("MessageType");
-
-                    b.Property<string>("RefDataID")
-                        .HasAnnotation("Relational:ColumnType", "varchar(36)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
-                    b.Property<string>("Sign")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
-
-                    b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
-
-                    b.Property<long>("WorkerID");
-
-                    b.HasKey("MessageID");
-
-                    b.HasAnnotation("Relational:TableName", "Worker_Message");
-                });
-
             modelBuilder.Entity("Td.Kylin.Entity.Worker_Profile", b =>
                 {
                     b.Property<long>("UserID");
@@ -3496,40 +3460,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.HasKey("UserID");
 
                     b.HasAnnotation("Relational:TableName", "Worker_Profile");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Worker_TradeRecords", b =>
-                {
-                    b.Property<long>("TradeID");
-
-                    b.Property<decimal>("Amount");
-
-                    b.Property<string>("CounterpartyId")
-                        .HasAnnotation("Relational:ColumnType", "varchar(36)");
-
-                    b.Property<int>("CounterpartyIdentity");
-
-                    b.Property<DateTime>("CreateTime");
-
-                    b.Property<int>("PaymentType");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
-                    b.Property<string>("TradeInfo")
-                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
-
-                    b.Property<string>("TradeNo")
-                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
-
-                    b.Property<int>("TradeType");
-
-                    b.Property<long>("UserID");
-
-                    b.HasKey("TradeID");
-
-                    b.HasAnnotation("Relational:TableName", "Worker_TradeRecords");
                 });
         }
     }

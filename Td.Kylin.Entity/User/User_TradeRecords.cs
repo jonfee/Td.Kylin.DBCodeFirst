@@ -25,6 +25,17 @@ namespace Td.Kylin.Entity
         public int TradeType { get; set; }
 
         /// <summary>
+        /// 交易对方身份（枚举：CounterpartyIdentity）
+        /// </summary>
+        public int CounterpartyIdentity { get; set; }
+
+        /// <summary>
+        /// 交易对方ID
+        /// </summary>
+        [Column(TypeName ="varchar(36)")]
+        public string CounterpartyId { get; set; }
+
+        /// <summary>
         /// 交易金额
         /// </summary>
         public decimal Amount { get; set; }

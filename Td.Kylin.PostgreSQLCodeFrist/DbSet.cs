@@ -534,6 +534,16 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// </summary>
         public DbSet<Worker_CompanyBusiness> Worker_CompanyBusiness { get { return Set<Worker_CompanyBusiness>(); } }
 
+        /// <summary>
+        /// 服务职员交易记录
+        /// </summary>
+        public DbSet<Worker_TradeRecords> Worker_TradeRecords { get { return Set<Worker_TradeRecords>(); } }
+
+        /// <summary>
+        /// 服务职员交消息
+        /// </summary>
+        public DbSet<Worker_Message> Worker_Message { get { return Set<Worker_Message>(); } }
+
         #endregion
 
         #region 区域

@@ -7,7 +7,6 @@ namespace Td.Kylin.Entity
     /// 服务人员消息
     /// </summary>
     [Table("Worker_Message")]
-    [Obsolete("用户账户统一后无需此模型，即将删除")]
     public class Worker_Message : BaseEntity
     {
         /// <summary>
