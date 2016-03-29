@@ -104,6 +104,17 @@ namespace Td.Kylin.Entity
         ///</summary>
         public int AuditStatus { get; set; }
 
+        /// <summary>
+        /// 审核说明
+        /// </summary>
+        [Column(TypeName = "varchar(255)")]
+        public string AuditRemark { get; set; }
+
+        /// <summary>
+        /// 审核时间
+        /// </summary>
+        public DateTime AuditTime { get; set; }
+
         ///<summary>
         ///禁用数据
         ///</summary>
