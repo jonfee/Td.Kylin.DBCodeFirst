@@ -14,7 +14,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///广告内容ID
         ///</summary>
-        [ Column(TypeName = "bigint")]
+        [Column(TypeName = "bigint")]
         public long ContentID { get; set; }
 
         /// <summary>
@@ -27,13 +27,7 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "bigint")]
         public long PositionID { get; set; }
-
-        ///<summary>
-        ///管理员ID
-        ///</summary>
-        [Column(TypeName = "bigint")]
-        public long AdminID { get; set; }
-
+        
         ///<summary>
         ///广告数据类型（枚举：ADType）
         ///</summary>
@@ -46,23 +40,15 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "varchar(50)")]
         public string Title { get; set; }
 
-        ///<summary>
-        ///广告内容
-        ///</summary>
-        [Column(TypeName = "varchar(255)")]
-        public string Body { get; set; }
+        /// <summary>
+        /// 链接类型（枚举：AdLinkType）
+        /// </summary>
+        public int LinkType { get; set; }
 
-        ///<summary>
-        ///广告链接
-        ///</summary>
-        [Column(TypeName = "varchar(255)")]
-        public string Url { get; set; }
-
-        ///<summary>
-        ///广告HTML
-        ///</summary>
-        [Column(TypeName = "text")]
-        public string Html { get; set; }
+        /// <summary>
+        /// 链接到的数据或地址
+        /// </summary>
+        public string LinkData { get; set; }
 
         ///<summary>
         ///是否启用

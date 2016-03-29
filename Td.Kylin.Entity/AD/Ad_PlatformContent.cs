@@ -22,16 +22,20 @@ namespace Td.Kylin.Entity
         public long PositionID { get; set; }
 
         ///<summary>
-        ///管理员ID
-        ///</summary>
-        [Column(TypeName = "bigint")]
-        public long AdminID { get; set; }
-
-        ///<summary>
         ///广告数据类型（枚举：ADType）
         ///</summary>
         [Column(TypeName = "int")]
         public int ADType { get; set; }
+
+        /// <summary>
+        /// 链接类型（枚举：AdLinkType）
+        /// </summary>
+        public int LinkType { get; set; }
+
+        /// <summary>
+        /// 链接到的数据或外链地址
+        /// </summary>
+        public string LinkData { get; set; }
 
         ///<summary>
         ///广告内容标题
@@ -39,23 +43,10 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "varchar(50)")]
         public string Title { get; set; }
 
-        ///<summary>
-        ///广告内容
-        ///</summary>
-        [Column(TypeName = "varchar(255)")]
-        public string Body { get; set; }
-
-        ///<summary>
-        ///广告链接
-        ///</summary>
-        [Column(TypeName = "varchar(255)")]
-        public string Url { get; set; }
-
-        ///<summary>
-        ///广告HTML
-        ///</summary>
-        [Column(TypeName = "text")]
-        public string Html { get; set; }
+        /// <summary>
+        /// 是否为全局广告内容（True表示全局，不产生任生区域关联，默认全平台统一使用）
+        /// </summary>
+        public bool IsGlobal { get; set; }
 
         ///<summary>
         ///是否启用
