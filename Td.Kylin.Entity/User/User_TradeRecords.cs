@@ -57,9 +57,13 @@ namespace Td.Kylin.Entity
         public string TradeNo { get; set; }
 
         /// <summary>
+        /// 优惠卷ID
+        /// </summary>
+        public long WelfareID { get; set; }
+        /// <summary>
         /// 数据产生时间
         /// </summary>
-        
+
         public DateTime CreateTime { get; set; }
     }
 }
