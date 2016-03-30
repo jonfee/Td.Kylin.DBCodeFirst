@@ -20,7 +20,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///广告位编码
         ///</summary>
-        [Column(TypeName = "varchar(10)")]
+        [Column(TypeName = "varchar(50)")]
         public string Code { get; set; }
 
         ///<summary>
