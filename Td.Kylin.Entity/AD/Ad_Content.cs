@@ -34,6 +34,12 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "int")]
         public int ADType { get; set; }
 
+        /// <summary>
+        /// 广告数据文件
+        /// </summary>
+        [Column(TypeName = "varchar(200)")]
+        public string ADFile { get; set; }
+
         ///<summary>
         ///广告内容标题
         ///</summary>

@@ -28,6 +28,12 @@ namespace Td.Kylin.Entity
         public int ADType { get; set; }
 
         /// <summary>
+        /// 广告数据文件
+        /// </summary>
+        [Column(TypeName = "varchar(200)")]
+        public string ADFile { get; set; }
+
+        /// <summary>
         /// 链接类型（枚举：AdLinkType）
         /// </summary>
         public int LinkType { get; set; }
