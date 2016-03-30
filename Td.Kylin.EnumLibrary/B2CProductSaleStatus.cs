@@ -1,4 +1,6 @@
-﻿using Td.ComponentModel;
+﻿
+
+using Td.ComponentModel;
 
 namespace Td.Kylin.EnumLibrary
 {

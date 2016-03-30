@@ -8,6 +8,9 @@ using Td.Kylin.EnumLibrary;
 
 namespace Td.Kylin.DBApi.Data.SysData
 {
+    /// <summary>
+    /// 全局配置数据
+    /// </summary>
     public class GlobalConfig
     {
         static GlobalConfig()
@@ -21,7 +24,7 @@ namespace Td.Kylin.DBApi.Data.SysData
         {
             get
             {
-                if(null== _globalResources)
+                if (null == _globalResources)
                 {
                     InitConfig();
                 }
@@ -31,7 +34,7 @@ namespace Td.Kylin.DBApi.Data.SysData
         }
 
 
-       static void InitConfig()
+        static void InitConfig()
         {
             _globalResources = new List<System_GlobalResources>();
 
@@ -155,6 +158,8 @@ namespace Td.Kylin.DBApi.Data.SysData
                     case PlatformCommissionOption.B2COrder: group = "B2C商城"; value = 1; unit = (int)CommissionType.MoneyRate; break;
                     //运营商对商家抽成后的佣金
                     case PlatformCommissionOption.AreaCommissionByMerchantOrder: group = "运营商对商家抽成后的佣金"; value = 10; unit = (int)CommissionType.MoneyRate; break;
+                    //运营商对个人服务者抽成后的佣金
+                    case PlatformCommissionOption.AreaCommissionByWorkerOrder: group = "运营商对个人服务者抽成后的佣金"; value = 10; unit = (int)CommissionType.MoneyRate; break;
                 }
 
                 Add((int)GlobalConfigType.AreaCommission, kv.Key, kv.Value, value.ToString(), group, unit);

@@ -1,7 +1,11 @@
 ﻿using Microsoft.AspNet.Mvc;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using Td.Common;
 using Td.Kylin.DBApi.Data;
+using Td.Kylin.Entity;
 using Td.Kylin.WebApi;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
@@ -67,9 +71,9 @@ namespace Td.Kylin.DBApi.Controllers
         {
             var result = InitProvider.InitArea();
 
-            string txt = string.Format("本次共初始化 {0} 个区域",result);
+            string txt = string.Format("本次共初始化 {0} 个区域", result);
 
-            return KylinOk(txt);    
+            return KylinOk(txt);
         }
         #endregion
 
@@ -86,6 +90,47 @@ namespace Td.Kylin.DBApi.Controllers
             string txt = string.Format("本次共初始化 {0} 个全局配置项", result);
 
             return KylinOk(txt);
+        }
+        #endregion
+
+        #region 初始化系统广告位
+
+        class InitAdPositionResult : Ad_Page
+        {
+            public string PlatformName { get; set; }
+            public List<Ad_Position> PositionList { get; set; }
+        }
+
+        /// <summary>
+        /// 初始化全局配置項
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("adposition")]
+        public IActionResult InitAdPosition()
+        {
+            List<Ad_Page> pageList = null;
+            List<Ad_Position> positionList = null;
+
+            var result = InitProvider.InitAdPosition(out pageList, out positionList);
+
+            List<InitAdPositionResult> data = new List<InitAdPositionResult>();
+
+            if (result > 0 && null != pageList && pageList.Count > 0)
+            {
+                foreach (var page in pageList)
+                {
+                    data.Add(new InitAdPositionResult
+                    {
+                        PageID = page.PageID,
+                        PageName = page.PageName,
+                        PlatformType = page.PlatformType,
+                        PlatformName = EnumUtility.GetEnumDescription<EnumLibrary.ADTerminal>(page.PlatformType),
+                        PositionList = positionList.Where(p => p.PageID == page.PageID).ToList()
+                    });
+                }
+            }
+
+            return KylinOk(data);
         }
         #endregion
 

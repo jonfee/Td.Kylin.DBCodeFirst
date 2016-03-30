@@ -86,6 +86,22 @@ namespace Td.Kylin.DBCodeFirst
             });
 
             #endregion
+
+            //广告页
+            modelBuilder.Entity<Ad_Page>(entity =>
+            {
+                entity.Property(p => p.PageID).ValueGeneratedNever();
+                entity.HasKey(p => p.PageID);
+            });
+
+            /// <summary>
+            /// 广告位
+            /// </summary>
+            modelBuilder.Entity<Ad_Position>(entity =>
+            {
+                entity.Property(p => p.PositionID).ValueGeneratedNever();
+                entity.HasKey(p => p.PositionID);
+            });
         }
     }
 }

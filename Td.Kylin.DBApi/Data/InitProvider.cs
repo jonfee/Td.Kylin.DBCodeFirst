@@ -222,5 +222,36 @@ namespace Td.Kylin.DBApi.Data
                 return db.SaveChanges();
             }
         }
+
+        /// <summary>
+        /// 初始化系统广告位
+        /// </summary>
+        /// <returns></returns>
+        public static int InitAdPosition(out List<Ad_Page> pageList, out List<Ad_Position> positionList)
+        {
+            using (var db = new DataContext())
+            {
+                pageList = SysData.AdPosition.AdPageList;
+                positionList = SysData.AdPosition.AdPositionList;
+
+                var tempPagelist = db.Ad_Page.ToList();
+                var tempPositionlist = db.Ad_Position.ToList();
+
+                if (null != tempPagelist && tempPagelist.Count > 0)
+                {
+                    db.Ad_Page.RemoveRange(tempPagelist);
+                }
+                if (null != tempPositionlist && tempPositionlist.Count > 0)
+                {
+                    db.Ad_Position.RemoveRange(tempPositionlist);
+                }
+                db.SaveChanges();
+
+                db.Ad_Page.AddRange(pageList);
+                db.Ad_Position.AddRange(positionList);
+
+                return db.SaveChanges();
+            }
+        }
     }
 }

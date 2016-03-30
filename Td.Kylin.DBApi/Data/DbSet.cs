@@ -53,5 +53,15 @@ namespace Td.Kylin.DBCodeFirst
         /// 全国区域
         /// </summary>
         public DbSet<System_Area> System_Area { get { return Set<System_Area>(); } }
+
+        /// <summary>
+        /// 广告页
+        /// </summary>
+        public DbSet<Ad_Page> Ad_Page { get { return Set<Ad_Page>(); } }
+
+        /// <summary>
+        /// 广告位
+        /// </summary>
+        public DbSet<Ad_Position> Ad_Position { get { return Set<Ad_Position>(); } }
     }
 }
