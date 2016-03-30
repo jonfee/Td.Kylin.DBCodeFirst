@@ -30,10 +30,9 @@ namespace Td.Kylin.Entity
         public int CounterpartyIdentity { get; set; }
 
         /// <summary>
-        /// 交易对方ID
+        /// 交易对方ID（如：用户ID，商家ID，运营商ID，代理商ID）
         /// </summary>
-        [Column(TypeName ="varchar(36)")]
-        public string CounterpartyId { get; set; }
+        public long CounterpartyId { get; set; }
 
         /// <summary>
         /// 交易金额

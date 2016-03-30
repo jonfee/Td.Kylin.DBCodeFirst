@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160330080647_removeColumnForTradeRecords_CounterpartyID")]
+    partial class removeColumnForTradeRecords_CounterpartyID
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -2224,8 +2225,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<decimal>("Amount");
 
-                    b.Property<long>("CounterpartyId");
-
                     b.Property<int>("CounterpartyIdentity");
 
                     b.Property<DateTime>("CreateTime");
@@ -3108,8 +3107,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<decimal>("Amount");
 
-                    b.Property<long>("CounterpartyId");
-
                     b.Property<int>("CounterpartyIdentity");
 
                     b.Property<DateTime>("CreateTime");
@@ -3507,8 +3504,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.Property<long>("TradeID");
 
                     b.Property<decimal>("Amount");
-
-                    b.Property<long>("CounterpartyId");
 
                     b.Property<int>("CounterpartyIdentity");
 
