@@ -39,5 +39,10 @@ namespace Td.Kylin.EnumLibrary
         /// </summary>
         [Description("提现")]
         Withdraw = 32,
+        /// <summary>
+        /// 用户转账/买单
+        /// </summary>
+        [Description("用户转账/买单")]
+        UserTransfer = 64
     }
 }

@@ -43,6 +43,11 @@ namespace Td.Kylin.EnumLibrary
         /// 服务收款
         /// </summary>
         [Description("服务收款")]
-        Proceeds = 64
+        Proceeds = 64,
+        /// <summary>
+        /// 转账付款
+        /// </summary>
+        [Description("转账付款")]
+        Transfer = 128
     }
 }
