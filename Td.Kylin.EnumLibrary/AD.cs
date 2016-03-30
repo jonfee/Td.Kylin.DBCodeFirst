@@ -45,7 +45,7 @@ namespace Td.Kylin.EnumLibrary
         /// 视频
         /// </summary>
         [Description("视频")]
-        Video = 2
+        Video = 4
     }
 
     /// <summary>
