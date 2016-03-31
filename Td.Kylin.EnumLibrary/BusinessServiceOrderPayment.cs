@@ -10,24 +10,24 @@ namespace Td.Kylin.EnumLibrary
     public enum BusinessServiceOrderPayment
     {
         /// <summary>
-        /// 线下付款
-        /// </summary>
-        [Description("线下付款")]
-        OffLine = 1,
-        /// <summary>
         /// 余额支付
         /// </summary>
-        [Description("summary")]
-        Balance = 2,
+        [Description("余额支付")]
+        Balance = 1,
+        /// <summary>
+        /// 支付宝支付
+        /// </summary>
+        [Description("支付宝支付")]
+        Alipay = 2,
         /// <summary>
         /// 微信支付
         /// </summary>
         [Description("微信支付")]
         WeiXin = 4,
         /// <summary>
-        /// 支付宝支付
+        /// 线下付款
         /// </summary>
-        [Description("支付宝支付")]
-        Alipay = 8
+        [Description("线下付款")]
+        OffLine = 8
     }
 }
