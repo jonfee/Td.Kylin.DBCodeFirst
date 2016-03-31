@@ -15,12 +15,7 @@ namespace Td.Kylin.Entity
         ///版面圈子ID
         ///</summary>
         public long ForumID { get; set; }
-
-        /// <summary>
-        /// 区域ID
-        /// </summary>
-        public int AreaID { get; set; }
-
+        
         ///<summary>
         ///论坛分类ID
         ///</summary>
@@ -43,48 +38,7 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "varchar(50)")]
         public string Description { get; set; }
-
-        ///<summary>
-        ///帖子数量
-        ///</summary>
-        public int TopicCount { get; set; }
-
-        ///<summary>
-        ///回帖数据
-        ///</summary>
-        public int ReplyCount { get; set; }
-
-        ///<summary>
-        ///今天帖子数量
-        ///</summary>
-        public int TodayTopicCount { get; set; }
-
-        ///<summary>
-        ///今天回帖数量
-        ///</summary>
-        public int TodayReplyCount { get; set; }
-
-        ///<summary>
-        ///关注度，关注人数
-        ///</summary>
-        public int Attention { get; set; }
-
-        ///<summary>
-        ///通过总数据，日数据等计算出来的一个热度值
-        ///</summary>
-        public int Hot { get; set; }
-
-        ///<summary>
-        ///版主
-        ///</summary>
-        [Column(TypeName = "varchar(200)")]
-        public string Moderators { get; set; }
-
-        ///<summary>
-        ///论坛分类排序
-        ///</summary>
-        public int OrderNo { get; set; }
-
+        
         ///<summary>
         ///发帖类型2n次方
         ///</summary>
