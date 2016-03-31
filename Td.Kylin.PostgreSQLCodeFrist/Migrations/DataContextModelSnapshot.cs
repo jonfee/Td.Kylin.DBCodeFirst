@@ -5,7 +5,7 @@ using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
 using Td.Kylin.PostgreSQLCodeFirst;
 
-namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
+namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
 {
     [DbContext(typeof(DataContext))]
     partial class DataContextModelSnapshot : ModelSnapshot

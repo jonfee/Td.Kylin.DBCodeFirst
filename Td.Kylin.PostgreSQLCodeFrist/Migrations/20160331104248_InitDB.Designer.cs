@@ -5,11 +5,11 @@ using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
 using Td.Kylin.PostgreSQLCodeFirst;
 
-namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
+namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20160324044858_removeColumnForTaoProductRecommend_SkuId")]
-    partial class removeColumnForTaoProductRecommend_SkuId
+    [Migration("20160331104248_InitDB")]
+    partial class InitDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,16 +21,13 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.Property<long>("ContentID")
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
+                    b.Property<string>("ADFile")
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
+
                     b.Property<int>("ADType")
                         .HasAnnotation("Relational:ColumnType", "int");
 
-                    b.Property<long>("AdminID")
-                        .HasAnnotation("Relational:ColumnType", "bigint");
-
                     b.Property<int>("AreaID");
-
-                    b.Property<string>("Body")
-                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
 
                     b.Property<DateTime>("CreateTime");
 
@@ -38,8 +35,9 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<DateTime>("EndTime");
 
-                    b.Property<string>("Html")
-                        .HasAnnotation("Relational:ColumnType", "text");
+                    b.Property<string>("LinkData");
+
+                    b.Property<int>("LinkType");
 
                     b.Property<int>("OrderNo");
 
@@ -50,9 +48,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<string>("Title")
                         .HasAnnotation("Relational:ColumnType", "varchar(50)");
-
-                    b.Property<string>("Url")
-                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
 
                     b.HasKey("ContentID");
 
@@ -74,16 +69,77 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Ad_Page");
                 });
 
+            modelBuilder.Entity("Td.Kylin.Entity.Ad_PlatformContent", b =>
+                {
+                    b.Property<long>("ContentID")
+                        .HasAnnotation("Relational:ColumnType", "bigint");
+
+                    b.Property<string>("ADFile")
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
+
+                    b.Property<int>("ADType")
+                        .HasAnnotation("Relational:ColumnType", "int");
+
+                    b.Property<DateTime>("CreateTime");
+
+                    b.Property<bool>("Enable");
+
+                    b.Property<DateTime>("EndTime");
+
+                    b.Property<bool>("IsGlobal");
+
+                    b.Property<string>("LinkData");
+
+                    b.Property<int>("LinkType");
+
+                    b.Property<int>("OrderNo");
+
+                    b.Property<long>("PositionID")
+                        .HasAnnotation("Relational:ColumnType", "bigint");
+
+                    b.Property<DateTime>("StartTime");
+
+                    b.Property<string>("Title")
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
+
+                    b.HasKey("ContentID");
+
+                    b.HasAnnotation("Relational:TableName", "Ad_PlatformContent");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.Ad_PlatformToArea", b =>
+                {
+                    b.Property<long>("ContentID")
+                        .HasAnnotation("Relational:ColumnType", "bigint");
+
+                    b.Property<int>("AreaID");
+
+                    b.Property<bool>("Enable");
+
+                    b.Property<DateTime>("EndTime");
+
+                    b.Property<int>("OrderNo");
+
+                    b.Property<long>("PositionID")
+                        .HasAnnotation("Relational:ColumnType", "bigint");
+
+                    b.Property<DateTime>("StartTime");
+
+                    b.HasKey("ContentID", "AreaID");
+
+                    b.HasAnnotation("Relational:TableName", "Ad_PlatformToArea");
+                });
+
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Position", b =>
                 {
                     b.Property<long>("PositionID")
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
-                    b.Property<int>("ADType")
+                    b.Property<int>("ADDisplayType")
                         .HasAnnotation("Relational:ColumnType", "int");
 
                     b.Property<string>("Code")
-                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<DateTime>("CreateTime");
 
@@ -178,6 +234,9 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.Property<DateTime>("CreateTime");
 
                     b.Property<decimal>("FreezeMoney");
+
+                    b.Property<string>("LoginAccount")
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("LoginPassword")
                         .HasAnnotation("Relational:ColumnType", "varchar(50)");
@@ -925,6 +984,25 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Commission_OperatorFromMerchant");
                 });
 
+            modelBuilder.Entity("Td.Kylin.Entity.Commission_OperatorFromWorker", b =>
+                {
+                    b.Property<int>("AreaID");
+
+                    b.Property<long>("UserID");
+
+                    b.Property<int>("CommissionItem");
+
+                    b.Property<int>("CommissionType");
+
+                    b.Property<DateTime>("UpdateTime");
+
+                    b.Property<decimal>("Value");
+
+                    b.HasKey("AreaID", "UserID", "CommissionItem");
+
+                    b.HasAnnotation("Relational:TableName", "Commission_OperatorFromWorker");
+                });
+
             modelBuilder.Entity("Td.Kylin.Entity.Commission_Platform", b =>
                 {
                     b.Property<int>("AreaID");
@@ -1593,6 +1671,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<long>("CategoryID");
 
+                    b.Property<int>("Click");
+
                     b.Property<string>("Code")
                         .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
@@ -2145,6 +2225,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<decimal>("Amount");
 
+                    b.Property<long>("CounterpartyId");
+
+                    b.Property<int>("CounterpartyIdentity");
+
                     b.Property<DateTime>("CreateTime");
 
                     b.Property<long>("MerchantID");
@@ -2298,6 +2382,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<long>("CategoryID");
 
+                    b.Property<int>("Click");
+
                     b.Property<DateTime>("CreateTime");
 
                     b.Property<string>("Description")
@@ -2397,7 +2483,12 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<int>("AreaID");
 
+                    b.Property<string>("AuditRemark")
+                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
+
                     b.Property<int>("AuditStatus");
+
+                    b.Property<DateTime>("AuditTime");
 
                     b.Property<int>("Category");
 
@@ -2599,6 +2690,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.Property<DateTime?>("EndTime");
 
                     b.Property<int>("MallType");
+
+                    b.Property<int>("OrderNo");
 
                     b.Property<long>("ProductID");
 
@@ -3016,6 +3109,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
 
                     b.Property<decimal>("Amount");
 
+                    b.Property<long>("CounterpartyId");
+
+                    b.Property<int>("CounterpartyIdentity");
+
                     b.Property<DateTime>("CreateTime");
 
                     b.Property<int>("PaymentType");
@@ -3033,6 +3130,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.Property<int>("TradeType");
 
                     b.Property<long>("UserID");
+
+                    b.Property<long>("WelfareID");
 
                     b.HasKey("TradeID");
 
@@ -3344,6 +3443,41 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Worker_CompanyBusiness");
                 });
 
+            modelBuilder.Entity("Td.Kylin.Entity.Worker_Message", b =>
+                {
+                    b.Property<long>("MessageID");
+
+                    b.Property<string>("Content")
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
+
+                    b.Property<DateTime>("CreateTime");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<bool>("IsRead");
+
+                    b.Property<int>("MessageType");
+
+                    b.Property<string>("RefDataID")
+                        .HasAnnotation("Relational:ColumnType", "varchar(36)");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate();
+
+                    b.Property<string>("Sign")
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
+
+                    b.Property<string>("Title")
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
+
+                    b.Property<long>("WorkerID");
+
+                    b.HasKey("MessageID");
+
+                    b.HasAnnotation("Relational:TableName", "Worker_Message");
+                });
+
             modelBuilder.Entity("Td.Kylin.Entity.Worker_Profile", b =>
                 {
                     b.Property<long>("UserID");
@@ -3369,6 +3503,39 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     b.HasKey("UserID");
 
                     b.HasAnnotation("Relational:TableName", "Worker_Profile");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.Worker_TradeRecords", b =>
+                {
+                    b.Property<long>("TradeID");
+
+                    b.Property<decimal>("Amount");
+
+                    b.Property<long>("CounterpartyId");
+
+                    b.Property<int>("CounterpartyIdentity");
+
+                    b.Property<DateTime>("CreateTime");
+
+                    b.Property<int>("PaymentType");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate();
+
+                    b.Property<string>("TradeInfo")
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
+
+                    b.Property<string>("TradeNo")
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
+
+                    b.Property<int>("TradeType");
+
+                    b.Property<long>("UserID");
+
+                    b.HasKey("TradeID");
+
+                    b.HasAnnotation("Relational:TableName", "Worker_TradeRecords");
                 });
         }
     }

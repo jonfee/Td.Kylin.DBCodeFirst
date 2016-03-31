@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Data.Entity.Migrations;
 
-namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
+namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
 {
-    public partial class dbMigrationFromMssql : Migration
+    public partial class InitDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,17 +13,18 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 columns: table => new
                 {
                     ContentID = table.Column<long>(type: "bigint", nullable: false),
+                    ADFile = table.Column<string>(type: "varchar(200)", nullable: true),
                     ADType = table.Column<int>(type: "int", nullable: false),
-                    AdminID = table.Column<long>(type: "bigint", nullable: false),
-                    Body = table.Column<string>(type: "varchar(255)", nullable: true),
+                    AreaID = table.Column<int>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     Enable = table.Column<bool>(nullable: false),
                     EndTime = table.Column<DateTime>(nullable: false),
-                    Html = table.Column<string>(type: "text", nullable: true),
+                    LinkData = table.Column<string>(nullable: true),
+                    LinkType = table.Column<int>(nullable: false),
+                    OrderNo = table.Column<int>(nullable: false),
                     PositionID = table.Column<long>(type: "bigint", nullable: false),
                     StartTime = table.Column<DateTime>(nullable: false),
-                    Title = table.Column<string>(type: "varchar(50)", nullable: true),
-                    Url = table.Column<string>(type: "varchar(255)", nullable: true)
+                    Title = table.Column<string>(type: "varchar(50)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -42,12 +43,50 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     table.PrimaryKey("PK_Ad_Page", x => x.PageID);
                 });
             migrationBuilder.CreateTable(
+                name: "Ad_PlatformContent",
+                columns: table => new
+                {
+                    ContentID = table.Column<long>(type: "bigint", nullable: false),
+                    ADFile = table.Column<string>(type: "varchar(200)", nullable: true),
+                    ADType = table.Column<int>(type: "int", nullable: false),
+                    CreateTime = table.Column<DateTime>(nullable: false),
+                    Enable = table.Column<bool>(nullable: false),
+                    EndTime = table.Column<DateTime>(nullable: false),
+                    IsGlobal = table.Column<bool>(nullable: false),
+                    LinkData = table.Column<string>(nullable: true),
+                    LinkType = table.Column<int>(nullable: false),
+                    OrderNo = table.Column<int>(nullable: false),
+                    PositionID = table.Column<long>(type: "bigint", nullable: false),
+                    StartTime = table.Column<DateTime>(nullable: false),
+                    Title = table.Column<string>(type: "varchar(50)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Ad_PlatformContent", x => x.ContentID);
+                });
+            migrationBuilder.CreateTable(
+                name: "Ad_PlatformToArea",
+                columns: table => new
+                {
+                    ContentID = table.Column<long>(type: "bigint", nullable: false),
+                    AreaID = table.Column<int>(nullable: false),
+                    Enable = table.Column<bool>(nullable: false),
+                    EndTime = table.Column<DateTime>(nullable: false),
+                    OrderNo = table.Column<int>(nullable: false),
+                    PositionID = table.Column<long>(type: "bigint", nullable: false),
+                    StartTime = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Ad_PlatformToArea", x => new { x.ContentID, x.AreaID });
+                });
+            migrationBuilder.CreateTable(
                 name: "Ad_Position",
                 columns: table => new
                 {
                     PositionID = table.Column<long>(type: "bigint", nullable: false),
-                    ADType = table.Column<int>(type: "int", nullable: false),
-                    Code = table.Column<string>(type: "varchar(10)", nullable: true),
+                    ADDisplayType = table.Column<int>(type: "int", nullable: false),
+                    Code = table.Column<string>(type: "varchar(50)", nullable: true),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     Enable = table.Column<bool>(nullable: false),
                     Intro = table.Column<string>(type: "varchar(255)", nullable: true),
@@ -94,6 +133,60 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Admin_Permission", x => new { x.AdminID, x.ModuleID });
+                });
+            migrationBuilder.CreateTable(
+                name: "Agent_Account",
+                columns: table => new
+                {
+                    AgentID = table.Column<long>(nullable: false),
+                    AccountStatus = table.Column<int>(nullable: false),
+                    Balance = table.Column<decimal>(nullable: false),
+                    CreateTime = table.Column<DateTime>(nullable: false),
+                    FreezeMoney = table.Column<decimal>(nullable: false),
+                    LoginAccount = table.Column<string>(type: "varchar(20)", nullable: true),
+                    LoginPassword = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Mobile = table.Column<string>(type: "varchar(11)", nullable: true),
+                    Name = table.Column<string>(type: "varchar(50)", nullable: true),
+                    OperatorAreaID = table.Column<int>(nullable: false),
+                    PaymentPassword = table.Column<string>(type: "varchar(50)", nullable: true),
+                    RowVersion = table.Column<byte[]>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Agent_Account", x => x.AgentID);
+                });
+            migrationBuilder.CreateTable(
+                name: "Agent_AreaRelation",
+                columns: table => new
+                {
+                    AgentID = table.Column<long>(nullable: false),
+                    AgentAreaID = table.Column<int>(nullable: false),
+                    CreateTime = table.Column<DateTime>(nullable: false),
+                    EndTime = table.Column<DateTime>(nullable: false),
+                    Remark = table.Column<string>(type: "varchar(300)", nullable: true),
+                    RowVersion = table.Column<byte[]>(nullable: true),
+                    StartTime = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Agent_AreaRelation", x => new { x.AgentID, x.AgentAreaID });
+                });
+            migrationBuilder.CreateTable(
+                name: "Agent_Profile",
+                columns: table => new
+                {
+                    AgentID = table.Column<long>(nullable: false),
+                    BusinessLicensePhoto = table.Column<string>(type: "varchar(100)", nullable: true),
+                    IDCardNo = table.Column<string>(type: "varchar(18)", nullable: true),
+                    IDCardPhotoBack = table.Column<string>(type: "varchar(100)", nullable: true),
+                    IDCardPhotoFront = table.Column<string>(type: "varchar(100)", nullable: true),
+                    LinkMan = table.Column<string>(type: "varchar(20)", nullable: true),
+                    LinkPhone = table.Column<string>(type: "varchar(11)", nullable: true),
+                    Remark = table.Column<string>(type: "varchar(100)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Agent_Profile", x => x.AgentID);
                 });
             migrationBuilder.CreateTable(
                 name: "Area_Open",
@@ -155,11 +248,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     AreaID = table.Column<int>(nullable: false),
                     CompactNumber = table.Column<string>(type: "varchar(20)", nullable: true),
                     CreateTime = table.Column<DateTime>(nullable: false),
-                    Email = table.Column<string>(type: "varchar(50)", nullable: true),
                     EndTime = table.Column<DateTime>(nullable: false),
-                    LinkMan = table.Column<string>(type: "varchar(20)", nullable: true),
-                    Mobile = table.Column<string>(type: "varchar(11)", nullable: true),
-                    PhoneNo = table.Column<string>(type: "varchar(20)", nullable: true),
                     Remark = table.Column<string>(type: "varchar(300)", nullable: true),
                     RowVersion = table.Column<byte[]>(nullable: true),
                     StartTime = table.Column<DateTime>(nullable: false)
@@ -167,6 +256,37 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Area_OperatorRelation", x => new { x.OperatorID, x.AreaID });
+                });
+            migrationBuilder.CreateTable(
+                name: "Circle_AreaForum",
+                columns: table => new
+                {
+                    AreaForumID = table.Column<long>(nullable: false),
+                    AliasName = table.Column<string>(type: "varchar(20)", nullable: true),
+                    AreaID = table.Column<int>(nullable: false),
+                    Attention = table.Column<int>(nullable: false),
+                    CategoryID = table.Column<long>(nullable: false),
+                    CreateTime = table.Column<DateTime>(nullable: false),
+                    DeleteTime = table.Column<DateTime>(nullable: true),
+                    Description = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Disabled = table.Column<bool>(nullable: false),
+                    ForumID = table.Column<long>(nullable: false),
+                    Hot = table.Column<int>(nullable: false),
+                    IsDelete = table.Column<bool>(nullable: false),
+                    Logo = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Moderators = table.Column<string>(type: "varchar(200)", nullable: true),
+                    OrderNo = table.Column<int>(nullable: false),
+                    PassLevel = table.Column<int>(nullable: false),
+                    PostLevel = table.Column<int>(nullable: false),
+                    PostType = table.Column<int>(nullable: false),
+                    ReplyCount = table.Column<int>(nullable: false),
+                    TodayReplyCount = table.Column<int>(nullable: false),
+                    TodayTopicCount = table.Column<int>(nullable: false),
+                    TopicCount = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Circle_AreaForum", x => x.AreaForumID);
                 });
             migrationBuilder.CreateTable(
                 name: "Circle_Attachment",
@@ -222,7 +342,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 columns: table => new
                 {
                     CheckID = table.Column<long>(nullable: false),
+                    AreaID = table.Column<int>(nullable: false),
                     CheckTime = table.Column<DateTime>(nullable: false),
+                    Latitude = table.Column<float>(nullable: false),
+                    Longitude = table.Column<float>(nullable: false),
                     RowVersion = table.Column<byte[]>(nullable: true),
                     UserId = table.Column<long>(nullable: false)
                 },
@@ -270,7 +393,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 name: "Circle_Follow",
                 columns: table => new
                 {
-                    ForumID = table.Column<long>(nullable: false),
+                    AreaForumID = table.Column<long>(nullable: false),
                     UserID = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     LastTime = table.Column<DateTime>(nullable: false),
@@ -278,33 +401,26 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Circle_Follow", x => new { x.ForumID, x.UserID });
+                    table.PrimaryKey("PK_Circle_Follow", x => new { x.AreaForumID, x.UserID });
                 });
             migrationBuilder.CreateTable(
                 name: "Circle_Forum",
                 columns: table => new
                 {
                     ForumID = table.Column<long>(nullable: false),
-                    Attention = table.Column<int>(nullable: false),
                     CategoryID = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     DeleteTime = table.Column<DateTime>(nullable: true),
                     Description = table.Column<string>(type: "varchar(50)", nullable: true),
                     Disabled = table.Column<bool>(nullable: false),
                     ForumName = table.Column<string>(type: "varchar(20)", nullable: true),
-                    Hot = table.Column<int>(nullable: false),
                     IsDelete = table.Column<bool>(nullable: false),
                     Logo = table.Column<string>(type: "varchar(50)", nullable: true),
-                    Moderators = table.Column<string>(type: "varchar(200)", nullable: true),
-                    OrderNo = table.Column<int>(nullable: false),
+                    OperatorNumber = table.Column<int>(nullable: false),
                     PassLevel = table.Column<int>(nullable: false),
                     PostLevel = table.Column<int>(nullable: false),
                     PostType = table.Column<int>(nullable: false),
-                    ReplyCount = table.Column<int>(nullable: false),
-                    RowVersion = table.Column<byte[]>(nullable: true),
-                    TodayReplyCount = table.Column<int>(nullable: false),
-                    TodayTopicCount = table.Column<int>(nullable: false),
-                    TopicCount = table.Column<int>(nullable: false)
+                    RowVersion = table.Column<byte[]>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -430,6 +546,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 columns: table => new
                 {
                     TopicID = table.Column<long>(nullable: false),
+                    AreaForumID = table.Column<long>(nullable: false),
                     AuditStatus = table.Column<int>(nullable: false),
                     ClickCount = table.Column<int>(nullable: false),
                     Content = table.Column<string>(type: "text", nullable: true),
@@ -456,6 +573,64 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Circle_Topic", x => x.TopicID);
+                });
+            migrationBuilder.CreateTable(
+                name: "Commission_OperatorDefault",
+                columns: table => new
+                {
+                    AreaID = table.Column<int>(nullable: false),
+                    CommissionItem = table.Column<int>(nullable: false),
+                    CommissionType = table.Column<int>(nullable: false),
+                    UpdateTime = table.Column<DateTime>(nullable: false),
+                    Value = table.Column<decimal>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Commission_OperatorDefault", x => new { x.AreaID, x.CommissionItem });
+                });
+            migrationBuilder.CreateTable(
+                name: "Commission_OperatorFromMerchant",
+                columns: table => new
+                {
+                    AreaID = table.Column<int>(nullable: false),
+                    MerchantID = table.Column<long>(nullable: false),
+                    CommissionItem = table.Column<int>(nullable: false),
+                    CommissionType = table.Column<int>(nullable: false),
+                    UpdateTime = table.Column<DateTime>(nullable: false),
+                    Value = table.Column<decimal>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Commission_OperatorFromMerchant", x => new { x.AreaID, x.MerchantID, x.CommissionItem });
+                });
+            migrationBuilder.CreateTable(
+                name: "Commission_OperatorFromWorker",
+                columns: table => new
+                {
+                    AreaID = table.Column<int>(nullable: false),
+                    UserID = table.Column<long>(nullable: false),
+                    CommissionItem = table.Column<int>(nullable: false),
+                    CommissionType = table.Column<int>(nullable: false),
+                    UpdateTime = table.Column<DateTime>(nullable: false),
+                    Value = table.Column<decimal>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Commission_OperatorFromWorker", x => new { x.AreaID, x.UserID, x.CommissionItem });
+                });
+            migrationBuilder.CreateTable(
+                name: "Commission_Platform",
+                columns: table => new
+                {
+                    AreaID = table.Column<int>(nullable: false),
+                    CommissionItem = table.Column<int>(nullable: false),
+                    CommissionType = table.Column<int>(nullable: false),
+                    UpdateTime = table.Column<DateTime>(nullable: false),
+                    Value = table.Column<decimal>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Commission_Platform", x => new { x.AreaID, x.CommissionItem });
                 });
             migrationBuilder.CreateTable(
                 name: "Complaint",
@@ -526,7 +701,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     ContactPhoto = table.Column<string>(type: "varchar(20)", nullable: true),
                     Count = table.Column<int>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
-                    Description = table.Column<int>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     IsUnShelve = table.Column<bool>(nullable: false),
                     JobName = table.Column<string>(type: "varchar(20)", nullable: true),
@@ -535,6 +710,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     LookCount = table.Column<int>(nullable: false),
                     MaxAge = table.Column<int>(nullable: false),
                     MaxMonthly = table.Column<int>(nullable: false),
+                    MerchantAreaID = table.Column<int>(nullable: false),
                     MerchantID = table.Column<long>(nullable: false),
                     MinAge = table.Column<int>(nullable: false),
                     MinEducation = table.Column<int>(nullable: false),
@@ -637,6 +813,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     OrderID = table.Column<long>(nullable: false),
                     ActualOrderAmount = table.Column<decimal>(nullable: false),
                     AllotTime = table.Column<DateTime>(nullable: true),
+                    AreaID = table.Column<int>(nullable: false),
                     BusinessID = table.Column<long>(nullable: false),
                     BusinessType = table.Column<int>(nullable: false),
                     CancelTime = table.Column<DateTime>(nullable: true),
@@ -685,6 +862,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 columns: table => new
                 {
                     CategoryID = table.Column<long>(nullable: false),
+                    AreaID = table.Column<int>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     DeleteTime = table.Column<DateTime>(nullable: false),
                     Description = table.Column<string>(type: "varchar(100)", nullable: true),
@@ -757,6 +935,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 {
                     OrderID = table.Column<long>(nullable: false),
                     ActualOrderAmount = table.Column<decimal>(nullable: false),
+                    AreaID = table.Column<int>(nullable: false),
                     CancelTime = table.Column<DateTime>(nullable: true),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     DeliveryInfo = table.Column<string>(type: "varchar(200)", nullable: true),
@@ -823,7 +1002,9 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 columns: table => new
                 {
                     ProductID = table.Column<long>(nullable: false),
+                    AreaID = table.Column<int>(nullable: false),
                     CategoryID = table.Column<long>(nullable: false),
+                    Click = table.Column<int>(nullable: false),
                     Code = table.Column<string>(type: "varchar(18)", nullable: true),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     DeliveryFee = table.Column<decimal>(nullable: false),
@@ -862,6 +1043,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     RowVersion = table.Column<byte[]>(nullable: true),
                     SKU = table.Column<string>(type: "varchar(18)", nullable: true),
                     SalePrice = table.Column<decimal>(nullable: false),
+                    SalesStatus = table.Column<int>(nullable: false),
                     SoldNumber = table.Column<int>(nullable: false),
                     Specs = table.Column<string>(type: "varchar(20)", nullable: true),
                     TagStatus = table.Column<int>(nullable: false)
@@ -875,6 +1057,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 columns: table => new
                 {
                     PromotionID = table.Column<long>(nullable: false),
+                    AreaID = table.Column<int>(nullable: false),
                     BeginTime = table.Column<DateTime>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     Description = table.Column<string>(type: "text", nullable: true),
@@ -924,7 +1107,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 columns: table => new
                 {
                     CartID = table.Column<long>(nullable: false),
+                    AreaID = table.Column<int>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
+                    MallType = table.Column<int>(nullable: false),
+                    MerchantID = table.Column<long>(nullable: false),
                     Number = table.Column<int>(nullable: false),
                     ProductID = table.Column<long>(nullable: false),
                     RowVersion = table.Column<byte[]>(nullable: true),
@@ -941,7 +1127,9 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 columns: table => new
                 {
                     MerchantID = table.Column<long>(nullable: false),
+                    AgentID = table.Column<long>(nullable: false),
                     AreaID = table.Column<int>(nullable: false),
+                    AreaLayer = table.Column<string>(type: "varchar(100)", nullable: true),
                     Balance = table.Column<decimal>(nullable: false),
                     CertificateStatus = table.Column<int>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
@@ -1013,8 +1201,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 columns: table => new
                 {
                     MerchantID = table.Column<long>(nullable: false),
-                    BusinessBeginTime = table.Column<string>(type: "char(5)", nullable: true),
-                    BusinessEndTime = table.Column<string>(type: "char(5)", nullable: true),
+                    BusinessBeginTime = table.Column<string>(type: "varchar(10)", nullable: true),
+                    BusinessEndTime = table.Column<string>(type: "varchar(10)", nullable: true),
                     DeliveryMoney = table.Column<decimal>(nullable: false),
                     ExceedOrderRemark = table.Column<string>(nullable: true),
                     ExceedOrderTime = table.Column<bool>(nullable: false),
@@ -1082,7 +1270,9 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     EvaluateTime = table.Column<DateTime>(nullable: true),
                     IsBuyerDelete = table.Column<bool>(nullable: false),
                     IsVenderDelete = table.Column<bool>(nullable: false),
-                    MerchatID = table.Column<long>(nullable: false),
+                    Latitude = table.Column<float>(nullable: false),
+                    Longitude = table.Column<float>(nullable: false),
+                    MerchantID = table.Column<long>(nullable: false),
                     OrderCode = table.Column<string>(type: "varchar(18)", nullable: true),
                     OrderStatus = table.Column<int>(nullable: false),
                     PayTime = table.Column<DateTime>(nullable: true),
@@ -1110,6 +1300,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     BuyCounts = table.Column<int>(nullable: false),
                     CategoryID = table.Column<long>(nullable: false),
                     GoodsID = table.Column<long>(nullable: false),
+                    HasEvaluate = table.Column<bool>(nullable: false),
                     MarketPrice = table.Column<decimal>(nullable: false),
                     Name = table.Column<string>(type: "varchar(200)", nullable: true),
                     OrderID = table.Column<long>(nullable: false),
@@ -1117,6 +1308,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     RowVersion = table.Column<byte[]>(nullable: true),
                     SalePrice = table.Column<decimal>(nullable: false),
                     Specification = table.Column<string>(type: "varchar(30)", nullable: true),
+                    SystemCategoryID = table.Column<long>(nullable: false),
                     TradPrice = table.Column<decimal>(nullable: false)
                 },
                 constraints: table =>
@@ -1129,6 +1321,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 {
                     TradeID = table.Column<long>(nullable: false),
                     Amount = table.Column<decimal>(nullable: false),
+                    CounterpartyId = table.Column<long>(nullable: false),
+                    CounterpartyIdentity = table.Column<int>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     MerchantID = table.Column<long>(nullable: false),
                     PaymentType = table.Column<int>(nullable: false),
@@ -1146,6 +1340,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 columns: table => new
                 {
                     WelfareID = table.Column<long>(nullable: false),
+                    AreaID = table.Column<int>(nullable: false),
                     AuditAdminID = table.Column<long>(nullable: false),
                     AuditAdminName = table.Column<string>(type: "varchar(20)", nullable: true),
                     AuditRemark = table.Column<string>(type: "varchar(200)", nullable: true),
@@ -1175,6 +1370,24 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     table.PrimaryKey("PK_Merchant_Welfare", x => x.WelfareID);
                 });
             migrationBuilder.CreateTable(
+                name: "MerchantGoods_SystemCategory",
+                columns: table => new
+                {
+                    CategoryID = table.Column<long>(nullable: false),
+                    CategoryPath = table.Column<string>(type: "varchar(50)", nullable: true),
+                    CreateTime = table.Column<DateTime>(nullable: false),
+                    Icon = table.Column<string>(type: "varchar(100)", nullable: true),
+                    IsDelete = table.Column<bool>(nullable: false),
+                    IsDisabled = table.Column<bool>(nullable: false),
+                    Name = table.Column<string>(type: "varchar(20)", nullable: true),
+                    OrderNo = table.Column<int>(nullable: false),
+                    ParentCategoryID = table.Column<long>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MerchantGoods_SystemCategory", x => x.CategoryID);
+                });
+            migrationBuilder.CreateTable(
                 name: "MerchGoods_Category",
                 columns: table => new
                 {
@@ -1196,20 +1409,27 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 {
                     GoodsID = table.Column<long>(nullable: false),
                     AreaID = table.Column<int>(nullable: false),
+                    AreaLayer = table.Column<string>(type: "varchar(100)", nullable: true),
                     CategoryID = table.Column<long>(nullable: false),
+                    Click = table.Column<int>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
+                    Description = table.Column<string>(type: "varchar(140)", nullable: true),
                     EvaluateCount = table.Column<int>(nullable: false),
                     Inventory = table.Column<int>(nullable: false),
                     IsDelete = table.Column<bool>(nullable: false),
+                    Latitude = table.Column<float>(nullable: false),
+                    Longitude = table.Column<float>(nullable: false),
                     MerchantID = table.Column<long>(nullable: false),
                     Name = table.Column<string>(type: "varchar(30)", nullable: true),
                     OriginalPrice = table.Column<decimal>(nullable: false),
-                    Pic = table.Column<string>(type: "varchar(100)", nullable: true),
+                    Pic = table.Column<string>(type: "varchar(200)", nullable: true),
                     RowVersion = table.Column<byte[]>(nullable: true),
                     SaleNumber = table.Column<int>(nullable: false),
                     SalePrice = table.Column<decimal>(nullable: false),
-                    Specification = table.Column<string>(nullable: true),
-                    Status = table.Column<int>(nullable: false)
+                    Specification = table.Column<string>(type: "varchar(30)", nullable: true),
+                    Status = table.Column<int>(nullable: false),
+                    SystemCategoryID = table.Column<long>(nullable: false),
+                    TagStatus = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -1221,6 +1441,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 {
                     ServiceGoodsID = table.Column<long>(nullable: false),
                     AreaID = table.Column<int>(nullable: false),
+                    AreaLayer = table.Column<string>(type: "varchar(100)", nullable: true),
                     BusinessID = table.Column<long>(nullable: false),
                     BusinessType = table.Column<int>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
@@ -1245,7 +1466,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 columns: table => new
                 {
                     ContentID = table.Column<long>(nullable: false),
+                    AreaID = table.Column<int>(nullable: false),
+                    AuditRemark = table.Column<string>(type: "varchar(255)", nullable: true),
                     AuditStatus = table.Column<int>(nullable: false),
+                    AuditTime = table.Column<DateTime>(nullable: false),
                     Category = table.Column<int>(nullable: false),
                     ConfirmCount = table.Column<int>(nullable: false),
                     Content = table.Column<string>(type: "varchar(255)", nullable: true),
@@ -1309,6 +1533,22 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     table.PrimaryKey("PK_System_Area", x => x.AreaID);
                 });
             migrationBuilder.CreateTable(
+                name: "System_GlobalResources",
+                columns: table => new
+                {
+                    ResourceType = table.Column<int>(nullable: false),
+                    ResourceKey = table.Column<int>(nullable: false),
+                    Group = table.Column<string>(type: "varchar(20)", nullable: true),
+                    Name = table.Column<string>(type: "varchar(50)", nullable: true),
+                    UpdateTime = table.Column<DateTime>(nullable: false),
+                    Value = table.Column<string>(type: "varchar(500)", nullable: true),
+                    ValueUnit = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_System_GlobalResources", x => new { x.ResourceType, x.ResourceKey });
+                });
+            migrationBuilder.CreateTable(
                 name: "System_ModuleAuthorize",
                 columns: table => new
                 {
@@ -1343,6 +1583,25 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     table.PrimaryKey("PK_System_SMS", x => x.Id);
                 });
             migrationBuilder.CreateTable(
+                name: "Tao_ProductRecommend",
+                columns: table => new
+                {
+                    RecommendID = table.Column<long>(nullable: false),
+                    AreaID = table.Column<int>(nullable: false),
+                    BeginTime = table.Column<DateTime>(nullable: true),
+                    EndTime = table.Column<DateTime>(nullable: true),
+                    MallType = table.Column<int>(nullable: false),
+                    OrderNo = table.Column<int>(nullable: false),
+                    ProductID = table.Column<long>(nullable: false),
+                    RecommendType = table.Column<int>(nullable: false),
+                    SKUID = table.Column<long>(nullable: false),
+                    UpdateTime = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tao_ProductRecommend", x => x.RecommendID);
+                });
+            migrationBuilder.CreateTable(
                 name: "User_Account",
                 columns: table => new
                 {
@@ -1351,6 +1610,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                     CreateTime = table.Column<DateTime>(nullable: false),
                     DataStatus = table.Column<int>(nullable: false),
                     FreezeMoney = table.Column<decimal>(nullable: false),
+                    IdentityType = table.Column<int>(nullable: false),
                     LastTime = table.Column<DateTime>(nullable: false),
                     Logins = table.Column<int>(nullable: false),
                     Mobile = table.Column<string>(type: "varchar(11)", nullable: true),
@@ -1386,6 +1646,29 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_User_Address", x => x.AddressID);
+                });
+            migrationBuilder.CreateTable(
+                name: "User_Certification",
+                columns: table => new
+                {
+                    CertificateID = table.Column<long>(nullable: false),
+                    AuditAdminID = table.Column<long>(nullable: true),
+                    AuditAdminName = table.Column<string>(type: "varchar(20)", nullable: true),
+                    AuditRemark = table.Column<string>(type: "varchar(200)", nullable: true),
+                    AuditStatus = table.Column<int>(nullable: false),
+                    AuditTime = table.Column<DateTime>(nullable: true),
+                    CertNo = table.Column<string>(type: "varchar(20)", nullable: true),
+                    CertificateType = table.Column<int>(nullable: false),
+                    CreateTime = table.Column<DateTime>(nullable: false),
+                    IsDelete = table.Column<bool>(nullable: false),
+                    Name = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Pics = table.Column<string>(type: "varchar(300)", nullable: true),
+                    RowVersion = table.Column<byte[]>(nullable: true),
+                    UserID = table.Column<long>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_User_Certification", x => x.CertificateID);
                 });
             migrationBuilder.CreateTable(
                 name: "User_Device",
@@ -1483,6 +1766,14 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 {
                     UserID = table.Column<long>(nullable: false),
                     BothBirthday = table.Column<DateTime>(nullable: false),
+                    CardID = table.Column<string>(type: "varchar(18)", nullable: true),
+                    JiGuan = table.Column<string>(type: "varchar(10)", nullable: true),
+                    MandarinLevel = table.Column<int>(nullable: false),
+                    MaritalStatus = table.Column<int>(nullable: false),
+                    MaxEducation = table.Column<int>(nullable: false),
+                    Name = table.Column<string>(type: "varchar(20)", nullable: true),
+                    Nation = table.Column<string>(type: "varchar(10)", nullable: true),
+                    Phone = table.Column<string>(type: "varchar(20)", nullable: true),
                     PresentAddress = table.Column<string>(type: "varchar(100)", nullable: true),
                     RowVersion = table.Column<byte[]>(nullable: true),
                     Sex = table.Column<int>(nullable: false),
@@ -1547,13 +1838,16 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 {
                     TradeID = table.Column<long>(nullable: false),
                     Amount = table.Column<decimal>(nullable: false),
+                    CounterpartyId = table.Column<long>(nullable: false),
+                    CounterpartyIdentity = table.Column<int>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     PaymentType = table.Column<int>(nullable: false),
                     RowVersion = table.Column<byte[]>(nullable: true),
                     TradeInfo = table.Column<string>(type: "varchar(100)", nullable: true),
                     TradeNo = table.Column<string>(type: "varchar(30)", nullable: true),
                     TradeType = table.Column<int>(nullable: false),
-                    UserID = table.Column<long>(nullable: false)
+                    UserID = table.Column<long>(nullable: false),
+                    WelfareID = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -1653,6 +1947,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 {
                     PhasesID = table.Column<long>(nullable: false),
                     AcceptNumber = table.Column<int>(nullable: false),
+                    AreaID = table.Column<int>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     Enabled = table.Column<bool>(nullable: false),
                     LotteryTime = table.Column<DateTime>(nullable: false),
@@ -1706,7 +2001,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 name: "Worker_Business",
                 columns: table => new
                 {
-                    WorkerID = table.Column<long>(nullable: false),
+                    UserID = table.Column<long>(nullable: false),
                     BusinessID = table.Column<long>(nullable: false),
                     AuditAdminID = table.Column<long>(nullable: false),
                     AuditRemark = table.Column<string>(type: "varchar(300)", nullable: true),
@@ -1718,36 +2013,13 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Worker_Business", x => new { x.WorkerID, x.BusinessID });
-                });
-            migrationBuilder.CreateTable(
-                name: "Worker_Certification",
-                columns: table => new
-                {
-                    CertificateID = table.Column<long>(nullable: false),
-                    AuditAdminID = table.Column<long>(nullable: true),
-                    AuditAdminName = table.Column<string>(type: "varchar(20)", nullable: true),
-                    AuditRemark = table.Column<string>(type: "varchar(200)", nullable: true),
-                    AuditStatus = table.Column<int>(nullable: false),
-                    AuditTime = table.Column<DateTime>(nullable: true),
-                    CertNo = table.Column<string>(type: "varchar(20)", nullable: true),
-                    CertificateType = table.Column<int>(nullable: false),
-                    CreateTime = table.Column<DateTime>(nullable: false),
-                    IsDelete = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(type: "varchar(50)", nullable: true),
-                    Pics = table.Column<string>(type: "varchar(300)", nullable: true),
-                    RowVersion = table.Column<byte[]>(nullable: true),
-                    WorkerID = table.Column<long>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Worker_Certification", x => x.CertificateID);
+                    table.PrimaryKey("PK_Worker_Business", x => new { x.UserID, x.BusinessID });
                 });
             migrationBuilder.CreateTable(
                 name: "Worker_Company",
                 columns: table => new
                 {
-                    WorkerID = table.Column<long>(nullable: false),
+                    UserID = table.Column<long>(nullable: false),
                     MerchantID = table.Column<long>(nullable: false),
                     AuditTime = table.Column<DateTime>(nullable: true),
                     CreateTime = table.Column<DateTime>(nullable: false),
@@ -1757,13 +2029,13 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Worker_Company", x => new { x.WorkerID, x.MerchantID });
+                    table.PrimaryKey("PK_Worker_Company", x => new { x.UserID, x.MerchantID });
                 });
             migrationBuilder.CreateTable(
                 name: "Worker_CompanyBusiness",
                 columns: table => new
                 {
-                    WorkerID = table.Column<long>(nullable: false),
+                    UserID = table.Column<long>(nullable: false),
                     MerchantID = table.Column<long>(nullable: false),
                     BusinessID = table.Column<long>(nullable: false),
                     BeginWorkYear = table.Column<int>(nullable: false),
@@ -1776,7 +2048,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Worker_CompanyBusiness", x => new { x.WorkerID, x.MerchantID, x.BusinessID });
+                    table.PrimaryKey("PK_Worker_CompanyBusiness", x => new { x.UserID, x.MerchantID, x.BusinessID });
                 });
             migrationBuilder.CreateTable(
                 name: "Worker_Message",
@@ -1802,29 +2074,18 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 name: "Worker_Profile",
                 columns: table => new
                 {
-                    WorkerID = table.Column<long>(nullable: false),
-                    Address = table.Column<string>(type: "varchar(50)", nullable: true),
+                    UserID = table.Column<long>(nullable: false),
                     BeginWorkYear = table.Column<int>(nullable: false),
-                    Birthdate = table.Column<DateTime>(nullable: false),
-                    CardID = table.Column<string>(type: "varchar(18)", nullable: true),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     Intro = table.Column<string>(type: "text", nullable: true),
-                    JiGuan = table.Column<string>(type: "varchar(10)", nullable: true),
-                    MandarinLevel = table.Column<int>(nullable: false),
-                    MaritalStatus = table.Column<int>(nullable: false),
-                    MaxEducation = table.Column<int>(nullable: false),
-                    Name = table.Column<string>(type: "varchar(20)", nullable: true),
-                    Nation = table.Column<string>(type: "varchar(10)", nullable: true),
-                    Phone = table.Column<string>(type: "varchar(20)", nullable: true),
                     Photo = table.Column<string>(type: "varchar(100)", nullable: true),
                     RowVersion = table.Column<byte[]>(nullable: true),
-                    Sex = table.Column<int>(nullable: false),
                     SpringFestivalIsBack = table.Column<bool>(nullable: false),
                     UpdateTime = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Worker_Profile", x => x.WorkerID);
+                    table.PrimaryKey("PK_Worker_Profile", x => x.UserID);
                 });
             migrationBuilder.CreateTable(
                 name: "Worker_TradeRecords",
@@ -1832,13 +2093,15 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
                 {
                     TradeID = table.Column<long>(nullable: false),
                     Amount = table.Column<decimal>(nullable: false),
+                    CounterpartyId = table.Column<long>(nullable: false),
+                    CounterpartyIdentity = table.Column<int>(nullable: false),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     PaymentType = table.Column<int>(nullable: false),
                     RowVersion = table.Column<byte[]>(nullable: true),
                     TradeInfo = table.Column<string>(type: "varchar(100)", nullable: true),
                     TradeNo = table.Column<string>(type: "varchar(30)", nullable: true),
                     TradeType = table.Column<int>(nullable: false),
-                    WorkerID = table.Column<long>(nullable: false)
+                    UserID = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -1850,13 +2113,19 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
         {
             migrationBuilder.DropTable("Ad_Content");
             migrationBuilder.DropTable("Ad_Page");
+            migrationBuilder.DropTable("Ad_PlatformContent");
+            migrationBuilder.DropTable("Ad_PlatformToArea");
             migrationBuilder.DropTable("Ad_Position");
             migrationBuilder.DropTable("Admin_Account");
             migrationBuilder.DropTable("Admin_Permission");
+            migrationBuilder.DropTable("Agent_Account");
+            migrationBuilder.DropTable("Agent_AreaRelation");
+            migrationBuilder.DropTable("Agent_Profile");
             migrationBuilder.DropTable("Area_Open");
             migrationBuilder.DropTable("Area_Operator");
             migrationBuilder.DropTable("Area_OperatorProfile");
             migrationBuilder.DropTable("Area_OperatorRelation");
+            migrationBuilder.DropTable("Circle_AreaForum");
             migrationBuilder.DropTable("Circle_Attachment");
             migrationBuilder.DropTable("Circle_AttachmentUsage");
             migrationBuilder.DropTable("Circle_Category");
@@ -1872,6 +2141,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
             migrationBuilder.DropTable("Circle_PostTrend");
             migrationBuilder.DropTable("Circle_Respond");
             migrationBuilder.DropTable("Circle_Topic");
+            migrationBuilder.DropTable("Commission_OperatorDefault");
+            migrationBuilder.DropTable("Commission_OperatorFromMerchant");
+            migrationBuilder.DropTable("Commission_OperatorFromWorker");
+            migrationBuilder.DropTable("Commission_Platform");
             migrationBuilder.DropTable("Complaint");
             migrationBuilder.DropTable("Job_Apply");
             migrationBuilder.DropTable("Job_Category");
@@ -1903,16 +2176,20 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
             migrationBuilder.DropTable("Merchant_OrderSnapshot");
             migrationBuilder.DropTable("Merchant_TradeRecords");
             migrationBuilder.DropTable("Merchant_Welfare");
+            migrationBuilder.DropTable("MerchantGoods_SystemCategory");
             migrationBuilder.DropTable("MerchGoods_Category");
             migrationBuilder.DropTable("MerchGoods_Goods");
             migrationBuilder.DropTable("MerchService_Goods");
             migrationBuilder.DropTable("Shake_Content");
             migrationBuilder.DropTable("Shake_UserRecord");
             migrationBuilder.DropTable("System_Area");
+            migrationBuilder.DropTable("System_GlobalResources");
             migrationBuilder.DropTable("System_ModuleAuthorize");
             migrationBuilder.DropTable("System_SMS");
+            migrationBuilder.DropTable("Tao_ProductRecommend");
             migrationBuilder.DropTable("User_Account");
             migrationBuilder.DropTable("User_Address");
+            migrationBuilder.DropTable("User_Certification");
             migrationBuilder.DropTable("User_Device");
             migrationBuilder.DropTable("User_Forum");
             migrationBuilder.DropTable("User_LocationTrack");
@@ -1931,7 +2208,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst.Migrations
             migrationBuilder.DropTable("Welfare_Remind");
             migrationBuilder.DropTable("Worker_Account");
             migrationBuilder.DropTable("Worker_Business");
-            migrationBuilder.DropTable("Worker_Certification");
             migrationBuilder.DropTable("Worker_Company");
             migrationBuilder.DropTable("Worker_CompanyBusiness");
             migrationBuilder.DropTable("Worker_Message");
