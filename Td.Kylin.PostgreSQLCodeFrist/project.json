@@ -27,8 +27,6 @@
     "ef": "EntityFramework.Commands"
   },
 
-
-
   "exclude": [
     "wwwroot",
     "node_modules"
