@@ -23,9 +23,5 @@ namespace Td.Kylin.Entity
         ///总评价次数
         ///</summary>
         public int Counts { get; set; }
-        /// <summary>
-        /// 评论类型（枚举值）
-        /// </summary>
-        public int EvaluateType { get; set; }
     }
 }
