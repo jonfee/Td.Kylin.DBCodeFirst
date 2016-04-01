@@ -66,6 +66,9 @@ namespace Td.Kylin.Entity
 		///是否已删除
 		///</summary>
 		public bool IsDelete{get;set;}
-				
-	}
+        /// <summary>
+        /// 评论类型（枚举值）
+        /// </summary>
+        public int EvaluateType { get; set; }
+    }
 }
