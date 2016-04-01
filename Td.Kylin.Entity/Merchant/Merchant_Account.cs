@@ -130,10 +130,18 @@ namespace Td.Kylin.Entity
         ///</summary>
         public int CertificateStatus { get; set; }
 
+        /// <summary>
+        /// 支付密码
+        /// </summary>
+        public string PayPassword { get; set; }
+        /// <summary>
+        /// 取现密码
+        /// </summary>
+        public string EncashmentPassword { get; set; }
         ///<summary>
         ///创建时间
         ///</summary>
-        
+
         public DateTime CreateTime { get; set; }
 
     }
