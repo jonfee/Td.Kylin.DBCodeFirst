@@ -1,13 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Td.Kylin.Entity
+namespace Td.Kylin.Entity.Merchant
 {
-    /// <summary>
-    /// 订单商品评价
-    /// </summary>
-    [Table("Mall_Evaluate")]
-    public class Mall_Evaluate : BaseEntity
+    public class Merchant_Evaluate : BaseEntity
     {
         ///<summary>
         ///评价ID
@@ -23,7 +22,10 @@ namespace Td.Kylin.Entity
         ///订单ID
         ///</summary>
         public long OrderID { get; set; }
-
+        /// <summary>
+        /// 商家ID
+        /// </summary>
+        public long MerchantID { get; set; }
         ///<summary>
         ///商品ID
         ///</summary>
