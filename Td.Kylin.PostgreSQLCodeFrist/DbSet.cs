@@ -100,10 +100,21 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// </summary>
         public DbSet<Merchant_Industry> Merchant_Industry { get { return Set<Merchant_Industry>(); } }
 
-        /// <summary>
-        /// 商家账户信息
-        /// </summary>
-        public DbSet<Merchant_Account> Merchant_Account { get { return Set<Merchant_Account>(); } }
+		/// <summary>
+		/// 商家所属行业推荐
+		/// </summary>
+		public DbSet<Merchant_IndustryRecommend> Merchant_IndustryRecommend
+		{
+			get
+			{
+				return Set<Merchant_IndustryRecommend>();
+			}
+		}
+
+		/// <summary>
+		/// 商家账户信息
+		/// </summary>
+		public DbSet<Merchant_Account> Merchant_Account { get { return Set<Merchant_Account>(); } }
 
         /// <summary>
         /// 商家认证

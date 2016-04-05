@@ -141,7 +141,12 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.HasKey(p => p.IndustryID);
             });
 
-            modelBuilder.Entity<Merchant_Account>(entity =>
+			modelBuilder.Entity<Merchant_IndustryRecommend>(entity =>
+			{
+				entity.HasKey(p => new { p.AreaID, p.IndustryID});
+			});
+
+			modelBuilder.Entity<Merchant_Account>(entity =>
             {
                 entity.Property(p => p.MerchantID).ValueGeneratedNever();
 

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 商家所属行业
+    /// 商家所属行业d; It doesn't matter; It will be over in the end.
     /// </summary>
     [Table("Merchant_Industry")]
     public class Merchant_Industry : BaseEntity
