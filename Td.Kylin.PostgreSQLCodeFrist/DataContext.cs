@@ -188,6 +188,18 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.Property(p => p.SnapshotID).ValueGeneratedNever();
                 entity.HasKey(p => p.SnapshotID);
             });
+            //商家商品评论表
+            modelBuilder.Entity<Merchant_Evaluate>(entity =>
+            {
+                entity.Property(p => p.EvaluateID).ValueGeneratedNever();
+                entity.HasKey(p => p.EvaluateID);
+            });
+            //商家商品汇总表
+            modelBuilder.Entity<Merchant_EvaluateStatistics>(entity =>
+            {
+                entity.Property(p => p.ProductID).ValueGeneratedNever();
+                entity.HasKey(p => p.ProductID);
+            });
             #endregion
 
             #region 用户

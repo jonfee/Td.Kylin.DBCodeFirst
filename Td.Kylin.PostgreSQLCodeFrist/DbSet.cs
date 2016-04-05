@@ -136,6 +136,14 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 商家订单表
         /// </summary>
         public DbSet<Merchant_Order> Merchant_Order { get { return Set<Merchant_Order>(); } }
+        /// <summary>
+        /// 商家商品评论表
+        /// </summary>
+        public DbSet<Merchant_Evaluate> Merchant_Evaluate { get { return Set<Merchant_Evaluate>(); } }
+        /// <summary>
+        /// 商家商品评论汇总表
+        /// </summary>
+        public DbSet<Merchant_EvaluateStatistics> Merchant_EvaluateStatistics { get { return Set<Merchant_EvaluateStatistics>(); } }
 
         #endregion
 
