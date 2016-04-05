@@ -7,6 +7,10 @@ namespace Td.Kylin.Entity
 {
     public class Merchant_EvaluateStatistics : BaseEntity
     {
+        /// <summary>
+        /// 商家ID
+        /// </summary>
+        public long MerchantID { get; set; }
         ///<summary>
         ///商品ID
         ///</summary>

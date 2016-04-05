@@ -197,8 +197,8 @@ namespace Td.Kylin.PostgreSQLCodeFirst
             //商家商品汇总表
             modelBuilder.Entity<Merchant_EvaluateStatistics>(entity =>
             {
-                entity.Property(p => p.ProductID).ValueGeneratedNever();
-                entity.HasKey(p => p.ProductID);
+                //entity.Property(p => p.ProductID).ValueGeneratedNever();
+                entity.HasKey(p => new { p.ProductID, p.EvaluateLevel });
             });
             #endregion
 

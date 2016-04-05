@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160405035153_updateTableKey")]
+    partial class updateTableKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -2091,8 +2092,6 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
                     b.Property<int>("EvaluateLevel");
 
                     b.Property<int>("Counts");
-
-                    b.Property<long>("MerchantID");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
