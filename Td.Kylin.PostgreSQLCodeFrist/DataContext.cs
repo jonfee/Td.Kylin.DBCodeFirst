@@ -673,6 +673,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.Property(p => p.AreaID).ValueGeneratedNever();
                 entity.HasKey(p => p.AreaID);
             });
+            modelBuilder.Entity<Area_RecommendIndustry>(entity =>
+            {
+                entity.HasKey(p => new { p.AreaID, p.IndustryID });
+            });
             #endregion
 
             #region 运营商
