@@ -143,6 +143,11 @@ namespace Td.Kylin.Entity
         ///</summary>
 
         public DateTime CreateTime { get; set; }
+        /// <summary>
+        /// 推荐码
+        /// </summary>
+        [Column(TypeName = "varchar(6)")]
+        public string RecommendCode { get; set; }
 
     }
 }
