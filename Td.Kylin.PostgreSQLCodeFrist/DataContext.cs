@@ -205,6 +205,11 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 //entity.Property(p => p.ProductID).ValueGeneratedNever();
                 entity.HasKey(p => new { p.ProductID, p.EvaluateLevel });
             });
+            modelBuilder.Entity<Merchant_RecommendRecord>(entity =>
+            {
+                entity.Property(p => p.RecordID).ValueGeneratedNever();
+                entity.HasKey(p => p.RecordID);
+            });
             #endregion
 
             #region 用户
@@ -280,7 +285,11 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.Property(p => p.MessageID).ValueGeneratedNever();
                 entity.HasKey(p => p.MessageID);
             });
-
+            modelBuilder.Entity<User_RecommendRecord>(entity =>
+            {
+                entity.Property(p => p.RecordID).ValueGeneratedNever();
+                entity.HasKey(p => p.RecordID);
+            });
             #endregion
 
             #region 摇一摇

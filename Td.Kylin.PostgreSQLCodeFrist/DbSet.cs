@@ -155,6 +155,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 商家商品评论汇总表
         /// </summary>
         public DbSet<Merchant_EvaluateStatistics> Merchant_EvaluateStatistics { get { return Set<Merchant_EvaluateStatistics>(); } }
+        /// <summary>
+        /// 商家推荐记录表
+        /// </summary>
+        public DbSet<Merchant_RecommendRecord> Merchant_RecommendRecord { get { return Set<Merchant_RecommendRecord>(); } }
 
         #endregion
 
@@ -219,6 +223,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 用户消息
         /// </summary>
         public DbSet<User_Message> User_Message { get { return Set<User_Message>(); } }
+        /// <summary>
+        /// 用户推荐记录表
+        /// </summary>
+        public DbSet<User_RecommendRecord> User_RecommendRecord { get { return Set<User_RecommendRecord>(); } }
 
         #endregion
 
@@ -570,7 +578,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 区域
         /// </summary>
         public DbSet<System_Area> System_Area { get { return Set<System_Area>(); } }
-        
+
         /// <summary>
         /// 开通区域
         /// </summary>
