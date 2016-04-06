@@ -100,21 +100,21 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// </summary>
         public DbSet<Merchant_Industry> Merchant_Industry { get { return Set<Merchant_Industry>(); } }
 
-		/// <summary>
-		/// 商家所属行业推荐
-		/// </summary>
-		public DbSet<Merchant_IndustryRecommend> Merchant_IndustryRecommend
-		{
-			get
-			{
-				return Set<Merchant_IndustryRecommend>();
-			}
-		}
+        /// <summary>
+        /// 商家所属行业推荐
+        /// </summary>
+        public DbSet<Merchant_IndustryRecommend> Merchant_IndustryRecommend
+        {
+            get
+            {
+                return Set<Merchant_IndustryRecommend>();
+            }
+        }
 
-		/// <summary>
-		/// 商家账户信息
-		/// </summary>
-		public DbSet<Merchant_Account> Merchant_Account { get { return Set<Merchant_Account>(); } }
+        /// <summary>
+        /// 商家账户信息
+        /// </summary>
+        public DbSet<Merchant_Account> Merchant_Account { get { return Set<Merchant_Account>(); } }
 
         /// <summary>
         /// 商家认证
@@ -570,7 +570,16 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 区域
         /// </summary>
         public DbSet<System_Area> System_Area { get { return Set<System_Area>(); } }
+        
+        /// <summary>
+        /// 开通区域
+        /// </summary>
         public DbSet<Area_Open> Area_Open { get { return Set<Area_Open>(); } }
+
+        /// <summary>
+        /// 区域推荐行业
+        /// </summary>
+        public DbSet<Area_RecommendIndustry> Area_RecommendIndustry { get { return Set<Area_RecommendIndustry>(); } }
         #endregion
 
         #region 运营商
