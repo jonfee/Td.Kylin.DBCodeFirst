@@ -3,18 +3,6 @@ using Td.ComponentModel;
 
 namespace Td.Kylin.EnumLibrary
 {
-    public static class EnumValue
-    {
-        /// <summary>
-        /// 获取枚举值
-        /// </summary>
-        /// <param name="err"></param>
-        /// <returns></returns>
-        public static int GetEnumValue<T>(this T err)
-        {
-            return Converter.ConvertValue<int>(err);
-        }
-    }
     /// <summary>
     /// 返回结果Code枚举
     /// </summary>
@@ -66,10 +54,20 @@ namespace Td.Kylin.EnumLibrary
         [Description("请求模式无效")]
         RequestModeInvalid = 8,
         /// <summary>
-        /// 非法请求10
+        /// 非法请求
         /// </summary>
         [Description("非法请求")]
         IllegalRequest = 9,
+        /// <summary>
+        /// 数据不存在或已被删除
+        /// </summary>
+        [Description("数据不存在或已被删除")]
+        DataNoFound =10,
+        /// <summary>
+        /// 数据存在但无法正常使用
+        /// </summary>
+        [Description("数据存在但无法正常使用")]
+        DataDisabled = 11,
         /// <summary>
         /// 接口异常统一返回
         /// </summary>
@@ -79,18 +77,12 @@ namespace Td.Kylin.EnumLibrary
         /// 数据连接失败
         /// </summary>
         [Description("数据连接失败")]
-        Connection = 1001,
+        ConnectionFailure = 1001,
         /// <summary>
-        /// 上传失败
+        /// 文件上传失败
         /// </summary>
-        [Description("上传失败")]
-        Upload = 1101,
-        /// <summary>
-        /// 商家未配置
-        /// </summary>
-        [Description("商家未配置")]
-        NotConfig = 1102,
-
+        [Description("文件上传失败")]
+        UploadFailure = 1101,
         /// <summary>
         /// 订单上级状态与当前修改状态不匹配
         /// </summary>
@@ -117,30 +109,14 @@ namespace Td.Kylin.EnumLibrary
         [Description("商家-前端传入总价格与后台计算价格不符合")]
         MerchantBackErrorOrderMoney = 1107,
         /// <summary>
-        /// 优惠卷不存在
+        /// 未满足优惠券使用条件
         /// </summary>
-        [Description("优惠卷不存在")]
-        NotWelfare = 1108,
-        /// <summary>
-        /// 总金额不足以使用优惠卷
-        /// </summary>
-        [Description("总金额不足以使用优惠卷")]
+        [Description("未满足优惠券使用条件")]
         NotUseWelfare = 1109,
-
         /// <summary>
-        /// 商家不存在
+        /// 未设置支付密码
         /// </summary>
-        [Description("商家不存在")]
-        NotMerchant = 1110,
-        /// <summary>
-        /// 用户不存在
-        /// </summary>
-        [Description("用户不存在")]
-        NotUser = 1111,
-        /// <summary>
-        /// 用户未设置支付密码
-        /// </summary>
-        [Description("用户未设置支付密码")]
+        [Description("未设置支付密码")]
         NotPayPassword = 1112,
         /// <summary>
         /// 支付密码错误
@@ -151,6 +127,6 @@ namespace Td.Kylin.EnumLibrary
         /// 余额不足
         /// </summary>
         [Description("余额不足")]
-        BalanceDeficiency = 1114,
+        BalanceDeficiency = 1114
     }
 }
