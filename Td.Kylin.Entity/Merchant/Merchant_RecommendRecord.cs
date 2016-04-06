@@ -4,11 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Td.Kylin.Entity.Merchant
+namespace Td.Kylin.Entity
 {
     public class Merchant_RecommendRecord
     {
-        /// <summary>
+        /// <summary> 
         /// 记录ID
         /// </summary>
         public long RecordID { get; set; }

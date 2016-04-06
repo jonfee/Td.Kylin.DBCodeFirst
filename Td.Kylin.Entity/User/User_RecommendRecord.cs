@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Td.Kylin.Entity.User
+namespace Td.Kylin.Entity
 {
     public class User_RecommendRecord
     {
