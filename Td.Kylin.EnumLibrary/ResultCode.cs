@@ -80,138 +80,77 @@ namespace Td.Kylin.EnumLibrary
         /// </summary>
         [Description("数据连接失败")]
         Connection = 1001,
-    }
-    /// <summary>
-    /// 商家------错误码区间：1101-1200
-    /// </summary>
-    public enum MerchantCode
-    {
         /// <summary>
         /// 上传失败
         /// </summary>
+        [Description("上传失败")]
         Upload = 1101,
         /// <summary>
         /// 商家未配置
         /// </summary>
+        [Description("商家未配置")]
         NotConfig = 1102,
-        /// <summary>
-        /// 附近没有商家
-        /// </summary>
-        NotMerchant = 1103,
-    }
-    /// <summary>
-    /// 订单------错误码区间：1201-1300
-    /// </summary>
-    public enum OrderCode
-    {
+
         /// <summary>
         /// 订单上级状态与当前修改状态不匹配
         /// </summary>
-        OrderStatusError = 1201,
+        [Description("订单上级状态与当前修改状态不匹配")]
+        OrderStatusError = 1103,
         /// <summary>
         /// B2C-前端数据传输价格计算错误
         /// </summary>
-        B2CFrontErrorOrderMoney = 1202,
+        [Description("B2C-前端数据传输价格计算错误")]
+        B2CFrontErrorOrderMoney = 1104,
         /// <summary>
         /// B2C-前端传入总价格与后台计算价格不符合
         /// </summary>
-        B2CBackErrorOrderMoney = 1203,
+        [Description("B2C-前端传入总价格与后台计算价格不符合")]
+        B2CBackErrorOrderMoney = 1105,
         /// <summary>
         /// 商家-前端数据传输价格计算错误
         /// </summary>
-        MerchantFrontErrorOrderMoney = 1204,
+        [Description("商家-前端数据传输价格计算错误")]
+        MerchantFrontErrorOrderMoney = 1106,
         /// <summary>
         /// 商家-前端传入总价格与后台计算价格不符合
         /// </summary>
-        MerchantBackErrorOrderMoney = 1205,
+        [Description("商家-前端传入总价格与后台计算价格不符合")]
+        MerchantBackErrorOrderMoney = 1107,
         /// <summary>
         /// 优惠卷不存在
         /// </summary>
-        NotWelfare = 1206,
+        [Description("优惠卷不存在")]
+        NotWelfare = 1108,
         /// <summary>
         /// 总金额不足以使用优惠卷
         /// </summary>
-        NotUseWelfare = 1207,
-    }
-    /// <summary>
-    /// 商家商品项目 1301-1400
-    /// </summary>
-    public enum MicroMallCode
-    {
+        [Description("总金额不足以使用优惠卷")]
+        NotUseWelfare = 1109,
 
-    }
-    /// <summary>
-    /// 上门预约项目 1401-1500
-    /// </summary>
-    public enum AppointCode
-    {
-
-    }
-    /// <summary>
-    /// 用户项目 1501-1600
-    /// </summary>
-    public enum UserCode
-    {
         /// <summary>
         /// 商家不存在
         /// </summary>
         [Description("商家不存在")]
-        NotMerchant = 1501,
+        NotMerchant = 1110,
         /// <summary>
         /// 用户不存在
         /// </summary>
         [Description("用户不存在")]
-        NotUser = 1502,
+        NotUser = 1111,
         /// <summary>
         /// 用户未设置支付密码
         /// </summary>
         [Description("用户未设置支付密码")]
-        NotPayPassword = 1503,
+        NotPayPassword = 1112,
         /// <summary>
         /// 支付密码错误
         /// </summary>
         [Description("支付密码错误")]
-        ErrorPayPassword = 1504,
+        ErrorPayPassword = 1113,
         /// <summary>
         /// 余额不足
         /// </summary>
         [Description("余额不足")]
-        BalanceDeficiency = 1505,
+        BalanceDeficiency = 1114,
     }
-    /// <summary>
-    /// 社区项目 1601-1700
-    /// </summary>
-    public enum ForumsCode
-    {
-
-    }
-    /// <summary>
-    /// 员工项目 1701-1800
-    /// </summary>
-    public enum WorderCode
-    {
-
-    }
-    /// <summary>
-    /// 招聘项目 1801-1900
-    /// </summary>
-    public enum JobCode
-    {
-
-    }
-    /// <summary>
-    /// 摇一摇项目 1901-2000
-    /// </summary>
-    public enum ShakeCode
-    {
-
-    }
-    /// <summary>
-    /// 限时福利项目 2001-2100
-    /// </summary>
-    public enum WelfareCode
-    {
-
-    }
-
 }
