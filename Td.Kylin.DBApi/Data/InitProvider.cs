@@ -100,7 +100,9 @@ namespace Td.Kylin.DBApi.Data
                         IndustryID = item.ID,
                         Name = item.Name,
                         OrderNo = 0,
-                        ParentID = 0
+                        ParentID = 0,
+                        Layer = item.ID.ToString(),
+                        TagStatus = 0
                     });
 
                     //二级类
@@ -116,7 +118,9 @@ namespace Td.Kylin.DBApi.Data
                                 IndustryID = child.ID,
                                 Name = child.Name,
                                 OrderNo = 0,
-                                ParentID = item.ID
+                                ParentID = item.ID,
+                                Layer = string.Format("{0}|{1}", item.ID, child.ID),
+                                TagStatus = 0
                             });
 
                             //业务
@@ -249,6 +253,60 @@ namespace Td.Kylin.DBApi.Data
                 db.Ad_Position.AddRange(positionList);
 
                 return db.SaveChanges();
+            }
+        }
+
+        /// <summary>
+        /// 初始化系统积分配置
+        /// </summary>
+        /// <returns></returns>
+        public static List<System_PointsConfig> InitPointsConfig()
+        {
+            using (var db = new DataContext())
+            {
+                var list = db.System_PointsConfig.ToList();
+
+                if (null != list && list.Count > 0)
+                {
+                    db.System_PointsConfig.RemoveRange(list);
+                    db.SaveChanges();
+                }
+
+                db.System_PointsConfig.AddRange(SysData.Points.List);
+
+                if (db.SaveChanges() > 0)
+                {
+                    return SysData.Points.List;
+                }
+
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 初始化系统用户等级配置
+        /// </summary>
+        /// <returns></returns>
+        public static List<System_Level> InitLevelConfig()
+        {
+            using (var db = new DataContext())
+            {
+                var list = db.System_Level.ToList();
+
+                if (null != list && list.Count > 0)
+                {
+                    db.System_Level.RemoveRange(list);
+                    db.SaveChanges();
+                }
+
+                db.System_Level.AddRange(SysData.Level.List);
+
+                if (db.SaveChanges() > 0)
+                {
+                    return SysData.Level.List;
+                }
+
+                return null;
             }
         }
     }

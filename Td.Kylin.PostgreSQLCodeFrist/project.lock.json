@@ -1153,7 +1153,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0": {
+      "Td.Kylin.Entity/1.0.16": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -3149,7 +3149,7 @@
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0": {
+      "Td.Kylin.Entity/1.0.16": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -4319,7 +4319,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0": {
+      "Td.Kylin.Entity/1.0.16": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -5489,7 +5489,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0": {
+      "Td.Kylin.Entity/1.0.16": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -7962,7 +7962,7 @@
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0": {
+      "Td.Kylin.Entity/1.0.16": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -10435,7 +10435,7 @@
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0": {
+      "Td.Kylin.Entity/1.0.16": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -10456,7 +10456,7 @@
     }
   },
   "libraries": {
-    "Td.Kylin.Entity/1.0.0": {
+    "Td.Kylin.Entity/1.0.16": {
       "type": "project",
       "path": "../Td.Kylin.Entity/project.json"
     },

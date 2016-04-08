@@ -1809,7 +1809,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.AspNet.Utils/1.0.0-rc1-26": {
+      "Td.AspNet.Utils/1.0.0-rc1-29": {
         "type": "package",
         "compile": {
           "lib/dnx451/Td.AspNet.Utils.dll": {}
@@ -1847,7 +1847,7 @@
           "lib/dnx451/Td.CoreLibrary.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0": {
+      "Td.Kylin.Entity/1.0.16": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -1865,13 +1865,13 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.8-beta": {
+      "Td.Kylin.EnumLibrary/1.0.12-beta": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
           "System.Runtime": "4.0.21-beta-23516",
           "System.Runtime.InteropServices": "4.0.21-beta-23516",
-          "Td.CoreLibrary": "1.0.5-beta"
+          "Td.CoreLibrary": "1.0.6-beta"
         }
       },
       "Td.Kylin.WebApi/1.0.0-rc1-80": {
@@ -4326,7 +4326,7 @@
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
       },
-      "Td.AspNet.Utils/1.0.0-rc1-26": {
+      "Td.AspNet.Utils/1.0.0-rc1-29": {
         "type": "package",
         "compile": {
           "lib/dnxcore50/Td.AspNet.Utils.dll": {}
@@ -4361,7 +4361,7 @@
           "lib/dnxcore50/Td.CoreLibrary.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0": {
+      "Td.Kylin.Entity/1.0.16": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -4379,13 +4379,13 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.8-beta": {
+      "Td.Kylin.EnumLibrary/1.0.12-beta": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
           "System.Runtime": "4.0.21-beta-23516",
           "System.Runtime.InteropServices": "4.0.21-beta-23516",
-          "Td.CoreLibrary": "1.0.5-beta"
+          "Td.CoreLibrary": "1.0.6-beta"
         }
       },
       "Td.Kylin.WebApi/1.0.0-rc1-80": {
@@ -6223,7 +6223,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.AspNet.Utils/1.0.0-rc1-26": {
+      "Td.AspNet.Utils/1.0.0-rc1-29": {
         "type": "package",
         "compile": {
           "lib/dnx451/Td.AspNet.Utils.dll": {}
@@ -6261,7 +6261,7 @@
           "lib/dnx451/Td.CoreLibrary.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0": {
+      "Td.Kylin.Entity/1.0.16": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -6279,13 +6279,13 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.8-beta": {
+      "Td.Kylin.EnumLibrary/1.0.12-beta": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
           "System.Runtime": "4.0.21-beta-23516",
           "System.Runtime.InteropServices": "4.0.21-beta-23516",
-          "Td.CoreLibrary": "1.0.5-beta"
+          "Td.CoreLibrary": "1.0.6-beta"
         }
       },
       "Td.Kylin.WebApi/1.0.0-rc1-80": {
@@ -8123,7 +8123,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.AspNet.Utils/1.0.0-rc1-26": {
+      "Td.AspNet.Utils/1.0.0-rc1-29": {
         "type": "package",
         "compile": {
           "lib/dnx451/Td.AspNet.Utils.dll": {}
@@ -8161,7 +8161,7 @@
           "lib/dnx451/Td.CoreLibrary.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0": {
+      "Td.Kylin.Entity/1.0.16": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -8179,13 +8179,13 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.8-beta": {
+      "Td.Kylin.EnumLibrary/1.0.12-beta": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
           "System.Runtime": "4.0.21-beta-23516",
           "System.Runtime.InteropServices": "4.0.21-beta-23516",
-          "Td.CoreLibrary": "1.0.5-beta"
+          "Td.CoreLibrary": "1.0.6-beta"
         }
       },
       "Td.Kylin.WebApi/1.0.0-rc1-80": {
@@ -11138,7 +11138,7 @@
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
       },
-      "Td.AspNet.Utils/1.0.0-rc1-26": {
+      "Td.AspNet.Utils/1.0.0-rc1-29": {
         "type": "package",
         "compile": {
           "lib/dnxcore50/Td.AspNet.Utils.dll": {}
@@ -11173,7 +11173,7 @@
           "lib/dnxcore50/Td.CoreLibrary.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0": {
+      "Td.Kylin.Entity/1.0.16": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -11191,13 +11191,13 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.8-beta": {
+      "Td.Kylin.EnumLibrary/1.0.12-beta": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
           "System.Runtime": "4.0.21-beta-23516",
           "System.Runtime.InteropServices": "4.0.21-beta-23516",
-          "Td.CoreLibrary": "1.0.5-beta"
+          "Td.CoreLibrary": "1.0.6-beta"
         }
       },
       "Td.Kylin.WebApi/1.0.0-rc1-80": {
@@ -14150,7 +14150,7 @@
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
       },
-      "Td.AspNet.Utils/1.0.0-rc1-26": {
+      "Td.AspNet.Utils/1.0.0-rc1-29": {
         "type": "package",
         "compile": {
           "lib/dnxcore50/Td.AspNet.Utils.dll": {}
@@ -14185,7 +14185,7 @@
           "lib/dnxcore50/Td.CoreLibrary.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0": {
+      "Td.Kylin.Entity/1.0.16": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -14203,13 +14203,13 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.8-beta": {
+      "Td.Kylin.EnumLibrary/1.0.12-beta": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
           "System.Runtime": "4.0.21-beta-23516",
           "System.Runtime.InteropServices": "4.0.21-beta-23516",
-          "Td.CoreLibrary": "1.0.5-beta"
+          "Td.CoreLibrary": "1.0.6-beta"
         }
       },
       "Td.Kylin.WebApi/1.0.0-rc1-80": {
@@ -14224,11 +14224,11 @@
     }
   },
   "libraries": {
-    "Td.Kylin.Entity/1.0.0": {
+    "Td.Kylin.Entity/1.0.16": {
       "type": "project",
       "path": "../Td.Kylin.Entity/project.json"
     },
-    "Td.Kylin.EnumLibrary/1.0.8-beta": {
+    "Td.Kylin.EnumLibrary/1.0.12-beta": {
       "type": "project",
       "path": "../Td.Kylin.EnumLibrary/project.json"
     },
@@ -14917,7 +14917,7 @@
     },
     "Microsoft.CodeAnalysis.Analyzers/1.0.0": {
       "type": "package",
-      "sha512": "E7VdmGw6xO3VHWapC+pNLZmo6yncS53UY3bmb5WZm9wliJBB1A6brgzKA4fcqiLrmJFx71r0M2zEbRDphRLUNg==",
+      "sha512": "2+V/VDgZu59Thrlp+FQH38H/SmPBegMKsG0ie1ZZyHtx7kJNEozIx/p9zs0UrolX0uyYX7Ouoj3Q3Be15lqXxA==",
       "files": [
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.Analyzers.dll",
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.CSharp.Analyzers.dll",
@@ -18099,7 +18099,7 @@
     "System.Reflection.TypeExtensions/4.0.1-beta-23409": {
       "type": "package",
       "serviceable": true,
-      "sha512": "n8m144jjCwhN/qtLih35a2sO33fLWm1U3eg51KxqAcAjJcw0nq1zWie8FZognBTPv7BXdW/G8xGbbvDGFoJwZA==",
+      "sha512": "Q3FiCsJ/4s2nuyhOHAFhc0Te10LzPjv6QzVcywA3oWI1msfDg583RIXQ9YifDfOuig+wg+SX0p133qV71HVfyw==",
       "files": [
         "lib/DNXCore50/de/System.Reflection.TypeExtensions.xml",
         "lib/DNXCore50/es/System.Reflection.TypeExtensions.xml",
@@ -19703,16 +19703,16 @@
         "System.Xml.XDocument.nuspec"
       ]
     },
-    "Td.AspNet.Utils/1.0.0-rc1-26": {
+    "Td.AspNet.Utils/1.0.0-rc1-29": {
       "type": "package",
-      "sha512": "+ucdFEH6BFHz/I351Pb+R79/UU1byju+qvRkJuuRdUU90TU3k2VziE/MgvWMGYnjp/dZd3Uy/aqqc4D3ycYUzw==",
+      "sha512": "1ELj2yJi0eALNsB9MoCVBbc6YrXp1m8AVPqgo7Vu4cLeP6Ed68q0L/uGPOrg+bcF0kNu/iaB+K9Og1783o7aHw==",
       "files": [
         "lib/dnx451/Td.AspNet.Utils.dll",
         "lib/dnx451/Td.AspNet.Utils.xml",
         "lib/dnxcore50/Td.AspNet.Utils.dll",
         "lib/dnxcore50/Td.AspNet.Utils.xml",
-        "Td.AspNet.Utils.1.0.0-rc1-26.nupkg",
-        "Td.AspNet.Utils.1.0.0-rc1-26.nupkg.sha512",
+        "Td.AspNet.Utils.1.0.0-rc1-29.nupkg",
+        "Td.AspNet.Utils.1.0.0-rc1-29.nupkg.sha512",
         "Td.AspNet.Utils.nuspec"
       ]
     },
@@ -19757,11 +19757,11 @@
       "Microsoft.Extensions.Logging >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Logging.Console >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Logging.Debug >= 1.0.0-rc1-final",
-      "Td.AspNet.Utils >= 1.0.0-rc1-26",
-      "Td.Kylin.Entity >= 1.0.0-rc1-11",
+      "Td.AspNet.Utils >= 1.0.0-rc1-29",
       "Td.Kylin.WebApi >= 1.0.0-rc1-80",
       "Td.CoreLibrary >= 1.0.6-beta",
-      "Td.Kylin.EnumLibrary >= 1.0.10-beta"
+      "Td.Kylin.Entity >= 1.0.16",
+      "Td.Kylin.EnumLibrary >= 1.0.12-beta"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []

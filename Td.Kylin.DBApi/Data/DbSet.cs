@@ -12,6 +12,16 @@ namespace Td.Kylin.DBCodeFirst
         /// </summary>
         public DbSet<System_GlobalResources> System_GlobalResources { get { return Set<System_GlobalResources>(); } }
 
+        /// <summary>
+        /// 系统积分配置
+        /// </summary>
+        public DbSet<System_PointsConfig> System_PointsConfig { get { return Set<System_PointsConfig>(); } }
+
+        /// <summary>
+        /// 用户等级规则
+        /// </summary>
+        public DbSet<System_Level> System_Level { get { return Set<System_Level>(); } }
+
 
         #endregion
 

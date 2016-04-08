@@ -85,6 +85,20 @@ namespace Td.Kylin.DBCodeFirst
                 entity.HasKey(p => new { p.ResourceType, p.ResourceKey });
             });
 
+            //系统积分配置
+            modelBuilder.Entity<System_PointsConfig>(entity =>
+            {
+                entity.Property(p => p.ActivityType).ValueGeneratedNever();
+                entity.HasKey(p => p.ActivityType);
+            });
+
+            //系统用户等级配置
+            modelBuilder.Entity<System_Level>(entity =>
+            {
+                entity.Property(p => p.LevelID).ValueGeneratedNever();
+                entity.HasKey(p => p.LevelID);
+            });
+
             #endregion
 
             //广告页

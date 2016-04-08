@@ -134,6 +134,34 @@ namespace Td.Kylin.DBApi.Controllers
         }
         #endregion
 
+        #region 初始化系统积分配置
+        /// <summary>
+        /// 初始化系统积分配置
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("pointsconfig")]
+        public IActionResult InitPointsConfig()
+        {
+            var result = InitProvider.InitPointsConfig();
+
+            return KylinOk(result);
+        }
+        #endregion
+
+        #region 初始化系统等级配置
+        /// <summary>
+        /// 初始化系统等级配置
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("levelconfig")]
+        public IActionResult InitLevelConfig()
+        {
+            var result = InitProvider.InitLevelConfig();
+
+            return KylinOk(result);
+        }
+        #endregion
+
         [HttpGet("img")]
         public IActionResult GetImgUrl(int width, int height)
         {

@@ -25,7 +25,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// <summary>
         /// 用户等级规则
         /// </summary>
-        public DbSet<System_Level> Circle_Level { get { return Set<System_Level>(); } }
+        public DbSet<System_Level> System_Level { get { return Set<System_Level>(); } }
 
         #endregion
 
