@@ -9,7 +9,7 @@ namespace Td.Kylin.Entity
     /// <summary>
     /// 用户积分记录
     /// </summary>
-    [Table("用户积分记录")]
+    [Table("User_PointsRecords")]
     public class User_PointsRecords
     {
         /// <summary>
