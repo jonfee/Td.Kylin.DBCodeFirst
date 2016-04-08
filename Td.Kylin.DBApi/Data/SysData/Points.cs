@@ -61,7 +61,7 @@ namespace Td.Kylin.DBApi.Data.SysData
             return new System_PointsConfig
             {
                 ActivityType = (int)type,
-                MaxLimit = score,
+                MaxLimit = maxScore,
                 MaxUnit = (int)unit,
                 Repeatable = isRepeatable,
                 Score = score,
