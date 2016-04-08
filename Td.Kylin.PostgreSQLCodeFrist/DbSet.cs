@@ -429,12 +429,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 赠送商品福利信息
         /// </summary>
         public DbSet<Welfare_DonatedGoods> Welfare_DonatedGoods { get { return Set<Welfare_DonatedGoods>(); } }
-
-        /// <summary>
-        /// 福利分期
-        /// </summary>
-        public DbSet<Welfare_Phases> Welfare_Phases { get { return Set<Welfare_Phases>(); } }
-
+        
         /// <summary>
         /// 福利参与人员
         /// </summary>

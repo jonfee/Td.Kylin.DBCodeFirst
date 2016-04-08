@@ -527,16 +527,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.Property(p => p.WelfareID).ValueGeneratedNever();
                 entity.HasKey(p => p.WelfareID);
             });
-
-            modelBuilder.Entity<Welfare_Phases>(entity =>
-            {
-                entity.Property(p => p.PhasesID).ValueGeneratedNever();
-                entity.HasKey(p => p.PhasesID);
-            });
-
+            
             modelBuilder.Entity<Welfare_PartUser>(entity =>
             {
-                entity.HasKey(p => new { p.PhasesID, p.UserID });
+                entity.HasKey(p => new { p.WelfareID, p.UserID });
             });
 
             modelBuilder.Entity<Welfare_Remind>(entity =>

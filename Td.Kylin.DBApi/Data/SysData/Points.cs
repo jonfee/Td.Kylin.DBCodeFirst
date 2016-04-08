@@ -45,12 +45,12 @@ namespace Td.Kylin.DBApi.Data.SysData
             _list.Add(GetConfig(EnumLibrary.PointsActivityType.PublishTopic, 5, 50, EnumLibrary.PointsMaxLimitUnit.Day, true));
             _list.Add(GetConfig(EnumLibrary.PointsActivityType.ReplyTopic, 1, 30, EnumLibrary.PointsMaxLimitUnit.Day, true));
             _list.Add(GetConfig(EnumLibrary.PointsActivityType.InviteUserRegister, 30, 30, EnumLibrary.PointsMaxLimitUnit.Times, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.TopicStick, 30, 0, EnumLibrary.PointsMaxLimitUnit.Day, true));
+            _list.Add(GetConfig(EnumLibrary.PointsActivityType.TopicStick, 30, 30, EnumLibrary.PointsMaxLimitUnit.Times, true));
             _list.Add(GetConfig(EnumLibrary.PointsActivityType.ShareData, 10, 100, EnumLibrary.PointsMaxLimitUnit.Day, true));
             _list.Add(GetConfig(EnumLibrary.PointsActivityType.Feedback, 5, 100, EnumLibrary.PointsMaxLimitUnit.Day, true));
             _list.Add(GetConfig(EnumLibrary.PointsActivityType.CreateResume, 20, 20, EnumLibrary.PointsMaxLimitUnit.Times, false));
             _list.Add(GetConfig(EnumLibrary.PointsActivityType.OrderFinish, 20, 20, EnumLibrary.PointsMaxLimitUnit.Times, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.Evaluate, 5, 5, EnumLibrary.PointsMaxLimitUnit.Times, true));
+            _list.Add(GetConfig(EnumLibrary.PointsActivityType.Evaluate, 2, 2, EnumLibrary.PointsMaxLimitUnit.Times, true));
             _list.Add(GetConfig(EnumLibrary.PointsActivityType.FinishReceiptAddress, 5, 5, EnumLibrary.PointsMaxLimitUnit.Times, false));
             _list.Add(GetConfig(EnumLibrary.PointsActivityType.AddFriend, 1, 10, EnumLibrary.PointsMaxLimitUnit.Day, true));
             _list.Add(GetConfig(EnumLibrary.PointsActivityType.StoreUp, 1, 10, EnumLibrary.PointsMaxLimitUnit.Day, true));

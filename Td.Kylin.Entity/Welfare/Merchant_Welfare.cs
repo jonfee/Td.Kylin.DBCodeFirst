@@ -20,7 +20,7 @@ namespace Td.Kylin.Entity
         public long MerchantID { get; set; }
 
         /// <summary>
-        /// 区域ID
+        /// 区域ID（以区域站为区域单元）
         /// </summary>
         public int AreaID { get; set; }
 
@@ -59,11 +59,6 @@ namespace Td.Kylin.Entity
         public int Number { get; set; }
 
         /// <summary>
-        /// 剩余可用数量
-        /// </summary>
-        public int SurplusNumber { get; set; }
-
-        /// <summary>
         /// 总参与人数
         /// </summary>
         public int PartNumber { get; set; }
@@ -92,26 +87,33 @@ namespace Td.Kylin.Entity
 
         /// <summary>
         /// 有效期（起）
-        /// </summary>
-        
+        /// </summary>        
         public DateTime ExpiryStartTime { get; set; }
 
         /// <summary>
         /// 有效期（止）
-        /// </summary>
-        
+        /// </summary>        
         public DateTime ExpiryEndTime { get; set; }
+
+        /// <summary>
+        /// 接受报名的开始时间
+        /// </summary>
+        public DateTime? ApplyStartTime { get; set; }
+
+        /// <summary>
+        /// 接受报名的结束时间
+        /// </summary>
+        public DateTime? ApplyEndTime { get; set; }
+
+        /// <summary>
+        /// 开奖时间
+        /// </summary>
+        public DateTime? LotteryTime { get; set; }
 
         /// <summary>
         /// 福利状态
         /// </summary>
         public int Status { get; set; }
-
-        /// <summary>
-        /// 审核说明
-        /// </summary>
-        [Column(TypeName = "varchar(200)")]
-        public string AuditRemark { get; set; }
 
         /// <summary>
         /// 审核的管理员ID
@@ -125,10 +127,20 @@ namespace Td.Kylin.Entity
         public string AuditAdminName { get; set; }
 
         /// <summary>
+        /// 审核说明
+        /// </summary>
+        [Column(TypeName = "varchar(200)")]
+        public string AuditRemark { get; set; }
+
+        /// <summary>
         /// 审核时间
         /// </summary>
-        
         public DateTime? AuditTime { get; set; }
+
+        /// <summary>
+        /// 是否已禁用
+        /// </summary>
+        public bool Disabled { get; set; }
 
         /// <summary>
         /// 是否已删除
@@ -140,5 +152,5 @@ namespace Td.Kylin.Entity
         /// </summary>
         
         public DateTime CreateTime { get; set; }
-    }
+    } 
 }
