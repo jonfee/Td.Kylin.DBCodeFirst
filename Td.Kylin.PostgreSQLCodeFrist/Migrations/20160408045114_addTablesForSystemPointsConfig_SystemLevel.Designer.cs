@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160408045114_addTablesForSystemPointsConfig_SystemLevel")]
+    partial class addTablesForSystemPointsConfig_SystemLevel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -2838,6 +2839,8 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
                     b.Property<int>("IdentityType");
 
                     b.Property<DateTime>("LastTime");
+
+                    b.Property<int>("LevelID");
 
                     b.Property<int>("Logins");
 

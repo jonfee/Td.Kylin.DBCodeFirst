@@ -17,6 +17,15 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// </summary>
         public DbSet<System_GlobalResources> System_GlobalResources { get { return Set<System_GlobalResources>(); } }
 
+        /// <summary>
+        /// 系统积分配置
+        /// </summary>
+        public DbSet<System_PointsConfig> System_PointsConfig { get { return Set<System_PointsConfig>(); } }
+
+        /// <summary>
+        /// 用户等级规则
+        /// </summary>
+        public DbSet<System_Level> Circle_Level { get { return Set<System_Level>(); } }
 
         #endregion
 
@@ -268,11 +277,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 帖子及评论位置
         /// </summary>
         public DbSet<Circle_Location> Circle_Location { get { return Set<Circle_Location>(); } }
-
-        /// <summary>
-        /// 社区用户等级规则
-        /// </summary>
-        public DbSet<Circle_Level> Circle_Level { get { return Set<Circle_Level>(); } }
 
         /// <summary>
         /// 社区商品帖信息
@@ -577,6 +581,11 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 区域推荐行业
         /// </summary>
         public DbSet<Area_RecommendIndustry> Area_RecommendIndustry { get { return Set<Area_RecommendIndustry>(); } }
+
+        /// <summary>
+        /// 用户积分记录
+        /// </summary>
+        public DbSet<User_PointsRecords> User_PointsRecords { get { return Set<User_PointsRecords>(); } }
         #endregion
 
         #region 运营商

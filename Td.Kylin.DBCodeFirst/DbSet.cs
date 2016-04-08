@@ -207,12 +207,7 @@ namespace Td.Kylin.DBCodeFirst
         /// 帖子及评论位置
         /// </summary>
         public DbSet<Circle_Location> Circle_Location { get { return Set<Circle_Location>(); } }
-
-        /// <summary>
-        /// 社区用户等级规则
-        /// </summary>
-        public DbSet<Circle_Level> Circle_Level { get { return Set<Circle_Level>(); } }
-
+        
         /// <summary>
         /// 社区商品帖信息
         /// </summary>

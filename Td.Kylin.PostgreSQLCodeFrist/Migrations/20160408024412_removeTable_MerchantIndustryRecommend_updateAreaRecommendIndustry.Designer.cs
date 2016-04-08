@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160408024412_removeTable_MerchantIndustryRecommend_updateAreaRecommendIndustry")]
+    partial class removeTable_MerchantIndustryRecommend_updateAreaRecommendIndustry
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -749,6 +750,28 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
                     b.HasKey("GoodID");
 
                     b.HasAnnotation("Relational:TableName", "Circle_Good");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.Circle_Level", b =>
+                {
+                    b.Property<long>("LevelID");
+
+                    b.Property<DateTime>("CreateTime");
+
+                    b.Property<bool>("Enable");
+
+                    b.Property<int>("Min");
+
+                    b.Property<string>("Name")
+                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate();
+
+                    b.HasKey("LevelID");
+
+                    b.HasAnnotation("Relational:TableName", "Circle_Level");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Location", b =>
@@ -2124,8 +2147,6 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
-                    b.Property<int>("TagStatus");
-
                     b.HasKey("IndustryID");
 
                     b.HasAnnotation("Relational:TableName", "Merchant_Industry");
@@ -2696,31 +2717,6 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
                     b.HasAnnotation("Relational:TableName", "System_GlobalResources");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.System_Level", b =>
-                {
-                    b.Property<long>("LevelID");
-
-                    b.Property<DateTime>("CreateTime");
-
-                    b.Property<bool>("Enable");
-
-                    b.Property<string>("Icon")
-                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
-
-                    b.Property<int>("Min");
-
-                    b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
-                    b.HasKey("LevelID");
-
-                    b.HasAnnotation("Relational:TableName", "System_Level");
-                });
-
             modelBuilder.Entity("Td.Kylin.Entity.System_ModuleAuthorize", b =>
                 {
                     b.Property<string>("ServerID")
@@ -2745,25 +2741,6 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
                     b.HasKey("ServerID", "ModuleID");
 
                     b.HasAnnotation("Relational:TableName", "System_ModuleAuthorize");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.System_PointsConfig", b =>
-                {
-                    b.Property<int>("ActivityType");
-
-                    b.Property<int>("MaxLimit");
-
-                    b.Property<int>("MaxUnit");
-
-                    b.Property<bool>("Repeatable");
-
-                    b.Property<int>("Score");
-
-                    b.Property<DateTime>("UpdateTime");
-
-                    b.HasKey("ActivityType");
-
-                    b.HasAnnotation("Relational:TableName", "System_PointsConfig");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.System_SMS", b =>
@@ -2848,8 +2825,6 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
                         .HasAnnotation("Relational:ColumnType", "varchar(32)");
 
                     b.Property<string>("PaymentPassword");
-
-                    b.Property<int>("Points");
 
                     b.Property<string>("RecommendCode")
                         .HasAnnotation("Relational:ColumnType", "varchar(6)");
@@ -3093,26 +3068,6 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
                     b.HasKey("UserID");
 
                     b.HasAnnotation("Relational:TableName", "User_Online");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.User_PointsRecords", b =>
-                {
-                    b.Property<long>("RecordsID");
-
-                    b.Property<int>("ActivityType");
-
-                    b.Property<DateTime>("CreateTime");
-
-                    b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
-
-                    b.Property<int>("Score");
-
-                    b.Property<long>("UserID");
-
-                    b.HasKey("RecordsID");
-
-                    b.HasAnnotation("Relational:TableName", "用户积分记录");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Profiles", b =>

@@ -33,6 +33,11 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "varchar(50)")]
         public string Layer { get; set; }
 
+        /// <summary>
+        /// 标记状态集
+        /// </summary>
+        public int TagStatus { get; set; }
+
         ///<summary>
         ///排序
         ///</summary>

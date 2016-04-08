@@ -34,6 +34,20 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.HasKey(p => new { p.ResourceType, p.ResourceKey });
             });
 
+            //系统积分配置
+            modelBuilder.Entity<System_PointsConfig>(entity =>
+            {
+                entity.Property(p => p.ActivityType).ValueGeneratedNever();
+                entity.HasKey(p => p.ActivityType);
+            });
+
+            //系统用户等级配置
+            modelBuilder.Entity<System_Level>(entity =>
+            {
+                entity.Property(p => p.LevelID).ValueGeneratedNever();
+                entity.HasKey(p => p.LevelID);
+            });
+
             #endregion
 
             #region 抽成
@@ -285,6 +299,12 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.Property(p => p.RecordID).ValueGeneratedNever();
                 entity.HasKey(p => p.RecordID);
             });
+            modelBuilder.Entity<User_PointsRecords>(entity =>
+            {
+                entity.Property(p => p.RecordsID).ValueGeneratedNever();
+                entity.HasKey(p => p.RecordsID);
+            });
+
             #endregion
 
             #region 摇一摇
@@ -343,12 +363,6 @@ namespace Td.Kylin.PostgreSQLCodeFirst
             {
                 entity.Property(p => p.LocationID).ValueGeneratedNever();
                 entity.HasKey(p => p.LocationID);
-            });
-
-            modelBuilder.Entity<Circle_Level>(entity =>
-            {
-                entity.Property(p => p.LevelID).ValueGeneratedNever();
-                entity.HasKey(p => p.LevelID);
             });
 
             modelBuilder.Entity<Circle_Good>(entity =>

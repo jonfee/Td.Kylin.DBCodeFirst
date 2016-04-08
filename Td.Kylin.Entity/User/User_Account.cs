@@ -85,5 +85,10 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName = "varchar(6)")]
         public string RecommendCode { get; set; }
+
+        /// <summary>
+        /// 积分
+        /// </summary>
+        public int Points { get; set; }
     }
 }
