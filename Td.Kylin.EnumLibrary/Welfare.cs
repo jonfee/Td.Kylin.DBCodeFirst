@@ -71,17 +71,12 @@ namespace Td.Kylin.EnumLibrary
         [Description("审核失败")]
         AuditFailure = 2,
         /// <summary>
-        /// 未排期（已审核通过，但未安排发放时间）
-        /// </summary>
-        [Description("未排期")]
-        NotScheduling = 4,
-        /// <summary>
         /// 进行中（已安排发放）
         /// </summary>
         [Description("进行中")]
         InProgress = 8,
         /// <summary>
-        /// 已完成（所有福利排期均已完成）
+        /// 已完成（已开奖）
         /// </summary>
         [Description("已完成")]
         Done = 16,

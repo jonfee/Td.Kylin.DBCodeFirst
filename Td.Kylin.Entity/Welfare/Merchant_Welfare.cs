@@ -111,7 +111,7 @@ namespace Td.Kylin.Entity
         public DateTime? LotteryTime { get; set; }
 
         /// <summary>
-        /// 福利状态
+        /// 福利状态（枚举：WelfareStatus）
         /// </summary>
         public int Status { get; set; }
 
