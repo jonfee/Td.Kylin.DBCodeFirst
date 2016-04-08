@@ -100,8 +100,7 @@ namespace Td.Kylin.DBApi.Data
                         IndustryID = item.ID,
                         Name = item.Name,
                         OrderNo = 0,
-                        ParentID = 0,
-                        TagStatus = 0
+                        ParentID = 0
                     });
 
                     //二级类
@@ -117,8 +116,7 @@ namespace Td.Kylin.DBApi.Data
                                 IndustryID = child.ID,
                                 Name = child.Name,
                                 OrderNo = 0,
-                                ParentID = item.ID,
-                                TagStatus = 0
+                                ParentID = item.ID
                             });
 
                             //业务

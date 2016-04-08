@@ -21,13 +21,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 行业父级ID
         /// </summary>
-        public long ParentID { get; set; }
-
-        ///<summary>
-        ///行业名称
-        ///</summary>
-        [Column(TypeName = "varchar(20)")]
-        public string Name { get; set; }        
+        public long ParentID { get; set; }    
 
         ///<summary>
         ///排序
@@ -35,9 +29,8 @@ namespace Td.Kylin.Entity
         public int OrderNo { get; set; }
 
         /// <summary>
-        /// 图标
+        /// 推荐状态（枚举：AreaIndustryRecommend，以2的N次方值和存储）
         /// </summary>
-        [Column(TypeName = "varchar(100)")]
-        public string Icon { get; set; }
+        public int RecommendType { get; set; }
     }
 }
