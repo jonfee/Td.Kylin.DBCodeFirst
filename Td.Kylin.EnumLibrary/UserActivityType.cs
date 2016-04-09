@@ -3,9 +3,9 @@
 namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
-    /// 影响积分的业务活动类型
+    /// 用户业务活动类型
     /// </summary>
-    public enum PointsActivityType
+    public enum UserActivityType
     {
         /// <summary>
         /// 完成注册

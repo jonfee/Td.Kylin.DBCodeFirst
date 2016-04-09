@@ -5,7 +5,7 @@ namespace Td.Kylin.EnumLibrary
     /// <summary>
     /// 业务积分上限单位
     /// </summary>
-    public enum PointsMaxLimitUnit
+    public enum ScoreMaxLimitUnit
     {
         /// <summary>
         /// 每次
