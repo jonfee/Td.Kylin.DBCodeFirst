@@ -36,27 +36,27 @@ namespace Td.Kylin.DBApi.Data.SysData
         {
             _list = new List<System_PointsConfig>();
 
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.Register, 30, 30, EnumLibrary.PointsMaxLimitUnit.Times, false));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.UploadHeadPhoto, 20, 20, EnumLibrary.PointsMaxLimitUnit.Times, false));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.FinishInfomation, 20, 20, EnumLibrary.PointsMaxLimitUnit.Times, false));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.RealNameCertification, 30, 30, EnumLibrary.PointsMaxLimitUnit.Times, false));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.SignIn, 10, 10, EnumLibrary.PointsMaxLimitUnit.Day, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.ClickLike, 1, 30, EnumLibrary.PointsMaxLimitUnit.Day, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.PublishTopic, 5, 50, EnumLibrary.PointsMaxLimitUnit.Day, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.ReplyTopic, 1, 30, EnumLibrary.PointsMaxLimitUnit.Day, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.InviteUserRegister, 30, 30, EnumLibrary.PointsMaxLimitUnit.Times, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.TopicStick, 30, 30, EnumLibrary.PointsMaxLimitUnit.Times, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.ShareData, 10, 100, EnumLibrary.PointsMaxLimitUnit.Day, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.Feedback, 5, 100, EnumLibrary.PointsMaxLimitUnit.Day, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.CreateResume, 20, 20, EnumLibrary.PointsMaxLimitUnit.Times, false));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.OrderFinish, 20, 20, EnumLibrary.PointsMaxLimitUnit.Times, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.Evaluate, 2, 2, EnumLibrary.PointsMaxLimitUnit.Times, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.FinishReceiptAddress, 5, 5, EnumLibrary.PointsMaxLimitUnit.Times, false));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.AddFriend, 1, 10, EnumLibrary.PointsMaxLimitUnit.Day, true));
-            _list.Add(GetConfig(EnumLibrary.PointsActivityType.StoreUp, 1, 10, EnumLibrary.PointsMaxLimitUnit.Day, true));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.Register, 30, 30, EnumLibrary.ScoreMaxLimitUnit.Times, false));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.UploadHeadPhoto, 20, 20, EnumLibrary.ScoreMaxLimitUnit.Times, false));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.FinishInfomation, 20, 20, EnumLibrary.ScoreMaxLimitUnit.Times, false));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.RealNameCertification, 30, 30, EnumLibrary.ScoreMaxLimitUnit.Times, false));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.SignIn, 10, 10, EnumLibrary.ScoreMaxLimitUnit.Day, true));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.ClickLike, 1, 30, EnumLibrary.ScoreMaxLimitUnit.Day, true));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.PublishTopic, 5, 50, EnumLibrary.ScoreMaxLimitUnit.Day, true));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.ReplyTopic, 1, 30, EnumLibrary.ScoreMaxLimitUnit.Day, true));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.InviteUserRegister, 30, 30, EnumLibrary.ScoreMaxLimitUnit.Times, true));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.TopicStick, 30, 30, EnumLibrary.ScoreMaxLimitUnit.Times, true));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.ShareData, 10, 100, EnumLibrary.ScoreMaxLimitUnit.Day, true));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.Feedback, 5, 100, EnumLibrary.ScoreMaxLimitUnit.Day, true));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.CreateResume, 20, 20, EnumLibrary.ScoreMaxLimitUnit.Times, false));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.OrderFinish, 20, 20, EnumLibrary.ScoreMaxLimitUnit.Times, true));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.Evaluate, 2, 2, EnumLibrary.ScoreMaxLimitUnit.Times, true));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.FinishReceiptAddress, 5, 5, EnumLibrary.ScoreMaxLimitUnit.Times, false));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.AddFriend, 1, 10, EnumLibrary.ScoreMaxLimitUnit.Day, true));
+            _list.Add(GetConfig(EnumLibrary.UserActivityType.StoreUp, 1, 10, EnumLibrary.ScoreMaxLimitUnit.Day, true));
         }
 
-        static System_PointsConfig GetConfig(EnumLibrary.PointsActivityType type, int score, int maxScore, EnumLibrary.PointsMaxLimitUnit unit, bool isRepeatable)
+        static System_PointsConfig GetConfig(EnumLibrary.UserActivityType type, int score, int maxScore, EnumLibrary.ScoreMaxLimitUnit unit, bool isRepeatable)
         {
             return new System_PointsConfig
             {

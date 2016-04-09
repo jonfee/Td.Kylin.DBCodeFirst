@@ -18,7 +18,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         public DbSet<System_GlobalResources> System_GlobalResources { get { return Set<System_GlobalResources>(); } }
 
         /// <summary>
-        /// 系统积分配置
+        /// 积分配置
         /// </summary>
         public DbSet<System_PointsConfig> System_PointsConfig { get { return Set<System_PointsConfig>(); } }
 
@@ -26,6 +26,11 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 用户等级规则
         /// </summary>
         public DbSet<System_Level> System_Level { get { return Set<System_Level>(); } }
+
+        /// <summary>
+        /// 经验值配置
+        /// </summary>
+        public DbSet<System_EmpiricalConfig> System_EmpiricalConfig { get { return Set<System_EmpiricalConfig>(); } }
 
         #endregion
 

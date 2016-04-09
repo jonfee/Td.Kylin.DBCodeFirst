@@ -34,7 +34,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.HasKey(p => new { p.ResourceType, p.ResourceKey });
             });
 
-            //系统积分配置
+            //积分配置
             modelBuilder.Entity<System_PointsConfig>(entity =>
             {
                 entity.Property(p => p.ActivityType).ValueGeneratedNever();
@@ -46,6 +46,13 @@ namespace Td.Kylin.PostgreSQLCodeFirst
             {
                 entity.Property(p => p.LevelID).ValueGeneratedNever();
                 entity.HasKey(p => p.LevelID);
+            });
+
+            //经验值配置
+            modelBuilder.Entity<System_EmpiricalConfig>(entity =>
+            {
+                entity.Property(p => p.ActivityType).ValueGeneratedNever();
+                entity.HasKey(p => p.ActivityType);
             });
 
             #endregion

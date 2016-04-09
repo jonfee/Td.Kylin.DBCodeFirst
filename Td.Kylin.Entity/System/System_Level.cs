@@ -22,7 +22,7 @@ namespace Td.Kylin.Entity
         public string Name { get; set; }
 
         ///<summary>
-        ///最小积分
+        ///最小经验值
         ///</summary>
         public int Min { get; set; }
 

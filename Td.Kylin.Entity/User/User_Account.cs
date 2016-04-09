@@ -90,5 +90,10 @@ namespace Td.Kylin.Entity
         /// 积分
         /// </summary>
         public int Points { get; set; }
+
+        /// <summary>
+        /// 经验值
+        /// </summary>
+        public int Empirical { get; set; }
     }
 }
