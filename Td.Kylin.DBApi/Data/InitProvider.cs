@@ -284,6 +284,33 @@ namespace Td.Kylin.DBApi.Data
         }
 
         /// <summary>
+        /// 初始化系统经验值配置
+        /// </summary>
+        /// <returns></returns>
+        public static List<System_EmpiricalConfig> InitEmpiricalConfig()
+        {
+            using (var db = new DataContext())
+            {
+                var list = db.System_EmpiricalConfig.ToList();
+
+                if (null != list && list.Count > 0)
+                {
+                    db.System_EmpiricalConfig.RemoveRange(list);
+                    db.SaveChanges();
+                }
+
+                db.System_EmpiricalConfig.AddRange(SysData.Empirical.List);
+
+                if (db.SaveChanges() > 0)
+                {
+                    return SysData.Empirical.List;
+                }
+
+                return null;
+            }
+        }
+
+        /// <summary>
         /// 初始化系统用户等级配置
         /// </summary>
         /// <returns></returns>

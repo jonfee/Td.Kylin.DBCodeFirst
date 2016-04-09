@@ -148,6 +148,20 @@ namespace Td.Kylin.DBApi.Controllers
         }
         #endregion
 
+        #region 初始化系统经验值配置
+        /// <summary>
+        /// 初始化系统经验值配置
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("empiricalconfig")]
+        public IActionResult InitEmpiricalConfig()
+        {
+            var result = InitProvider.InitEmpiricalConfig();
+
+            return KylinOk(result);
+        }
+        #endregion
+
         #region 初始化系统等级配置
         /// <summary>
         /// 初始化系统等级配置

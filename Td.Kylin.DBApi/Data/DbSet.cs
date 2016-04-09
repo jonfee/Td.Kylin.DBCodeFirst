@@ -15,7 +15,12 @@ namespace Td.Kylin.DBCodeFirst
         /// <summary>
         /// 系统积分配置
         /// </summary>
-        public DbSet<System_PointsConfig> System_PointsConfig { get { return Set<System_PointsConfig>(); } }
+        public DbSet<System_PointsConfig> System_PointsConfig { get { return Set<System_PointsConfig>(); } } 
+        
+        /// <summary>
+        /// 系统经验值配置
+        /// </summary>
+        public DbSet<System_EmpiricalConfig> System_EmpiricalConfig { get { return Set<System_EmpiricalConfig>(); } }
 
         /// <summary>
         /// 用户等级规则

@@ -91,6 +91,13 @@ namespace Td.Kylin.DBCodeFirst
                 entity.Property(p => p.ActivityType).ValueGeneratedNever();
                 entity.HasKey(p => p.ActivityType);
             });
+            
+            //系统经验值配置
+            modelBuilder.Entity<System_EmpiricalConfig>(entity =>
+            {
+                entity.Property(p => p.ActivityType).ValueGeneratedNever();
+                entity.HasKey(p => p.ActivityType);
+            });
 
             //系统用户等级配置
             modelBuilder.Entity<System_Level>(entity =>
