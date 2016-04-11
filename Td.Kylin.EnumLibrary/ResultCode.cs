@@ -62,7 +62,7 @@ namespace Td.Kylin.EnumLibrary
         /// 数据不存在或已被删除
         /// </summary>
         [Description("数据不存在或已被删除")]
-        DataNoFound =10,
+        DataNoFound = 10,
         /// <summary>
         /// 数据存在但无法正常使用
         /// </summary>
@@ -127,6 +127,11 @@ namespace Td.Kylin.EnumLibrary
         /// 余额不足
         /// </summary>
         [Description("余额不足")]
-        BalanceDeficiency = 1114
+        BalanceDeficiency = 1114,
+        /// <summary>
+        /// 数据存在依赖性不允许删除
+        /// </summary>
+        [Description("数据存在依赖性不允许删除")]
+        DeleteError = 1115
     }
 }
