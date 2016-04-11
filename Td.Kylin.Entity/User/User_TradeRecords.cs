@@ -60,10 +60,10 @@ namespace Td.Kylin.Entity
         /// 优惠卷ID
         /// </summary>
         public long WelfareID { get; set; }
+
         /// <summary>
         /// 数据产生时间
         /// </summary>
-
         public DateTime CreateTime { get; set; }
     }
 }

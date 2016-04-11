@@ -758,6 +758,12 @@ namespace Td.Kylin.PostgreSQLCodeFirst
             });
 
             #endregion
+
+
+            modelBuilder.Entity<Platform_MoneyTransaction>(entity =>
+            {
+                entity.HasKey(p => p.TransactionCode);
+            });
         }
     }
 }

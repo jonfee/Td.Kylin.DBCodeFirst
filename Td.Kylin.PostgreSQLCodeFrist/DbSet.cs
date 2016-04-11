@@ -625,5 +625,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         public DbSet<Agent_AreaRelation> Agent_AreaRelation { get { return Set<Agent_AreaRelation>(); } }
 
         #endregion
+
+        /// <summary>
+        /// 平台资金流水
+        /// </summary>
+        public DbSet<Platform_MoneyTransaction> Platform_MoneyTransaction { get { return Set<Platform_MoneyTransaction>(); } }
     }
 }
