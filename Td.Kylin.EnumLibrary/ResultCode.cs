@@ -69,6 +69,10 @@ namespace Td.Kylin.EnumLibrary
         [Description("数据存在但无法正常使用")]
         DataDisabled = 11,
         /// <summary>
+        /// 失败
+        /// </summary>
+        Failure = 40,
+        /// <summary>
         /// 接口异常统一返回
         /// </summary>
         [Description("接口异常统一返回")]
