@@ -65,5 +65,9 @@ namespace Td.Kylin.Entity
         /// 交易时间
         /// </summary>
         public DateTime TransactionTime { get; set; }
+        /// <summary>
+        /// 区域ID
+        /// </summary>
+        public int AreaID { get; set; }
     }
 }
