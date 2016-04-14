@@ -10,9 +10,9 @@ namespace Td.Kylin.Entity
     public class Welfare_Remind : BaseEntity
     {
         /// <summary>
-        /// 福利发放分期ID
+        /// 福利ID
         /// </summary>
-        public long PhasesID { get; set; }
+        public long WelfareID { get; set; }
 
         /// <summary>
         /// 参与用户ID
