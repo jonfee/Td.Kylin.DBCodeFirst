@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160414065738_AddUser_EmpiricalRecords")]
+    partial class AddUser_EmpiricalRecords
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -3519,7 +3520,7 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Welfare_Remind", b =>
                 {
-                    b.Property<long>("WelfareID");
+                    b.Property<long>("PhasesID");
 
                     b.Property<long>("UserID");
 
@@ -3529,7 +3530,7 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
-                    b.HasKey("WelfareID", "UserID");
+                    b.HasKey("PhasesID", "UserID");
 
                     b.HasAnnotation("Relational:TableName", "Welfare_Remind");
                 });
