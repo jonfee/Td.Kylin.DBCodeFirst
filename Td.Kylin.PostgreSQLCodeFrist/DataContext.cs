@@ -311,7 +311,11 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.Property(p => p.RecordsID).ValueGeneratedNever();
                 entity.HasKey(p => p.RecordsID);
             });
-
+            modelBuilder.Entity<User_EmpiricalRecords>(entity =>
+            {
+                entity.Property(p => p.RecordsID).ValueGeneratedNever();
+                entity.HasKey(p => p.RecordsID);
+            });
             #endregion
 
             #region 摇一摇

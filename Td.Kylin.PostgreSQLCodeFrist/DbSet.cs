@@ -230,6 +230,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// 用户推荐记录表
         /// </summary>
         public DbSet<User_RecommendRecord> User_RecommendRecord { get { return Set<User_RecommendRecord>(); } }
+        /// <summary>
+        /// 用户经验记录
+        /// </summary>
+        public DbSet<User_EmpiricalRecords> User_EmpiricalRecords { get { return Set<User_EmpiricalRecords>(); } }
 
         #endregion
 
