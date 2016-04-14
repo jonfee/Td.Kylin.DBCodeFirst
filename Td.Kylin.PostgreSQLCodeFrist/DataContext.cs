@@ -546,7 +546,7 @@ namespace Td.Kylin.PostgreSQLCodeFirst
 
             modelBuilder.Entity<Welfare_Remind>(entity =>
             {
-                entity.HasKey(p => new { p.PhasesID, p.UserID });
+                entity.HasKey(p => new { p.WelfareID, p.UserID });
             });
 
             #endregion

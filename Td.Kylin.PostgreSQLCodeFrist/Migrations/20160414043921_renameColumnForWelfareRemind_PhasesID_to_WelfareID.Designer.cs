@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160414043921_renameColumnForWelfareRemind_PhasesID_to_WelfareID")]
+    partial class renameColumnForWelfareRemind_PhasesID_to_WelfareID
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -3040,26 +3041,6 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
                     b.HasKey("DeviceID");
 
                     b.HasAnnotation("Relational:TableName", "User_Device");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.User_EmpiricalRecords", b =>
-                {
-                    b.Property<long>("RecordsID");
-
-                    b.Property<int>("ActivityType");
-
-                    b.Property<DateTime>("CreateTime");
-
-                    b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
-
-                    b.Property<int>("Score");
-
-                    b.Property<long>("UserID");
-
-                    b.HasKey("RecordsID");
-
-                    b.HasAnnotation("Relational:TableName", "User_EmpiricalRecords");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Forum", b =>
