@@ -101,12 +101,17 @@ namespace Td.Kylin.Entity
         ///</summary>
 
         public DateTime? EvaluateTime { get; set; }
-        /// <summary>
-        /// 发货说明
-        /// </summary>
-        [Column(TypeName = "varchar(100)")]
+        ///<summary>
+        ///物流承运公司
+        ///</summary>
+        [Column(TypeName = "varchar(20)")]
+        public string ExpressCompany { get; set; }
 
-        public string SendRemark { get; set; }
+        ///<summary>
+        ///物流单号
+        ///</summary>
+        [Column(TypeName = "varchar(30)")]
+        public string ExpressNumber { get; set; }
         ///<summary>
         ///买家已删除
         ///</summary>
