@@ -136,6 +136,11 @@ namespace Td.Kylin.EnumLibrary
         /// 数据存在依赖性不允许删除
         /// </summary>
         [Description("数据存在依赖性不允许删除")]
-        DeleteError = 1115
+        DeleteError = 1115,
+        /// <summary>
+        /// 购买当前商品库存量不足
+        /// </summary>
+        [Description("购买当前商品库存量不足")]
+        NotInventory = 1116
     }
 }
