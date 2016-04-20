@@ -113,6 +113,11 @@ namespace Td.Kylin.EnumLibrary
         [Description("商家-前端传入总价格与后台计算价格不符合")]
         MerchantBackErrorOrderMoney = 1107,
         /// <summary>
+        /// 接口必传参数
+        /// </summary>
+        [Description("接口必传参数")]
+        ApiParameters = 1108,
+        /// <summary>
         /// 未满足优惠券使用条件
         /// </summary>
         [Description("未满足优惠券使用条件")]
@@ -141,6 +146,7 @@ namespace Td.Kylin.EnumLibrary
         /// 购买当前商品库存量不足
         /// </summary>
         [Description("购买当前商品库存量不足")]
-        NotInventory = 1116
+        NotInventory = 1116,
+        
     }
 }
