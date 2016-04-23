@@ -112,19 +112,19 @@ namespace Td.Kylin.DBApi.Data.SysData
                 switch (option)
                 {
                     //B2C商城
-                    case GlobalTimeConfigOption.B2COrderEvaluate: group = "B2C商城"; value = 168; break;
-                    case GlobalTimeConfigOption.B2COrderWaitPayment: group = "B2C商城"; value = 72; break;
-                    case GlobalTimeConfigOption.B2COrderWaitReceive: group = "B2C商城"; value = 168; break;
+                    case GlobalTimeConfigOption.B2COrderEvaluate: group = "B2C商城"; value = 168; unit = (int)TimeOption.Hour; break;
+                    case GlobalTimeConfigOption.B2COrderWaitPayment: group = "B2C商城"; value = 72; unit = (int)TimeOption.Hour; break;
+                    case GlobalTimeConfigOption.B2COrderWaitReceive: group = "B2C商城"; value = 168; unit = (int)TimeOption.Hour; break;
                     //商家商铺
-                    case GlobalTimeConfigOption.MerchantOrderWaitEvaluate: group = "商家商铺"; value = 168; break;
-                    case GlobalTimeConfigOption.MerchantOrderWaitPayment: group = "商家商铺"; value = 72; break;
-                    case GlobalTimeConfigOption.MerchantOrderWaitReceive: group = "商家商铺"; value = 168; break;
+                    case GlobalTimeConfigOption.MerchantOrderWaitEvaluate: group = "商家商铺"; value = 168; unit = (int)TimeOption.Hour; break;
+                    case GlobalTimeConfigOption.MerchantOrderWaitPayment: group = "商家商铺"; value = 72; unit = (int)TimeOption.Hour; break;
+                    case GlobalTimeConfigOption.MerchantOrderWaitReceive: group = "商家商铺"; value = 168; unit = (int)TimeOption.Hour; break;
                     //兴趣社区
                     case GlobalTimeConfigOption.CircleEventRemind: group = "兴趣社区"; value = 30; unit = (int)TimeOption.Minute; break;
                     //上门预约服务订单
-                    case GlobalTimeConfigOption.ServiceOrderWaitPayment: group = "上门预约"; value = 24; break;
-                    case GlobalTimeConfigOption.ServiceOrderWaitUserDone: group = "上门预约"; value = 72; break;
-                    case GlobalTimeConfigOption.ServiceOrderWaitUserEvaluate: group = "上门预约"; value = 168; break;
+                    case GlobalTimeConfigOption.ServiceOrderWaitPayment: group = "上门预约"; value = 24; unit = (int)TimeOption.Hour; break;
+                    case GlobalTimeConfigOption.ServiceOrderWaitUserDone: group = "上门预约"; value = 72; unit = (int)TimeOption.Hour; break;
+                    case GlobalTimeConfigOption.ServiceOrderWaitUserEvaluate: group = "上门预约"; value = 168; unit = (int)TimeOption.Hour; break;
                     //摇一摇
                     case GlobalTimeConfigOption.ShakeB2COrderWaitPayment: group = "摇一摇"; value = 30; unit = (int)TimeOption.Minute; break;
                     //短信验证码
