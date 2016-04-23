@@ -123,6 +123,11 @@ namespace Td.Kylin.EnumLibrary
         [Description("未满足优惠券使用条件")]
         NotUseWelfare = 1109,
         /// <summary>
+        /// 该帖用户已点赞过
+        /// </summary>
+        [Description("该帖用户已点赞过")]
+        VerifyPostLike = 1110,
+        /// <summary>
         /// 未设置支付密码
         /// </summary>
         [Description("未设置支付密码")]
@@ -147,6 +152,16 @@ namespace Td.Kylin.EnumLibrary
         /// </summary>
         [Description("购买当前商品库存量不足")]
         NotInventory = 1116,
-        
+        /// <summary>
+        /// 商品已删除
+        /// </summary>
+        [Description("商品已删除")]
+        DeleteProduct = 1117,
+        /// <summary>
+        /// 商品已下架
+        /// </summary>
+        [Description("商品已下架")]
+        DisableProduct = 1118,
+
     }
 }
