@@ -40,6 +40,11 @@ namespace Td.Kylin.Entity
         public decimal Amount { get; set; }
 
         /// <summary>
+        /// 余额（指本次交易后的余额）
+        /// </summary>
+        public decimal LastBalance { get; set; }
+
+        /// <summary>
         /// 交易信息
         /// </summary>
         [Column(TypeName = "varchar(100)")]

@@ -45,6 +45,11 @@ namespace Td.Kylin.Entity
         public decimal Amount { get; set; }
 
         /// <summary>
+        /// 余额（指本次交易后客户剩余的资金）
+        /// </summary>
+         public decimal LastBalance { get; set; }
+
+        /// <summary>
         /// 是否为主交易业务
         /// </summary>
         public bool IsMainTransaction { get; set; }

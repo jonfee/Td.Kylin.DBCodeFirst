@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160425185740_addColumnForTradeRecord_LastBalance")]
+    partial class addColumnForTradeRecord_LastBalance
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -2580,8 +2581,6 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
                         .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<bool>("IsMainTransaction");
-
-                    b.Property<decimal>("LastBalance");
 
                     b.Property<string>("Remark")
                         .HasAnnotation("Relational:ColumnType", "varchar(150)");
