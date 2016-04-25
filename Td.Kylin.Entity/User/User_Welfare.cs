@@ -53,6 +53,11 @@ namespace Td.Kylin.Entity
         public string Name { get; set; }
 
         /// <summary>
+        /// 福利价值
+        /// </summary>
+        public decimal ValueMoney { get; set; }
+
+        /// <summary>
         /// 标签
         /// </summary>
         [Column(TypeName = "varchar(10)")]
