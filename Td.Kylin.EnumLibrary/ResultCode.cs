@@ -162,6 +162,16 @@ namespace Td.Kylin.EnumLibrary
         /// </summary>
         [Description("商品已下架")]
         DisableProduct = 1118,
+        /// <summary>
+        /// 重复点赞
+        /// </summary>
+        [Description("重复点赞")]
+        RepetitionSupport = 1119,
+        /// <summary>
+        /// 重复踩贴
+        /// </summary>
+        [Description("重复踩贴")]
+        RepetitionDisLike = 1120,
 
     }
 }
