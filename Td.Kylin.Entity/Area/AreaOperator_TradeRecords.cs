@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 用户交易记录
+    /// 运营商交易记录
     /// </summary>
-    [Table("User_TradeRecords")]
-    public class User_TradeRecords : BaseEntity
+    [Table("AreaOperator_TradeRecords")]
+    public class AreaOperator_TradeRecords
     {
         /// <summary>
         /// 交易ID
@@ -15,12 +15,12 @@ namespace Td.Kylin.Entity
         public long TradeID { get; set; }
 
         ///<summary>
-        ///用户ID
+        ///运营商ID
         ///</summary>
-        public long UserID { get; set; }
+        public long OpeartorID { get; set; }
 
         /// <summary>
-        /// 交易类型（枚举：UserTransType，如：购买商品，充值等）
+        /// 交易类型（枚举：OperatorTradeType，如：销售商品等）
         /// </summary>
         public int TradeType { get; set; }
 
@@ -70,11 +70,6 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName = "varchar(30)")]
         public string TradeNo { get; set; }
-
-        /// <summary>
-        /// 优惠卷ID
-        /// </summary>
-        public long WelfareID { get; set; }
 
         /// <summary>
         /// 数据产生时间

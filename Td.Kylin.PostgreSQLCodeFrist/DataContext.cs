@@ -721,6 +721,12 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.HasKey(p => new { p.OperatorID, p.AreaID });
             });
 
+            modelBuilder.Entity<AreaOperator_TradeRecords>(entity =>
+            {
+                entity.Property(p => p.TradeID).ValueGeneratedNever();
+                entity.HasKey(p => p.TradeID);
+            });
+
             #endregion
 
             #region 代理商
