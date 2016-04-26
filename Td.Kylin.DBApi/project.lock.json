@@ -1847,7 +1847,7 @@
           "lib/dnx451/Td.CoreLibrary.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0-rc1-18": {
+      "Td.Kylin.Entity/1.0.0-rc1-26": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -1865,7 +1865,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.14-beta": {
+      "Td.Kylin.EnumLibrary/1.0.23-beta": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -4361,7 +4361,7 @@
           "lib/dnxcore50/Td.CoreLibrary.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0-rc1-18": {
+      "Td.Kylin.Entity/1.0.0-rc1-26": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -4379,7 +4379,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.14-beta": {
+      "Td.Kylin.EnumLibrary/1.0.23-beta": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -6261,7 +6261,7 @@
           "lib/dnx451/Td.CoreLibrary.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0-rc1-18": {
+      "Td.Kylin.Entity/1.0.0-rc1-26": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -6279,7 +6279,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.14-beta": {
+      "Td.Kylin.EnumLibrary/1.0.23-beta": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -8161,7 +8161,7 @@
           "lib/dnx451/Td.CoreLibrary.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0-rc1-18": {
+      "Td.Kylin.Entity/1.0.0-rc1-26": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -8179,7 +8179,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.14-beta": {
+      "Td.Kylin.EnumLibrary/1.0.23-beta": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -11173,7 +11173,7 @@
           "lib/dnxcore50/Td.CoreLibrary.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0-rc1-18": {
+      "Td.Kylin.Entity/1.0.0-rc1-26": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -11191,7 +11191,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.14-beta": {
+      "Td.Kylin.EnumLibrary/1.0.23-beta": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -14185,7 +14185,7 @@
           "lib/dnxcore50/Td.CoreLibrary.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0-rc1-18": {
+      "Td.Kylin.Entity/1.0.0-rc1-26": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -14203,7 +14203,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
         }
       },
-      "Td.Kylin.EnumLibrary/1.0.14-beta": {
+      "Td.Kylin.EnumLibrary/1.0.23-beta": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -14224,11 +14224,11 @@
     }
   },
   "libraries": {
-    "Td.Kylin.Entity/1.0.0-rc1-18": {
+    "Td.Kylin.Entity/1.0.0-rc1-26": {
       "type": "project",
       "path": "../Td.Kylin.Entity/project.json"
     },
-    "Td.Kylin.EnumLibrary/1.0.14-beta": {
+    "Td.Kylin.EnumLibrary/1.0.23-beta": {
       "type": "project",
       "path": "../Td.Kylin.EnumLibrary/project.json"
     },
@@ -14917,7 +14917,7 @@
     },
     "Microsoft.CodeAnalysis.Analyzers/1.0.0": {
       "type": "package",
-      "sha512": "E7VdmGw6xO3VHWapC+pNLZmo6yncS53UY3bmb5WZm9wliJBB1A6brgzKA4fcqiLrmJFx71r0M2zEbRDphRLUNg==",
+      "sha512": "2+V/VDgZu59Thrlp+FQH38H/SmPBegMKsG0ie1ZZyHtx7kJNEozIx/p9zs0UrolX0uyYX7Ouoj3Q3Be15lqXxA==",
       "files": [
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.Analyzers.dll",
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.CSharp.Analyzers.dll",
@@ -18099,7 +18099,7 @@
     "System.Reflection.TypeExtensions/4.0.1-beta-23409": {
       "type": "package",
       "serviceable": true,
-      "sha512": "n8m144jjCwhN/qtLih35a2sO33fLWm1U3eg51KxqAcAjJcw0nq1zWie8FZognBTPv7BXdW/G8xGbbvDGFoJwZA==",
+      "sha512": "Q3FiCsJ/4s2nuyhOHAFhc0Te10LzPjv6QzVcywA3oWI1msfDg583RIXQ9YifDfOuig+wg+SX0p133qV71HVfyw==",
       "files": [
         "lib/DNXCore50/de/System.Reflection.TypeExtensions.xml",
         "lib/DNXCore50/es/System.Reflection.TypeExtensions.xml",
