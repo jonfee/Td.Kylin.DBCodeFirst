@@ -25,24 +25,29 @@ namespace Td.Kylin.EnumLibrary
         [Description("上门服务中支付用户费用")]
         InServicePaymentToUser = 4,
         /// <summary>
+        /// 返佣金给运营商
+        /// </summary>
+        [Description("返佣金给运营商")]
+        ReturnCommissionToOperator = 8,
+        /// <summary>
         /// 返佣金给工作人员
         /// </summary>
         [Description("返佣金给工作人员")]
-        ReturnCommissionToWorker = 8,
+        ReturnCommissionToWorker = 16,
         /// <summary>
         /// 充退回款
         /// </summary>
         [Description("充退回款")]
-        Drawback = 16,
+        Drawback = 32,
         /// <summary>
         /// 提现
         /// </summary>
         [Description("提现")]
-        Withdraw = 32,
+        Withdraw = 64,
         /// <summary>
         /// 用户转账/买单
         /// </summary>
         [Description("用户转账/买单")]
-        UserTransfer = 64
+        UserTransfer = 128
     }
 }
