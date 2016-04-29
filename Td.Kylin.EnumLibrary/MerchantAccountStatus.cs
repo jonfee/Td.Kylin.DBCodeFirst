@@ -18,6 +18,11 @@ namespace Td.Kylin.EnumLibrary
         /// 已锁定
         /// </summary>
         [Description("已锁定")]
-        Locked = 2
+        Locked = 2,
+        /// <summary>
+        /// 未审核
+        /// </summary>
+        [Description("未审核")]
+        UnAudited = 3,
     }
 }
