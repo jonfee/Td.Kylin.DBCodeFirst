@@ -8,9 +8,10 @@ using Td.Kylin.PostgreSQLCodeFirst;
 namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160426073703_addTable_AreaOperatorTradeRecords")]
+    partial class addTable_AreaOperatorTradeRecords
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -3776,13 +3777,7 @@ namespace Td.Kylin.PostgreSQLCodeFrist.Migrations
 
                     b.Property<DateTime>("CreateTime");
 
-                    b.Property<long>("DataID");
-
-                    b.Property<decimal>("LastBalance");
-
                     b.Property<int>("PaymentType");
-
-                    b.Property<string>("PlatformTransactionCode");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()

@@ -15,11 +15,11 @@ namespace Td.Kylin.EnumLibrary
         /// 上门服务中支付用户费用（一般用于上门回收垃圾等服务中）
         /// </summary>
         [Description("上门服务中支付用户费用")]
-        InServicePaymentToUser = 2,
+        InServicePayment = 2,
         /// <summary>
         /// 返佣金给运营商（一般用于个人服务者）
         /// </summary>
         [Description("返佣金给运营商")]
-        ReturnCommissionToWorker = 4
+        ReturnCommission = 4
     }
 }

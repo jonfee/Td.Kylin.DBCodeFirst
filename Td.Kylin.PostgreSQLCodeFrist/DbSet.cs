@@ -608,6 +608,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         /// </summary>
         public DbSet<Area_OperatorRelation> Area_OperatorRelation { get { return Set<Area_OperatorRelation>(); } }
 
+        /// <summary>
+        /// 运营商交易记录
+        /// </summary>
+        public DbSet<AreaOperator_TradeRecords> AreaOperator_TradeRecords { get { return Set<AreaOperator_TradeRecords>(); } }
 
         #endregion
 

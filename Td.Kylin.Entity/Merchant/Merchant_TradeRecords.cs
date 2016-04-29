@@ -20,7 +20,7 @@ namespace Td.Kylin.Entity
         public long MerchantID { get; set; }
 
         /// <summary>
-        /// 交易类型（如：商品销售｜服务销售｜支付服务佣金等）
+        /// 交易类型（枚举：MerchantTransType，如：商品销售｜服务销售｜支付服务佣金等）
         /// </summary>
         public int TradeType { get; set; }
 

@@ -85,7 +85,7 @@ namespace Td.Kylin.EnumLibrary
     /// 区域(运营商)对区域内商家的交易抽成项
     /// </summary>
     public enum AreaMerchantCommissionOption
-    {
+    { 
         /// <summary>
         /// 商家商品订单抽成
         /// </summary>

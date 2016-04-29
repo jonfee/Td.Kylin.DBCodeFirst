@@ -25,6 +25,16 @@ namespace Td.Kylin.Entity
         public int TradeType { get; set; }
 
         /// <summary>
+        /// 交易对象数据ID（如订单ID）
+        /// </summary>
+        public long DataID { get; set; }
+
+        /// <summary>
+        /// 平台交易流水号
+        /// </summary>
+        public string PlatformTransactionCode { get; set; }
+
+        /// <summary>
         /// 交易对方身份（枚举：CounterpartyIdentity）
         /// </summary>
         public int CounterpartyIdentity { get; set; }
@@ -38,6 +48,11 @@ namespace Td.Kylin.Entity
         /// 交易金额
         /// </summary>
         public decimal Amount { get; set; }
+
+        /// <summary>
+        /// 余额（指本次交易后的余额）
+        /// </summary>
+        public decimal LastBalance { get; set; }
 
         /// <summary>
         /// 交易信息

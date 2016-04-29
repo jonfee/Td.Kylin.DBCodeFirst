@@ -40,14 +40,19 @@ namespace Td.Kylin.EnumLibrary
         [Description("获得服务佣金")]
         GetWorkCommission = 32,
         /// <summary>
+        /// 返还佣金给第三方
+        /// </summary>
+        [Description("返还佣金给第三方")]
+        ReturnCommission = 64,
+        /// <summary>
         /// 服务收款
         /// </summary>
         [Description("服务收款")]
-        Proceeds = 64,
+        Proceeds = 128,
         /// <summary>
         /// 转账付款
         /// </summary>
         [Description("转账付款")]
-        Transfer = 128
+        Transfer = 256
     }
 }
