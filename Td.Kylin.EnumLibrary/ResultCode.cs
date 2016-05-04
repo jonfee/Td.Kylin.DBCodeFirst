@@ -182,6 +182,11 @@ namespace Td.Kylin.EnumLibrary
         /// </summary>
         [Description("用户简历不存在")]
         NotUserResume = 1122,
+        /// <summary>
+        /// 当日可摇次数用完
+        /// </summary>
+        [Description("当日可摇次数用完")]
+        NotShake = 1123,
 
     }
 }
