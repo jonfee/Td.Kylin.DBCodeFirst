@@ -172,6 +172,21 @@ namespace Td.Kylin.EnumLibrary
         /// </summary>
         [Description("重复踩贴")]
         RepetitionDisLike = 1120,
+        /// <summary>
+        /// 招聘信息已下架
+        /// </summary>
+        [Description("招聘信息已下架")]
+        DisabledJobRecruitment = 1121,
+        /// <summary>
+        /// 用户简历不存在
+        /// </summary>
+        [Description("用户简历不存在")]
+        NotUserResume = 1122,
+        /// <summary>
+        /// 当日可摇次数用完
+        /// </summary>
+        [Description("当日可摇次数用完")]
+        NotShake = 1123,
 
     }
 }

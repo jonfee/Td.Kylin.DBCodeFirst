@@ -40,7 +40,7 @@ namespace Td.Kylin.Entity
         public int TransactionType { get; set; }
 
         /// <summary>
-        /// 变动的资金（支出时使用负数，如：-10.05）
+        /// 变动的资金（支出时使用负数，）
         /// </summary>
         public decimal Amount { get; set; }
 
