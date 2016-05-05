@@ -44,7 +44,7 @@ namespace Td.Kylin.Entity
         ///</summary>
         public decimal TotalDeliveryFee { get; set; }
         /// <summary>
-        /// 配送方式（商家配送、用户自提）
+        /// 配送方式（枚举：MerchantOrderDeliveryMode，商家配送、到店自取）
         /// </summary>
         public int DeliveryMode { get; set; }
         ///<summary>

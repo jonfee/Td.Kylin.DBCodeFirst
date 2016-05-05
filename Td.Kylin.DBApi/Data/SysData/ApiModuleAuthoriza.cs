@@ -125,6 +125,16 @@ namespace Td.Kylin.DBApi.Data.SysData
                 list.Add(new System_ModuleAuthorize { ServerID = "S1700", ModuleID = "U001", AppSecret = "165FC884-182B-4487-A3D7-E2BCDDDC90FD", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
                 list.Add(new System_ModuleAuthorize { ServerID = "S1700", ModuleID = "U002", AppSecret = "1D892F4C-0851-425D-A974-EE7F69CF30F7", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
                 list.Add(new System_ModuleAuthorize { ServerID = "S1700", ModuleID = "U003", AppSecret = "6D9B0D43-C1CE-4FDC-B48A-CBC8658404F1", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
+                list.Add(new System_ModuleAuthorize { ServerID = "S1800", ModuleID = "A013", AppSecret = "10fdc616-a593-40b4-a753-b0ef629c3b5c", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
+                list.Add(new System_ModuleAuthorize { ServerID = "S1800", ModuleID = "E001", AppSecret = "e564bd05-fbbf-4e2b-a095-a0f817ed9e8e", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
+                list.Add(new System_ModuleAuthorize { ServerID = "S1800", ModuleID = "E002", AppSecret = "6ea6aaf8-d81e-401f-84f9-d53c77fb3b5f", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
+                list.Add(new System_ModuleAuthorize { ServerID = "S1800", ModuleID = "E003", AppSecret = "c579b4a4-a84c-4261-9d83-1259aad2b8b0", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
+                list.Add(new System_ModuleAuthorize { ServerID = "S1800", ModuleID = "F001", AppSecret = "3dd1ad87-fb74-4542-95d4-7ab0162f01ac", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
+                list.Add(new System_ModuleAuthorize { ServerID = "S1800", ModuleID = "F002", AppSecret = "c2c302d8-a3d1-4d38-9f2f-8c48bc4fd446", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
+                list.Add(new System_ModuleAuthorize { ServerID = "S1800", ModuleID = "F003", AppSecret = "78a01de7-857e-4c69-ad88-fea79b8d1ab9", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
+                list.Add(new System_ModuleAuthorize { ServerID = "S1800", ModuleID = "U001", AppSecret = "486e8b79-b99f-4bbb-9743-71a864b1620a", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
+                list.Add(new System_ModuleAuthorize { ServerID = "S1800", ModuleID = "U002", AppSecret = "ce44be0c-11e3-4069-8e76-e539ac6e09c8", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
+                list.Add(new System_ModuleAuthorize { ServerID = "S1800", ModuleID = "U003", AppSecret = "ad296230-d855-447b-8353-4cb301d5f3cc", Role = 1, CreateTime = DateTime.Now, UpdateTime = DateTime.Now });
 
                 return list;
             }
