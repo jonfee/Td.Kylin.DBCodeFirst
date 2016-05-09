@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Td.Common;
 using Td.Kylin.DBApi.Core;
@@ -127,11 +128,13 @@ namespace Td.Kylin.DBApi.Data.SysData
         {
             if (null == pages || pages.Length < 1) return;
 
+            long pageId = long.Parse(string.Format("{0}{1}", platformType, "000"));
+
             foreach (var page in pages)
             {
                 _adPageList.Add(new Ad_Page
                 {
-                    PageID = IDProvider.NewId(),
+                    PageID = ++pageId,
                     PlatformType = platformType,
                     PageName = page
                 });
@@ -141,7 +144,7 @@ namespace Td.Kylin.DBApi.Data.SysData
         /// <summary>
         /// 添加广告位到集合  
         /// </summary>
-        static void AddPosition(long pageId, string name, string code, EnumLibrary.ADDisplayType displayType, string intro, int maxCount)
+        static void AddPosition(long pageId, int positionIndex, string name, string code, EnumLibrary.ADDisplayType displayType, string intro, int maxCount)
         {
             Ad_Position item = new Ad_Position
             {
@@ -153,7 +156,7 @@ namespace Td.Kylin.DBApi.Data.SysData
                 MaxCount = maxCount,
                 Name = name,
                 PageID = pageId,
-                PositionID = IDProvider.NewId(),
+                PositionID = long.Parse(string.Format("{0}{1}", pageId, positionIndex.ToString().PadLeft(3, '0'))),
                 PreviewPicture = string.Format("/admin_img/advertposition/{0}.png", code)
             };
             _adPositionList.Add(item);
@@ -167,39 +170,39 @@ namespace Td.Kylin.DBApi.Data.SysData
             {
                 if (page.PageName.Equals("启动页"))
                 {
-                    AddPosition(page.PageID, "启动广告", "U01001_startalways", EnumLibrary.ADDisplayType.TimerPass, "APP启动时展示图片，默认N秒后自动进入APP首页，无任何点击事件", 1);
+                    AddPosition(page.PageID, 1, "启动广告", "U01001_startalways", EnumLibrary.ADDisplayType.TimerPass, "APP启动时展示图片，默认N秒后自动进入APP首页，无任何点击事件", 1);
                     //AddPosition(page.PageID, "产品介绍", "U01001_startproducts", EnumLibrary.ADDisplayType.SlidePass, "APP新安装/更新后首次启动APP时对APP的介绍或推荐功能的展示，一般为多张图片且无任何点击事件，一张张向后查看结束后进入APP首页", 4);
                 }
                 else if (page.PageName.Equals("淘一淘首页"))
                 {
-                    AddPosition(page.PageID, "顶部通栏Banner", "U01001_malltyt001", EnumLibrary.ADDisplayType.Viwepager, "一般为多个图片广告，自动滚动（或手动滑动）广告图可切换，点击后进入相应的内容页", 6);
-                    AddPosition(page.PageID, "导航栏下左一按钮广告", "U01001_malltyt002", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "导航栏下右一按钮广告", "U01001_malltyt003", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "导航栏下右二按钮广告", "U01001_malltyt004", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "导航栏下左二按钮广告", "U01001_malltyt005", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "导航栏下右三按钮广告", "U01001_malltyt006", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 1, "顶部通栏Banner", "U01001_malltyt001", EnumLibrary.ADDisplayType.Viwepager, "一般为多个图片广告，自动滚动（或手动滑动）广告图可切换，点击后进入相应的内容页", 6);
+                    AddPosition(page.PageID, 2, "导航栏下左一按钮广告", "U01001_malltyt002", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 3, "导航栏下右一按钮广告", "U01001_malltyt003", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 4, "导航栏下右二按钮广告", "U01001_malltyt004", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 5, "导航栏下左二按钮广告", "U01001_malltyt005", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 6, "导航栏下右三按钮广告", "U01001_malltyt006", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
                     // AddPosition(page.PageID, "中部横幅", "U01001_malltyt008", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
                 }
                 else if (page.PageName.Equals("附近购首页"))
                 {
-                    AddPosition(page.PageID, "左一按钮广告", "U01001_mallsjsc001", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "右一按钮广告", "U01001_mallsjsc002", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "右二按钮广告", "U01001_mallsjsc003", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "左二按钮广告", "U01001_mallsjsc004", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "右三按钮广告", "U01001_mallsjsc005", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 1, "左一按钮广告", "U01001_mallsjsc001", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 2, "右一按钮广告", "U01001_mallsjsc002", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 3, "右二按钮广告", "U01001_mallsjsc003", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 4, "左二按钮广告", "U01001_mallsjsc004", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 5, "右三按钮广告", "U01001_mallsjsc005", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
                 }
                 else if (page.PageName.Equals("精品汇首页"))
                 {
-                    AddPosition(page.PageID, "左一按钮广告", "U01001_mallqysc001", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "右一按钮广告", "U01001_mallqysc002", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "右二按钮广告", "U01001_mallqysc003", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 1, "左一按钮广告", "U01001_mallqysc001", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 2, "右一按钮广告", "U01001_mallqysc002", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 3, "右二按钮广告", "U01001_mallqysc003", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
                     //AddPosition(page.PageID, "中部左侧按钮广告", "U01001_mallqysc004", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
                     //AddPosition(page.PageID, "中部右一按钮广告", "U01001_mallqysc005", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
                     //AddPosition(page.PageID, "中部右二按钮广告", "U01001_mallqysc006", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
                 }
                 else if (page.PageName.Equals("兴趣社区首页"))
                 {
-                    AddPosition(page.PageID, "顶部通栏", "U01001_forumxqsq001", EnumLibrary.ADDisplayType.Viwepager, "一般为多个图片广告，自动滚动（或手动滑动）广告图可切换，点击后进入相应的内容页", 6);
+                    AddPosition(page.PageID, 1, "顶部通栏", "U01001_forumxqsq001", EnumLibrary.ADDisplayType.Viwepager, "一般为多个图片广告，自动滚动（或手动滑动）广告图可切换，点击后进入相应的内容页", 6);
                 }
                 //else if (page.PageName.Equals("上门服务首页"))
                 //{
@@ -211,31 +214,31 @@ namespace Td.Kylin.DBApi.Data.SysData
                 //}
                 else if (page.PageName.Equals("求职招聘首页"))
                 {
-                    AddPosition(page.PageID, "顶部通栏", "U01001_hrqzzp001", EnumLibrary.ADDisplayType.Viwepager, "一般为多个图片广告，自动滚动（或手动滑动）广告图可切换，点击后进入相应的内容页", 6);
+                    AddPosition(page.PageID, 1, "顶部通栏", "U01001_hrqzzp001", EnumLibrary.ADDisplayType.Viwepager, "一般为多个图片广告，自动滚动（或手动滑动）广告图可切换，点击后进入相应的内容页", 6);
                 }
                 else if (page.PageName.Equals("发现首页"))
                 {
-                    AddPosition(page.PageID, "顶部通栏Banner", "U01001_find001", EnumLibrary.ADDisplayType.Viwepager, "一般为多个图片广告，自动滚动（或手动滑动）广告图可切换，点击后进入相应的内容页", 6);
-                    AddPosition(page.PageID, "顶部左一按钮广告", "U01001_find002", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "顶部右一按钮广告", "U01001_find003", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "中部左一按钮广告", "U01001_find004", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "中部右一按钮广告", "U01001_find005", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "中部右二按钮广告", "U01001_find006", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "中部右三按钮广告", "U01001_find007", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "中部横幅", "U01001_find008", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "底部左一按钮广告", "U01001_find009", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "底部右一按钮广告", "U01001_find010", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "底部右二按钮广告", "U01001_find011", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "底部左二按钮广告", "U01001_find012", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "底部右三按钮广告", "U01001_find013", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 1, "顶部通栏Banner", "U01001_find001", EnumLibrary.ADDisplayType.Viwepager, "一般为多个图片广告，自动滚动（或手动滑动）广告图可切换，点击后进入相应的内容页", 6);
+                    AddPosition(page.PageID, 2, "顶部左一按钮广告", "U01001_find002", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 3, "顶部右一按钮广告", "U01001_find003", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 4, "中部左一按钮广告", "U01001_find004", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 5, "中部右一按钮广告", "U01001_find005", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 6, "中部右二按钮广告", "U01001_find006", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 7, "中部右三按钮广告", "U01001_find007", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 8, "中部横幅", "U01001_find008", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 9, "底部左一按钮广告", "U01001_find009", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 10, "底部右一按钮广告", "U01001_find010", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 11, "底部右二按钮广告", "U01001_find011", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 12, "底部左二按钮广告", "U01001_find012", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 13, "底部右三按钮广告", "U01001_find013", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
                 }
                 else if (page.PageName.Equals("附近首页"))
                 {
-                    AddPosition(page.PageID, "顶部通栏Banner", "U01001_nearby001", EnumLibrary.ADDisplayType.Viwepager, "一般为多个图片广告，自动滚动（或手动滑动）广告图可切换，点击后进入相应的内容页", 6);
-                    AddPosition(page.PageID, "左一按钮广告", "U01001_nearby002", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "右一按钮广告", "U01001_nearby003", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "左二按钮广告", "U01001_nearby004", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
-                    AddPosition(page.PageID, "右二按钮广告", "U01001_nearby005", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 1, "顶部通栏Banner", "U01001_nearby001", EnumLibrary.ADDisplayType.Viwepager, "一般为多个图片广告，自动滚动（或手动滑动）广告图可切换，点击后进入相应的内容页", 6);
+                    AddPosition(page.PageID, 2, "左一按钮广告", "U01001_nearby002", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 3, "右一按钮广告", "U01001_nearby003", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 4, "左二按钮广告", "U01001_nearby004", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
+                    AddPosition(page.PageID, 5, "右二按钮广告", "U01001_nearby005", EnumLibrary.ADDisplayType.SingleImage, "一般为单个图片广告，点击后进入相应的内容页", 1);
                 }
             }
         }
@@ -248,7 +251,7 @@ namespace Td.Kylin.DBApi.Data.SysData
             {
                 if (page.PageName.Equals("启动页"))
                 {
-                    AddPosition(page.PageID, "启动广告", "M01001_startalways", EnumLibrary.ADDisplayType.TimerPass, "APP启动时展示图片，默认N秒后自动进入APP首页，无任何点击事件", 1);
+                    AddPosition(page.PageID, 1, "启动广告", "M01001_startalways", EnumLibrary.ADDisplayType.TimerPass, "APP启动时展示图片，默认N秒后自动进入APP首页，无任何点击事件", 1);
                     //AddPosition(page.PageID, "产品介绍", "M01001_startproducts", EnumLibrary.ADDisplayType.SlidePass, "APP新安装/更新后首次启动APP时对APP的介绍或推荐功能的展示，一般为多张图片且无任何点击事件，一张张向后查看结束后进入APP首页", 4);
                 }
             }
@@ -262,7 +265,7 @@ namespace Td.Kylin.DBApi.Data.SysData
             {
                 if (page.PageName.Equals("启动页"))
                 {
-                    AddPosition(page.PageID, "启动广告", "W01001_startalways", EnumLibrary.ADDisplayType.TimerPass, "APP启动时展示图片，默认N秒后自动进入APP首页，无任何点击事件", 1);
+                    AddPosition(page.PageID, 1, "启动广告", "W01001_startalways", EnumLibrary.ADDisplayType.TimerPass, "APP启动时展示图片，默认N秒后自动进入APP首页，无任何点击事件", 1);
                     //AddPosition(page.PageID, "产品介绍", "W01001_startproducts", EnumLibrary.ADDisplayType.SlidePass, "APP新安装/更新后首次启动APP时对APP的介绍或推荐功能的展示，一般为多张图片且无任何点击事件，一张张向后查看结束后进入APP首页", 4);
                 }
             }
