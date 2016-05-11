@@ -13,7 +13,7 @@ namespace Td.Kylin.DBApi.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { Guid.NewGuid().ToString(), Guid.NewGuid().ToString() };
         }
 
         // GET api/values/5
