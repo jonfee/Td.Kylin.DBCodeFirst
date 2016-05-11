@@ -16,7 +16,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 地区名称
         /// </summary>
-        [Column(TypeName = "varchar(15)")]
+        [Column(TypeName = "varchar(30)")]
         public string AreaName { get; set; }
         /// <summary>
         /// 父ID（1级为0）
@@ -27,7 +27,7 @@ namespace Td.Kylin.Entity
         /// </summary>
         public int Depth { get; set; }
         /// <summary>
-        /// 地区级别（1为省级，2为市级，3为区、县、地级市级，4为镇，5为村、街道）
+        /// 地区名称拼音
         /// </summary>
         [Column(TypeName = "varchar(20)")]
         public string NameSpell { get; set; }

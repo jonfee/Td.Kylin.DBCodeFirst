@@ -38,13 +38,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///论坛图标
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "varchar(100)")]
         public string Logo { get; set; }
 
         ///<summary>
         ///论坛介绍
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "varchar(200)")]
         public string Description { get; set; }
 
         ///<summary>

@@ -16,8 +16,8 @@ namespace Td.Kylin.DBCodeFirst
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connection = Startup.Configuration["Data:DefaultConnectionString"];
-            //optionsBuilder.UseSqlServer(connection);
-            optionsBuilder.UseNpgsql(connection);
+            optionsBuilder.UseSqlServer(connection);
+            //optionsBuilder.UseNpgsql(connection);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

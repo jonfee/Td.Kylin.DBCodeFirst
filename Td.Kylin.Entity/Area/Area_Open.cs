@@ -19,7 +19,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 地区名称
         /// </summary>
-        [Column(TypeName = "varchar(15)")]
+        [Column(TypeName = "varchar(20)")]
         public string AreaName { get; set; }
         /// <summary>
         /// 状态

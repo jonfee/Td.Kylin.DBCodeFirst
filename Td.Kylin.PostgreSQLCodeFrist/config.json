@@ -1,8 +1,10 @@
 ﻿{
   "Data": {
     //"DefaultConnectionString": "server=139.129.194.132;user id=kylintest;password=kylintest1q2!Q@;database=kylintest" //外网 PostgresSQL 测试数据库
-    //"DefaultConnectionString": "data source=139.129.194.132;initial catalog=Kylin.Test;persist security info=True;user id=kylintest;password=kylintest++;MultipleActiveResultSets=True;"  //外网 MSSQL 测试数据库
+    //"DefaultConnectionString": "data source=139.129.194.132;initial catalog=KylinTest;persist security info=True;user id=kylintest;password=kylintest++;MultipleActiveResultSets=True;" //外网 MSSQL 测试数据库
     //"DefaultConnectionString": "server=192.168.1.200;user id=kylindevelop;password=123456;database=kylindevelop"  //内网 PostgresSQL 开发数据库
     //"DefaultConnectionString": "server=192.168.1.200;user id=kylintest;password=123456;database=kylintest"  //内网 PostgresSQL 测试数据库
+    //"DefaultConnectionString": "server=192.168.1.200;user id=kylindevelop;password=123456;database=kylindevelop"  //内网 MSSQL 开发数据库
+    //"DefaultConnectionString": "server=192.168.1.200;user id=kylintest;password=123456;database=kylintest"  //内网 MSSQL 测试数据库
   }
-}
+} 

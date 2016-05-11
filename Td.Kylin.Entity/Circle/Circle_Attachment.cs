@@ -41,7 +41,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///存储路径
         ///</summary>
-        [Column(TypeName = "varchar(255)")]
+        [Column(TypeName = "varchar(100)")]
         public string FilePath{get;set;}
 				
 		///<summary>

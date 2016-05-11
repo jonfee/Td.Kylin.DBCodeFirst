@@ -68,7 +68,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///UserPic
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "varchar(100)")]
         public string UserPic{get;set;}
 				
 	}

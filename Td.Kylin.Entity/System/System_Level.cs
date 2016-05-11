@@ -18,7 +18,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///等级名称
         ///</summary>
-        [Column(TypeName = "varchar(10)")]
+        [Column(TypeName = "varchar(20)")]
         public string Name { get; set; }
 
         ///<summary>

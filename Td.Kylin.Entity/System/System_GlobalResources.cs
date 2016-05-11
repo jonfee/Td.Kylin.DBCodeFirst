@@ -22,13 +22,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 键分组（如：B2C）
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "varchar(30)")]
         public string Group { get; set; }
 
         /// <summary>
         /// 资源名称
         /// </summary>
-        [Column(TypeName ="varchar(50)")]
+        [Column(TypeName ="varchar(100)")]
         public string Name { get; set; }
 
         /// <summary>
