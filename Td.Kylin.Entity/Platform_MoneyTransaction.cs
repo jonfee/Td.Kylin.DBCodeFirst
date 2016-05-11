@@ -57,7 +57,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 第三方交易流水号
         /// </summary>
-        [Column(TypeName = "varchar(30)")]
+        [Column(TypeName = "varchar(50)")]
         public string ThirdTransactionCode { get; set; }
 
         /// <summary>
