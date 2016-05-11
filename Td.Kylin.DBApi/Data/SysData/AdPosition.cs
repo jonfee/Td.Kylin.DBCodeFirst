@@ -157,7 +157,7 @@ namespace Td.Kylin.DBApi.Data.SysData
                 Name = name,
                 PageID = pageId,
                 PositionID = long.Parse(string.Format("{0}{1}", pageId, positionIndex.ToString().PadLeft(3, '0'))),
-                PreviewPicture = string.Format("/admin_img/advertposition/{0}.png", code)
+                PreviewPicture = string.Format("/img1/advertposition/{0}.png", code)
             };
             _adPositionList.Add(item);
         }
