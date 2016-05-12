@@ -3,8 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using Td.Common;
+using Td.Kylin.DBApi.Core;
 using Td.Kylin.DBApi.Data;
+using Td.Kylin.DBApi.Enum;
 using Td.Kylin.Entity;
 using Td.Kylin.WebApi;
 
@@ -206,6 +209,44 @@ namespace Td.Kylin.DBApi.Controllers
             arr[len - 1] = string.Format("T_W{0}H{1}_{2}", width, height, fn);
 
             return Path.Combine(arr).ToLower();
+        }
+
+        [HttpGet("getapiauth")]
+        public string GetApiauth()
+        {
+            var list = Data.SysData.ApiModuleAuthoriza.Data;
+
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
+            sb.AppendLine("<Data>");
+
+            foreach (var item in list)
+            {
+                string apiName = EnumUtility.GetEnumDescription<ApiServerType>(item.ServerID.ToString());
+
+                string moduleName = EnumUtility.GetEnumDescription<ApiModule>(item.ModuleID);
+
+                string auth = null;
+
+                switch (item.Role)
+                {
+                    case 1: auth = "Admin"; break;
+                    case 2: auth = "Editer"; break;
+                    case 4: auth = "Use"; break;
+                    default: auth = "未知权限"; break;
+                }
+
+                sb.AppendLine("<Modules>");
+                sb.AppendLine(string.Format("<Name>{0}〖{1} - {2}〗</Name>", apiName, moduleName, auth));
+                sb.AppendLine(string.Format("<Id>{0}</Id>", item.ServerID));
+                sb.AppendLine(string.Format("<Key>{0}</Key>", item.AppSecret));
+                sb.AppendLine("</Modules>");
+            }
+
+            sb.AppendLine("</Data>");
+
+            return sb.ToString();
         }
     }
 }

@@ -1153,7 +1153,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0-rc1-18": {
+      "Td.Kylin.Entity/1.0.0-rc1-27": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -3149,7 +3149,7 @@
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0-rc1-18": {
+      "Td.Kylin.Entity/1.0.0-rc1-27": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -4319,7 +4319,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0-rc1-18": {
+      "Td.Kylin.Entity/1.0.0-rc1-27": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -5489,7 +5489,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0-rc1-18": {
+      "Td.Kylin.Entity/1.0.0-rc1-27": {
         "type": "project",
         "framework": "DNX,Version=v4.5.1",
         "dependencies": {
@@ -7962,7 +7962,7 @@
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0-rc1-18": {
+      "Td.Kylin.Entity/1.0.0-rc1-27": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -10435,7 +10435,7 @@
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.0.0-rc1-18": {
+      "Td.Kylin.Entity/1.0.0-rc1-27": {
         "type": "project",
         "framework": "DNXCore,Version=v5.0",
         "dependencies": {
@@ -10456,7 +10456,7 @@
     }
   },
   "libraries": {
-    "Td.Kylin.Entity/1.0.0-rc1-18": {
+    "Td.Kylin.Entity/1.0.0-rc1-27": {
       "type": "project",
       "path": "../Td.Kylin.Entity/project.json"
     },
@@ -13588,7 +13588,7 @@
     "System.Reflection.TypeExtensions/4.0.1-beta-23409": {
       "type": "package",
       "serviceable": true,
-      "sha512": "n8m144jjCwhN/qtLih35a2sO33fLWm1U3eg51KxqAcAjJcw0nq1zWie8FZognBTPv7BXdW/G8xGbbvDGFoJwZA==",
+      "sha512": "Q3FiCsJ/4s2nuyhOHAFhc0Te10LzPjv6QzVcywA3oWI1msfDg583RIXQ9YifDfOuig+wg+SX0p133qV71HVfyw==",
       "files": [
         "lib/DNXCore50/de/System.Reflection.TypeExtensions.xml",
         "lib/DNXCore50/es/System.Reflection.TypeExtensions.xml",
