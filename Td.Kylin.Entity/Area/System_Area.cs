@@ -46,7 +46,14 @@ namespace Td.Kylin.Entity
         
         public DateTime UpdateTime { get; set; }
 
-
-   
+		/// <summary>
+		/// 行政区域点。 
+		/// </summary>
+		[Column(TypeName = "varchar(MAX)")]
+		public string Points
+	    {
+		    get;
+		    set;
+	    }
     }
 }
