@@ -646,9 +646,9 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.HasKey(p => p.CertificateID);
             });
 
-            modelBuilder.Entity<Worker_Business>(entity =>
+            modelBuilder.Entity<Worker_BusinessRelation>(entity =>
             {
-                entity.HasKey(p => new { p.UserID, p.BusinessID });
+                entity.HasKey(p => new { p.WorkerID, p.BusinessType });
             });
 
             modelBuilder.Entity<Worker_Company>(entity =>
@@ -763,10 +763,51 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.HasKey(p => p.RecommendID);
             });
 
-            #endregion
+			#endregion
+
+			#region 跑腿业务
+
+			// 全局配置
+	        modelBuilder.Entity<Legwork_GlobalConfig>();
+
+			// 区域配置
+			modelBuilder.Entity<Legwork_AreaConfig>(entity =>
+			{
+				entity.HasKey(p => p.AreaID);
+			});
+
+			// 物品分类
+			modelBuilder.Entity<Legwork_GoodsCategory>(entity =>
+			{
+				entity.Property(p => p.CategoryID).ValueGeneratedNever();
+				entity.HasKey(p => p.CategoryID);
+			});
+
+			// 跑腿订单。
+			modelBuilder.Entity<Legwork_Order>(entity =>
+			{
+				entity.Property(p => p.OrderID).ValueGeneratedNever();
+				entity.HasKey(p => p.OrderID);
+			});
+
+			// 跑腿报价记录
+			modelBuilder.Entity<Legwork_OfferRecord>(entity =>
+			{
+				entity.Property(p => p.OfferID).ValueGeneratedNever();
+				entity.HasKey(p => p.OfferID);
+			});
+
+			// 跑腿订单评价。
+			modelBuilder.Entity<Legwork_Evaluate>(entity =>
+			{
+				entity.Property(p => p.EvaluateID).ValueGeneratedNever();
+				entity.HasKey(p => p.EvaluateID);
+			});
+
+			#endregion
 
 
-            modelBuilder.Entity<Platform_MoneyTransaction>(entity =>
+			modelBuilder.Entity<Platform_MoneyTransaction>(entity =>
             {
                 entity.HasKey(p => p.TransactionCode);
             });

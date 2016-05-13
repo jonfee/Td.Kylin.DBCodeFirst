@@ -541,7 +541,8 @@ namespace Td.Kylin.SQLCodeFirst
         /// <summary>
         /// 服务职员业务
         /// </summary>
-        public DbSet<Worker_Business> Worker_Business { get { return Set<Worker_Business>(); } }
+        public DbSet<Worker_BusinessRelation> Worker_BusinessRelation
+		{ get { return Set<Worker_BusinessRelation>(); } }
 
         /// <summary>
         /// 服务职员所服务的企业（商家）
@@ -632,11 +633,81 @@ namespace Td.Kylin.SQLCodeFirst
         /// </summary>
         public DbSet<Agent_AreaRelation> Agent_AreaRelation { get { return Set<Agent_AreaRelation>(); } }
 
-        #endregion
+		#endregion
 
-        /// <summary>
-        /// 平台资金流水
-        /// </summary>
-        public DbSet<Platform_MoneyTransaction> Platform_MoneyTransaction { get { return Set<Platform_MoneyTransaction>(); } }
+		#region 跑腿业务
+
+		/// <summary>
+		/// 跑腿业务全局配置。
+		/// </summary>
+	    public DbSet<Legwork_GlobalConfig> Legwork_GlobalConfig
+		{
+			get
+			{
+				return Set<Legwork_GlobalConfig>();
+			}
+		}
+
+		/// <summary>
+		/// 跑腿业务区域配置。
+		/// </summary>
+		public DbSet<Legwork_AreaConfig> Legwork_AreaConfig
+		{
+			get
+			{
+				return Set<Legwork_AreaConfig>();
+			}
+		}
+
+		/// <summary>
+		/// 跑腿业务物品分类。
+		/// </summary>
+		public DbSet<Legwork_GoodsCategory> Legwork_GoodsCategory
+		{
+			get
+			{
+				return Set<Legwork_GoodsCategory>();
+			}
+		}
+
+		/// <summary>
+		/// 跑腿订单。
+		/// </summary>
+		public DbSet<Legwork_Order> Legwork_Order
+		{
+			get
+			{
+				return Set<Legwork_Order>();
+			}
+		}
+
+		/// <summary>
+		/// 跑腿报价记录。
+		/// </summary>
+		public DbSet<Legwork_OfferRecord> Legwork_OfferRecord
+		{
+			get
+			{
+				return Set<Legwork_OfferRecord>();
+			}
+		}
+
+		/// <summary>
+		/// 跑腿订单评价。
+		/// </summary>
+		public DbSet<Legwork_Evaluate> Legwork_Evaluate
+		{
+			get
+			{
+				return Set<Legwork_Evaluate>();
+			}
+		}
+
+		#endregion
+
+		/// <summary>
+		/// 平台资金流水
+		/// </summary>
+		public DbSet<Platform_MoneyTransaction> Platform_MoneyTransaction { get { return Set<Platform_MoneyTransaction>(); } }
     }
 }

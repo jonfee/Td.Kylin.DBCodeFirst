@@ -4,61 +4,61 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Td.Kylin.Entity
 {
 	/// <summary>
-	/// 服务职员账户
+	/// 跑腿订单评价。
 	/// </summary>
-	[Table("Worker_Account")]
-	public class Worker_Account : BaseEntity
+	[Table("Legwork_Evaluate")]
+	public class Legwork_Evaluate : BaseEntity
 	{
 		/// <summary>
-		/// 服务员ID。
+		/// 评价ID。
 		/// </summary>
-		public long WorkerID
+		public long EvaluateID
 		{
 			get;
 			set;
 		}
 
 		/// <summary>
-		/// 真实姓名。
+		/// 订单ID。
 		/// </summary>
-		[Column(TypeName = "nvarchar(10)")]
-		public string FullName
+		public long OrderID
 		{
 			get;
 			set;
 		}
 
 		/// <summary>
-		/// 工作状态。
+		/// 用户ID。
 		/// </summary>
-		public short WorkingState
+		public long UserID
 		{
 			get;
 			set;
 		}
 
 		/// <summary>
-		/// 账户状态。
+		/// 评价等级。
 		/// </summary>
-		public short AccountStatus
+		public short Level
 		{
 			get;
 			set;
 		}
 
 		/// <summary>
-		/// 激活时间。
+		/// 评价内容。
 		/// </summary>
-		public DateTime? ActiveTime
+		[Column(TypeName = "nvarchar(200)")]
+		public string Content
 		{
 			get;
 			set;
 		}
 
 		/// <summary>
-		/// 激活时间。
+		/// 创建时间。
 		/// </summary>
-		public DateTime? AuditTime
+		public DateTime CreateTime
 		{
 			get;
 			set;

@@ -650,9 +650,9 @@ namespace Td.Kylin.PostgreSQLCodeFirst
                 entity.HasKey(p => p.CertificateID);
             });
 
-            modelBuilder.Entity<Worker_Business>(entity =>
+            modelBuilder.Entity<Worker_BusinessRelation>(entity =>
             {
-                entity.HasKey(p => new { p.UserID, p.BusinessID });
+                entity.HasKey(p => new { p.WorkerID, p.BusinessType });
             });
 
             modelBuilder.Entity<Worker_Company>(entity =>

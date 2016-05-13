@@ -539,9 +539,10 @@ namespace Td.Kylin.PostgreSQLCodeFirst
         public DbSet<User_Certification> User_Certification { get { return Set<User_Certification>(); } }
 
         /// <summary>
-        /// 服务职员业务
+        /// 服务职员业务关联
         /// </summary>
-        public DbSet<Worker_Business> Worker_Business { get { return Set<Worker_Business>(); } }
+        public DbSet<Worker_BusinessRelation> Worker_BusinessRelation
+		{ get { return Set<Worker_BusinessRelation>(); } }
 
         /// <summary>
         /// 服务职员所服务的企业（商家）
