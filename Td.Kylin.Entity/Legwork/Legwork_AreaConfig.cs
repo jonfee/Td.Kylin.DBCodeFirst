@@ -21,7 +21,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 业务须知。
 		/// </summary>
-		[Column(TypeName = "nvarchar(5000)")]
+		[Column(TypeName = "nvarchar(MAX)")]
 		public string Instructions
 		{
 			get;

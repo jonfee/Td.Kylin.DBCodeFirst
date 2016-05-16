@@ -158,7 +158,7 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.HasKey(p => p.IndustryID);
             });
 
-			modelBuilder.Entity<Merchant_Account>(entity =>
+            modelBuilder.Entity<Merchant_Account>(entity =>
             {
                 entity.Property(p => p.MerchantID).ValueGeneratedNever();
 
@@ -534,7 +534,7 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.Property(p => p.WelfareID).ValueGeneratedNever();
                 entity.HasKey(p => p.WelfareID);
             });
-            
+
             modelBuilder.Entity<Welfare_PartUser>(entity =>
             {
                 entity.HasKey(p => new { p.WelfareID, p.UserID });
@@ -763,51 +763,55 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.HasKey(p => p.RecommendID);
             });
 
-			#endregion
+            #endregion
 
-			#region 跑腿业务
+            #region 跑腿业务
 
-			// 全局配置
-	        modelBuilder.Entity<Legwork_GlobalConfig>();
+            // 全局配置
+            modelBuilder.Entity<Legwork_GlobalConfig>(
+               entity =>
+               {
+                   entity.HasKey(p => p.GlobalConfigID);
+               });
 
-			// 区域配置
-			modelBuilder.Entity<Legwork_AreaConfig>(entity =>
-			{
-				entity.HasKey(p => p.AreaID);
-			});
+            // 区域配置
+            modelBuilder.Entity<Legwork_AreaConfig>(entity =>
+            {
+                entity.HasKey(p => p.AreaID);
+            });
 
-			// 物品分类
-			modelBuilder.Entity<Legwork_GoodsCategory>(entity =>
-			{
-				entity.Property(p => p.CategoryID).ValueGeneratedNever();
-				entity.HasKey(p => p.CategoryID);
-			});
+            // 物品分类
+            modelBuilder.Entity<Legwork_GoodsCategory>(entity =>
+            {
+                entity.Property(p => p.CategoryID).ValueGeneratedNever();
+                entity.HasKey(p => p.CategoryID);
+            });
 
-			// 跑腿订单。
-			modelBuilder.Entity<Legwork_Order>(entity =>
-			{
-				entity.Property(p => p.OrderID).ValueGeneratedNever();
-				entity.HasKey(p => p.OrderID);
-			});
+            // 跑腿订单。
+            modelBuilder.Entity<Legwork_Order>(entity =>
+            {
+                entity.Property(p => p.OrderID).ValueGeneratedNever();
+                entity.HasKey(p => p.OrderID);
+            });
 
-			// 跑腿报价记录
-			modelBuilder.Entity<Legwork_OfferRecord>(entity =>
-			{
-				entity.Property(p => p.OfferID).ValueGeneratedNever();
-				entity.HasKey(p => p.OfferID);
-			});
+            // 跑腿报价记录
+            modelBuilder.Entity<Legwork_OfferRecord>(entity =>
+            {
+                entity.Property(p => p.OfferID).ValueGeneratedNever();
+                entity.HasKey(p => p.OfferID);
+            });
 
-			// 跑腿订单评价。
-			modelBuilder.Entity<Legwork_Evaluate>(entity =>
-			{
-				entity.Property(p => p.EvaluateID).ValueGeneratedNever();
-				entity.HasKey(p => p.EvaluateID);
-			});
+            // 跑腿订单评价。
+            modelBuilder.Entity<Legwork_Evaluate>(entity =>
+            {
+                entity.Property(p => p.EvaluateID).ValueGeneratedNever();
+                entity.HasKey(p => p.EvaluateID);
+            });
 
-			#endregion
+            #endregion
 
 
-			modelBuilder.Entity<Platform_MoneyTransaction>(entity =>
+            modelBuilder.Entity<Platform_MoneyTransaction>(entity =>
             {
                 entity.HasKey(p => p.TransactionCode);
             });

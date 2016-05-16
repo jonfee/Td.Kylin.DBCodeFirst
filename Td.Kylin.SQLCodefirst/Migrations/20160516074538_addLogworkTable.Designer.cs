@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160516074538_addLogworkTable")]
+    partial class addLogworkTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -1452,7 +1453,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Instructions")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(MAX)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(5000)");
 
                     b.Property<string>("OpenAreas")
                         .HasAnnotation("Relational:ColumnType", "varchar(100)");
