@@ -18,7 +18,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///手机号码
         ///</summary>
-        [Column(TypeName = "varchar(11)")]
+        [Column(TypeName = "nvarchar(11)")]
         public string Phone { get; set; }
 
         ///<summary>
@@ -29,13 +29,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///短信内容
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string Content { get; set; }
 
         ///<summary>
         ///验证码，最长6位置
         ///</summary>
-        [Column(TypeName = "varchar(6)")]
+        [Column(TypeName = "nvarchar(6)")]
         public string Code { get; set; }
 
         ///<summary>
@@ -47,13 +47,13 @@ namespace Td.Kylin.Entity
         ///过期时间
         ///</summary>
         
-        public DateTime Expires { get; set; }
+        [Column(TypeName = "datetime")]public DateTime Expires { get; set; }
 
         ///<summary>
         ///建立时间
         ///</summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
 
     }
 }

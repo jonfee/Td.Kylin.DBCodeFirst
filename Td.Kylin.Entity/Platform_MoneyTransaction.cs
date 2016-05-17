@@ -31,7 +31,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 客户名称
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string CustomName { get; set; }
 
         /// <summary>
@@ -57,19 +57,19 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 第三方交易流水号
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string ThirdTransactionCode { get; set; }
 
         /// <summary>
         /// 交易摘要/备注
         /// </summary>
-        [Column(TypeName = "varchar(150)")]
+        [Column(TypeName = "nvarchar(150)")]
         public string Remark { get; set; }
 
         /// <summary>
         /// 交易时间
         /// </summary>
-        public DateTime TransactionTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime TransactionTime { get; set; }
         /// <summary>
         /// 区域ID
         /// </summary>

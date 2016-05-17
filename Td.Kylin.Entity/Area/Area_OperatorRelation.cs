@@ -22,27 +22,27 @@ namespace Td.Kylin.Entity
         /// 运营开始时间
         /// </summary>
         
-        public DateTime StartTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime StartTime { get; set; }
         /// <summary>
         /// 运营结束时间
         /// </summary>
         
-        public DateTime EndTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime EndTime { get; set; }
         /// <summary>
         /// 合同号
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string CompactNumber { get; set; }
         
         /// <summary>
         /// 备注说明
         /// </summary>
-        [Column(TypeName = "varchar(300)")]
+        [Column(TypeName = "nvarchar(300)")]
         public string Remark { get; set; }
         /// <summary>
         /// 创建日期
         /// </summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

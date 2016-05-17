@@ -34,7 +34,7 @@ namespace Td.Kylin.Entity
         ///建立时间
         ///</summary>
         
-        public DateTime CreateTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime CreateTime{get;set;}
 				
 	}
 }

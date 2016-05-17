@@ -28,19 +28,19 @@ namespace Td.Kylin.Entity
         /// 数据创建时间
         /// </summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 审核时间
         /// </summary>
         
-        public DateTime? AuditTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? AuditTime { get; set; }
 
         /// <summary>
         /// 最后更新时间
         /// </summary>
         
-        public DateTime UpdateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime UpdateTime { get; set; }
 
     }
 }

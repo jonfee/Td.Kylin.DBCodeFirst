@@ -24,7 +24,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///设备类型(如：iphone 6s,小米 5S)
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string DeviceName{get;set;}
 				
 		///<summary>
@@ -35,7 +35,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///系统版本
         ///</summary>
-        [Column(TypeName = "varchar(15)")]
+        [Column(TypeName = "nvarchar(15)")]
         public string Version{get;set;}
 				
 		///<summary>
@@ -47,7 +47,7 @@ namespace Td.Kylin.Entity
         ///最后活动时间
         ///</summary>
         
-        public DateTime LastTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime LastTime{get;set;}
 				
 	}
 }

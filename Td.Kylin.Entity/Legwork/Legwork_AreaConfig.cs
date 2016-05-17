@@ -31,7 +31,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 开通跑腿业务的行政区域。
 		/// </summary>
-		[Column(TypeName = "varchar(100)")]
+		[Column(TypeName = "nvarchar(100)")]
 		public string OpenAreas
 		{
 			get;

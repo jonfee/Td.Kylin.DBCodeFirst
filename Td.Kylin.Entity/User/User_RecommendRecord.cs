@@ -26,7 +26,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 推荐码
         /// </summary>
-        [Column(TypeName = "varchar(6)")]
+        [Column(TypeName = "nvarchar(6)")]
         public string RecommendCode { get; set; }
         /// <summary>
         /// 推荐人类型 （枚举：“商家或者用户”）
@@ -39,7 +39,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
-        public DateTime CreatedTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreatedTime { get; set; }
 
     }
 }

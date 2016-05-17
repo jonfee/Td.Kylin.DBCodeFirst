@@ -37,19 +37,19 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 参与抽奖时的编号
         /// </summary>
-        [Column(TypeName = "varchar(12)")]
+        [Column(TypeName = "nvarchar(12)")]
         public string PartCode { get; set; }
 
         ///<summary>
         /// 福利提供商户名称
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string MerchantName { get; set; }
 
         /// <summary>
         /// 福利名称
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Name { get; set; }
 
         /// <summary>
@@ -60,26 +60,26 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 标签
         /// </summary>
-        [Column(TypeName = "varchar(10)")]
+        [Column(TypeName = "nvarchar(10)")]
         public string Tag { get; set; }
 
         /// <summary>
         /// 图片
         /// </summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Picture { get; set; }
 
         /// <summary>
         /// 有效期（起）
         /// </summary>
         
-        public DateTime ExpiryStartTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime ExpiryStartTime { get; set; }
 
         /// <summary>
         /// 有效期（止）
         /// </summary>
         
-        public DateTime ExpiryEndTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime ExpiryEndTime { get; set; }
 
         /// <summary>
         /// 是否已领取
@@ -90,7 +90,7 @@ namespace Td.Kylin.Entity
         /// 领取时间
         /// </summary>
         
-        public DateTime? AwardTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? AwardTime { get; set; }
 
         /// <summary>
         /// 是否已使用
@@ -106,12 +106,12 @@ namespace Td.Kylin.Entity
         /// 使用的时间
         /// </summary>
         
-        public DateTime? UseTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? UseTime { get; set; }
 
         /// <summary>
         /// 创建时间（获得时间）
         /// </summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

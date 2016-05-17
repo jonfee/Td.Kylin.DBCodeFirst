@@ -24,7 +24,7 @@ namespace Td.Kylin.Entity
         ///签到时间
         ///</summary>
         
-        public DateTime CheckTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime CheckTime{get;set;}
 
         /// <summary>
         /// 签到时所在的区域ID

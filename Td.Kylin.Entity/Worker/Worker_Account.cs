@@ -49,7 +49,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 激活时间。
 		/// </summary>
-		public DateTime? ActiveTime
+		[Column(TypeName = "datetime")]public DateTime? ActiveTime
 		{
 			get;
 			set;
@@ -58,7 +58,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 激活时间。
 		/// </summary>
-		public DateTime? AuditTime
+		[Column(TypeName = "datetime")]public DateTime? AuditTime
 		{
 			get;
 			set;

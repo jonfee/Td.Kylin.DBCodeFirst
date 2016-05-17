@@ -17,7 +17,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 头像
         /// </summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Photo { get; set; }
         
         /// <summary>
@@ -40,12 +40,12 @@ namespace Td.Kylin.Entity
         /// 创建时间
         /// </summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 最后修改时间
         /// </summary>
         
-        public DateTime UpdateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime UpdateTime { get; set; }
     }
 }

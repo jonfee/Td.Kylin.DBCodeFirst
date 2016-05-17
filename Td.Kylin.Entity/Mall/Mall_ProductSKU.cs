@@ -21,19 +21,19 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///规格名称
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Specs{get;set;}
 
         ///<summary>
         ///SKU码
         ///</summary>
-        [Column(TypeName = "varchar(18)")]
+        [Column(TypeName = "nvarchar(18)")]
         public string SKU{get;set;}
 
         ///<summary>
         ///规格展示图
         ///</summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Img{get;set;}
 				
 		///<summary>

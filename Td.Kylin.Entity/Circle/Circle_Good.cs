@@ -44,19 +44,19 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///联系人
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string LinkMan{get;set;}
 
         ///<summary>
         ///电话
         ///</summary>
-        [Column(TypeName = "varchar(13)")]
+        [Column(TypeName = "nvarchar(13)")]
         public string Phone{get;set;}
 
         ///<summary>
         ///交易地点
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string Address{get;set;}
 				
 		///<summary>
@@ -68,7 +68,7 @@ namespace Td.Kylin.Entity
         ///帖子发布时间
         ///</summary>
         
-        public DateTime CreateTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime CreateTime{get;set;}
 				
 	}
 }

@@ -39,13 +39,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///用户名
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Username{get;set;}
 
         ///<summary>
         ///内容
         ///</summary>
-        [Column(TypeName = "varchar(255)")]
+        [Column(TypeName = "nvarchar(255)")]
         public string Content{get;set;}
 				
 		///<summary>
@@ -56,14 +56,14 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///回应的用户名
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string ReplyUsername{get;set;}
 
         ///<summary>
         ///数据建立时间
         ///</summary>
         
-        public DateTime CreateTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime CreateTime{get;set;}
 				
 	}
 }

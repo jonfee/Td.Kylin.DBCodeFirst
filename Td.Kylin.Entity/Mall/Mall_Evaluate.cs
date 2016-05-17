@@ -42,14 +42,14 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///评价内容
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string Contents { get; set; }
 
         ///<summary>
         ///评价时间
         ///</summary>
 
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///回复内容
@@ -60,7 +60,7 @@ namespace Td.Kylin.Entity
         ///回复时间
         ///</summary>
 
-        public DateTime? ReplyTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? ReplyTime { get; set; }
 
         ///<summary>
         ///是否已删除

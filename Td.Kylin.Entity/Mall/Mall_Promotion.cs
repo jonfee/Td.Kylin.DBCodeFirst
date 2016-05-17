@@ -22,13 +22,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///促销名称
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string Name{get;set;}
 
         ///<summary>
         ///宣传海报
         ///</summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Pic{get;set;}
 
         ///<summary>
@@ -41,13 +41,13 @@ namespace Td.Kylin.Entity
         ///开始时间
         ///</summary>
         
-        public DateTime BeginTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime BeginTime{get;set;}
 
         ///<summary>
         ///结束时间
         ///</summary>
         
-        public DateTime EndTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime EndTime{get;set;}
 				
 		///<summary>
 		///促销类型(1：直减；2：满减)
@@ -68,7 +68,7 @@ namespace Td.Kylin.Entity
         ///创建时间
         ///</summary>
         
-        public DateTime CreateTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime CreateTime{get;set;}
 				
 	}
 }

@@ -28,25 +28,25 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 区域路径（如：110000|110100|110101）
         /// </summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string AreaLayer { get; set; }
 
         ///<summary>
         ///手机号码（唯一）
         ///</summary>
-        [Column(TypeName = "varchar(11)")]
+        [Column(TypeName = "nvarchar(11)")]
         public string Mobile { get; set; }
 
         ///<summary>
         ///登陆密码
         ///</summary>
-        [Column(TypeName = "varchar(32)")]
+        [Column(TypeName = "nvarchar(32)")]
         public string Password { get; set; }
 
         ///<summary>
         ///商户名称
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Name { get; set; }
 
         ///<summary>
@@ -57,13 +57,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商户位置
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string LocationPlace { get; set; }
 
         ///<summary>
         ///街道详细地址
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Street { get; set; }
 
         ///<summary>
@@ -79,25 +79,25 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///联系人
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string LinkMan { get; set; }
 
         ///<summary>
         ///商户电话
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Phone { get; set; }
 
         ///<summary>
         ///商户介绍
         ///</summary>
-        [Column(TypeName = "varchar(500)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string Description { get; set; }
 
         ///<summary>
         ///商户图片
         ///</summary>
-        [Column(TypeName = "varchar(500)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string Pics { get; set; }
 
         /// <summary>
@@ -142,11 +142,11 @@ namespace Td.Kylin.Entity
         ///创建时间
         ///</summary>
 
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
         /// <summary>
         /// 推荐码
         /// </summary>
-        [Column(TypeName = "varchar(6)")]
+        [Column(TypeName = "nvarchar(6)")]
         public string RecommendCode { get; set; }
 
     }

@@ -17,7 +17,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 订单编号
         /// </summary>
-        [Column(TypeName = "varchar(18)")]
+        [Column(TypeName = "nvarchar(18)")]
         public string OrderCode { get; set; }
 
         /// <summary>
@@ -79,12 +79,12 @@ namespace Td.Kylin.Entity
         /// 服务开始时间
         /// </summary>
         
-        public DateTime ServiceStartTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime ServiceStartTime { get; set; }
 
         /// <summary>
         /// 服务地点
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string ServiceAddress { get; set; }
 
         ///<summary>
@@ -100,31 +100,31 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 用户姓名
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string UserName { get; set; }
 
         /// <summary>
         /// 用户联系电话
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Mobile { get; set; }
 
         /// <summary>
         /// 用户备注/说明
         /// </summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string UserRemark { get; set; }
 
         /// <summary>
         /// 服务项目内容描述
         /// </summary>
-        [Column(TypeName = "varchar(500)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string ServiceContent { get; set; }
 
         /// <summary>
         /// 服务人员备注/说明
         /// </summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string WorkerRemark { get; set; }
 
         /// <summary>
@@ -156,55 +156,55 @@ namespace Td.Kylin.Entity
         /// 下单时间
         /// </summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 订单取消时间
         /// </summary>
         
-        public DateTime? CancelTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? CancelTime { get; set; }
 
         /// <summary>
         /// 商家接单时间
         /// </summary>
         
-        public DateTime? ReceivedTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? ReceivedTime { get; set; }
 
         /// <summary>
         /// 派单时间
         /// </summary>
         
-        public DateTime? AllotTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? AllotTime { get; set; }
 
         /// <summary>
         /// 订单确定时间（即双方达成一致，默认为商家接单时间）
         /// </summary>
         
-        public DateTime? ConfirmTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? ConfirmTime { get; set; }
 
         /// <summary>
         /// 支付时间
         /// </summary>
         
-        public DateTime? PaiedTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? PaiedTime { get; set; }
 
         /// <summary>
         /// 服务职员结束服务时间
         /// </summary>
         
-        public DateTime? WorkerFinishTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? WorkerFinishTime { get; set; }
 
         /// <summary>
         /// 用户确定服务结束时间
         /// </summary>
         
-        public DateTime? UserFinishTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? UserFinishTime { get; set; }
 
         /// <summary>
         /// 用户评论时间
         /// </summary>
         
-        public DateTime? EvaluateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? EvaluateTime { get; set; }
 
         /// <summary>
         /// 用户评价等级

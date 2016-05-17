@@ -32,13 +32,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///订单编号
         ///</summary>
-        [Column(TypeName = "varchar(18)")]
+        [Column(TypeName = "nvarchar(18)")]
         public string OrderCode { get; set; }
 
         ///<summary>
         ///商品简要信息
         ///</summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string ProductInfo { get; set; }
 
         ///<summary>
@@ -69,7 +69,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///收货信息（包括收货地址联系人电话等）
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string DeliveryInfo { get; set; }
 
         ///<summary>
@@ -86,37 +86,37 @@ namespace Td.Kylin.Entity
         ///下单时间
         ///</summary>
 
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///支付时间
         ///</summary>
 
-        public DateTime? PayTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? PayTime { get; set; }
 
         ///<summary>
         ///取消时间
         ///</summary>
 
-        public DateTime? CancelTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? CancelTime { get; set; }
 
         ///<summary>
         ///发货时间
         ///</summary>
 
-        public DateTime? ShipTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? ShipTime { get; set; }
 
         ///<summary>
         ///收货时间
         ///</summary>
 
-        public DateTime? ReceivedTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? ReceivedTime { get; set; }
 
         ///<summary>
         ///评价时间
         ///</summary>
 
-        public DateTime? EvaluateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? EvaluateTime { get; set; }
 
         ///<summary>
         ///买家已删除
@@ -132,24 +132,24 @@ namespace Td.Kylin.Entity
         ///必须支付的时间
         ///</summary>
 
-        public DateTime? NeedPayTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? NeedPayTime { get; set; }
 
         ///<summary>
         ///物流承运公司
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string ExpressCompany { get; set; }
 
         ///<summary>
         ///物流单号
         ///</summary>
-        [Column(TypeName = "varchar(30)")]
+        [Column(TypeName = "nvarchar(30)")]
         public string ExpressNumber { get; set; }
 
         ///<summary>
         ///买家备注
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string Remark { get; set; }
 
     }

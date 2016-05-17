@@ -38,12 +38,14 @@ namespace Td.Kylin.Entity
         ///加入购物车时间
         ///</summary>
 
+        [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///最后更新时间
         ///</summary>
 
+        [Column(TypeName = "datetime")]
         public DateTime UpdateTime { get; set; }
 
         /// <summary>

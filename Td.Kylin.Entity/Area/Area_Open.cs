@@ -19,7 +19,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 地区名称
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string AreaName { get; set; }
         /// <summary>
         /// 状态
@@ -29,6 +29,6 @@ namespace Td.Kylin.Entity
         /// 创建时间
         /// </summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

@@ -20,32 +20,32 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 代理商名称
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Name { get; set; }
         
 
         /// <summary>
         /// 绑定手机号码
         /// </summary>
-        [Column(TypeName = "varchar(11)")]
+        [Column(TypeName = "nvarchar(11)")]
         public string Mobile { get; set; }
 
         /// <summary>
         /// 登录账号
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string LoginAccount { get; set; }
 
         /// <summary>
         /// 登录密码
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string LoginPassword { get; set; }
 
         /// <summary>
         /// 支付密码
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string PaymentPassword { get; set; }
 
         /// <summary>
@@ -71,6 +71,6 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

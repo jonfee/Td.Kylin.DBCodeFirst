@@ -24,19 +24,19 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///论坛名称
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string ForumName { get; set; }
 
         ///<summary>
         ///论坛图标
         ///</summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Logo { get; set; }
 
         ///<summary>
         ///论坛介绍
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string Description { get; set; }
         
         ///<summary>
@@ -58,7 +58,7 @@ namespace Td.Kylin.Entity
         ///逻辑删除时间
         ///</summary>
 
-        public DateTime? DeleteTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? DeleteTime { get; set; }
 
         ///<summary>
         ///是否禁用
@@ -73,7 +73,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///数据建立时间
         ///</summary>
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 区域运营数（即有多少区域在使用及运营）

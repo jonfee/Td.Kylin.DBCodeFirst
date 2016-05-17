@@ -36,13 +36,14 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///建立时间
         ///</summary>
-        
+        [Column(TypeName ="datetime")]
         public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///更新时间
         ///</summary>
-        
+        [Column(TypeName ="datetime")]
+
         public DateTime UpdateTime { get; set; }
 
     }

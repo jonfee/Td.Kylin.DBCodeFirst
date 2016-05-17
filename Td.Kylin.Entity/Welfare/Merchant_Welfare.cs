@@ -27,7 +27,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商户名称
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string MerchantName { get; set; }
 
         /// <summary>
@@ -38,19 +38,19 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 福利名称
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Name { get; set; }
 
         /// <summary>
         /// 图片
         /// </summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Picture { get; set; }
 
         /// <summary>
         /// 标签
         /// </summary>
-        [Column(TypeName = "varchar(10)")]
+        [Column(TypeName = "nvarchar(10)")]
         public string Tag { get; set; }
 
         /// <summary>
@@ -76,39 +76,39 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 福利介绍
         /// </summary>
-        [Column(TypeName = "varchar(500)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string Intro { get; set; }
 
         /// <summary>
         /// 使用/规则说明
         /// </summary>
-        [Column(TypeName = "varchar(500)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string Regular { get; set; }
 
         /// <summary>
         /// 有效期（起）
         /// </summary>        
-        public DateTime ExpiryStartTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime ExpiryStartTime { get; set; }
 
         /// <summary>
         /// 有效期（止）
         /// </summary>        
-        public DateTime ExpiryEndTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime ExpiryEndTime { get; set; }
 
         /// <summary>
         /// 接受报名的开始时间
         /// </summary>
-        public DateTime? ApplyStartTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? ApplyStartTime { get; set; }
 
         /// <summary>
         /// 接受报名的结束时间
         /// </summary>
-        public DateTime? ApplyEndTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? ApplyEndTime { get; set; }
 
         /// <summary>
         /// 开奖时间
         /// </summary>
-        public DateTime? LotteryTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? LotteryTime { get; set; }
 
         /// <summary>
         /// 福利状态（枚举：WelfareStatus）
@@ -123,19 +123,19 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 审核的管理员名称
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string AuditAdminName { get; set; }
 
         /// <summary>
         /// 审核说明
         /// </summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string AuditRemark { get; set; }
 
         /// <summary>
         /// 审核时间
         /// </summary>
-        public DateTime? AuditTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? AuditTime { get; set; }
 
         /// <summary>
         /// 是否已禁用
@@ -151,6 +151,6 @@ namespace Td.Kylin.Entity
         /// 创建时间
         /// </summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     } 
 }

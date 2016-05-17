@@ -19,7 +19,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///论坛分类名称
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Name{get;set;}
 				
 		///<summary>
@@ -41,13 +41,13 @@ namespace Td.Kylin.Entity
         ///数据建立时间
         ///</summary>
         
-        public DateTime CreateTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime CreateTime{get;set;}
 
         ///<summary>
         ///逻辑删除时间
         ///</summary>
         
-        public DateTime? DeleteTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime? DeleteTime{get;set;}
 				
 	}
 }

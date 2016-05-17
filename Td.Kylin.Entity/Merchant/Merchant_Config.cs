@@ -43,16 +43,16 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 更新日期
         /// </summary>
-        public DateTime UpdateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime UpdateTime { get; set; }
         ///<summary>
         ///营业开始时间（格式：07:30）
         ///</summary>
-        [Column(TypeName = "varchar(10)")]
+        [Column(TypeName = "nvarchar(10)")]
         public string BusinessBeginTime { get; set; }
         ///<summary>
         ///营业结束时间（格式：23:00）
         ///</summary>
-        [Column(TypeName = "varchar(10)")]
+        [Column(TypeName = "nvarchar(10)")]
         public string BusinessEndTime { get; set; }
         /// <summary>
         /// 是否在线交易

@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160516102751_UpdateDateTime1")]
+    partial class UpdateDateTime1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -22,7 +23,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<string>("ADFile")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<int>("ADType")
                         .HasAnnotation("Relational:ColumnType", "int");
@@ -50,7 +51,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.HasKey("ContentID");
 
@@ -62,7 +63,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("PageID");
 
                     b.Property<string>("PageName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("PlatformType")
                         .HasAnnotation("Relational:ColumnType", "int");
@@ -78,7 +79,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<string>("ADFile")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<int>("ADType")
                         .HasAnnotation("Relational:ColumnType", "int");
@@ -106,7 +107,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.HasKey("ContentID");
 
@@ -147,7 +148,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "int");
 
                     b.Property<string>("Code")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -155,18 +156,18 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("Enable");
 
                     b.Property<string>("Intro")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
 
                     b.Property<int>("MaxCount")
                         .HasAnnotation("Relational:ColumnType", "int");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<long>("PageID");
 
                     b.Property<string>("PreviewPicture")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.HasKey("PositionID");
 
@@ -183,7 +184,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("DataStatus");
 
                     b.Property<string>("LastIp")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<DateTime>("LastTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -191,22 +192,22 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Logins");
 
                     b.Property<string>("Password")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(32)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(32)");
 
                     b.Property<int>("PowerLevel");
 
                     b.Property<string>("Realname")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("UserPic")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("Username")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.HasKey("AdminID");
 
@@ -249,21 +250,21 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("FreezeMoney");
 
                     b.Property<string>("LoginAccount")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("LoginPassword")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("Mobile")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(11)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<int>("OperatorAreaID");
 
                     b.Property<string>("PaymentPassword")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -287,7 +288,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(300)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -306,25 +307,25 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AgentID");
 
                     b.Property<string>("BusinessLicensePhoto")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("IDCardNo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
                     b.Property<string>("IDCardPhotoBack")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("IDCardPhotoFront")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("LinkMan")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("LinkPhone")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(11)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
 
                     b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.HasKey("AgentID");
 
@@ -336,7 +337,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("AreaName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -362,10 +363,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("FreezeMoney");
 
                     b.Property<string>("LoginAccount")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("LoginPassword")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -381,37 +382,37 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("OperatorID");
 
                     b.Property<string>("Code")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(16)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(16)");
 
                     b.Property<string>("CompanyName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("Email")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("LegalIDCard")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
                     b.Property<string>("LegalName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("LinkMan")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("LocationPlace")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("Mobile")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(11)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
 
                     b.Property<string>("PhoneNo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("Photo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -429,7 +430,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("CompactNumber")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -438,7 +439,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(300)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -493,10 +494,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<string>("PlatformTransactionCode");
 
                     b.Property<string>("TradeInfo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("TradeNo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<int>("TradeType");
 
@@ -510,7 +511,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AreaForumID");
 
                     b.Property<string>("AliasName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("AreaID");
 
@@ -518,14 +519,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<long>("CategoryID");
 
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
+                    b.Property<DateTime>("CreateTime");
 
                     b.Property<DateTime?>("DeleteTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<bool>("Disabled");
 
@@ -536,10 +536,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Logo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("Moderators")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<int>("OrderNo");
 
@@ -570,15 +570,15 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("FilePath")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<long>("FileSize");
 
                     b.Property<string>("FileType")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("Filename")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<bool>("IsDelete");
 
@@ -628,7 +628,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<int>("OrderNo");
 
@@ -670,7 +670,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("EventID");
 
                     b.Property<string>("Address")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -718,7 +718,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<string>("Username")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.HasKey("EventUserId");
 
@@ -759,17 +759,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<bool>("Disabled");
 
                     b.Property<string>("ForumName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Logo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<int>("OperatorNumber");
 
@@ -793,20 +793,20 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("GoodID");
 
                     b.Property<string>("Address")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("LinkMan")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("Loss");
 
                     b.Property<decimal>("Original");
 
                     b.Property<string>("Phone")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(13)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(13)");
 
                     b.Property<decimal>("Price");
 
@@ -859,7 +859,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Dislike");
 
                     b.Property<string>("Pics")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<int>("Reviews");
 
@@ -870,14 +870,14 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Support");
 
                     b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<long>("TopicID");
 
                     b.Property<long>("UserID");
 
                     b.Property<string>("Username")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.HasKey("PostID");
 
@@ -893,7 +893,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AtUserID");
 
                     b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -928,7 +928,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("RespondID");
 
                     b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -938,7 +938,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("ReplyUserID");
 
                     b.Property<string>("ReplyUsername")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -951,7 +951,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<string>("Username")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.HasKey("RespondID");
 
@@ -994,7 +994,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Loss");
 
                     b.Property<string>("Pics")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<int>("PostCount");
 
@@ -1007,14 +1007,14 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("TagStatus");
 
                     b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<int>("TopicType");
 
                     b.Property<long>("UserID");
 
                     b.Property<string>("Username")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.HasKey("TopicID");
 
@@ -1104,28 +1104,28 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("ComplainantID");
 
                     b.Property<string>("ComplainantName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("ComplainantPhone")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("ComplaintsStatus");
 
                     b.Property<int>("ComplaintsType");
 
                     b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("DataID")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<int>("IdentityType");
 
                     b.Property<string>("Reason")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1173,7 +1173,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<long>("OrderNo");
 
@@ -1203,13 +1203,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<string>("ContactEmail")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("ContactMan")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("ContactPhoto")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("Count");
 
@@ -1224,7 +1224,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsUnShelve");
 
                     b.Property<string>("JobName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("JobType");
 
@@ -1260,7 +1260,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Welfares");
 
                     b.Property<string>("WordAddress")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.HasKey("RecruitmentID");
 
@@ -1277,7 +1277,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("JobName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("JobType");
 
@@ -1296,14 +1296,14 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("SearcherName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<long>("UserID");
 
                     b.Property<int>("Welfares");
 
                     b.Property<string>("WordAddress")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.HasKey("SearcherID");
 
@@ -1324,7 +1324,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("Disabled");
 
                     b.Property<string>("Icon")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<long>("IndustryID");
 
@@ -1333,7 +1333,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsOpenService");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("OrderNo");
 
@@ -1359,7 +1359,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("OptionID");
 
                     b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(300)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1389,10 +1389,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(300)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1445,14 +1445,14 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("Mobile")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("Number");
 
                     b.Property<long>("OptionID");
 
                     b.Property<string>("OrderCode")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
                     b.Property<DateTime?>("PaiedTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1471,10 +1471,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("ServerType");
 
                     b.Property<string>("ServiceAddress")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("ServiceContent")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<DateTime>("ServiceStartTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1493,10 +1493,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<string>("UserName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("UserRemark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<bool>("WorkerDelete");
 
@@ -1506,7 +1506,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("WorkerID");
 
                     b.Property<string>("WorkerRemark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.HasKey("OrderID");
 
@@ -1522,7 +1522,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "nvarchar(MAX)");
 
                     b.Property<string>("OpenAreas")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1661,7 +1661,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Categories")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<DateTime?>("CompleteTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1682,7 +1682,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long?>("OfferID");
 
                     b.Property<string>("OrderCode")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
                     b.Property<short>("OrderType");
 
@@ -1694,7 +1694,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<short?>("PaymentType");
 
                     b.Property<string>("Pictures")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(400)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(400)");
 
                     b.Property<long>("RequiredDeliveryAddressID");
 
@@ -1740,17 +1740,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<bool>("Disabled");
 
                     b.Property<string>("Ico")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("OrderNo");
 
@@ -1785,7 +1785,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("SearchTimes");
 
                     b.Property<string>("TagName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(8)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(8)");
 
                     b.HasKey("TagID");
 
@@ -1797,7 +1797,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("EvaluateID");
 
                     b.Property<string>("Contents")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -1860,16 +1860,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("DeliveryInfo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<DateTime?>("EvaluateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("ExpressCompany")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("ExpressNumber")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<bool>("IsBuyerDelete");
 
@@ -1879,7 +1879,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("OrderCode")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
                     b.Property<int>("OrderStatus");
 
@@ -1891,13 +1891,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("PaymentType");
 
                     b.Property<string>("ProductInfo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<DateTime?>("ReceivedTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1930,7 +1930,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<string>("Code")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
                     b.Property<string>("Description")
                         .HasAnnotation("Relational:ColumnType", "text");
@@ -1938,27 +1938,27 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("HasEvaluate");
 
                     b.Property<string>("MainPic")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<decimal>("MarketPrice");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<long>("OrderID");
 
                     b.Property<string>("Pics")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<long>("ProductID");
 
                     b.Property<long?>("PromotionID");
 
                     b.Property<string>("PromotionTags")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<string>("Publisher")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1969,17 +1969,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("SkuID");
 
                     b.Property<string>("Specs")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("TagIDs")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<decimal>("TotalDeliveryFee");
 
                     b.Property<decimal>("TradPrice");
 
                     b.Property<string>("VenderName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.HasKey("SnapshotID");
 
@@ -1997,7 +1997,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Click");
 
                     b.Property<string>("Code")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -2014,20 +2014,20 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("MainPic")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<int>("OrderNo");
 
                     b.Property<string>("Pics")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<long?>("PromotionID");
 
                     b.Property<string>("Publisher")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2038,7 +2038,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("SoldNumber");
 
                     b.Property<string>("TagIDs")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<int>("TagStatus");
 
@@ -2046,7 +2046,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("VenderName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.HasKey("ProductID");
 
@@ -2058,7 +2058,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("SkuID");
 
                     b.Property<string>("Img")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<int>("Inventory");
 
@@ -2073,7 +2073,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("SKU")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
                     b.Property<decimal>("SalePrice");
 
@@ -2082,7 +2082,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("SoldNumber");
 
                     b.Property<string>("Specs")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("TagStatus");
 
@@ -2114,10 +2114,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<string>("Pic")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<int>("PromotionType");
 
@@ -2145,7 +2145,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Unit");
 
                     b.Property<string>("Value")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.HasKey("ConfigID");
 
@@ -2216,7 +2216,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("AreaLayer")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<decimal>("Balance");
 
@@ -2228,7 +2228,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("DataStatus");
 
                     b.Property<string>("Description")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<string>("EncashmentPassword");
 
@@ -2239,34 +2239,34 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<float>("Latitude");
 
                     b.Property<string>("LinkMan")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("LocationPlace")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<float>("Longitude");
 
                     b.Property<string>("Mobile")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(11)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<int>("OrderMode");
 
                     b.Property<string>("Password")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(32)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(32)");
 
                     b.Property<string>("PayPassword");
 
                     b.Property<string>("Phone")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("Pics")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<string>("RecommendCode")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(6)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(6)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2275,7 +2275,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("SourceType");
 
                     b.Property<string>("Street")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.HasKey("MerchantID");
 
@@ -2291,10 +2291,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AuditAdminID");
 
                     b.Property<string>("AuditRemark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(300)");
 
                     b.Property<string>("AudtiAdminName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -2320,10 +2320,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long?>("AuditAdminID");
 
                     b.Property<string>("AuditAdminName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("AuditRemark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<int>("AuditStatus");
 
@@ -2331,7 +2331,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("CertNo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("CertificateType");
 
@@ -2343,10 +2343,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("Pics")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(300)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2362,10 +2362,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("BusinessBeginTime")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
 
                     b.Property<string>("BusinessEndTime")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
 
                     b.Property<decimal>("DeliveryMoney");
 
@@ -2398,7 +2398,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("EvaluateID");
 
                     b.Property<string>("Contents")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -2456,13 +2456,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("Disabled");
 
                     b.Property<string>("Icon")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("Layer")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("OrderNo");
 
@@ -2484,7 +2484,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MessageID");
 
                     b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -2498,17 +2498,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("MessageType");
 
                     b.Property<string>("RefDataID")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(36)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(36)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Sign")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.HasKey("MessageID");
 
@@ -2522,7 +2522,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("ActualOrderAmount");
 
                     b.Property<string>("CancelRemark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<DateTime?>("CancelTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -2531,7 +2531,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("DeliveryInfo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<int>("DeliveryMode");
 
@@ -2539,10 +2539,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("ExpressCompany")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("ExpressNumber")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<bool>("IsBuyerDelete");
 
@@ -2555,7 +2555,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("OrderCode")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
                     b.Property<int>("OrderStatus");
 
@@ -2568,7 +2568,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2607,12 +2607,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("MarketPrice");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<long>("OrderID");
 
                     b.Property<string>("Pic")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2621,7 +2621,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("SalePrice");
 
                     b.Property<string>("Specification")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<long>("SystemCategoryID");
 
@@ -2642,7 +2642,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("RecommendCode")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(6)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(6)");
 
                     b.Property<int>("ReferrerBusinessType");
 
@@ -2679,10 +2679,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("TradeInfo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("TradeNo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<int>("TradeType");
 
@@ -2706,10 +2706,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AuditAdminID");
 
                     b.Property<string>("AuditAdminName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("AuditRemark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<DateTime?>("AuditTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -2728,7 +2728,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Intro")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<bool>("IsDelete");
 
@@ -2738,20 +2738,20 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("MerchantName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<int>("Number");
 
                     b.Property<int>("PartNumber");
 
                     b.Property<string>("Picture")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("Regular")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2760,7 +2760,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Status");
 
                     b.Property<string>("Tag")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
 
                     b.Property<int>("WelfareType");
 
@@ -2776,20 +2776,20 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<string>("CategoryPath")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Icon")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<bool>("IsDisabled");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("OrderNo");
 
@@ -2812,7 +2812,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("OrderNo");
 
@@ -2832,7 +2832,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("AreaLayer")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<long>("CategoryID");
 
@@ -2842,7 +2842,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(140)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(140)");
 
                     b.Property<int>("EvaluateCount");
 
@@ -2857,12 +2857,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<decimal>("OriginalPrice");
 
                     b.Property<string>("Pic")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2873,7 +2873,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("SalePrice");
 
                     b.Property<string>("Specification")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<int>("Status");
 
@@ -2893,7 +2893,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("AreaLayer")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<long>("BusinessID");
 
@@ -2903,7 +2903,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<int>("EvaluateCount");
 
@@ -2926,7 +2926,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("SubscriptionPrice");
 
                     b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.HasKey("ServiceGoodsID");
 
@@ -2947,17 +2947,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("CustomIdentity");
 
                     b.Property<string>("CustomName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<bool>("IsMainTransaction");
 
                     b.Property<decimal>("LastBalance");
 
                     b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(150)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(150)");
 
                     b.Property<string>("ThirdTransactionCode")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<DateTime>("TransactionTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -2976,7 +2976,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("AuditRemark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
 
                     b.Property<int>("AuditStatus");
 
@@ -2988,7 +2988,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("ConfirmCount");
 
                     b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
 
                     b.Property<decimal>("CostPrice");
 
@@ -3016,7 +3016,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<double>("Odds");
 
                     b.Property<string>("Pic")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
 
                     b.Property<decimal>("Price");
 
@@ -3032,10 +3032,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Subject");
 
                     b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("Url")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(255)");
 
                     b.HasKey("ContentID");
 
@@ -3063,7 +3063,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<long>("UserID");
 
@@ -3077,22 +3077,22 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("AreaName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<int>("Depth");
 
                     b.Property<bool>("HasChild");
 
                     b.Property<string>("Layer")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("NameSpell")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("ParentID");
 
                     b.Property<string>("Points")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(MAX)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(MAX)");
 
                     b.Property<DateTime>("UpdateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -3129,16 +3129,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("ResourceKey");
 
                     b.Property<string>("Group")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<DateTime>("UpdateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Value")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<int>("ValueUnit");
 
@@ -3157,12 +3157,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("Enable");
 
                     b.Property<string>("Icon")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<int>("Min");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -3226,10 +3226,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<Guid>("Id");
 
                     b.Property<string>("Code")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(6)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(6)");
 
                     b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -3238,7 +3238,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Phone")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(11)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -3306,27 +3306,27 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Logins");
 
                     b.Property<string>("Mobile")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(11)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(11)");
 
                     b.Property<string>("Password")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(32)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(32)");
 
                     b.Property<string>("PaymentPassword");
 
                     b.Property<int>("Points");
 
                     b.Property<string>("RecommendCode")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(6)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(6)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("UserPic")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("Username")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.HasKey("UserID");
 
@@ -3338,14 +3338,14 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AddressID");
 
                     b.Property<string>("Address")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<int>("AddressType");
 
                     b.Property<int>("AddressUseType");
 
                     b.Property<string>("Community")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -3355,12 +3355,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<float>("Latitude");
 
                     b.Property<string>("Linkman")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<float>("Longitude");
 
                     b.Property<string>("Phone")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("PostCode")
                         .HasAnnotation("Relational:ColumnType", "char(6)");
@@ -3383,10 +3383,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long?>("AuditAdminID");
 
                     b.Property<string>("AuditAdminName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("AuditRemark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<int>("AuditStatus");
 
@@ -3394,7 +3394,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("CertNo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("CertificateType");
 
@@ -3404,10 +3404,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("Pics")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(300)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -3425,7 +3425,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("DeviceID");
 
                     b.Property<string>("DeviceName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<DateTime>("LastTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -3441,7 +3441,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<string>("Version")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(15)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(15)");
 
                     b.HasKey("DeviceID");
 
@@ -3458,7 +3458,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<int>("Score");
 
@@ -3532,7 +3532,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MessageID");
 
                     b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -3544,17 +3544,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("MessageType");
 
                     b.Property<string>("RefDataID")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(36)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(36)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Sign")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<long>("UserID");
 
@@ -3582,7 +3582,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Token")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.HasKey("UserID");
 
@@ -3599,7 +3599,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Remark")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<int>("Score");
 
@@ -3618,10 +3618,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("CardID")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
                     b.Property<string>("JiGuan")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
 
                     b.Property<int>("MandarinLevel");
 
@@ -3630,16 +3630,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("MaxEducation");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("Nation")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
 
                     b.Property<string>("Phone")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("PresentAddress")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -3648,7 +3648,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Sex");
 
                     b.Property<string>("Signature")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.HasKey("UserID");
 
@@ -3663,7 +3663,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("RecommendCode")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(6)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(6)");
 
                     b.Property<int>("ReferrerBusinessType");
 
@@ -3686,7 +3686,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<string>("ContactPhoto")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -3701,7 +3701,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("JobName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("JobYearsType");
 
@@ -3715,10 +3715,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("MaxEducation");
 
                     b.Property<string>("Photo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("RealName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("ResumeStatus");
 
@@ -3734,7 +3734,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<string>("WantWordArea")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.HasKey("ResumeID");
 
@@ -3792,10 +3792,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("TradeInfo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("TradeNo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<int>("TradeType");
 
@@ -3833,23 +3833,23 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("MerchantName")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<string>("PartCode")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(12)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(12)");
 
                     b.Property<string>("Picture")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Tag")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
 
                     b.Property<DateTime?>("UseTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -3943,7 +3943,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsWin");
 
                     b.Property<string>("PartCode")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(12)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(12)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -4090,7 +4090,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MessageID");
 
                     b.Property<string>("Content")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");
@@ -4102,17 +4102,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("MessageType");
 
                     b.Property<string>("RefDataID")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(36)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(36)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Sign")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<string>("Title")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(30)");
 
                     b.Property<long>("WorkerID");
 
@@ -4134,7 +4134,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "text");
 
                     b.Property<string>("Photo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -4176,10 +4176,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("TradeInfo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("TradeNo")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<int>("TradeType");
 

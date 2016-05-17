@@ -30,13 +30,13 @@ namespace Td.Kylin.Entity
         ///开始时间
         ///</summary>
         
-        public DateTime StartTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime StartTime{get;set;}
 
         ///<summary>
         ///结束时间
         ///</summary>
         
-        public DateTime EndTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime EndTime{get;set;}
 				
 		///<summary>
 		///提醒时间（单位分钟）
@@ -46,7 +46,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///活动地点
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string Address{get;set;}
 				
 		///<summary>
@@ -63,7 +63,7 @@ namespace Td.Kylin.Entity
         ///帖子发布时间
         ///</summary>
         
-        public DateTime CreateTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime CreateTime{get;set;}
 				
 	}
 }

@@ -18,7 +18,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 姓名
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Name { get; set; }
 
         ///<summary>
@@ -29,13 +29,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 籍贯
         /// </summary>
-        [Column(TypeName = "varchar(10)")]
+        [Column(TypeName = "nvarchar(10)")]
         public string JiGuan { get; set; }
 
         ///<summary>
         ///出生日期
         ///</summary>
-        public DateTime BothBirthday{get;set;}
+        [Column(TypeName = "datetime")]public DateTime BothBirthday{get;set;}
 
         /// <summary>
         /// 婚姻状况（枚举：如：未婚｜已婚｜离异｜丧偶等）
@@ -45,13 +45,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 身份证号
         /// </summary>
-        [Column(TypeName = "varchar(18)")]
+        [Column(TypeName = "nvarchar(18)")]
         public string CardID { get; set; }
 
         /// <summary>
         /// 民族
         /// </summary>
-        [Column(TypeName = "varchar(10)")]
+        [Column(TypeName = "nvarchar(10)")]
         public string Nation { get; set; }
 
         /// <summary>
@@ -62,13 +62,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 电话
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Phone { get; set; }
 
         ///<summary>
         ///现居地
         ///</summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string PresentAddress{get;set;}
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///个性签名
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string Signature{get;set;}
 				
 	}
