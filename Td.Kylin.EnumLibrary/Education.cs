@@ -20,19 +20,24 @@ namespace Td.Kylin.EnumLibrary
         [Description("高中")]
         SeniorHigh = 2,
         /// <summary>
+        /// 中专/技校
+        /// </summary>
+        [Description("中专/技校")]
+        JiXiao =3,
+        /// <summary>
         /// 大专
         /// </summary>
         [Description("大专")]
-        JuniorCollege = 3,
+        JuniorCollege = 4,
         /// <summary>
         /// 本科
         /// </summary>
         [Description("本科")]
-        BachelorDegree = 4,
+        BachelorDegree = 5,
         /// <summary>
         /// 硕士及以上
         /// </summary>
         [Description("硕士及以上")]
-        MasterDegree = 5
+        MasterDegree = 6
     }
 }
