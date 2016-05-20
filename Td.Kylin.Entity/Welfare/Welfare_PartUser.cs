@@ -19,7 +19,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 参与编号
         /// </summary>
-        [Column(TypeName = "varchar(12)")]
+        [Column(TypeName = "nvarchar(12)")]
         public string PartCode { get; set; }
 
         /// <summary>
@@ -35,12 +35,12 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 领奖时间
         /// </summary>        
-        public DateTime? AwardTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? AwardTime { get; set; }
 
         /// <summary>
         /// 数据创建时间（即参与时间）
         /// </summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

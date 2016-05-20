@@ -70,7 +70,7 @@ namespace Td.Kylin.Entity
         ///最后查看数据动态时间
         ///</summary>
         
-        public DateTime LastRead{get;set;}
+        [Column(TypeName = "datetime")]public DateTime LastRead{get;set;}
 				
 	}
 }

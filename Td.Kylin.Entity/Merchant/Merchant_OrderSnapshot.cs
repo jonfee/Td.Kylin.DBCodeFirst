@@ -35,13 +35,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         ///  商品规格
         /// </summary>
-        [Column(TypeName = "varchar(30)")]
+        [Column(TypeName = "nvarchar(30)")]
         public string Specification { get; set; }
 
         ///<summary>
         ///商品名称
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string Name { get; set; }
         ///<summary>
 		///市场价
@@ -55,7 +55,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 图片
         /// </summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Pic { get; set; }
 
         /// <summary>

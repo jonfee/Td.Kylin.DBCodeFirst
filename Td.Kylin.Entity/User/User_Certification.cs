@@ -27,19 +27,19 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///主体名称（如：姓名等）
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Name { get; set; }
 
         ///<summary>
         ///证件编号（如：身份证号码等）
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string CertNo { get; set; }
 
         ///<summary>
         ///证件照片（多个用英文逗号分隔）
         ///</summary>
-        [Column(TypeName = "varchar(300)")]
+        [Column(TypeName = "nvarchar(300)")]
         public string Pics { get; set; }
 
         ///<summary>
@@ -50,14 +50,14 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///审核说明
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string AuditRemark { get; set; }
 
         ///<summary>
         ///审核时间
         ///</summary>
         
-        public DateTime? AuditTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? AuditTime { get; set; }
 
         ///<summary>
         ///审核的管理员ID
@@ -67,7 +67,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///审核的管理员名称
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string AuditAdminName { get; set; }
 
         ///<summary>
@@ -79,6 +79,6 @@ namespace Td.Kylin.Entity
         ///申请时间
         ///</summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

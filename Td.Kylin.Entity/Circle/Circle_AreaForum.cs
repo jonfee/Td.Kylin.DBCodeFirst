@@ -27,24 +27,24 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 圈子别名
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string AliasName { get; set; }
 
         ///<summary>
         ///论坛分类ID
         ///</summary>
         public long CategoryID { get; set; }
-        
+
         ///<summary>
         ///论坛图标
         ///</summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Logo { get; set; }
 
         ///<summary>
         ///论坛介绍
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string Description { get; set; }
 
         ///<summary>
@@ -80,7 +80,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///版主
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string Moderators { get; set; }
 
         ///<summary>
@@ -107,6 +107,7 @@ namespace Td.Kylin.Entity
         ///逻辑删除时间
         ///</summary>
 
+        [Column(TypeName = "datetime")]
         public DateTime? DeleteTime { get; set; }
 
         ///<summary>
@@ -123,6 +124,7 @@ namespace Td.Kylin.Entity
         ///数据建立时间
         ///</summary>
 
+        [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
     }
 }

@@ -54,7 +54,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///内容预览
         ///</summary>
-        [Column(TypeName = "varchar(255)")]
+        [Column(TypeName = "nvarchar(255)")]
         public string Content{get;set;}
 				
 		///<summary>
@@ -76,7 +76,7 @@ namespace Td.Kylin.Entity
         ///创建时间
         ///</summary>
         
-        public DateTime CreateTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime CreateTime{get;set;}
 				
 	}
 }

@@ -20,19 +20,19 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///广告位编码
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Code { get; set; }
 
         ///<summary>
         ///广告位名称
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Name { get; set; }
 
         ///<summary>
         ///广告位说明
         ///</summary>
-        [Column(TypeName = "varchar(255)")]
+        [Column(TypeName = "nvarchar(255)")]
         public string Intro { get; set; }
 
         ///<summary>
@@ -49,7 +49,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///预览效果图
         ///</summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string PreviewPicture { get; set; }
 
         ///<summary>
@@ -61,13 +61,14 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///是否启用
         ///</summary>
-        
+
         public bool Enable { get; set; }
 
         ///<summary>
         ///建立时间
         ///</summary>
-        
+
+        [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
 
     }

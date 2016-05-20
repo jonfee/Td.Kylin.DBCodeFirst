@@ -68,7 +68,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 服务开通时间（为null表示未开通线上业务）。
 		/// </summary>
-		public DateTime? OpenServiceTime
+		[Column(TypeName = "datetime")]public DateTime? OpenServiceTime
 		{
 			get;
 			set;
@@ -77,7 +77,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 数据创建时间。
 		/// </summary>
-		public DateTime CreateTime
+		[Column(TypeName = "datetime")]public DateTime CreateTime
 		{
 			get;
 			set;

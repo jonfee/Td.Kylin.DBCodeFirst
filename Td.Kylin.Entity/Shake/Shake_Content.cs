@@ -48,19 +48,19 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///标题
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Title { get; set; }
 
         ///<summary>
         ///图片
         ///</summary>
-        [Column(TypeName = "varchar(255)")]
+        [Column(TypeName = "nvarchar(255)")]
         public string Pic { get; set; }
 
         ///<summary>
         ///内容
         ///</summary>
-        [Column(TypeName = "varchar(255)")]
+        [Column(TypeName = "nvarchar(255)")]
         public string Content { get; set; }
 
         ///<summary>
@@ -81,7 +81,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///目标URL
         ///</summary>
-        [Column(TypeName = "varchar(255)")]
+        [Column(TypeName = "nvarchar(255)")]
         public string Url { get; set; }
 
         ///<summary>
@@ -107,13 +107,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 审核说明
         /// </summary>
-        [Column(TypeName = "varchar(255)")]
+        [Column(TypeName = "nvarchar(255)")]
         public string AuditRemark { get; set; }
 
         /// <summary>
         /// 审核时间
         /// </summary>
-        public DateTime AuditTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime AuditTime { get; set; }
 
         ///<summary>
         ///禁用数据
@@ -129,25 +129,25 @@ namespace Td.Kylin.Entity
         ///开始时间
         ///</summary>
         
-        public DateTime StartTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime StartTime { get; set; }
 
         ///<summary>
         ///结束时间
         ///</summary>
         
-        public DateTime EndTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime EndTime { get; set; }
 
         ///<summary>
         ///最后使用时间
         ///</summary>
         
-        public DateTime LastTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime LastTime { get; set; }
 
         ///<summary>
         ///建立时间
         ///</summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
 
     }
 }

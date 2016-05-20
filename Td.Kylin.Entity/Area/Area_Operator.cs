@@ -17,13 +17,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 登录账号
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string LoginAccount { get; set; }
 
         /// <summary>
         /// 登录密码
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string LoginPassword { get; set; }
 
         /// <summary>
@@ -45,6 +45,6 @@ namespace Td.Kylin.Entity
         /// 创建时间
         /// </summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

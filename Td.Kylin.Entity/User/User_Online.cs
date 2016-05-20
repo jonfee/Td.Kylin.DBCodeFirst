@@ -18,13 +18,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///登陆令牌
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Token { get; set; }
 
         ///<summary>
         ///登陆时间
         ///</summary>
-        public DateTime LoginTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime LoginTime { get; set; }
 
         ///<summary>
         ///最后活动纬度
@@ -40,7 +40,7 @@ namespace Td.Kylin.Entity
         ///最后活动时间
         ///</summary>
         
-        public DateTime ActiveTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime ActiveTime { get; set; }
 
     }
 }

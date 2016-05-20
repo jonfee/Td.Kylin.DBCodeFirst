@@ -22,7 +22,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 订单编号。
 		/// </summary>
-		[Column(TypeName = "varchar(18)")]
+		[Column(TypeName = "nvarchar(18)")]
 		public string OrderCode
 		{
 			get;
@@ -50,7 +50,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 物品分类。
 		/// </summary>
-		[Column(TypeName = "varchar(50)")]
+		[Column(TypeName = "nvarchar(50)")]
 		public string Categories
 		{
 			get;
@@ -80,7 +80,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 物品照片。
 		/// </summary>
-		[Column(TypeName = "varchar(400)")]
+		[Column(TypeName = "nvarchar(400)")]
 		public string Pictures
 		{
 			get;
@@ -99,7 +99,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 用户要求取货时间。
 		/// </summary>
-		public DateTime? RequiredPickTime
+		[Column(TypeName = "datetime")]public DateTime? RequiredPickTime
 		{
 			get;
 			set;
@@ -117,7 +117,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 用户要求收货时间。
 		/// </summary>
-		public DateTime RequiredDeliveryTime
+		[Column(TypeName = "datetime")]public DateTime RequiredDeliveryTime
 		{
 			get;
 			set;
@@ -180,7 +180,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 订单提交时间。
 		/// </summary>
-		public DateTime SubmitTime
+		[Column(TypeName = "datetime")]public DateTime SubmitTime
 		{
 			get;
 			set;
@@ -189,7 +189,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 支付时间。
 		/// </summary>
-		public DateTime? PaymentTime
+		[Column(TypeName = "datetime")]public DateTime? PaymentTime
 		{
 			get;
 			set;
@@ -198,7 +198,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 完成时间。
 		/// </summary>
-		public DateTime? CompleteTime
+		[Column(TypeName = "datetime")]public DateTime? CompleteTime
 		{
 			get;
 			set;
@@ -207,7 +207,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 取消时间。
 		/// </summary>
-		public DateTime? CancelTime
+		[Column(TypeName = "datetime")]public DateTime? CancelTime
 		{
 			get;
 			set;
@@ -234,7 +234,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 报价确认时间。
 		/// </summary>
-		public DateTime? OfferAcceptTime
+		[Column(TypeName = "datetime")]public DateTime? OfferAcceptTime
 		{
 			get;
 			set;
@@ -243,7 +243,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 实际取货/购买时间。
 		/// </summary>
-		public DateTime? ActualPickTime
+		[Column(TypeName = "datetime")]public DateTime? ActualPickTime
 		{
 			get;
 			set;
@@ -270,7 +270,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 实际送达时间。
 		/// </summary>
-		public DateTime? ActualDeliveryTime
+		[Column(TypeName = "datetime")]public DateTime? ActualDeliveryTime
 		{
 			get;
 			set;
@@ -297,7 +297,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 评价时间。
 		/// </summary>
-		public DateTime? EvaluateTime
+		[Column(TypeName = "datetime")]public DateTime? EvaluateTime
 		{
 			get;
 			set;

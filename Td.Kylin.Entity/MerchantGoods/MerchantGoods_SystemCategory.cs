@@ -17,7 +17,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 分类名称
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Name { get; set; }
 
         /// <summary>
@@ -28,13 +28,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 分类层级路径（如：1|2|3）
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string CategoryPath { get; set; }
 
         /// <summary>
         /// 图标
         /// </summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Icon { get; set; }
 
         /// <summary>
@@ -56,6 +56,6 @@ namespace Td.Kylin.Entity
         /// 创建时间
         /// </summary>
 
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

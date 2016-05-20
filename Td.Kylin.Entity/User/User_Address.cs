@@ -34,13 +34,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///小区/区域
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Community{get;set;}
 
         ///<summary>
         ///详细地址
         ///</summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Address{get;set;}
 
         ///<summary>
@@ -62,13 +62,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///联系人
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Linkman{get;set;}
 
         ///<summary>
         ///联系电话
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Phone{get;set;}
 				
 		///<summary>
@@ -80,7 +80,7 @@ namespace Td.Kylin.Entity
         ///数据创建时间
         ///</summary>
         
-        public DateTime CreateTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime CreateTime{get;set;}
 				
 	}
 }

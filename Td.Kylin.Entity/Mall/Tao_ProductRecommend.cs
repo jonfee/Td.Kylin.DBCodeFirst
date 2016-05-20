@@ -37,12 +37,12 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 开始时间（为null表示不限制）
         /// </summary>
-        public DateTime? BeginTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? BeginTime { get; set; }
 
         /// <summary>
         /// 结束时间（为null表示不限制）
         /// </summary>
-        public DateTime? EndTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime? EndTime { get; set; }
         
         /// <summary>
         /// 排序
@@ -57,6 +57,6 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 最后更新时间
         /// </summary>
-        public DateTime UpdateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime UpdateTime { get; set; }
     }
 }

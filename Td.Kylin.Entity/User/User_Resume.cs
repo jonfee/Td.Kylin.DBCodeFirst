@@ -22,13 +22,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 姓名
         /// </summary>
-        [Column(TypeName ="varchar(20)")]
+        [Column(TypeName ="nvarchar(20)")]
         public string RealName { get; set; }
 
         /// <summary>
         /// 头像
         /// </summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Photo { get; set; }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace Td.Kylin.Entity
         /// 出生日期
         /// </summary>
         
-        public DateTime Both { get; set; }
+        [Column(TypeName = "datetime")]public DateTime Both { get; set; }
 
         /// <summary>
         /// 最高学历
@@ -55,13 +55,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 联系电话
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string ContactPhoto { get; set; }
 
         /// <summary>
         /// 意向工作区域
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string WantWordArea { get; set; }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 职位名称
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string JobName { get; set; }
 
         /// <summary>
@@ -119,17 +119,17 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>        
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 最后更新时间
         /// </summary>        
-        public DateTime UpdateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime UpdateTime { get; set; }
 
         /// <summary>
         /// 最后刷新时间
         /// </summary>
         
-        public DateTime LastRefreshTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime LastRefreshTime { get; set; }
     }
 }

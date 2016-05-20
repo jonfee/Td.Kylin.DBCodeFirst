@@ -27,25 +27,25 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 关联的数据ID
         /// </summary>
-        [Column(TypeName = "varchar(36)")]
+        [Column(TypeName = "nvarchar(36)")]
         public string RefDataID { get; set; }
 
         /// <summary>
         /// 消息主题
         /// </summary>
-        [Column(TypeName = "varchar(30)")]
+        [Column(TypeName = "nvarchar(30)")]
         public string Title { get; set; }
 
         /// <summary>
         /// 消息内容
         /// </summary>
-        [Column(TypeName = "varchar(500)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string Content { get; set; }
 
         /// <summary>
         /// 签名（如：某某物业集团）
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Sign { get; set; }
 
         /// <summary>
@@ -61,6 +61,6 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 消息发送时间
         /// </summary>
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

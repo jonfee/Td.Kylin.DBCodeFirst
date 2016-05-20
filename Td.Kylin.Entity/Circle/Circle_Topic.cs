@@ -39,7 +39,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///发帖的用户昵称
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Username{get;set;}
 				
 		///<summary>
@@ -50,7 +50,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///帖子标题
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Title{get;set;}
 
         ///<summary>
@@ -62,7 +62,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///帖子图片
         ///</summary>
-        [Column(TypeName = "varchar(500)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string Pics{get;set;}
 				
 		///<summary>
@@ -119,7 +119,7 @@ namespace Td.Kylin.Entity
         ///逻辑删除时间
         ///</summary>
         
-        public DateTime? DeleteTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime? DeleteTime{get;set;}
 				
 		///<summary>
 		///审核状态（1审核中，2审核成功）
@@ -130,7 +130,7 @@ namespace Td.Kylin.Entity
         ///帖子发布时间
         ///</summary>
         
-        public DateTime CreateTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime CreateTime{get;set;}
 				
 	}
 }

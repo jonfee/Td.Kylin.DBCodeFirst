@@ -29,19 +29,19 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///文件类型
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string FileType{get;set;}
 
         ///<summary>
         ///文件名称
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Filename{get;set;}
 
         ///<summary>
         ///存储路径
         ///</summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string FilePath{get;set;}
 				
 		///<summary>
@@ -53,7 +53,7 @@ namespace Td.Kylin.Entity
         ///上传时间
         ///</summary>
         
-        public DateTime UploadTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime UploadTime{get;set;}
 				
 		///<summary>
 		///是否逻辑删除
@@ -64,7 +64,7 @@ namespace Td.Kylin.Entity
         ///逻辑删除时间
         ///</summary>
         
-        public DateTime DeleteTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime DeleteTime{get;set;}
 				
 	}
 }

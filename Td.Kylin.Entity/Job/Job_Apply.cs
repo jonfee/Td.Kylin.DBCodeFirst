@@ -37,12 +37,12 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 投递/申请时间
         /// </summary>
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 更新时间
         /// </summary>
         
-        public DateTime UpdateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime UpdateTime { get; set; }
     }
 }

@@ -34,11 +34,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///开始时间
         ///</summary>        
+        [Column(TypeName = "datetime")]
         public DateTime StartTime { get; set; }
 
         ///<summary>
         ///过期时间
         ///</summary>        
+        [Column(TypeName = "datetime")]
         public DateTime EndTime { get; set; }
 
         ///<summary>

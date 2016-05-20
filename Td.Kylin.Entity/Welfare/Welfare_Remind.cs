@@ -23,6 +23,6 @@ namespace Td.Kylin.Entity
         /// 数据创建时间（即参与时间）
         /// </summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

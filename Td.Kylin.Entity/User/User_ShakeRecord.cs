@@ -34,13 +34,13 @@ namespace Td.Kylin.Entity
         ///最后一次摇的时间
         ///</summary>
         
-        public DateTime LastTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime LastTime{get;set;}
 
         ///<summary>
         ///更新时间
         ///</summary>
         
-        public DateTime UpdatetTime{get;set;}
+        [Column(TypeName = "datetime")]public DateTime UpdatetTime{get;set;}
 				
 	}
 }

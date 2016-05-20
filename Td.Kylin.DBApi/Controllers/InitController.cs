@@ -18,6 +18,26 @@ namespace Td.Kylin.DBApi.Controllers
     [Route("api/init")]
     public class InitController : BaseController
     {
+
+        [HttpGet("init")]
+        public void Init()
+        {
+            InitProvider.InitApiMoudleAuthoriza();
+            string account = "admin";
+
+            string pwd = "123456";
+
+            int rows = InitProvider.InitSuperAdmin(account, pwd);
+            InitProvider.InitIndustry();
+            InitProvider.InitArea();
+            InitProvider.InitGlobalConfig();
+            List<Ad_Page> pageList = null;
+            List<Ad_Position> positionList = null;
+            InitProvider.InitAdPosition(out pageList, out positionList);
+            InitProvider.InitPointsConfig();
+            InitProvider.InitEmpiricalConfig();
+            InitProvider.InitLevelConfig();
+        }
         #region 初始化模块授权
         /// <summary>
         /// 初始化模块授权

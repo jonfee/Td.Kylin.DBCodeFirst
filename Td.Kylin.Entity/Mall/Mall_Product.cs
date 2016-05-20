@@ -17,13 +17,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商品名称
         ///</summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string Name { get; set; }
 
         ///<summary>
         ///商品编号
         ///</summary>
-        [Column(TypeName = "varchar(18)")]
+        [Column(TypeName = "nvarchar(18)")]
         public string Code { get; set; }
 
         ///<summary>
@@ -41,19 +41,19 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///标签ID集合
         ///</summary>
-        [Column(TypeName = "varchar(500)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string TagIDs { get; set; }
 
         ///<summary>
         ///商家名称
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string VenderName { get; set; }
 
         ///<summary>
         ///发布者
         ///</summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Publisher { get; set; }
 
         ///<summary>
@@ -64,13 +64,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///主图
         ///</summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string MainPic { get; set; }
 
         ///<summary>
         ///商品展示图集
         ///</summary>
-        [Column(TypeName = "varchar(500)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string Pics { get; set; }
 
         ///<summary>
@@ -118,13 +118,13 @@ namespace Td.Kylin.Entity
         ///数据建立时间
         ///</summary>
 
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///最后更新时间
         ///</summary>
 
-        public DateTime UpdateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime UpdateTime { get; set; }
 
         ///<summary>
         ///促销ID

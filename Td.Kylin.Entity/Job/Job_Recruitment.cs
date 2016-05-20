@@ -32,7 +32,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 职位名称
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string JobName { get; set; }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 工作地点
         /// </summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string WordAddress { get; set; }
 
         /// <summary>
@@ -110,19 +110,19 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 联系人
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string ContactMan { get; set; }
 
         /// <summary>
         /// 联系电话
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string ContactPhoto { get; set; }
 
         /// <summary>
         /// 联系邮箱
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string ContactEmail { get; set; }
 
         /// <summary>
@@ -154,12 +154,12 @@ namespace Td.Kylin.Entity
         /// 发布时间
         /// </summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 最后刷新时间
         /// </summary>
         
-        public DateTime LastRefreshTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime LastRefreshTime { get; set; }
     }
 }

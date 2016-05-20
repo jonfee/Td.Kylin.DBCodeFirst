@@ -57,7 +57,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 交易信息
         /// </summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string TradeInfo { get; set; }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 第三方交易流水号（一般用于第三方支付系统时）
         /// </summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string TradeNo { get; set; }
 
         /// <summary>
@@ -79,6 +79,6 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 数据产生时间
         /// </summary>
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

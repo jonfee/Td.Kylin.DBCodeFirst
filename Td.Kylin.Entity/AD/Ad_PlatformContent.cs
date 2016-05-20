@@ -30,7 +30,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 广告数据文件
         /// </summary>
-        [Column(TypeName = "varchar(200)")]
+        [Column(TypeName = "nvarchar(200)")]
         public string ADFile { get; set; }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///广告内容标题
         ///</summary>
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Title { get; set; }
 
         /// <summary>
@@ -62,11 +62,13 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///开始时间
         ///</summary>        
+        [Column(TypeName = "datetime")]
         public DateTime StartTime { get; set; }
 
         ///<summary>
         ///过期时间
         ///</summary>        
+        [Column(TypeName = "datetime")]
         public DateTime EndTime { get; set; }
 
         ///<summary>
@@ -77,6 +79,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///建立时间
         ///</summary>
+        [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
     }
 }

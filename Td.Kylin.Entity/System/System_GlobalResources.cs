@@ -22,19 +22,19 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 键分组（如：B2C）
         /// </summary>
-        [Column(TypeName = "varchar(30)")]
+        [Column(TypeName = "nvarchar(30)")]
         public string Group { get; set; }
 
         /// <summary>
         /// 资源名称
         /// </summary>
-        [Column(TypeName ="varchar(100)")]
+        [Column(TypeName ="nvarchar(100)")]
         public string Name { get; set; }
 
         /// <summary>
         /// 资源值
         /// </summary>
-        [Column(TypeName = "varchar(500)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string Value { get; set; }
 
         /// <summary>
@@ -45,6 +45,6 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 最后更新时间
         /// </summary>
-        public DateTime UpdateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime UpdateTime { get; set; }
     }
 }

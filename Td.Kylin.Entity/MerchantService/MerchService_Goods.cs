@@ -27,7 +27,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 区域路径（如：110000|110100|110101）
         /// </summary>
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string AreaLayer { get; set; }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 服务主题（服务项目名称）
         /// </summary>
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Title { get; set; }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 服务说明/描述
         /// </summary>
-        [Column(TypeName = "varchar(500)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string Description { get; set; }
 
         /// <summary>
@@ -91,6 +91,6 @@ namespace Td.Kylin.Entity
         /// 创建时间
         /// </summary>
         
-        public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

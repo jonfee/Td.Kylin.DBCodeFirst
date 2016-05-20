@@ -37,6 +37,6 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 最后更新时间
         /// </summary>
-        public DateTime UpdateTime { get; set; }
+        [Column(TypeName = "datetime")]public DateTime UpdateTime { get; set; }
     }
 }
