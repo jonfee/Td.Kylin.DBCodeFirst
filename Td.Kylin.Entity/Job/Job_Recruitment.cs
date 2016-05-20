@@ -98,6 +98,16 @@ namespace Td.Kylin.Entity
         public string WordAddress { get; set; }
 
         /// <summary>
+        ///  工作地点纬度
+        /// </summary>
+        public double WorkLatitude { get; set; }
+
+        /// <summary>
+        /// 工作地点经度
+        /// </summary>
+        public double WorkLongitude { get; set; }
+
+        /// <summary>
         /// 联系人
         /// </summary>
         [Column(TypeName = "varchar(20)")]
