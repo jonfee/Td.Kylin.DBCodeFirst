@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160520074749_deleteTable_LegworkAreaConfig_LegworkGolbalConfig")]
+    partial class deleteTable_LegworkAreaConfig_LegworkGolbalConfig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -1517,25 +1518,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.HasAnnotation("Relational:TableName", "KylinService_Order");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.Legwork_AreaConfig", b =>
-                {
-                    b.Property<int>("AreaID");
-
-                    b.Property<string>("Instructions")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(MAX)");
-
-                    b.Property<string>("OpenAreas")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
-                    b.HasKey("AreaID");
-
-                    b.HasAnnotation("Relational:TableName", "Legwork_AreaConfig");
-                });
-
             modelBuilder.Entity("Td.Kylin.Entity.Legwork_Evaluate", b =>
                 {
                     b.Property<long>("EvaluateID");
@@ -1559,31 +1541,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.HasKey("EvaluateID");
 
                     b.HasAnnotation("Relational:TableName", "Legwork_Evaluate");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Legwork_GlobalConfig", b =>
-                {
-                    b.Property<long>("GlobalConfigID");
-
-                    b.Property<short>("AutoConfirmTime");
-
-                    b.Property<short>("OrderTimeout");
-
-                    b.Property<short>("PaymentTimeout");
-
-                    b.Property<short>("QuotationWaitingTime");
-
-                    b.Property<short>("QuotationWaitingTimeout");
-
-                    b.Property<short>("QuotationWaitingWorkers");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
-                    b.HasKey("GlobalConfigID");
-
-                    b.HasAnnotation("Relational:TableName", "Legwork_GlobalConfig");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Legwork_GoodsCategory", b =>

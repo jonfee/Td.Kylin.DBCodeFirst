@@ -633,36 +633,36 @@ namespace Td.Kylin.SQLCodeFirst
         /// </summary>
         public DbSet<Agent_AreaRelation> Agent_AreaRelation { get { return Set<Agent_AreaRelation>(); } }
 
-		#endregion
+        #endregion
 
-		#region 跑腿业务
+        #region 跑腿业务
 
-		/// <summary>
-		/// 跑腿业务全局配置。
-		/// </summary>
-	    public DbSet<Legwork_GlobalConfig> Legwork_GlobalConfig
-		{
-			get
-			{
-				return Set<Legwork_GlobalConfig>();
-			}
-		}
+        /// <summary>
+        /// 跑腿业务全局配置。
+        /// </summary>
+        public DbSet<Legwork_GlobalConfig> Legwork_GlobalConfig
+        {
+            get
+            {
+                return Set<Legwork_GlobalConfig>();
+            }
+        }
 
-		/// <summary>
-		/// 跑腿业务区域配置。
-		/// </summary>
-		public DbSet<Legwork_AreaConfig> Legwork_AreaConfig
-		{
-			get
-			{
-				return Set<Legwork_AreaConfig>();
-			}
-		}
+        /// <summary>
+        /// 跑腿业务区域配置。
+        /// </summary>
+        public DbSet<Legwork_AreaConfig> Legwork_AreaConfig
+        {
+            get
+            {
+                return Set<Legwork_AreaConfig>();
+            }
+        }
 
-		/// <summary>
-		/// 跑腿业务物品分类。
-		/// </summary>
-		public DbSet<Legwork_GoodsCategory> Legwork_GoodsCategory
+        /// <summary>
+        /// 跑腿业务物品分类。
+        /// </summary>
+        public DbSet<Legwork_GoodsCategory> Legwork_GoodsCategory
 		{
 			get
 			{
