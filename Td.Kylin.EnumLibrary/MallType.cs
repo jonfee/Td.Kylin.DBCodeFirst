@@ -13,11 +13,16 @@ namespace Td.Kylin.EnumLibrary
         /// B2C区域直营
         /// </summary>
         [Description("B2C区域直营")]
-        B2C =1,
+        B2C = 1,
         /// <summary>
         /// 企业微商城
         /// </summary>
         [Description("企业微商城")]
-        Merchant =2
+        Merchant = 2,
+        /// <summary>
+        /// 跑腿商城
+        /// </summary>
+        [Description("跑腿商城")]
+        Legwork = 3,
     }
 }
