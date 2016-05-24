@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Td.Kylin.EnumLibrary
+﻿namespace Td.Kylin.EnumLibrary
 {
+    /// <summary>
+    /// 数据库提供程序类型
+    /// </summary>
     public enum SqlProviderType
     {
-        //
-        // 摘要:
-        //     SqlServer
+        /// <summary>
+        /// SqlServer
+        /// </summary>
         SqlServer = 1,
-        //
-        // 摘要:
-        //     NpgSQL 如：PostgreSQL
+        /// <summary>
+        /// NpgSQL 如：PostgreSQL
+        /// </summary>
         NpgSQL = 2
     }
 }

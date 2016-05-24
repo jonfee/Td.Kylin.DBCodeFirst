@@ -121,6 +121,11 @@ namespace Td.Kylin.Entity
         public int DataStatus { get; set; }
 
         /// <summary>
+        /// 评价均值（对5星级别的评价统计按算法计算得出）
+        /// </summary>
+        public float EvaluateEvgScore { get; set; }
+
+        /// <summary>
         /// 抢单模式
         /// </summary>
         public int OrderMode { get; set; }
@@ -135,14 +140,15 @@ namespace Td.Kylin.Entity
         /// </summary>
         public string PayPassword { get; set; }
         /// <summary>
-        /// 取现密码
+        /// 取现密码（多余）
         /// </summary>
         public string EncashmentPassword { get; set; }
+
         ///<summary>
         ///创建时间
         ///</summary>
-
-        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime CreateTime { get; set; }
         /// <summary>
         /// 推荐码
         /// </summary>

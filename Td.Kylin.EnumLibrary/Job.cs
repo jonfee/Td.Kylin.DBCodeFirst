@@ -17,63 +17,33 @@ namespace Td.Kylin.EnumLibrary
         /// <summary>
         /// 免费班车
         /// </summary>
-        [Description("免费班车")]
-        MFBC = 2,
+        [Description("带薪年假")]
+        DXNJ = 2,
         /// <summary>
-        /// 员工旅游
+        /// 包吃住
         /// </summary>
-        [Description("员工旅游")]
-        YGLY = 4,
+        [Description("包吃住")]
+        BCZ = 4,
         /// <summary>
-        /// 交通补贴
+        /// 双休
         /// </summary>
-        [Description("交通补贴")]
-        JTBT = 8,
+        [Description("双休")]
+        SX = 8,
         /// <summary>
-        /// 餐饮补贴
+        /// 餐补
         /// </summary>
-        [Description("餐饮补贴")]
-        CYBT = 16,
+        [Description("餐补")]
+        CB = 16,
         /// <summary>
-        /// 话费补贴
+        /// 交通补助
         /// </summary>
-        [Description("话费补贴")]
-        HFBT = 32,
+        [Description("交通补助")]
+        JTBZ = 32,
         /// <summary>
-        /// 专业培训
+        /// 培训
         /// </summary>
-        [Description("专业培训")]
-        ZYPX = 64,
-        /// <summary>
-        /// 出国机会
-        /// </summary>
-        [Description("出国机会")]
-        CGJH = 128,
-        /// <summary>
-        /// 绩效奖金
-        /// </summary>
-        [Description("绩效奖金")]
-        JXJJ = 256,
-        /// <summary>
-        /// 股票期权
-        /// </summary>
-        [Description("股票期权")]
-        GPQQ = 512,
-        /// <summary>
-        /// 年终奖金
-        /// </summary>
-        [Description("年终奖金")]
-        NZJJ = 1024,
-        /// <summary>
-        /// 定期体检
-        /// </summary>
-        [Description("定期体检")]
-        DQTJ = 2048,
-        /// <summary>
-        /// 弹性工作
-        /// </summary>
-        [Description("弹性工作")]
-        TXGZ = 4096
+        [Description("培训")]
+        PX = 64,
     }
 
     /// <summary>

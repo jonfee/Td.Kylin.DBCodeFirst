@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160520065657_modifyLegworkPK")]
+    partial class modifyLegworkPK
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -2234,8 +2235,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<string>("EncashmentPassword");
 
-                    b.Property<float>("EvaluateEvgScore");
-
                     b.Property<decimal>("FreezeMoney");
 
                     b.Property<long>("IndustryID");
@@ -3349,7 +3348,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AddressUseType");
 
                     b.Property<string>("Community")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");

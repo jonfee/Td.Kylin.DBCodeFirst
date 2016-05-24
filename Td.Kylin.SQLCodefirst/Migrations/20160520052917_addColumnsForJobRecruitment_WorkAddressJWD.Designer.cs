@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160520052917_addColumnsForJobRecruitment_WorkAddressJWD")]
+    partial class addColumnsForJobRecruitment_WorkAddressJWD
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -1519,7 +1520,8 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Legwork_AreaConfig", b =>
                 {
-                    b.Property<int>("AreaID");
+                    b.Property<int>("AreaID")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Instructions")
                         .HasAnnotation("Relational:ColumnType", "nvarchar(MAX)");
@@ -1563,7 +1565,8 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Legwork_GlobalConfig", b =>
                 {
-                    b.Property<long>("GlobalConfigID");
+                    b.Property<long>("GlobalConfigID")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<short>("AutoConfirmTime");
 
@@ -2233,8 +2236,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<string>("EncashmentPassword");
-
-                    b.Property<float>("EvaluateEvgScore");
 
                     b.Property<decimal>("FreezeMoney");
 
@@ -3349,7 +3350,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AddressUseType");
 
                     b.Property<string>("Community")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasAnnotation("Relational:ColumnType", "datetime");

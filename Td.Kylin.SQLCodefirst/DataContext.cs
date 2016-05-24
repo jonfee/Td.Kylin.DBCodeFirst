@@ -771,12 +771,14 @@ namespace Td.Kylin.SQLCodeFirst
             modelBuilder.Entity<Legwork_GlobalConfig>(
                entity =>
                {
+                   entity.Property(p => p.GlobalConfigID).ValueGeneratedNever();
                    entity.HasKey(p => p.GlobalConfigID);
                });
 
             // 区域配置
             modelBuilder.Entity<Legwork_AreaConfig>(entity =>
             {
+                entity.Property(p => p.AreaID).ValueGeneratedNever();
                 entity.HasKey(p => p.AreaID);
             });
 

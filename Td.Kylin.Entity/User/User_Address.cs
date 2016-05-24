@@ -34,7 +34,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///小区/区域
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Community{get;set;}
 
         ///<summary>

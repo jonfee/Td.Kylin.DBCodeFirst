@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160522100543_modifyAddressCommunityLength")]
+    partial class modifyAddressCommunityLength
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -2233,8 +2234,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<string>("EncashmentPassword");
-
-                    b.Property<float>("EvaluateEvgScore");
 
                     b.Property<decimal>("FreezeMoney");
 
