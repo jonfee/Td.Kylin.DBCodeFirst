@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160525094439_addColumnDeviceCodePushCode")]
+    partial class addColumnDeviceCodePushCode
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -1525,7 +1526,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "nvarchar(MAX)");
 
                     b.Property<string>("OpenAreas")
-                        .HasAnnotation("Relational:ColumnType", "varchar(400)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
