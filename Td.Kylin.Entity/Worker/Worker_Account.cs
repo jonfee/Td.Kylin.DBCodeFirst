@@ -73,5 +73,32 @@ namespace Td.Kylin.Entity
             get;
             set;
         }
+
+
+        ///<summary>
+        ///最后记录纬度
+        ///</summary>
+        public Single LastLatitude { get; set; }
+
+        ///<summary>
+        ///经度最后记录
+        ///</summary>
+        public Single LastLongitude { get; set; }
+        /// <summary>
+        /// 设备号
+        /// </summary>
+        public string DeviceCode
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// 推送号
+        /// </summary>
+        public string PushCode
+        {
+            get;
+            set;
+        }
     }
-}
+}     

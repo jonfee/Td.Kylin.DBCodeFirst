@@ -48,7 +48,8 @@ namespace Td.Kylin.Entity
         ///最后登录时间
         ///</summary>
 
-        [Column(TypeName = "datetime")]public DateTime LastTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime LastTime { get; set; }
 
         ///<summary>
         ///用户状态（正常、封号）
@@ -79,7 +80,8 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///注册时间
         ///</summary>        
-        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime CreateTime { get; set; }
         /// <summary>
         /// 推荐码
         /// </summary>
@@ -95,5 +97,22 @@ namespace Td.Kylin.Entity
         /// 经验值
         /// </summary>
         public int Empirical { get; set; }
+
+        /// <summary>
+        /// 设备号
+        /// </summary>
+        public string DeviceCode
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// 推送号
+        /// </summary>
+        public string PushCode
+        {
+            get;
+            set;
+        }
     }
 }

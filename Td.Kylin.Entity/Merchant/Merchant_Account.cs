@@ -155,5 +155,22 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "nvarchar(6)")]
         public string RecommendCode { get; set; }
 
+        /// <summary>
+        /// 设备号
+        /// </summary>
+        public string DeviceCode
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// 推送号
+        /// </summary>
+        public string PushCode
+        {
+            get;
+            set;
+        }
+
     }
 }
