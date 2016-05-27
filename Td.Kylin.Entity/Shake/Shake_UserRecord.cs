@@ -44,14 +44,14 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///最后支付时间
         ///</summary>
-        
-        [Column(TypeName = "datetime")]public DateTime? LastPayTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? LastPayTime { get; set; }
 
         ///<summary>
         ///建立时间
         ///</summary>
-        
-        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime CreateTime { get; set; }
 
     }
 }
