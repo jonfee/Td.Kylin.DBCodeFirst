@@ -49,7 +49,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 行政区域点。 
 		/// </summary>
-		[Column(TypeName = "nvarchar(MAX)")]
+		[Column(TypeName = "text")]
 		public string Points
 	    {
 		    get;
