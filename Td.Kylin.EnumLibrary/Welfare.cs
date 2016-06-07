@@ -9,20 +9,20 @@ namespace Td.Kylin.EnumLibrary
     /// </summary>
     public enum WelfareType
     {
+        ///// <summary>
+        ///// 优惠券
+        ///// </summary>
+        //[Description("优惠券")]
+        //Coupon = 1,
         /// <summary>
-        /// 优惠券
+        /// 赠送
         /// </summary>
-        [Description("优惠券")]
-        Coupon = 1,
-        /// <summary>
-        /// 免费商品
-        /// </summary>
-        [Description("免费商品")]
+        [Description("赠送")]
         FreeGoods = 2,
         /// <summary>
-        /// 折扣商品
+        /// 打折
         /// </summary>
-        [Description("折扣商品")]
+        [Description("打折")]
         DiscountGoods = 4
     }
 
