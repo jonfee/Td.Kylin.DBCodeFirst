@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160607062715_UpdateCategoryCloumnLength")]
+    partial class UpdateCategoryCloumnLength
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -2250,7 +2251,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("LocationPlace")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(40)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<float>("Longitude");
 
