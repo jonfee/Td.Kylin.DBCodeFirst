@@ -57,7 +57,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///商户位置
         ///</summary>
-        [Column(TypeName = "nvarchar(20)")]
+        [Column(TypeName = "nvarchar(40)")]
         public string LocationPlace { get; set; }
 
         ///<summary>
