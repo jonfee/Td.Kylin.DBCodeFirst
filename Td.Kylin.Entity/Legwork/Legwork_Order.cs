@@ -50,7 +50,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 物品分类。
         /// </summary>
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string Categories
         {
             get;
