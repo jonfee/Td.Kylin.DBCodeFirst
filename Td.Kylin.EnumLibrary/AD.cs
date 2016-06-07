@@ -81,29 +81,29 @@ namespace Td.Kylin.EnumLibrary
     public enum ADLinkType
     {
         /// <summary>
-        /// 外部链接
+        /// 网址
         /// </summary>
-        [Description("外部链接")]
+        [Description("网址")]
         UrlLink = 1,
         /// <summary>
-        /// B2C商品展示页
+        /// 精品汇商品
         /// </summary>
-        [Description("B2C商品展示页")]
+        [Description("精品汇商品")]
         B2CProduct = 2,
         /// <summary>
-        /// 商家商品展示页
+        /// 商家商品
         /// </summary>
-        [Description("商家商品展示页")]
+        [Description("商家商品")]
         MerchantProduct = 4,
         /// <summary>
-        /// 商家详情展示页
+        /// 商家
         /// </summary>
-        [Description("商家详情展示页")]
+        [Description("商家")]
         MerchantDetails = 8,
         /// <summary>
-        /// 社区活动帖子展示页
+        /// 社区活动帖
         /// </summary>
-        [Description("社区活动帖子展示页")]
+        [Description("社区活动帖")]
         CircleEvent = 16
     }
 }
