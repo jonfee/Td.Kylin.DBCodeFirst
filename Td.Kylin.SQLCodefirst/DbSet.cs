@@ -342,6 +342,10 @@ namespace Td.Kylin.SQLCodeFirst
         #region 自营商城
 
         /// <summary>
+        /// 此刻推荐
+        /// </summary>
+        public DbSet<NowRecommend> NowRecommend { get { return Set<NowRecommend>(); } }
+        /// <summary>
         /// 商品分类
         /// </summary>
         public DbSet<Mall_Category> Mall_Category { get { return Set<Mall_Category>(); } }
@@ -438,7 +442,7 @@ namespace Td.Kylin.SQLCodeFirst
         /// 赠送商品福利信息
         /// </summary>
         public DbSet<Welfare_DonatedGoods> Welfare_DonatedGoods { get { return Set<Welfare_DonatedGoods>(); } }
-        
+
         /// <summary>
         /// 福利参与人员
         /// </summary>
@@ -542,7 +546,7 @@ namespace Td.Kylin.SQLCodeFirst
         /// 服务职员业务
         /// </summary>
         public DbSet<Worker_BusinessRelation> Worker_BusinessRelation
-		{ get { return Set<Worker_BusinessRelation>(); } }
+        { get { return Set<Worker_BusinessRelation>(); } }
 
         /// <summary>
         /// 服务职员所服务的企业（商家）
@@ -663,51 +667,51 @@ namespace Td.Kylin.SQLCodeFirst
         /// 跑腿业务物品分类。
         /// </summary>
         public DbSet<Legwork_GoodsCategory> Legwork_GoodsCategory
-		{
-			get
-			{
-				return Set<Legwork_GoodsCategory>();
-			}
-		}
+        {
+            get
+            {
+                return Set<Legwork_GoodsCategory>();
+            }
+        }
 
-		/// <summary>
-		/// 跑腿订单。
-		/// </summary>
-		public DbSet<Legwork_Order> Legwork_Order
-		{
-			get
-			{
-				return Set<Legwork_Order>();
-			}
-		}
+        /// <summary>
+        /// 跑腿订单。
+        /// </summary>
+        public DbSet<Legwork_Order> Legwork_Order
+        {
+            get
+            {
+                return Set<Legwork_Order>();
+            }
+        }
 
-		/// <summary>
-		/// 跑腿报价记录。
-		/// </summary>
-		public DbSet<Legwork_OfferRecord> Legwork_OfferRecord
-		{
-			get
-			{
-				return Set<Legwork_OfferRecord>();
-			}
-		}
+        /// <summary>
+        /// 跑腿报价记录。
+        /// </summary>
+        public DbSet<Legwork_OfferRecord> Legwork_OfferRecord
+        {
+            get
+            {
+                return Set<Legwork_OfferRecord>();
+            }
+        }
 
-		/// <summary>
-		/// 跑腿订单评价。
-		/// </summary>
-		public DbSet<Legwork_Evaluate> Legwork_Evaluate
-		{
-			get
-			{
-				return Set<Legwork_Evaluate>();
-			}
-		}
+        /// <summary>
+        /// 跑腿订单评价。
+        /// </summary>
+        public DbSet<Legwork_Evaluate> Legwork_Evaluate
+        {
+            get
+            {
+                return Set<Legwork_Evaluate>();
+            }
+        }
 
-		#endregion
+        #endregion
 
-		/// <summary>
-		/// 平台资金流水
-		/// </summary>
-		public DbSet<Platform_MoneyTransaction> Platform_MoneyTransaction { get { return Set<Platform_MoneyTransaction>(); } }
+        /// <summary>
+        /// 平台资金流水
+        /// </summary>
+        public DbSet<Platform_MoneyTransaction> Platform_MoneyTransaction { get { return Set<Platform_MoneyTransaction>(); } }
     }
 }

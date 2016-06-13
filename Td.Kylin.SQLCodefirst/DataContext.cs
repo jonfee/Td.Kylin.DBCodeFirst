@@ -434,6 +434,11 @@ namespace Td.Kylin.SQLCodeFirst
 
             #region 自营商城
 
+            modelBuilder.Entity<NowRecommend>(entity =>
+            {
+                entity.Property(p => p.RecommendID).ValueGeneratedNever();
+                entity.HasKey(p => p.RecommendID);
+            });
             modelBuilder.Entity<Mall_Category>(entity =>
             {
                 entity.Property(p => p.CategoryID).ValueGeneratedNever();
