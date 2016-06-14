@@ -14,10 +14,17 @@ namespace Td.Kylin.Entity
         /// </summary>
         public long ServiceGoodsID { get; set; }
 
+
         /// <summary>
         /// 商家ID
         /// </summary>
         public long MerchantID { get; set; }
+
+        /// <summary>
+        /// 生活服务名称
+        /// </summary>
+        [Column(TypeName = "nvarchar(30)")]
+        public string Name { get; set; }
 
         /// <summary>
         /// 所属商家的区域ID（一般为区县ID）
@@ -31,41 +38,35 @@ namespace Td.Kylin.Entity
         public string AreaLayer { get; set; }
 
         /// <summary>
-        /// 所属业务ID
+        /// 所属系统生活服务分类（Service_SystemCategory.CategoryID）
         /// </summary>
-        public long BusinessID { get; set; }
+        public long SystemCategoryID { get; set; }
 
         /// <summary>
-        /// 业务类型（如：上门|预约）
+        /// 所属自定义分类（未选择时为0）
         /// </summary>
-        public int BusinessType { get; set; }
+        public long CategoryID { get; set; }
 
         /// <summary>
-        /// 服务主题（服务项目名称）
-        /// </summary>
-        [Column(TypeName = "nvarchar(20)")]
-        public string Title { get; set; }
-
-        /// <summary>
-        /// 原价
+        /// 原价/市场价
         /// </summary>
         public decimal OriginalPrice { get; set; }
 
         /// <summary>
-        /// 现价
+        /// 现价/销售价
         /// </summary>
-        public decimal Price { get; set; }
+        public decimal SalePrice { get; set; }
 
         /// <summary>
-        /// 服务说明/描述
+        /// 图片
         /// </summary>
-        [Column(TypeName = "nvarchar(500)")]
-        public string Description { get; set; }
+        [Column(TypeName = "nvarchar(200)")]
+        public string Pic { get; set; }
 
         /// <summary>
-        /// 预约服务时的预约金，上门服务无此配置项
+        /// 库存
         /// </summary>
-        public decimal SubscriptionPrice { get; set; }
+        public int Inventory { get; set; }
 
         /// <summary>
         /// 销售量
@@ -78,9 +79,14 @@ namespace Td.Kylin.Entity
         public int EvaluateCount { get; set; }
 
         /// <summary>
-        /// 服务商品状态
+        /// 生活服务状态
         /// </summary>
         public int Status { get; set; }
+
+        ///<summary>
+        ///标识状态集（推荐，新品，人气）
+        ///</summary>
+        public int TagStatus { get; set; }
 
         /// <summary>
         /// 是否已删除
@@ -90,7 +96,28 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
-        
-        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
+
+        [Column(TypeName = "datetime")]
+        public DateTime CreateTime { get; set; }
+
+        /// <summary>
+        /// 服务描述
+        /// </summary>
+        [Column(TypeName = "nvarchar(140)")]
+
+        public string Description { get; set; }
+        ///<summary>
+        ///纬度
+        ///</summary>
+        public Single Latitude { get; set; }
+
+        ///<summary>
+        ///经度
+        ///</summary>
+        public Single Longitude { get; set; }
+        /// <summary>
+        /// 点击率
+        /// </summary>
+        public int Click { get; set; }
     }
 }
