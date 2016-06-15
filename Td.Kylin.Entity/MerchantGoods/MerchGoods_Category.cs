@@ -35,10 +35,6 @@ namespace Td.Kylin.Entity
         /// </summary>
         public bool IsDelete { get; set; }
         /// <summary>
-        /// 是否服务
-        /// </summary>
-        public bool IsService { get; set; }
-        /// <summary>
         /// 创建时间
         /// </summary>
         

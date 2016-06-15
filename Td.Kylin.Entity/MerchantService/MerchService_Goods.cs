@@ -63,10 +63,6 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "nvarchar(200)")]
         public string Pic { get; set; }
 
-        /// <summary>
-        /// 库存
-        /// </summary>
-        public int Inventory { get; set; }
 
         /// <summary>
         /// 销售量
@@ -84,7 +80,7 @@ namespace Td.Kylin.Entity
         public int Status { get; set; }
 
         ///<summary>
-        ///标识状态集（推荐，新品，人气）
+        ///标识状态集
         ///</summary>
         public int TagStatus { get; set; }
 
