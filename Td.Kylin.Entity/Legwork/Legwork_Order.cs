@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Threading;
 
 namespace Td.Kylin.Entity
 {
@@ -314,13 +315,19 @@ namespace Td.Kylin.Entity
         }
 
         /// <summary>
-        /// 是否删除。
+        /// 用户端删除。
         /// </summary>
         public bool IsDelete
         {
             get;
             set;
         }
+
+        /// <summary>
+        /// 工作端删除
+        /// </summary>
+        public bool IsWorkDelete { get; set; }
+
         /// <summary>
         /// 用户ID下单者
         /// </summary>
