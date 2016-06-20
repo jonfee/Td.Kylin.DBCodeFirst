@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Td.ComponentModel;
 
-namespace Td.Kylin.EnumLibrary.Merchant
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 商家订单类型
