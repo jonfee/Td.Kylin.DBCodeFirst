@@ -6,7 +6,7 @@ using Td.ComponentModel;
 
 namespace Td.Kylin.EnumLibrary
 {
-    public enum MerchServiceTag
+    public enum MerchantServiceTag
     {
         /// <summary>
         /// 上门
