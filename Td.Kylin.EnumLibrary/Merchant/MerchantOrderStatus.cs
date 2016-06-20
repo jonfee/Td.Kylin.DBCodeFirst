@@ -44,14 +44,14 @@ namespace Td.Kylin.EnumLibrary
         [Description("待付款")]
         WaitingPayment = 1,
         /// <summary>
-        /// 待发货
+        /// 待服务
         /// </summary>
-        [Description("待发货")]
+        [Description("待服务")]
         WaitingDelivery = 2,
         /// <summary>
-        /// 待收货
+        /// 待确认
         /// </summary>
-        [Description("待收货")]
+        [Description("待确认")]
         WaitingReceipt = 4,
         /// <summary>
         /// 已完成
