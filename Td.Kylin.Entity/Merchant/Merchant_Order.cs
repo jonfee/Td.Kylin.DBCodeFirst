@@ -74,33 +74,39 @@ namespace Td.Kylin.Entity
         ///下单时间
         ///</summary>
 
-        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///支付时间
         ///</summary>
 
-        [Column(TypeName = "datetime")]public DateTime? PayTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? PayTime { get; set; }
         ///<summary>
         ///取消时间
         ///</summary>
 
-        [Column(TypeName = "datetime")]public DateTime? CancelTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? CancelTime { get; set; }
         /// <summary>
         /// 发货时间
         /// </summary>
 
-        [Column(TypeName = "datetime")]public DateTime? SendTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? SendTime { get; set; }
         ///<summary>
         ///收货时间
         ///</summary>
 
-        [Column(TypeName = "datetime")]public DateTime? ReceivedTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? ReceivedTime { get; set; }
         ///<summary>
         ///评价时间
         ///</summary>
 
-        [Column(TypeName = "datetime")]public DateTime? EvaluateTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? EvaluateTime { get; set; }
         ///<summary>
         ///物流承运公司
         ///</summary>
@@ -139,6 +145,11 @@ namespace Td.Kylin.Entity
         /// 纬度
         /// </summary>
         public Single Latitude { get; set; }
+
+        /// <summary>
+        /// 订单类型
+        /// </summary>
+        public int OrderType { get; set; }
 
     }
 }

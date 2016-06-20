@@ -118,13 +118,15 @@ namespace Td.Kylin.Entity
         ///数据建立时间
         ///</summary>
 
-        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///最后更新时间
         ///</summary>
 
-        [Column(TypeName = "datetime")]public DateTime UpdateTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime UpdateTime { get; set; }
 
         ///<summary>
         ///促销ID
@@ -134,6 +136,14 @@ namespace Td.Kylin.Entity
         /// 点击率
         /// </summary>
         public int Click { get; set; }
+        /// <summary>
+        /// 产品库分类ID
+        /// </summary>
+        public long LibraryCategoryID { get; set; }
+        /// <summary>
+        /// 产品库商品ID
+        /// </summary>
+        public long LibraryProductID { get; set; }
 
     }
 }
