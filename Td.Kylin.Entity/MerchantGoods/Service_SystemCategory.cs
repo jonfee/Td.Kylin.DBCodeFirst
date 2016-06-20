@@ -9,7 +9,7 @@ namespace Td.Kylin.Entity.MerchantGoods
     /// <summary>
     /// 商家商品系统分类
     /// </summary>
-    [Table("MerchantGoods_SystemCategory")]
+    [Table("Service_SystemCategory")]
     public class Service_SystemCategory
     {
         /// <summary>
