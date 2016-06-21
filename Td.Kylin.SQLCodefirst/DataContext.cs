@@ -10,8 +10,8 @@ namespace Td.Kylin.SQLCodeFirst
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //var connection = Startup.Configuration["Data:DefaultConnectionString"];
-            //optionsBuilder.UseSqlServer(connection);
+            // var connection = Startup.Configuration["Data:DefaultConnectionString"];
+            //  optionsBuilder.UseSqlServer(connection);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -146,6 +146,11 @@ namespace Td.Kylin.SQLCodeFirst
 
             #region 商家
 
+            modelBuilder.Entity<Service_SystemCategory>(entity =>
+            {
+                entity.Property(p => p.CategoryID).ValueGeneratedNever();
+                entity.HasKey(p => p.CategoryID);
+            });
             modelBuilder.Entity<MerchantGoods_SystemCategory>(entity =>
             {
                 entity.Property(p => p.CategoryID).ValueGeneratedNever();
@@ -817,7 +822,20 @@ namespace Td.Kylin.SQLCodeFirst
 
             #endregion
 
-
+            #region 产品库
+            modelBuilder.Entity<Library_ProductSKU>(entity =>
+            {
+                entity.HasKey(p => p.SkuID);
+            });
+            modelBuilder.Entity<Library_Category>(entity =>
+            {
+                entity.HasKey(p => p.CategoryID);
+            });
+            modelBuilder.Entity<Library_Product>(entity =>
+            {
+                entity.HasKey(p => p.ProductID);
+            });
+            #endregion
             modelBuilder.Entity<Platform_MoneyTransaction>(entity =>
             {
                 entity.HasKey(p => p.TransactionCode);

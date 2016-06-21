@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160621085233_updatedevelop")]
+    partial class updatedevelop
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -1733,126 +1734,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.HasAnnotation("Relational:TableName", "Legwork_Order");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.Library_Category", b =>
-                {
-                    b.Property<long>("CategoryID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<DateTime>("DeleteTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<int>("Depth");
-
-                    b.Property<string>("Description")
-                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
-
-                    b.Property<bool>("Disabled");
-
-                    b.Property<string>("Ico")
-                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<string>("Layer");
-
-                    b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
-
-                    b.Property<int>("OrderNo");
-
-                    b.Property<long>("ParentID");
-
-                    b.Property<int>("ProductNumber");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
-                    b.HasKey("CategoryID");
-
-                    b.HasAnnotation("Relational:TableName", "Library_Category");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Library_Product", b =>
-                {
-                    b.Property<long>("ProductID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<long>("CategoryID");
-
-                    b.Property<string>("Code")
-                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<string>("Description")
-                        .HasAnnotation("Relational:ColumnType", "text");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<string>("MainPic")
-                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
-
-                    b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
-
-                    b.Property<int>("OrderNo");
-
-                    b.Property<string>("ParameterDesc");
-
-                    b.Property<string>("Pics")
-                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
-                    b.Property<int>("SalesStatus");
-
-                    b.Property<int>("Source");
-
-                    b.Property<string>("SourceUrl");
-
-                    b.Property<DateTime>("UpdateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.HasKey("ProductID");
-
-                    b.HasAnnotation("Relational:TableName", "Library_Product");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Library_ProductSKU", b =>
-                {
-                    b.Property<long>("SkuID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<decimal>("MarketPrice");
-
-                    b.Property<long>("ProductID");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
-
-                    b.Property<string>("SKU");
-
-                    b.Property<decimal>("SalePrice");
-
-                    b.Property<int>("SalesStatus");
-
-                    b.Property<string>("Specs");
-
-                    b.HasKey("SkuID");
-
-                    b.HasAnnotation("Relational:TableName", "Library_ProductSKU");
-                });
-
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Category", b =>
                 {
                     b.Property<long>("CategoryID");
@@ -3145,35 +3026,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.HasKey("TransactionCode");
 
                     b.HasAnnotation("Relational:TableName", "Platform_MoneyTransaction");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Service_SystemCategory", b =>
-                {
-                    b.Property<long>("CategoryID");
-
-                    b.Property<string>("CategoryPath")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasAnnotation("Relational:ColumnType", "datetime");
-
-                    b.Property<string>("Icon")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<bool>("IsDisabled");
-
-                    b.Property<string>("Name")
-                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
-
-                    b.Property<int>("OrderNo");
-
-                    b.Property<long>("ParentCategoryID");
-
-                    b.HasKey("CategoryID");
-
-                    b.HasAnnotation("Relational:TableName", "Service_SystemCategory");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Shake_Content", b =>

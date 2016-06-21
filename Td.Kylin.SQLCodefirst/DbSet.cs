@@ -103,7 +103,10 @@ namespace Td.Kylin.SQLCodeFirst
         #endregion
 
         #region 商家
-
+        /// <summary>
+        /// 商家服务系统分类
+        /// </summary>
+        public DbSet<Service_SystemCategory> Service_SystemCategory { get { return Set<Service_SystemCategory>(); } }
         /// <summary>
         /// 商家商品系统分类
         /// </summary>
@@ -709,6 +712,12 @@ namespace Td.Kylin.SQLCodeFirst
 
         #endregion
 
+        #region 产品库
+        public DbSet<Library_Category> Library_Category { get { return Set<Library_Category>(); } }
+        public DbSet<Library_Product> Library_Product { get { return Set<Library_Product>(); } }
+        public DbSet<Library_ProductSKU> Library_ProductSKU { get { return Set<Library_ProductSKU>(); } }
+
+        #endregion
         /// <summary>
         /// 平台资金流水
         /// </summary>
