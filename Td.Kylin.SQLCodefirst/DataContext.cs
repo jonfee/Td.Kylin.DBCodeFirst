@@ -825,14 +825,17 @@ namespace Td.Kylin.SQLCodeFirst
             #region 产品库
             modelBuilder.Entity<Library_ProductSKU>(entity =>
             {
+                entity.Property(p => p.SkuID).ValueGeneratedNever();
                 entity.HasKey(p => p.SkuID);
             });
             modelBuilder.Entity<Library_Category>(entity =>
             {
+                entity.Property(p => p.CategoryID).ValueGeneratedNever();
                 entity.HasKey(p => p.CategoryID);
             });
             modelBuilder.Entity<Library_Product>(entity =>
             {
+                entity.Property(p => p.ProductID).ValueGeneratedNever();
                 entity.HasKey(p => p.ProductID);
             });
             #endregion
