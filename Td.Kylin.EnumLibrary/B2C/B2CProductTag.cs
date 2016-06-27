@@ -20,4 +20,16 @@ namespace Td.Kylin.EnumLibrary
         [Description("热卖")]
         Hot = 2
     }
+
+    /// <summary>
+    /// B2C促销标识
+    /// </summary>
+    public enum B2CPromotionTagStatus
+    {
+        /// <summary>
+        /// 限时购
+        /// </summary>
+        [Description("限时购")]
+        Limit = 1,
+    }
 }
