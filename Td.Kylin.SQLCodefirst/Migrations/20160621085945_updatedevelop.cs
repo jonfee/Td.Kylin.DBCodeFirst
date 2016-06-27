@@ -5,7 +5,7 @@ using Microsoft.Data.Entity.Metadata;
 
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
-    public partial class updatedevelop1 : Migration
+    public partial class updatedevelop: Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,8 +13,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                 name: "Library_Category",
                 columns: table => new
                 {
-                    CategoryID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    CategoryID = table.Column<long>(nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     DeleteTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Depth = table.Column<int>(nullable: false),
@@ -37,8 +36,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                 name: "Library_Product",
                 columns: table => new
                 {
-                    ProductID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ProductID = table.Column<long>(nullable: false),
                     CategoryID = table.Column<long>(nullable: false),
                     Code = table.Column<string>(type: "varchar(18)", nullable: true),
                     CreateTime = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -63,8 +61,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                 name: "Library_ProductSKU",
                 columns: table => new
                 {
-                    SkuID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    SkuID = table.Column<long>(nullable: false),
                     IsDelete = table.Column<bool>(nullable: false),
                     MarketPrice = table.Column<decimal>(nullable: false),
                     ProductID = table.Column<long>(nullable: false),

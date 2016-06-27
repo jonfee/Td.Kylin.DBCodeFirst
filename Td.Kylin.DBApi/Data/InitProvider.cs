@@ -23,7 +23,7 @@ namespace Td.Kylin.DBApi.Data
                 var list = db.System_ModuleAuthorize.ToList();
 
                 if (null != list && list.Count > 0)
-                {
+                {    
                     db.System_ModuleAuthorize.RemoveRange(list);
                     db.SaveChanges();
                 }

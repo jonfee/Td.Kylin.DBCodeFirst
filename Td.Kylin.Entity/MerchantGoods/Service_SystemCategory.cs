@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 商家商品系统分类
+    /// 商家服务系统分类
     /// </summary>
     [Table("Service_SystemCategory")]
     public class Service_SystemCategory
