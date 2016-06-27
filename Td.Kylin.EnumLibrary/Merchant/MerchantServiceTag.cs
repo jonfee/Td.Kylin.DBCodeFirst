@@ -12,6 +12,11 @@ namespace Td.Kylin.EnumLibrary
         /// 上门
         /// </summary>
         [Description("上门")]
-        Call = 1
+        Call = 1,
+        /// <summary>
+        /// 自提
+        /// </summary>
+        [Description("自提")]
+        Take = 2
     }
 }
