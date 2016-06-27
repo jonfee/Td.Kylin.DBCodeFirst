@@ -40,6 +40,10 @@ namespace Td.Kylin.Entity
         /// 标识集合 (例如:限时购)
         /// </summary>
         public int TagStatus { get; set; }
+        /// <summary>
+        /// 排序值
+        /// </summary>
+        public int OrderNo { get; set; }
 
     }
 }
