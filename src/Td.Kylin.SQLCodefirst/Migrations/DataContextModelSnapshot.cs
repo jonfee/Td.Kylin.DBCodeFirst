@@ -1,8 +1,7 @@
-﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 using Td.Kylin.SQLCodeFirst;
 
 namespace Td.Kylin.SQLCodefirst.Migrations
@@ -13,29 +12,29 @@ namespace Td.Kylin.SQLCodefirst.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
+                .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Content", b =>
                 {
                     b.Property<long>("ContentID")
-                        .HasColumnType("bigint");
+                        .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<string>("ADFile")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<int>("ADType")
-                        .HasColumnType("int");
+                        .HasAnnotation("Relational:ColumnType", "int");
 
                     b.Property<int>("AreaID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("Enable");
 
                     b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("LinkData");
 
@@ -44,17 +43,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("OrderNo");
 
                     b.Property<long>("PositionID")
-                        .HasColumnType("bigint");
+                        .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.HasKey("ContentID");
 
-                    b.ToTable("Ad_Content");
+                    b.HasAnnotation("Relational:TableName", "Ad_Content");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Page", b =>
@@ -62,34 +61,34 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("PageID");
 
                     b.Property<string>("PageName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("PlatformType")
-                        .HasColumnType("int");
+                        .HasAnnotation("Relational:ColumnType", "int");
 
                     b.HasKey("PageID");
 
-                    b.ToTable("Ad_Page");
+                    b.HasAnnotation("Relational:TableName", "Ad_Page");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Ad_PlatformContent", b =>
                 {
                     b.Property<long>("ContentID")
-                        .HasColumnType("bigint");
+                        .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<string>("ADFile")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<int>("ADType")
-                        .HasColumnType("int");
+                        .HasAnnotation("Relational:ColumnType", "int");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("Enable");
 
                     b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsGlobal");
 
@@ -100,77 +99,77 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("OrderNo");
 
                     b.Property<long>("PositionID")
-                        .HasColumnType("bigint");
+                        .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.HasKey("ContentID");
 
-                    b.ToTable("Ad_PlatformContent");
+                    b.HasAnnotation("Relational:TableName", "Ad_PlatformContent");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Ad_PlatformToArea", b =>
                 {
                     b.Property<long>("ContentID")
-                        .HasColumnType("bigint");
+                        .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<int>("AreaID");
 
                     b.Property<bool>("Enable");
 
                     b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("OrderNo");
 
                     b.Property<long>("PositionID")
-                        .HasColumnType("bigint");
+                        .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("ContentID", "AreaID");
 
-                    b.ToTable("Ad_PlatformToArea");
+                    b.HasAnnotation("Relational:TableName", "Ad_PlatformToArea");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Ad_Position", b =>
                 {
                     b.Property<long>("PositionID")
-                        .HasColumnType("bigint");
+                        .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<int>("ADDisplayType")
-                        .HasColumnType("int");
+                        .HasAnnotation("Relational:ColumnType", "int");
 
                     b.Property<string>("Code")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("Enable");
 
                     b.Property<string>("Intro")
-                        .HasColumnType("nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
 
                     b.Property<int>("MaxCount")
-                        .HasColumnType("int");
+                        .HasAnnotation("Relational:ColumnType", "int");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<long>("PageID");
 
                     b.Property<string>("PreviewPicture")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.HasKey("PositionID");
 
-                    b.ToTable("Ad_Position");
+                    b.HasAnnotation("Relational:TableName", "Ad_Position");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Admin_Account", b =>
@@ -178,51 +177,51 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AdminID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("DataStatus");
 
                     b.Property<string>("LastIp")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<DateTime>("LastTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("Logins");
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(32)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(32)");
 
                     b.Property<int>("PowerLevel");
 
                     b.Property<string>("Realname")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("UserPic")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("Username")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.HasKey("AdminID");
 
-                    b.ToTable("Admin_Account");
+                    b.HasAnnotation("Relational:TableName", "Admin_Account");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Admin_Permission", b =>
                 {
                     b.Property<long>("AdminID")
-                        .HasColumnType("bigint");
+                        .HasAnnotation("Relational:ColumnType", "bigint");
 
                     b.Property<string>("ModuleID")
-                        .HasColumnType("varchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("DataStatus");
 
@@ -232,7 +231,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("AdminID", "ModuleID");
 
-                    b.ToTable("Admin_Permission");
+                    b.HasAnnotation("Relational:TableName", "Admin_Permission");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Agent_Account", b =>
@@ -244,26 +243,26 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("Balance");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<decimal>("FreezeMoney");
 
                     b.Property<string>("LoginAccount")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("LoginPassword")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("Mobile")
-                        .HasColumnType("nvarchar(11)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(11)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<int>("OperatorAreaID");
 
                     b.Property<string>("PaymentPassword")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -271,7 +270,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("AgentID");
 
-                    b.ToTable("Agent_Account");
+                    b.HasAnnotation("Relational:TableName", "Agent_Account");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Agent_AreaRelation", b =>
@@ -281,24 +280,24 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AgentAreaID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("AgentID", "AgentAreaID");
 
-                    b.ToTable("Agent_AreaRelation");
+                    b.HasAnnotation("Relational:TableName", "Agent_AreaRelation");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Agent_Profile", b =>
@@ -306,29 +305,29 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AgentID");
 
                     b.Property<string>("BusinessLicensePhoto")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("IDCardNo")
-                        .HasColumnType("nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
 
                     b.Property<string>("IDCardPhotoBack")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("IDCardPhotoFront")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("LinkMan")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("LinkPhone")
-                        .HasColumnType("nvarchar(11)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(11)");
 
                     b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.HasKey("AgentID");
 
-                    b.ToTable("Agent_Profile");
+                    b.HasAnnotation("Relational:TableName", "Agent_Profile");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Area_Open", b =>
@@ -336,16 +335,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("AreaName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("Status");
 
                     b.HasKey("AreaID");
 
-                    b.ToTable("Area_Open");
+                    b.HasAnnotation("Relational:TableName", "Area_Open");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Area_Operator", b =>
@@ -357,15 +356,15 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("Balance");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<decimal>("FreezeMoney");
 
                     b.Property<string>("LoginAccount")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("LoginPassword")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -373,7 +372,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("OperatorID");
 
-                    b.ToTable("Area_Operator");
+                    b.HasAnnotation("Relational:TableName", "Area_Operator");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Area_OperatorProfile", b =>
@@ -381,37 +380,37 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("OperatorID");
 
                     b.Property<string>("Code")
-                        .HasColumnType("nvarchar(16)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(16)");
 
                     b.Property<string>("CompanyName")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("LegalIDCard")
-                        .HasColumnType("nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
 
                     b.Property<string>("LegalName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("LinkMan")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("LocationPlace")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("Mobile")
-                        .HasColumnType("nvarchar(11)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(11)");
 
                     b.Property<string>("PhoneNo")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("Photo")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -419,7 +418,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("OperatorID");
 
-                    b.ToTable("Area_OperatorProfile");
+                    b.HasAnnotation("Relational:TableName", "Area_OperatorProfile");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Area_OperatorRelation", b =>
@@ -429,27 +428,27 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("CompactNumber")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("OperatorID", "AreaID");
 
-                    b.ToTable("Area_OperatorRelation");
+                    b.HasAnnotation("Relational:TableName", "Area_OperatorRelation");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Area_RecommendIndustry", b =>
@@ -466,7 +465,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("AreaID", "IndustryID");
 
-                    b.ToTable("Area_RecommendIndustry");
+                    b.HasAnnotation("Relational:TableName", "Area_RecommendIndustry");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.AreaOperator_TradeRecords", b =>
@@ -480,7 +479,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("CounterpartyIdentity");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("DataID");
 
@@ -493,16 +492,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<string>("PlatformTransactionCode");
 
                     b.Property<string>("TradeInfo")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("TradeNo")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.Property<int>("TradeType");
 
                     b.HasKey("TradeID");
 
-                    b.ToTable("AreaOperator_TradeRecords");
+                    b.HasAnnotation("Relational:TableName", "AreaOperator_TradeRecords");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_AreaForum", b =>
@@ -510,7 +509,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AreaForumID");
 
                     b.Property<string>("AliasName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("AreaID");
 
@@ -519,13 +518,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime?>("DeleteTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<bool>("Disabled");
 
@@ -536,10 +535,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Logo")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("Moderators")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<int>("OrderNo");
 
@@ -559,7 +558,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("AreaForumID");
 
-                    b.ToTable("Circle_AreaForum");
+                    b.HasAnnotation("Relational:TableName", "Circle_AreaForum");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Attachment", b =>
@@ -567,18 +566,18 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AttachmentID");
 
                     b.Property<DateTime>("DeleteTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("FilePath")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<long>("FileSize");
 
                     b.Property<string>("FileType")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("Filename")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<bool>("IsDelete");
 
@@ -589,13 +588,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime>("UploadTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("UserID");
 
                     b.HasKey("AttachmentID");
 
-                    b.ToTable("Circle_Attachment");
+                    b.HasAnnotation("Relational:TableName", "Circle_Attachment");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_AttachmentUsage", b =>
@@ -610,7 +609,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("AttachmentID", "PostID");
 
-                    b.ToTable("Circle_AttachmentUsage");
+                    b.HasAnnotation("Relational:TableName", "Circle_AttachmentUsage");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Category", b =>
@@ -618,17 +617,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime?>("DeleteTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("Disabled");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<int>("OrderNo");
 
@@ -638,7 +637,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("Circle_Category");
+                    b.HasAnnotation("Relational:TableName", "Circle_Category");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_CheckIn", b =>
@@ -648,7 +647,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<DateTime>("CheckTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<float>("Latitude");
 
@@ -662,7 +661,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("CheckID");
 
-                    b.ToTable("Circle_CheckIn");
+                    b.HasAnnotation("Relational:TableName", "Circle_CheckIn");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Event", b =>
@@ -670,13 +669,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("EventID");
 
                     b.Property<string>("Address")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("EventStatus");
 
@@ -687,7 +686,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("TopicID");
 
@@ -697,7 +696,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("EventID");
 
-                    b.ToTable("Circle_Event");
+                    b.HasAnnotation("Relational:TableName", "Circle_Event");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_EventUser", b =>
@@ -705,7 +704,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("EventUserId");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("EventID");
 
@@ -718,11 +717,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<string>("Username")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.HasKey("EventUserId");
 
-                    b.ToTable("Circle_EventUser");
+                    b.HasAnnotation("Relational:TableName", "Circle_EventUser");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Follow", b =>
@@ -732,10 +731,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("LastTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -743,7 +742,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("AreaForumID", "UserID");
 
-                    b.ToTable("Circle_Follow");
+                    b.HasAnnotation("Relational:TableName", "Circle_Follow");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Forum", b =>
@@ -753,23 +752,23 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime?>("DeleteTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<bool>("Disabled");
 
                     b.Property<string>("ForumName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Logo")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<int>("OperatorNumber");
 
@@ -785,7 +784,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("ForumID");
 
-                    b.ToTable("Circle_Forum");
+                    b.HasAnnotation("Relational:TableName", "Circle_Forum");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Good", b =>
@@ -793,20 +792,20 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("GoodID");
 
                     b.Property<string>("Address")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("LinkMan")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("Loss");
 
                     b.Property<decimal>("Original");
 
                     b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(13)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(13)");
 
                     b.Property<decimal>("Price");
 
@@ -822,7 +821,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("GoodID");
 
-                    b.ToTable("Circle_Good");
+                    b.HasAnnotation("Relational:TableName", "Circle_Good");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Location", b =>
@@ -843,7 +842,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("LocationID");
 
-                    b.ToTable("Circle_Location");
+                    b.HasAnnotation("Relational:TableName", "Circle_Location");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Post", b =>
@@ -851,15 +850,15 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("PostID");
 
                     b.Property<string>("Content")
-                        .HasColumnType("text");
+                        .HasAnnotation("Relational:ColumnType", "text");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("Dislike");
 
                     b.Property<string>("Pics")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<int>("Reviews");
 
@@ -870,18 +869,18 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Support");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<long>("TopicID");
 
                     b.Property<long>("UserID");
 
                     b.Property<string>("Username")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.HasKey("PostID");
 
-                    b.ToTable("Circle_Post");
+                    b.HasAnnotation("Relational:TableName", "Circle_Post");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_PostTrend", b =>
@@ -893,10 +892,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AtUserID");
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("Disable");
 
@@ -920,7 +919,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("TrendsID");
 
-                    b.ToTable("Circle_PostTrend");
+                    b.HasAnnotation("Relational:TableName", "Circle_PostTrend");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Respond", b =>
@@ -928,17 +927,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("RespondID");
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("PostID");
 
                     b.Property<long>("ReplyUserID");
 
                     b.Property<string>("ReplyUsername")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -951,11 +950,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<string>("Username")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.HasKey("RespondID");
 
-                    b.ToTable("Circle_Respond");
+                    b.HasAnnotation("Relational:TableName", "Circle_Respond");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_Topic", b =>
@@ -969,13 +968,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("ClickCount");
 
                     b.Property<string>("Content")
-                        .HasColumnType("text");
+                        .HasAnnotation("Relational:ColumnType", "text");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime?>("DeleteTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("DislikeCount");
 
@@ -994,7 +993,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Loss");
 
                     b.Property<string>("Pics")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<int>("PostCount");
 
@@ -1007,18 +1006,18 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("TagStatus");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<int>("TopicType");
 
                     b.Property<long>("UserID");
 
                     b.Property<string>("Username")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.HasKey("TopicID");
 
-                    b.ToTable("Circle_Topic");
+                    b.HasAnnotation("Relational:TableName", "Circle_Topic");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Commission_OperatorDefault", b =>
@@ -1030,13 +1029,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("CommissionType");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<decimal>("Value");
 
                     b.HasKey("AreaID", "CommissionItem");
 
-                    b.ToTable("Commission_OperatorDefault");
+                    b.HasAnnotation("Relational:TableName", "Commission_OperatorDefault");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Commission_OperatorFromMerchant", b =>
@@ -1050,13 +1049,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("CommissionType");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<decimal>("Value");
 
                     b.HasKey("AreaID", "MerchantID", "CommissionItem");
 
-                    b.ToTable("Commission_OperatorFromMerchant");
+                    b.HasAnnotation("Relational:TableName", "Commission_OperatorFromMerchant");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Commission_OperatorFromWorker", b =>
@@ -1070,13 +1069,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("CommissionType");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<decimal>("Value");
 
                     b.HasKey("AreaID", "UserID", "CommissionItem");
 
-                    b.ToTable("Commission_OperatorFromWorker");
+                    b.HasAnnotation("Relational:TableName", "Commission_OperatorFromWorker");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Commission_Platform", b =>
@@ -1088,13 +1087,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("CommissionType");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<decimal>("Value");
 
                     b.HasKey("AreaID", "CommissionItem");
 
-                    b.ToTable("Commission_Platform");
+                    b.HasAnnotation("Relational:TableName", "Commission_Platform");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Complaint", b =>
@@ -1104,28 +1103,28 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("ComplainantID");
 
                     b.Property<string>("ComplainantName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("ComplainantPhone")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("ComplaintsStatus");
 
                     b.Property<int>("ComplaintsType");
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("DataID")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<int>("IdentityType");
 
                     b.Property<string>("Reason")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1133,7 +1132,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("ComplaintsID");
 
-                    b.ToTable("Complaint");
+                    b.HasAnnotation("Relational:TableName", "Complaint");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Job_Apply", b =>
@@ -1145,7 +1144,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("ApplyStatus");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("MerchantIsDelete");
 
@@ -1154,13 +1153,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("UserIsDelete");
 
                     b.HasKey("RecruitmentID", "ResumeID");
 
-                    b.ToTable("Job_Apply");
+                    b.HasAnnotation("Relational:TableName", "Job_Apply");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Job_Category", b =>
@@ -1170,10 +1169,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("ApplyCount");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<long>("OrderNo");
 
@@ -1191,7 +1190,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("Job_Category");
+                    b.HasAnnotation("Relational:TableName", "Job_Category");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Job_Recruitment", b =>
@@ -1203,33 +1202,33 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<string>("ContactEmail")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("ContactMan")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("ContactPhoto")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("Count");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasColumnType("text");
+                        .HasAnnotation("Relational:ColumnType", "text");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<bool>("IsUnShelve");
 
                     b.Property<string>("JobName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("JobType");
 
                     b.Property<DateTime>("LastRefreshTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("LookCount");
 
@@ -1260,7 +1259,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Welfares");
 
                     b.Property<string>("WordAddress")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<double>("WorkLatitude");
 
@@ -1268,7 +1267,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("RecruitmentID");
 
-                    b.ToTable("Job_Recruitment");
+                    b.HasAnnotation("Relational:TableName", "Job_Recruitment");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Job_Searcher", b =>
@@ -1278,10 +1277,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("JobName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("JobType");
 
@@ -1300,18 +1299,18 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("SearcherName")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<long>("UserID");
 
                     b.Property<int>("Welfares");
 
                     b.Property<string>("WordAddress")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.HasKey("SearcherID");
 
-                    b.ToTable("Job_Searcher");
+                    b.HasAnnotation("Relational:TableName", "Job_Searcher");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.KylinService_Business", b =>
@@ -1323,12 +1322,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("BusinessType");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("Disabled");
 
                     b.Property<string>("Icon")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<long>("IndustryID");
 
@@ -1337,7 +1336,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsOpenService");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("OrderNo");
 
@@ -1353,7 +1352,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("BusinessID");
 
-                    b.ToTable("KylinService_Business");
+                    b.HasAnnotation("Relational:TableName", "KylinService_Business");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.KylinService_BusinessConfig", b =>
@@ -1363,7 +1362,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("OptionID");
 
                     b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1374,11 +1373,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("UnitType");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("BusinessID", "OptionID");
 
-                    b.ToTable("KylinService_BusinessConfig");
+                    b.HasAnnotation("Relational:TableName", "KylinService_BusinessConfig");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.KylinService_BusinessOptions", b =>
@@ -1388,15 +1387,15 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("BusinessID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1404,7 +1403,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("OptionID");
 
-                    b.ToTable("KylinService_BusinessOptions");
+                    b.HasAnnotation("Relational:TableName", "KylinService_BusinessOptions");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.KylinService_Order", b =>
@@ -1414,7 +1413,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("ActualOrderAmount");
 
                     b.Property<DateTime?>("AllotTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("AreaID");
 
@@ -1423,22 +1422,22 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("BusinessType");
 
                     b.Property<DateTime?>("CancelTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime?>("ConfirmTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("ConsumerCode");
 
                     b.Property<decimal>("CouponAmount");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("EvaluateLevel");
 
                     b.Property<DateTime?>("EvaluateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<float>("Latitude");
 
@@ -1449,24 +1448,24 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("Mobile")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("Number");
 
                     b.Property<long>("OptionID");
 
                     b.Property<string>("OrderCode")
-                        .HasColumnType("nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
 
                     b.Property<DateTime?>("PaiedTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("PaymentType");
 
                     b.Property<decimal>("PrepaidAmount");
 
                     b.Property<DateTime?>("ReceivedTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1475,13 +1474,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("ServerType");
 
                     b.Property<string>("ServiceAddress")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("ServiceContent")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<DateTime>("ServiceStartTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("Status");
 
@@ -1492,29 +1491,29 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("UserDelete");
 
                     b.Property<DateTime?>("UserFinishTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("UserID");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("UserRemark")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<bool>("WorkerDelete");
 
                     b.Property<DateTime?>("WorkerFinishTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("WorkerID");
 
                     b.Property<string>("WorkerRemark")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.HasKey("OrderID");
 
-                    b.ToTable("KylinService_Order");
+                    b.HasAnnotation("Relational:TableName", "KylinService_Order");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Legwork_AreaConfig", b =>
@@ -1522,10 +1521,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("Instructions")
-                        .HasColumnType("nvarchar(MAX)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(MAX)");
 
                     b.Property<string>("OpenAreas")
-                        .HasColumnType("varchar(400)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(400)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1533,7 +1532,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("AreaID");
 
-                    b.ToTable("Legwork_AreaConfig");
+                    b.HasAnnotation("Relational:TableName", "Legwork_AreaConfig");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Legwork_Evaluate", b =>
@@ -1541,10 +1540,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("EvaluateID");
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<short>("Level");
 
@@ -1558,7 +1557,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("EvaluateID");
 
-                    b.ToTable("Legwork_Evaluate");
+                    b.HasAnnotation("Relational:TableName", "Legwork_Evaluate");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Legwork_GlobalConfig", b =>
@@ -1583,7 +1582,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("GlobalConfigID");
 
-                    b.ToTable("Legwork_GlobalConfig");
+                    b.HasAnnotation("Relational:TableName", "Legwork_GlobalConfig");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Legwork_GoodsCategory", b =>
@@ -1591,12 +1590,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1606,7 +1605,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("Legwork_GoodsCategory");
+                    b.HasAnnotation("Relational:TableName", "Legwork_GoodsCategory");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Legwork_OfferRecord", b =>
@@ -1616,7 +1615,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("Charge");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsUsed");
 
@@ -1634,7 +1633,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("OfferID");
 
-                    b.ToTable("Legwork_OfferRecord");
+                    b.HasAnnotation("Relational:TableName", "Legwork_OfferRecord");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Legwork_Order", b =>
@@ -1648,67 +1647,67 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<float?>("ActualDeliveryLongitude");
 
                     b.Property<DateTime?>("ActualDeliveryTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<float?>("ActualPickLatitude");
 
                     b.Property<float?>("ActualPickLongitude");
 
                     b.Property<DateTime?>("ActualPickTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("AreaID");
 
                     b.Property<DateTime?>("CancelTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Categories")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<DateTime?>("CompleteTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime?>("EvaluateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<decimal>("GoodsAmount");
 
                     b.Property<string>("Introduction")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<bool>("IsWorkDelete");
 
                     b.Property<DateTime?>("OfferAcceptTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long?>("OfferID");
 
                     b.Property<string>("OrderCode")
-                        .HasColumnType("nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
 
                     b.Property<short>("OrderType");
 
                     b.Property<short?>("PaymentMethod");
 
                     b.Property<DateTime?>("PaymentTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<short?>("PaymentType");
 
                     b.Property<string>("Pictures")
-                        .HasColumnType("nvarchar(400)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(400)");
 
                     b.Property<long>("RequiredDeliveryAddressID");
 
                     b.Property<DateTime>("RequiredDeliveryTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long?>("RequiredPickAddressID");
 
                     b.Property<DateTime?>("RequiredPickTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1719,10 +1718,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<short>("Status");
 
                     b.Property<DateTime>("SubmitTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Summary")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<long>("UserID");
 
@@ -1730,7 +1729,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("OrderID");
 
-                    b.ToTable("Legwork_Order");
+                    b.HasAnnotation("Relational:TableName", "Legwork_Order");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Library_Category", b =>
@@ -1738,27 +1737,27 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("DeleteTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("Depth");
 
                     b.Property<string>("Description")
-                        .HasColumnType("varchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<bool>("Disabled");
 
                     b.Property<string>("Ico")
-                        .HasColumnType("varchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Layer");
 
                     b.Property<string>("Name")
-                        .HasColumnType("varchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(20)");
 
                     b.Property<int>("OrderNo");
 
@@ -1772,7 +1771,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("Library_Category");
+                    b.HasAnnotation("Relational:TableName", "Library_Category");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Library_Product", b =>
@@ -1782,28 +1781,28 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<string>("Code")
-                        .HasColumnType("varchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(18)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasColumnType("text");
+                        .HasAnnotation("Relational:ColumnType", "text");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("MainPic")
-                        .HasColumnType("varchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(100)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("varchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(200)");
 
                     b.Property<int>("OrderNo");
 
                     b.Property<string>("ParameterDesc");
 
                     b.Property<string>("Pics")
-                        .HasColumnType("varchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(500)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -1816,11 +1815,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<string>("SourceUrl");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("ProductID");
 
-                    b.ToTable("Library_Product");
+                    b.HasAnnotation("Relational:TableName", "Library_Product");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Library_ProductSKU", b =>
@@ -1847,188 +1846,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("SkuID");
 
-                    b.ToTable("Library_ProductSKU");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_AreaConfig", b =>
-                {
-                    b.Property<int>("AreaID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<long>("GlobalTicketBalance");
-
-                    b.Property<string>("Introduction")
-                        .HasColumnType("nvarchar(MAX)");
-
-                    b.Property<long>("PrizeTicketBalance");
-
-                    b.HasKey("AreaID");
-
-                    b.ToTable("Luckydraw_AreaConfig");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_AreaTicketGivingRules", b =>
-                {
-                    b.Property<int>("AreaID");
-
-                    b.Property<short>("Rule");
-
-                    b.Property<bool>("IsEnabled");
-
-                    b.Property<short>("Quantity");
-
-                    b.Property<char>("Values")
-                        .HasColumnType(" 	varchar(200)");
-
-                    b.HasKey("AreaID", "Rule");
-
-                    b.ToTable("Luckydraw_AreaTicketGivingRules");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_LotteryRecord", b =>
-                {
-                    b.Property<long>("RecordID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("AreaID");
-
-                    b.Property<long>("ConsignorID");
-
-                    b.Property<DateTime>("CreatedTime");
-
-                    b.Property<bool>("IsDelivery");
-
-                    b.Property<bool>("IsWinning");
-
-                    b.Property<char>("ReceiptInfo")
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<char>("Remark")
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<long>("TicketID");
-
-                    b.Property<long>("UserID");
-
-                    b.HasKey("RecordID");
-
-                    b.ToTable("Luckydraw_LotteryRecord");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_PlatformConfig", b =>
-                {
-                    b.Property<long>("ConfigID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<TimeSpan>("ExclusionEndTime");
-
-                    b.Property<TimeSpan>("ExclusionStartTime");
-
-                    b.Property<short>("GlobalTicketProportion");
-
-                    b.Property<short>("Probability");
-
-                    b.HasKey("ConfigID");
-
-                    b.ToTable("Luckydraw_PlatformConfig");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_Prize", b =>
-                {
-                    b.Property<long>("PrizeID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("AreaID");
-
-                    b.Property<int>("Balance");
-
-                    b.Property<char>("CoverImage")
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<bool>("CreatedTime");
-
-                    b.Property<decimal>("Denomination");
-
-                    b.Property<DateTime>("EndTime");
-
-                    b.Property<int>("GlobalTicketBuildCount");
-
-                    b.Property<string>("Introduction")
-                        .HasColumnType("nvarchar(MAX)");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<bool>("IsPublished");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("PrizeTicketBuildCount");
-
-                    b.Property<DateTime>("PublishedTime");
-
-                    b.Property<int>("Quantity");
-
-                    b.Property<int>("SortOrder");
-
-                    b.Property<DateTime>("StartTime");
-
-                    b.Property<DateTime>("UpdatedTime");
-
-                    b.HasKey("PrizeID");
-
-                    b.ToTable("Luckydraw_Prize");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_PrizePool", b =>
-                {
-                    b.Property<long>("ID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<long>("AreaID");
-
-                    b.Property<int>("Balance");
-
-                    b.Property<long>("PrizeID");
-
-                    b.Property<DateTime>("ReleaseTime");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Luckydraw_PrizePool");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_Ticket", b =>
-                {
-                    b.Property<long>("TicketID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("AcquiredTime");
-
-                    b.Property<int>("AreaID");
-
-                    b.Property<DateTime>("EndTime");
-
-                    b.Property<bool>("IsUsed");
-
-                    b.Property<bool>("IsWinning");
-
-                    b.Property<long>("PrizeID");
-
-                    b.Property<DateTime>("StartTime");
-
-                    b.Property<char>("TicketCode")
-                        .HasColumnType("varchar(50)");
-
-                    b.Property<short>("Type");
-
-                    b.Property<DateTime>("UsedTime");
-
-                    b.Property<long>("UserID");
-
-                    b.HasKey("TicketID");
-
-                    b.ToTable("Luckydraw_Ticket");
+                    b.HasAnnotation("Relational:TableName", "Library_ProductSKU");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Category", b =>
@@ -2038,23 +1856,23 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("DeleteTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<bool>("Disabled");
 
                     b.Property<string>("Ico")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("OrderNo");
 
@@ -2066,7 +1884,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("Mall_Category");
+                    b.HasAnnotation("Relational:TableName", "Mall_Category");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_CategoryTag", b =>
@@ -2076,7 +1894,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("OrderNo");
 
@@ -2089,11 +1907,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("SearchTimes");
 
                     b.Property<string>("TagName")
-                        .HasColumnType("nvarchar(8)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(8)");
 
                     b.HasKey("TagID");
 
-                    b.ToTable("Mall_CategoryTag");
+                    b.HasAnnotation("Relational:TableName", "Mall_CategoryTag");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Evaluate", b =>
@@ -2101,10 +1919,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("EvaluateID");
 
                     b.Property<string>("Contents")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("EvaluateLevel");
 
@@ -2117,7 +1935,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<string>("ReplyContents");
 
                     b.Property<DateTime?>("ReplyTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2129,7 +1947,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("EvaluateID");
 
-                    b.ToTable("Mall_Evaluate");
+                    b.HasAnnotation("Relational:TableName", "Mall_Evaluate");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_EvaluateStatistics", b =>
@@ -2146,7 +1964,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("ProductID", "EvaluateLevel");
 
-                    b.ToTable("Mall_EvaluateStatistics");
+                    b.HasAnnotation("Relational:TableName", "Mall_EvaluateStatistics");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Order", b =>
@@ -2158,57 +1976,57 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<DateTime?>("CancelTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("DeliveryInfo")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<DateTime?>("EvaluateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("ExpressCompany")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("ExpressNumber")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.Property<bool>("IsBuyerDelete");
 
                     b.Property<bool>("IsVenderDelete");
 
                     b.Property<DateTime?>("NeedPayTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("OrderCode")
-                        .HasColumnType("nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
 
                     b.Property<int>("OrderStatus");
 
                     b.Property<int>("OrderType");
 
                     b.Property<DateTime?>("PayTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("PaymentType");
 
                     b.Property<string>("ProductInfo")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<DateTime?>("ReceivedTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime?>("ShipTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("SourceDataID");
 
@@ -2222,7 +2040,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("OrderID");
 
-                    b.ToTable("Mall_Order");
+                    b.HasAnnotation("Relational:TableName", "Mall_Order");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_OrderProductSnapshot", b =>
@@ -2234,35 +2052,35 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<string>("Code")
-                        .HasColumnType("nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
 
                     b.Property<string>("Description")
-                        .HasColumnType("text");
+                        .HasAnnotation("Relational:ColumnType", "text");
 
                     b.Property<bool>("HasEvaluate");
 
                     b.Property<string>("MainPic")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<decimal>("MarketPrice");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<long>("OrderID");
 
                     b.Property<string>("Pics")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<long>("ProductID");
 
                     b.Property<long?>("PromotionID");
 
                     b.Property<string>("PromotionTags")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.Property<string>("Publisher")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2273,21 +2091,21 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("SkuID");
 
                     b.Property<string>("Specs")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("TagIDs")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<decimal>("TotalDeliveryFee");
 
                     b.Property<decimal>("TradPrice");
 
                     b.Property<string>("VenderName")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.HasKey("SnapshotID");
 
-                    b.ToTable("Mall_OrderProductSnapshot");
+                    b.HasAnnotation("Relational:TableName", "Mall_OrderProductSnapshot");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Product", b =>
@@ -2301,15 +2119,15 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Click");
 
                     b.Property<string>("Code")
-                        .HasColumnType("nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<decimal>("DeliveryFee");
 
                     b.Property<string>("Description")
-                        .HasColumnType("text");
+                        .HasAnnotation("Relational:ColumnType", "text");
 
                     b.Property<double>("EvaluateScore");
 
@@ -2322,20 +2140,20 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("LibraryProductID");
 
                     b.Property<string>("MainPic")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<int>("OrderNo");
 
                     b.Property<string>("Pics")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<long?>("PromotionID");
 
                     b.Property<string>("Publisher")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2346,19 +2164,19 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("SoldNumber");
 
                     b.Property<string>("TagIDs")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<int>("TagStatus");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("VenderName")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.HasKey("ProductID");
 
-                    b.ToTable("Mall_Product");
+                    b.HasAnnotation("Relational:TableName", "Mall_Product");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_ProductSKU", b =>
@@ -2366,7 +2184,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("SkuID");
 
                     b.Property<string>("Img")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<int>("Inventory");
 
@@ -2381,7 +2199,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("SKU")
-                        .HasColumnType("nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
 
                     b.Property<decimal>("SalePrice");
 
@@ -2390,13 +2208,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("SoldNumber");
 
                     b.Property<string>("Specs")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("TagStatus");
 
                     b.HasKey("SkuID");
 
-                    b.ToTable("Mall_ProductSKU");
+                    b.HasAnnotation("Relational:TableName", "Mall_ProductSKU");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Promotion", b =>
@@ -2406,26 +2224,26 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<DateTime>("BeginTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasColumnType("text");
+                        .HasAnnotation("Relational:ColumnType", "text");
 
                     b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("FreeDelivery");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<string>("Pic")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<int>("PromotionType");
 
@@ -2435,7 +2253,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("PromotionID");
 
-                    b.ToTable("Mall_Promotion");
+                    b.HasAnnotation("Relational:TableName", "Mall_Promotion");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_PromotionConfig", b =>
@@ -2453,11 +2271,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Unit");
 
                     b.Property<string>("Value")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.HasKey("ConfigID");
 
-                    b.ToTable("Mall_PromotionConfig");
+                    b.HasAnnotation("Relational:TableName", "Mall_PromotionConfig");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_PromotionProductRelevance", b =>
@@ -2467,7 +2285,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("ProductID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("MaxNumber");
 
@@ -2483,7 +2301,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("PromotionID", "ProductID");
 
-                    b.ToTable("Mall_PromotionProductRelevance");
+                    b.HasAnnotation("Relational:TableName", "Mall_PromotionProductRelevance");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_ShoppingCart", b =>
@@ -2493,7 +2311,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("MallType");
 
@@ -2510,13 +2328,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("SkuID");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("UserID");
 
                     b.HasKey("CartID");
 
-                    b.ToTable("Mall_ShoppingCart");
+                    b.HasAnnotation("Relational:TableName", "Mall_ShoppingCart");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Account", b =>
@@ -2528,19 +2346,19 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("AreaLayer")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<decimal>("Balance");
 
                     b.Property<int>("CertificateStatus");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("DataStatus");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<string>("DeviceCode");
 
@@ -2555,36 +2373,36 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<float>("Latitude");
 
                     b.Property<string>("LinkMan")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("LocationPlace")
-                        .HasColumnType("nvarchar(40)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(40)");
 
                     b.Property<float>("Longitude");
 
                     b.Property<string>("Mobile")
-                        .HasColumnType("nvarchar(11)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(11)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<int>("OrderMode");
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(32)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(32)");
 
                     b.Property<string>("PayPassword");
 
                     b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("Pics")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<string>("PushCode");
 
                     b.Property<string>("RecommendCode")
-                        .HasColumnType("nvarchar(6)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(6)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2593,11 +2411,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("SourceType");
 
                     b.Property<string>("Street")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.HasKey("MerchantID");
 
-                    b.ToTable("Merchant_Account");
+                    b.HasAnnotation("Relational:TableName", "Merchant_Account");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Business", b =>
@@ -2609,16 +2427,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AuditAdminID");
 
                     b.Property<string>("AuditRemark")
-                        .HasColumnType("nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
 
                     b.Property<string>("AudtiAdminName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime?>("OpenServiceTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2628,7 +2446,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("MerchantID", "BusinessID");
 
-                    b.ToTable("Merchant_Business");
+                    b.HasAnnotation("Relational:TableName", "Merchant_Business");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Certificate", b =>
@@ -2638,33 +2456,33 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long?>("AuditAdminID");
 
                     b.Property<string>("AuditAdminName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("AuditRemark")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<int>("AuditStatus");
 
                     b.Property<DateTime?>("AuditTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("CertNo")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("CertificateType");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("Pics")
-                        .HasColumnType("nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2672,7 +2490,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("CertificateID");
 
-                    b.ToTable("Merchant_Certificate");
+                    b.HasAnnotation("Relational:TableName", "Merchant_Certificate");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Config", b =>
@@ -2680,10 +2498,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("BusinessBeginTime")
-                        .HasColumnType("nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
 
                     b.Property<string>("BusinessEndTime")
-                        .HasColumnType("nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
 
                     b.Property<decimal>("DeliveryMoney");
 
@@ -2706,11 +2524,9 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("StartMoney");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("MerchantID");
-
-                    b.ToTable("Merchant_Config");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Evaluate", b =>
@@ -2718,10 +2534,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("EvaluateID");
 
                     b.Property<string>("Contents")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("EvaluateLevel");
 
@@ -2736,7 +2552,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<string>("ReplyContents");
 
                     b.Property<DateTime?>("ReplyTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2747,8 +2563,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.HasKey("EvaluateID");
-
-                    b.ToTable("Merchant_Evaluate");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_EvaluateStatistics", b =>
@@ -2766,8 +2580,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.HasKey("ProductID", "EvaluateLevel");
-
-                    b.ToTable("Merchant_EvaluateStatistics");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Industry", b =>
@@ -2775,18 +2587,18 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("IndustryID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("Disabled");
 
                     b.Property<string>("Icon")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("Layer")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("OrderNo");
 
@@ -2800,7 +2612,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("IndustryID");
 
-                    b.ToTable("Merchant_Industry");
+                    b.HasAnnotation("Relational:TableName", "Merchant_Industry");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Message", b =>
@@ -2808,10 +2620,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MessageID");
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsDelete");
 
@@ -2822,21 +2634,21 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("MessageType");
 
                     b.Property<string>("RefDataID")
-                        .HasColumnType("nvarchar(36)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(36)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Sign")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.HasKey("MessageID");
 
-                    b.ToTable("Merchant_Message");
+                    b.HasAnnotation("Relational:TableName", "Merchant_Message");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Order", b =>
@@ -2846,27 +2658,27 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("ActualOrderAmount");
 
                     b.Property<string>("CancelRemark")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<DateTime?>("CancelTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("DeliveryInfo")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<int>("DeliveryMode");
 
                     b.Property<DateTime?>("EvaluateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("ExpressCompany")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("ExpressNumber")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.Property<bool>("IsBuyerDelete");
 
@@ -2879,29 +2691,29 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("OrderCode")
-                        .HasColumnType("nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
 
                     b.Property<int>("OrderStatus");
 
                     b.Property<int>("OrderType");
 
                     b.Property<DateTime?>("PayTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("PaymentType");
 
                     b.Property<DateTime?>("ReceivedTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime?>("SendTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<decimal>("TotalDeliveryFee");
 
@@ -2915,7 +2727,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("OrderID");
 
-                    b.ToTable("Merchant_Order");
+                    b.HasAnnotation("Relational:TableName", "Merchant_Order");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_OrderSnapshot", b =>
@@ -2933,12 +2745,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("MarketPrice");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<long>("OrderID");
 
                     b.Property<string>("Pic")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -2947,7 +2759,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("SalePrice");
 
                     b.Property<string>("Specification")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.Property<long>("SystemCategoryID");
 
@@ -2955,7 +2767,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("SnapshotID");
 
-                    b.ToTable("Merchant_OrderSnapshot");
+                    b.HasAnnotation("Relational:TableName", "Merchant_OrderSnapshot");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_RecommendRecord", b =>
@@ -2963,20 +2775,18 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("RecordID");
 
                     b.Property<DateTime>("CreatedTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("RecommendCode")
-                        .HasColumnType("nvarchar(6)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(6)");
 
                     b.Property<int>("ReferrerBusinessType");
 
                     b.Property<int>("ReferrerType");
 
                     b.HasKey("RecordID");
-
-                    b.ToTable("Merchant_RecommendRecord");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_TradeRecords", b =>
@@ -2990,7 +2800,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("CounterpartyIdentity");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("DataID");
 
@@ -3007,16 +2817,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("TradeInfo")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("TradeNo")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<int>("TradeType");
 
                     b.HasKey("TradeID");
 
-                    b.ToTable("Merchant_TradeRecords");
+                    b.HasAnnotation("Relational:TableName", "Merchant_TradeRecords");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Merchant_Welfare", b =>
@@ -3024,62 +2834,62 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("WelfareID");
 
                     b.Property<DateTime?>("ApplyEndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime?>("ApplyStartTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("AreaID");
 
                     b.Property<long>("AuditAdminID");
 
                     b.Property<string>("AuditAdminName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("AuditRemark")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<DateTime?>("AuditTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("Disabled");
 
                     b.Property<int>("DrawNumber");
 
                     b.Property<DateTime>("ExpiryEndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("ExpiryStartTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Intro")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<DateTime?>("LotteryTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("MerchantName")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<int>("Number");
 
                     b.Property<int>("PartNumber");
 
                     b.Property<string>("Picture")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("Regular")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -3088,7 +2898,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Status");
 
                     b.Property<string>("Tag")
-                        .HasColumnType("nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
 
                     b.Property<int>("WelfareType");
 
@@ -3096,7 +2906,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("WelfareID");
 
-                    b.ToTable("Merchant_Welfare");
+                    b.HasAnnotation("Relational:TableName", "Merchant_Welfare");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.MerchantGoods_SystemCategory", b =>
@@ -3104,20 +2914,20 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<string>("CategoryPath")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Icon")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<bool>("IsDisabled");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("OrderNo");
 
@@ -3125,7 +2935,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("MerchantGoods_SystemCategory");
+                    b.HasAnnotation("Relational:TableName", "MerchantGoods_SystemCategory");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.MerchGoods_Category", b =>
@@ -3133,14 +2943,14 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("OrderNo");
 
@@ -3150,7 +2960,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("MerchGoods_Category");
+                    b.HasAnnotation("Relational:TableName", "MerchGoods_Category");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.MerchGoods_Goods", b =>
@@ -3160,17 +2970,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("AreaLayer")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<long>("CategoryID");
 
                     b.Property<int>("Click");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(140)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(140)");
 
                     b.Property<int>("EvaluateCount");
 
@@ -3185,12 +2995,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.Property<decimal>("OriginalPrice");
 
                     b.Property<string>("Pic")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -3201,7 +3011,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("SalePrice");
 
                     b.Property<string>("Specification")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.Property<int>("Status");
 
@@ -3211,7 +3021,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("GoodsID");
 
-                    b.ToTable("MerchGoods_Goods");
+                    b.HasAnnotation("Relational:TableName", "MerchGoods_Goods");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.MerchService_Goods", b =>
@@ -3221,17 +3031,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("AreaLayer")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<long>("CategoryID");
 
                     b.Property<int>("Click");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(140)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(140)");
 
                     b.Property<int>("EvaluateCount");
 
@@ -3244,12 +3054,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.Property<decimal>("OriginalPrice");
 
                     b.Property<string>("Pic")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -3267,7 +3077,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("ServiceGoodsID");
 
-                    b.ToTable("MerchService_Goods");
+                    b.HasAnnotation("Relational:TableName", "MerchService_Goods");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.NowRecommend", b =>
@@ -3277,10 +3087,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<DateTime>("BeginTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("DataID");
 
@@ -3289,22 +3099,22 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("Disabled");
 
                     b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("OrderNo");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("RecommendID");
 
-                    b.ToTable("NowRecommend");
+                    b.HasAnnotation("Relational:TableName", "NowRecommend");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Platform_MoneyTransaction", b =>
                 {
                     b.Property<string>("TransactionCode")
-                        .HasColumnType("varchar(24)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(24)");
 
                     b.Property<decimal>("Amount");
 
@@ -3315,26 +3125,26 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("CustomIdentity");
 
                     b.Property<string>("CustomName")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<bool>("IsMainTransaction");
 
                     b.Property<decimal>("LastBalance");
 
                     b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(150)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(150)");
 
                     b.Property<string>("ThirdTransactionCode")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<DateTime>("TransactionTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("TransactionType");
 
                     b.HasKey("TransactionCode");
 
-                    b.ToTable("Platform_MoneyTransaction");
+                    b.HasAnnotation("Relational:TableName", "Platform_MoneyTransaction");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Service_SystemCategory", b =>
@@ -3342,20 +3152,20 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("CategoryID");
 
                     b.Property<string>("CategoryPath")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Icon")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<bool>("IsDisabled");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("OrderNo");
 
@@ -3363,7 +3173,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("Service_SystemCategory");
+                    b.HasAnnotation("Relational:TableName", "Service_SystemCategory");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Shake_Content", b =>
@@ -3373,26 +3183,26 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("AuditRemark")
-                        .HasColumnType("nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
 
                     b.Property<int>("AuditStatus");
 
                     b.Property<DateTime>("AuditTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("Category");
 
                     b.Property<int>("ConfirmCount");
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
 
                     b.Property<decimal>("CostPrice");
 
                     b.Property<int>("Count");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("DataID");
 
@@ -3401,19 +3211,19 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("Disable");
 
                     b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<DateTime>("LastTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("Number");
 
                     b.Property<double>("Odds");
 
                     b.Property<string>("Pic")
-                        .HasColumnType("nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
 
                     b.Property<decimal>("Price");
 
@@ -3424,19 +3234,19 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("Subject");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("Url")
-                        .HasColumnType("nvarchar(255)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(255)");
 
                     b.HasKey("ContentID");
 
-                    b.ToTable("Shake_Content");
+                    b.HasAnnotation("Relational:TableName", "Shake_Content");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Shake_UserRecord", b =>
@@ -3448,10 +3258,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("CostPrice");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime?>("LastPayTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<decimal>("Price");
 
@@ -3460,13 +3270,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<long>("UserID");
 
                     b.HasKey("RecordID");
 
-                    b.ToTable("Shake_UserRecord");
+                    b.HasAnnotation("Relational:TableName", "Shake_UserRecord");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.System_Area", b =>
@@ -3474,29 +3284,29 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("AreaName")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.Property<int>("Depth");
 
                     b.Property<bool>("HasChild");
 
                     b.Property<string>("Layer")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("NameSpell")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("ParentID");
 
                     b.Property<string>("Points")
-                        .HasColumnType("text");
+                        .HasAnnotation("Relational:ColumnType", "text");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("AreaID");
 
-                    b.ToTable("System_Area");
+                    b.HasAnnotation("Relational:TableName", "System_Area");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.System_EmpiricalConfig", b =>
@@ -3512,11 +3322,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Score");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("ActivityType");
 
-                    b.ToTable("System_EmpiricalConfig");
+                    b.HasAnnotation("Relational:TableName", "System_EmpiricalConfig");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.System_GlobalResources", b =>
@@ -3526,22 +3336,22 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("ResourceKey");
 
                     b.Property<string>("Group")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Value")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<int>("ValueUnit");
 
                     b.HasKey("ResourceType", "ResourceKey");
 
-                    b.ToTable("System_GlobalResources");
+                    b.HasAnnotation("Relational:TableName", "System_GlobalResources");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.System_Level", b =>
@@ -3549,17 +3359,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("LevelID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("Enable");
 
                     b.Property<string>("Icon")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<int>("Min");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -3567,22 +3377,22 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("LevelID");
 
-                    b.ToTable("System_Level");
+                    b.HasAnnotation("Relational:TableName", "System_Level");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.System_ModuleAuthorize", b =>
                 {
                     b.Property<string>("ServerID")
-                        .HasColumnType("varchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
 
                     b.Property<string>("ModuleID")
-                        .HasColumnType("varchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(10)");
 
                     b.Property<string>("AppSecret")
-                        .HasColumnType("varchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "varchar(50)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("Role");
 
@@ -3591,11 +3401,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("ServerID", "ModuleID");
 
-                    b.ToTable("System_ModuleAuthorize");
+                    b.HasAnnotation("Relational:TableName", "System_ModuleAuthorize");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.System_PointsConfig", b =>
@@ -3611,11 +3421,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Score");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("ActivityType");
 
-                    b.ToTable("System_PointsConfig");
+                    b.HasAnnotation("Relational:TableName", "System_PointsConfig");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.System_SMS", b =>
@@ -3623,19 +3433,19 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<Guid>("Id");
 
                     b.Property<string>("Code")
-                        .HasColumnType("nvarchar(6)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(6)");
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("Expires")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(11)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(11)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -3647,7 +3457,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("System_SMS");
+                    b.HasAnnotation("Relational:TableName", "System_SMS");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Tao_ProductRecommend", b =>
@@ -3657,10 +3467,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<DateTime?>("BeginTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime?>("EndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("MallType");
 
@@ -3673,11 +3483,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("SKUID");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("RecommendID");
 
-                    b.ToTable("Tao_ProductRecommend");
+                    b.HasAnnotation("Relational:TableName", "Tao_ProductRecommend");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Account", b =>
@@ -3687,7 +3497,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<decimal>("Balance");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("DataStatus");
 
@@ -3700,15 +3510,15 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("IdentityType");
 
                     b.Property<DateTime>("LastTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("Logins");
 
                     b.Property<string>("Mobile")
-                        .HasColumnType("nvarchar(11)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(11)");
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(32)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(32)");
 
                     b.Property<string>("PaymentPassword");
 
@@ -3717,21 +3527,21 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<string>("PushCode");
 
                     b.Property<string>("RecommendCode")
-                        .HasColumnType("nvarchar(6)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(6)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("UserPic")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("Username")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.HasKey("UserID");
 
-                    b.ToTable("User_Account");
+                    b.HasAnnotation("Relational:TableName", "User_Account");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Address", b =>
@@ -3739,17 +3549,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("AddressID");
 
                     b.Property<string>("Address")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<int>("AddressType");
 
                     b.Property<int>("AddressUseType");
 
                     b.Property<string>("Community")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsDefault");
 
@@ -3758,15 +3568,15 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<float>("Latitude");
 
                     b.Property<string>("Linkman")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<float>("Longitude");
 
                     b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("PostCode")
-                        .HasColumnType("char(6)");
+                        .HasAnnotation("Relational:ColumnType", "char(6)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -3776,7 +3586,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("AddressID");
 
-                    b.ToTable("User_Address");
+                    b.HasAnnotation("Relational:TableName", "User_Address");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Certification", b =>
@@ -3786,31 +3596,31 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long?>("AuditAdminID");
 
                     b.Property<string>("AuditAdminName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("AuditRemark")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.Property<int>("AuditStatus");
 
                     b.Property<DateTime?>("AuditTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("CertNo")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("CertificateType");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("Pics")
-                        .HasColumnType("nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -3820,7 +3630,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("CertificateID");
 
-                    b.ToTable("User_Certification");
+                    b.HasAnnotation("Relational:TableName", "User_Certification");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Device", b =>
@@ -3828,10 +3638,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("DeviceID");
 
                     b.Property<string>("DeviceName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<DateTime>("LastTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("Logins");
 
@@ -3844,11 +3654,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<string>("Version")
-                        .HasColumnType("nvarchar(15)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(15)");
 
                     b.HasKey("DeviceID");
 
-                    b.ToTable("User_Device");
+                    b.HasAnnotation("Relational:TableName", "User_Device");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_EmpiricalRecords", b =>
@@ -3858,10 +3668,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("ActivityType");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<int>("Score");
 
@@ -3869,7 +3679,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("RecordsID");
 
-                    b.ToTable("User_EmpiricalRecords");
+                    b.HasAnnotation("Relational:TableName", "User_EmpiricalRecords");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Forum", b =>
@@ -3885,7 +3695,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("DislikeCount");
 
                     b.Property<DateTime>("LastRead")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("ReplyCount");
 
@@ -3905,7 +3715,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("UserID");
 
-                    b.ToTable("User_Forum");
+                    b.HasAnnotation("Relational:TableName", "User_Forum");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_LocationTrack", b =>
@@ -3913,7 +3723,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("TrackID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<float>("Latitude");
 
@@ -3927,7 +3737,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("TrackID");
 
-                    b.ToTable("User_LocationTrack");
+                    b.HasAnnotation("Relational:TableName", "User_LocationTrack");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Message", b =>
@@ -3935,10 +3745,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MessageID");
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsDelete");
 
@@ -3947,23 +3757,23 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("MessageType");
 
                     b.Property<string>("RefDataID")
-                        .HasColumnType("nvarchar(36)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(36)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Sign")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.Property<long>("UserID");
 
                     b.HasKey("MessageID");
 
-                    b.ToTable("User_Message");
+                    b.HasAnnotation("Relational:TableName", "User_Message");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Online", b =>
@@ -3971,12 +3781,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<DateTime>("ActiveTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<float>("Latitude");
 
                     b.Property<DateTime>("LoginTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<float>("Longitude");
 
@@ -3985,11 +3795,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Token")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.HasKey("UserID");
 
-                    b.ToTable("User_Online");
+                    b.HasAnnotation("Relational:TableName", "User_Online");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_PointsRecords", b =>
@@ -3999,10 +3809,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("ActivityType");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<int>("Score");
 
@@ -4010,7 +3820,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("RecordsID");
 
-                    b.ToTable("User_PointsRecords");
+                    b.HasAnnotation("Relational:TableName", "User_PointsRecords");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Profiles", b =>
@@ -4018,13 +3828,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<DateTime>("BothBirthday")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("CardID")
-                        .HasColumnType("nvarchar(18)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(18)");
 
                     b.Property<string>("JiGuan")
-                        .HasColumnType("nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
 
                     b.Property<int>("MandarinLevel");
 
@@ -4033,16 +3843,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("MaxEducation");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("Nation")
-                        .HasColumnType("nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
 
                     b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("PresentAddress")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -4051,11 +3861,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Sex");
 
                     b.Property<string>("Signature")
-                        .HasColumnType("nvarchar(200)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(200)");
 
                     b.HasKey("UserID");
 
-                    b.ToTable("User_Profiles");
+                    b.HasAnnotation("Relational:TableName", "User_Profiles");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_RecommendRecord", b =>
@@ -4063,10 +3873,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("RecordID");
 
                     b.Property<DateTime>("CreatedTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("RecommendCode")
-                        .HasColumnType("nvarchar(6)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(6)");
 
                     b.Property<int>("ReferrerBusinessType");
 
@@ -4075,8 +3885,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.HasKey("RecordID");
-
-                    b.ToTable("User_RecommendRecord");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Resume", b =>
@@ -4086,44 +3894,44 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("ApplyCount");
 
                     b.Property<DateTime>("Both")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("CategoryID");
 
                     b.Property<string>("ContactPhoto")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("Disabled");
 
                     b.Property<int>("HopeSalary");
 
                     b.Property<string>("Intro")
-                        .HasColumnType("text");
+                        .HasAnnotation("Relational:ColumnType", "text");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("JobName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("JobYearsType");
 
                     b.Property<int>("JoinTime");
 
                     b.Property<DateTime>("LastRefreshTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("LookCount");
 
                     b.Property<int>("MaxEducation");
 
                     b.Property<string>("Photo")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("RealName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<int>("ResumeStatus");
 
@@ -4134,16 +3942,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Sex");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("UserID");
 
                     b.Property<string>("WantWordArea")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.HasKey("ResumeID");
 
-                    b.ToTable("User_Resume");
+                    b.HasAnnotation("Relational:TableName", "User_Resume");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_ShakeRecord", b =>
@@ -4153,7 +3961,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Count");
 
                     b.Property<DateTime>("LastTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("LimitCount");
 
@@ -4164,11 +3972,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("TodayCount");
 
                     b.Property<DateTime>("UpdatetTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("UserID");
 
-                    b.ToTable("User_ShakeRecord");
+                    b.HasAnnotation("Relational:TableName", "User_ShakeRecord");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_TradeRecords", b =>
@@ -4182,7 +3990,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("CounterpartyIdentity");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("DataID");
 
@@ -4197,10 +4005,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("TradeInfo")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("TradeNo")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<int>("TradeType");
 
@@ -4210,7 +4018,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("TradeID");
 
-                    b.ToTable("User_TradeRecords");
+                    b.HasAnnotation("Relational:TableName", "User_TradeRecords");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.User_Welfare", b =>
@@ -4218,16 +4026,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("ConsumerCode");
 
                     b.Property<DateTime?>("AwardTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("ExpiryEndTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("ExpiryStartTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsAward");
 
@@ -4238,26 +4046,26 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<string>("MerchantName")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<string>("PartCode")
-                        .HasColumnType("nvarchar(12)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(12)");
 
                     b.Property<string>("Picture")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Tag")
-                        .HasColumnType("nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
 
                     b.Property<DateTime?>("UseTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("UserID");
 
@@ -4269,7 +4077,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("ConsumerCode");
 
-                    b.ToTable("User_Welfare");
+                    b.HasAnnotation("Relational:TableName", "User_Welfare");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Welfare_Coupon", b =>
@@ -4292,7 +4100,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("WelfareID");
 
-                    b.ToTable("Welfare_Coupon");
+                    b.HasAnnotation("Relational:TableName", "Welfare_Coupon");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Welfare_DonatedGoods", b =>
@@ -4309,7 +4117,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("WelfareID");
 
-                    b.ToTable("Welfare_DonatedGoods");
+                    b.HasAnnotation("Relational:TableName", "Welfare_DonatedGoods");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Welfare_Goods", b =>
@@ -4328,7 +4136,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("WelfareID");
 
-                    b.ToTable("Welfare_Goods");
+                    b.HasAnnotation("Relational:TableName", "Welfare_Goods");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Welfare_PartUser", b =>
@@ -4338,17 +4146,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<DateTime?>("AwardTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsAward");
 
                     b.Property<bool>("IsWin");
 
                     b.Property<string>("PartCode")
-                        .HasColumnType("nvarchar(12)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(12)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -4356,7 +4164,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("WelfareID", "UserID");
 
-                    b.ToTable("Welfare_PartUser");
+                    b.HasAnnotation("Relational:TableName", "Welfare_PartUser");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Welfare_Remind", b =>
@@ -4366,7 +4174,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("UserID");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -4374,7 +4182,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("WelfareID", "UserID");
 
-                    b.ToTable("Welfare_Remind");
+                    b.HasAnnotation("Relational:TableName", "Welfare_Remind");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Worker_Account", b =>
@@ -4384,17 +4192,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<short>("AccountStatus");
 
                     b.Property<DateTime?>("ActiveTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime?>("AuditTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<int>("DefaultAreaID");
 
                     b.Property<string>("DeviceCode");
 
                     b.Property<string>("FullName")
-                        .HasColumnType("nvarchar(10)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(10)");
 
                     b.Property<float>("LastLatitude");
 
@@ -4410,7 +4218,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("WorkerID");
 
-                    b.ToTable("Worker_Account");
+                    b.HasAnnotation("Relational:TableName", "Worker_Account");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Worker_BusinessRelation", b =>
@@ -4422,18 +4230,18 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long?>("AuditAdminID");
 
                     b.Property<string>("AuditRemark")
-                        .HasColumnType("nvarchar(300)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(300)");
 
                     b.Property<short>("AuditStatus");
 
                     b.Property<string>("AudtiAdminName")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime?>("OpenServiceTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -4441,7 +4249,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("WorkerID", "BusinessType");
 
-                    b.ToTable("Worker_BusinessRelation");
+                    b.HasAnnotation("Relational:TableName", "Worker_BusinessRelation");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Worker_Company", b =>
@@ -4451,10 +4259,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MerchantID");
 
                     b.Property<DateTime?>("AuditTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -4463,11 +4271,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("Status");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("UserID", "MerchantID");
 
-                    b.ToTable("Worker_Company");
+                    b.HasAnnotation("Relational:TableName", "Worker_Company");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Worker_CompanyBusiness", b =>
@@ -4481,7 +4289,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("BeginWorkYear");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("Enabled");
 
@@ -4497,7 +4305,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("UserID", "MerchantID", "BusinessID");
 
-                    b.ToTable("Worker_CompanyBusiness");
+                    b.HasAnnotation("Relational:TableName", "Worker_CompanyBusiness");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Worker_Message", b =>
@@ -4505,10 +4313,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("MessageID");
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(500)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(500)");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<bool>("IsDelete");
 
@@ -4517,23 +4325,23 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("MessageType");
 
                     b.Property<string>("RefDataID")
-                        .HasColumnType("nvarchar(36)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(36)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Sign")
-                        .HasColumnType("nvarchar(20)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(20)");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(30)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(30)");
 
                     b.Property<long>("WorkerID");
 
                     b.HasKey("MessageID");
 
-                    b.ToTable("Worker_Message");
+                    b.HasAnnotation("Relational:TableName", "Worker_Message");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Worker_Profile", b =>
@@ -4543,13 +4351,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("BeginWorkYear");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<string>("Intro")
-                        .HasColumnType("text");
+                        .HasAnnotation("Relational:ColumnType", "text");
 
                     b.Property<string>("Photo")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -4558,11 +4366,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("SpringFestivalIsBack");
 
                     b.Property<DateTime>("UpdateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.HasKey("UserID");
 
-                    b.ToTable("Worker_Profile");
+                    b.HasAnnotation("Relational:TableName", "Worker_Profile");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Worker_TradeRecords", b =>
@@ -4576,7 +4384,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("CounterpartyIdentity");
 
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
+                        .HasAnnotation("Relational:ColumnType", "datetime");
 
                     b.Property<long>("DataID");
 
@@ -4591,10 +4399,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("TradeInfo")
-                        .HasColumnType("nvarchar(100)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(100)");
 
                     b.Property<string>("TradeNo")
-                        .HasColumnType("nvarchar(50)");
+                        .HasAnnotation("Relational:ColumnType", "nvarchar(50)");
 
                     b.Property<int>("TradeType");
 
@@ -4602,7 +4410,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.HasKey("TradeID");
 
-                    b.ToTable("Worker_TradeRecords");
+                    b.HasAnnotation("Relational:TableName", "Worker_TradeRecords");
                 });
         }
     }
