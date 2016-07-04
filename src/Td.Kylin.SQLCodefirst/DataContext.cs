@@ -845,41 +845,7 @@ namespace Td.Kylin.SQLCodeFirst
             {
                 entity.HasKey(p => p.TransactionCode);
             });
-			#region 抽奖业务
-			//抽奖全局配置
-			modelBuilder.Entity<Luckydraw_AreaConfig>(entity =>
-			{
-				entity.HasKey(p => p.AreaID);
-			});
-			modelBuilder.Entity<Luckydraw_AreaTicketGivingRules>(entity =>
-			{
-				entity.HasKey(p =>new {p.AreaID,p.Rule});
-			});
-			modelBuilder.Entity<Luckydraw_LotteryRecord>(entity =>
-			{
-				entity.HasKey(p => p.RecordID);
-			});
-
-			modelBuilder.Entity<Luckydraw_PlatformConfig>(entity =>
-			{
-				entity.HasKey(t => t.ConfigID);
-			});
-
-			modelBuilder.Entity<Luckydraw_Prize>(entity =>
-			{
-				entity.HasKey(p => p.PrizeID);
-			});
-
-			modelBuilder.Entity<Luckydraw_PrizePool>(entity =>
-			{
-				entity.HasKey(p => p.ID);
-			});
-
-			modelBuilder.Entity<Luckydraw_Ticket>(entity =>
-			{
-				entity.HasKey(p => p.TicketID);
-			});
-			#endregion
+			
 		}
 	}
 }
