@@ -7,5 +7,6 @@
         //"DefaultConnectionString": "data source=192.168.1.200;initial catalog=KylinDevelop;persist security info=True;user id=sa;password=sql100200;MultipleActiveResultSets=True;"
         //外网测试数据库
         //"DefaultConnectionString": "data source=139.129.194.132;initial catalog=Kylin_Test;persist security info=True;user id=kylintest;password=kylintest++;MultipleActiveResultSets=True;"
+  
     }
 }

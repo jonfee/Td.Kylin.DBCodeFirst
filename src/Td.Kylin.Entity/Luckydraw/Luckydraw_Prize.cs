@@ -175,5 +175,21 @@ namespace Td.Kylin.Entity
 			get;
 			set;
 		}
+		/// <summary>
+		/// 通用券剩余数量
+		/// </summary>
+		public int GlobalTicketBalance
+		{
+			get;
+			set;
+		}
+		/// <summary>
+		/// 奖品券剩余数量
+		/// </summary>
+		public int PrizeTicketBalance
+		{
+			get;
+			set;
+		}
 	}
 }
