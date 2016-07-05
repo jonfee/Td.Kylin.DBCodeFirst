@@ -1,7 +1,5 @@
 ﻿using System;
-using System.CodeDom;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Threading;
 
 namespace Td.Kylin.Entity
 {
