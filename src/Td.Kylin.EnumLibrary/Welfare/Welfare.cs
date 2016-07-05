@@ -9,11 +9,11 @@ namespace Td.Kylin.EnumLibrary
     /// </summary>
     public enum WelfareType
     {
-        ///// <summary>
-        ///// 优惠券
-        ///// </summary>
-        //[Description("优惠券")]
-        //Coupon = 1,
+        /// <summary>
+        /// 优惠券
+        /// </summary>
+        [Description("优惠券")]
+        Coupon = 1,
         /// <summary>
         /// 赠送
         /// </summary>
