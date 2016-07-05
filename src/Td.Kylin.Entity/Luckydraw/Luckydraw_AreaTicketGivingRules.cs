@@ -29,13 +29,13 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		///     规则值
 		/// </summary>
-		[Column(TypeName = " 	varchar(200)")]
-		public char Values
+		[Column(TypeName = "varchar(200)")]
+		public string Values
 		{
 			get;
 			set;
 		}
-
+		
 		/// <summary>
 		///     奖券数量
 		/// </summary>

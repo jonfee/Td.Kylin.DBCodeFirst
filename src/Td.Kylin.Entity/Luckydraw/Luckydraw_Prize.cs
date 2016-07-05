@@ -41,7 +41,7 @@ namespace Td.Kylin.Entity
 		///     奖品图片
 		/// </summary>
 		[Column(TypeName = "varchar(200)")]
-		public char CoverImage
+		public string CoverImage
 		{
 			get;
 			set;
