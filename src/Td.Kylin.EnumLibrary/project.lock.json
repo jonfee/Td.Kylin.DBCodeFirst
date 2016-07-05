@@ -2,6 +2,52 @@
   "locked": false,
   "version": 2,
   "targets": {
+    ".NETFramework,Version=v4.5.2": {
+      "Td.CoreLibrary/1.1.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Core",
+          "System.Linq",
+          "System.Linq.Expressions",
+          "System.Runtime",
+          "System.Runtime.Caching",
+          "System.Xml",
+          "System.Xml.ReaderWriter",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net452/Td.CoreLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net452/Td.CoreLibrary.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6": {
+      "Td.CoreLibrary/1.1.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Core",
+          "System.Linq",
+          "System.Linq.Expressions",
+          "System.Runtime",
+          "System.Runtime.Caching",
+          "System.Xml",
+          "System.Xml.ReaderWriter",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net452/Td.CoreLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net452/Td.CoreLibrary.dll": {}
+        }
+      }
+    },
     ".NETStandard,Version=v1.6": {
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
@@ -5283,9 +5329,10 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "NETStandard.Library >= 1.6.0",
       "Td.CoreLibrary >= 1.1.0"
     ],
+    ".NETFramework,Version=v4.5.2": [],
+    ".NETFramework,Version=v4.6": [],
     ".NETStandard,Version=v1.6": []
   },
   "tools": {},
