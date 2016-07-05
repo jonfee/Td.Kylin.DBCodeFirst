@@ -33,7 +33,7 @@ namespace Td.Kylin.Entity
 		/// 奖券编号
 		/// </summary>
 		[Column(TypeName = "varchar(50)")]
-		public char TicketCode
+		public string TicketCode
 		{
 			get;
 			set;

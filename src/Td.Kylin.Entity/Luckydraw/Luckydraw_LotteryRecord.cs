@@ -58,7 +58,7 @@ namespace Td.Kylin.Entity
 		///     收货信息(包括收货地址、电话等)
 		/// </summary>
 		[Column(TypeName = "nvarchar(200)")]
-		public char ReceiptInfo
+		public string ReceiptInfo
 		{
 			get;
 			set;
@@ -86,7 +86,7 @@ namespace Td.Kylin.Entity
 		///     备注信息
 		/// </summary>
 		[Column(TypeName = "nvarchar(500)")]
-		public char Remark
+		public string Remark
 		{
 			get;
 			set;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,6 +9,8 @@ namespace Td.Kylin.Entity
 	/// <summary>
 	/// 平台配置
 	/// </summary>
+
+	[Table("Luckydraw_PlatformConfig")]
 	public class Luckydraw_PlatformConfig
     {
 		/// <summary>
