@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Td.Kylin.Entity
 {
-    public class Merchant_RecommendRecord
+	[Table("Merchant_RecommendRecord")]
+
+	public class Merchant_RecommendRecord
     {
         /// <summary> 
         /// 记录ID
