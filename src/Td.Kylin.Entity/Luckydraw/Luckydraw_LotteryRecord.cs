@@ -46,6 +46,15 @@ namespace Td.Kylin.Entity
 		}
 
 		/// <summary>
+		///    奖品ID
+		/// </summary>
+		public long PrizeID
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
 		///     是否中奖
 		/// </summary>
 		public bool IsWinning
