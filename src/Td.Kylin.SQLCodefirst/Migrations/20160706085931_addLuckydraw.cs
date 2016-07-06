@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
-    public partial class AddLuckydraw : Migration
+    public partial class addLuckydraw : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,11 +12,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                 name: "Luckydraw_AreaConfig",
                 columns: table => new
                 {
-                    AreaID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    GlobalTicketBalance = table.Column<long>(nullable: false),
+                    AreaID = table.Column<int>(nullable: false),
+                    GlobalTicketBalance = table.Column<int>(nullable: false),
                     Introduction = table.Column<string>(type: "nvarchar(MAX)", nullable: true),
-                    PrizeTicketBalance = table.Column<long>(nullable: false)
+                    PrizeTicketBalance = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -32,7 +30,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     Rule = table.Column<short>(nullable: false),
                     IsEnabled = table.Column<bool>(nullable: false),
                     Quantity = table.Column<short>(nullable: false),
-                    Values = table.Column<char>(type: " 	varchar(200)", nullable: false)
+                    Values = table.Column<string>(type: "varchar(200)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -43,15 +41,14 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                 name: "Luckydraw_LotteryRecord",
                 columns: table => new
                 {
-                    RecordID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    RecordID = table.Column<long>(nullable: false),
                     AreaID = table.Column<int>(nullable: false),
                     ConsignorID = table.Column<long>(nullable: false),
-                    CreatedTime = table.Column<DateTime>(nullable: false),
+                    CreatedTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     IsDelivery = table.Column<bool>(nullable: false),
                     IsWinning = table.Column<bool>(nullable: false),
-                    ReceiptInfo = table.Column<char>(type: "nvarchar(200)", nullable: false),
-                    Remark = table.Column<char>(type: "nvarchar(500)", nullable: false),
+                    ReceiptInfo = table.Column<string>(type: "nvarchar(200)", nullable: true),
+                    Remark = table.Column<string>(type: "nvarchar(500)", nullable: true),
                     TicketID = table.Column<long>(nullable: false),
                     UserID = table.Column<long>(nullable: false)
                 },
@@ -64,8 +61,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                 name: "Luckydraw_PlatformConfig",
                 columns: table => new
                 {
-                    ConfigID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ConfigID = table.Column<long>(nullable: false),
                     ExclusionEndTime = table.Column<TimeSpan>(nullable: false),
                     ExclusionStartTime = table.Column<TimeSpan>(nullable: false),
                     GlobalTicketProportion = table.Column<short>(nullable: false),
@@ -80,25 +76,26 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                 name: "Luckydraw_Prize",
                 columns: table => new
                 {
-                    PrizeID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    PrizeID = table.Column<long>(nullable: false),
                     AreaID = table.Column<int>(nullable: false),
                     Balance = table.Column<int>(nullable: false),
-                    CoverImage = table.Column<char>(type: "varchar(200)", nullable: false),
-                    CreatedTime = table.Column<bool>(nullable: false),
+                    CoverImage = table.Column<string>(type: "varchar(200)", nullable: true),
+                    CreatedTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Denomination = table.Column<decimal>(nullable: false),
-                    EndTime = table.Column<DateTime>(nullable: false),
+                    EndTime = table.Column<DateTime>(type: "datetime", nullable: false),
+                    GlobalTicketBalance = table.Column<int>(nullable: false),
                     GlobalTicketBuildCount = table.Column<int>(nullable: false),
                     Introduction = table.Column<string>(type: "nvarchar(MAX)", nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     IsPublished = table.Column<bool>(nullable: false),
                     Name = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    PrizeTicketBalance = table.Column<int>(nullable: false),
                     PrizeTicketBuildCount = table.Column<int>(nullable: false),
-                    PublishedTime = table.Column<DateTime>(nullable: false),
+                    PublishedTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Quantity = table.Column<int>(nullable: false),
                     SortOrder = table.Column<int>(nullable: false),
-                    StartTime = table.Column<DateTime>(nullable: false),
-                    UpdatedTime = table.Column<DateTime>(nullable: false)
+                    StartTime = table.Column<DateTime>(type: "datetime", nullable: false),
+                    UpdatedTime = table.Column<DateTime>(type: "datetime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -109,12 +106,11 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                 name: "Luckydraw_PrizePool",
                 columns: table => new
                 {
-                    ID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ID = table.Column<long>(nullable: false),
                     AreaID = table.Column<long>(nullable: false),
                     Balance = table.Column<int>(nullable: false),
                     PrizeID = table.Column<long>(nullable: false),
-                    ReleaseTime = table.Column<DateTime>(nullable: false)
+                    ReleaseTime = table.Column<DateTime>(type: "datetime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -125,18 +121,17 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                 name: "Luckydraw_Ticket",
                 columns: table => new
                 {
-                    TicketID = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    AcquiredTime = table.Column<DateTime>(nullable: false),
+                    TicketID = table.Column<long>(nullable: false),
+                    AcquiredTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     AreaID = table.Column<int>(nullable: false),
-                    EndTime = table.Column<DateTime>(nullable: false),
+                    EndTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     IsUsed = table.Column<bool>(nullable: false),
                     IsWinning = table.Column<bool>(nullable: false),
                     PrizeID = table.Column<long>(nullable: false),
-                    StartTime = table.Column<DateTime>(nullable: false),
-                    TicketCode = table.Column<char>(type: "varchar(50)", nullable: false),
+                    StartTime = table.Column<DateTime>(type: "datetime", nullable: false),
+                    TicketCode = table.Column<string>(type: "varchar(50)", nullable: true),
                     Type = table.Column<short>(nullable: false),
-                    UsedTime = table.Column<DateTime>(nullable: false),
+                    UsedTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     UserID = table.Column<long>(nullable: false)
                 },
                 constraints: table =>

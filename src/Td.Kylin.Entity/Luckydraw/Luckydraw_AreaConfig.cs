@@ -24,7 +24,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 抽奖说明
 		/// </summary>
-		[Column(TypeName = "nvarchar(MAX)")]
+		[Column(TypeName = "nvarchar(max)")]
 		public string Introduction
 		{
 			get;

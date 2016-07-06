@@ -8,8 +8,8 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20160704055423_UpdateLucydraw")]
-    partial class UpdateLucydraw
+    [Migration("20160706085931_addLuckydraw")]
+    partial class addLuckydraw
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -1853,15 +1853,14 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_AreaConfig", b =>
                 {
-                    b.Property<int>("AreaID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("AreaID");
 
-                    b.Property<long>("GlobalTicketBalance");
+                    b.Property<int>("GlobalTicketBalance");
 
                     b.Property<string>("Introduction")
                         .HasColumnType("nvarchar(MAX)");
 
-                    b.Property<long>("PrizeTicketBalance");
+                    b.Property<int>("PrizeTicketBalance");
 
                     b.HasKey("AreaID");
 
@@ -1878,8 +1877,8 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<short>("Quantity");
 
-                    b.Property<char>("Values")
-                        .HasColumnType(" 	varchar(200)");
+                    b.Property<string>("Values")
+                        .HasColumnType("varchar(200)");
 
                     b.HasKey("AreaID", "Rule");
 
@@ -1888,23 +1887,23 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_LotteryRecord", b =>
                 {
-                    b.Property<long>("RecordID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("RecordID");
 
                     b.Property<int>("AreaID");
 
                     b.Property<long>("ConsignorID");
 
-                    b.Property<DateTime>("CreatedTime");
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime");
 
                     b.Property<bool>("IsDelivery");
 
                     b.Property<bool>("IsWinning");
 
-                    b.Property<char>("ReceiptInfo")
+                    b.Property<string>("ReceiptInfo")
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<char>("Remark")
+                    b.Property<string>("Remark")
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<long>("TicketID");
@@ -1918,8 +1917,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_PlatformConfig", b =>
                 {
-                    b.Property<long>("ConfigID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("ConfigID");
 
                     b.Property<TimeSpan>("ExclusionEndTime");
 
@@ -1936,21 +1934,22 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_Prize", b =>
                 {
-                    b.Property<long>("PrizeID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("PrizeID");
 
                     b.Property<int>("AreaID");
 
                     b.Property<int>("Balance");
 
-                    b.Property<char>("CoverImage")
+                    b.Property<string>("CoverImage")
                         .HasColumnType("varchar(200)");
 
-                    b.Property<bool>("CreatedTime");
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime");
 
                     b.Property<decimal>("Denomination");
 
-                    b.Property<DateTime>("EndTime");
+                    b.Property<DateTime>("EndTime")
+                        .HasColumnType("datetime");
 
                     b.Property<int>("GlobalTicketBalance");
 
@@ -1970,15 +1969,18 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<int>("PrizeTicketBuildCount");
 
-                    b.Property<DateTime>("PublishedTime");
+                    b.Property<DateTime>("PublishedTime")
+                        .HasColumnType("datetime");
 
                     b.Property<int>("Quantity");
 
                     b.Property<int>("SortOrder");
 
-                    b.Property<DateTime>("StartTime");
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("datetime");
 
-                    b.Property<DateTime>("UpdatedTime");
+                    b.Property<DateTime>("UpdatedTime")
+                        .HasColumnType("datetime");
 
                     b.HasKey("PrizeID");
 
@@ -1987,8 +1989,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_PrizePool", b =>
                 {
-                    b.Property<long>("ID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("ID");
 
                     b.Property<long>("AreaID");
 
@@ -1996,7 +1997,8 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<long>("PrizeID");
 
-                    b.Property<DateTime>("ReleaseTime");
+                    b.Property<DateTime>("ReleaseTime")
+                        .HasColumnType("datetime");
 
                     b.HasKey("ID");
 
@@ -2005,14 +2007,15 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
             modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_Ticket", b =>
                 {
-                    b.Property<long>("TicketID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<long>("TicketID");
 
-                    b.Property<DateTime>("AcquiredTime");
+                    b.Property<DateTime>("AcquiredTime")
+                        .HasColumnType("datetime");
 
                     b.Property<int>("AreaID");
 
-                    b.Property<DateTime>("EndTime");
+                    b.Property<DateTime>("EndTime")
+                        .HasColumnType("datetime");
 
                     b.Property<bool>("IsUsed");
 
@@ -2020,14 +2023,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<long>("PrizeID");
 
-                    b.Property<DateTime>("StartTime");
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("datetime");
 
-                    b.Property<char>("TicketCode")
+                    b.Property<string>("TicketCode")
                         .HasColumnType("varchar(50)");
 
                     b.Property<short>("Type");
 
-                    b.Property<DateTime>("UsedTime");
+                    b.Property<DateTime>("UsedTime")
+                        .HasColumnType("datetime");
 
                     b.Property<long>("UserID");
 
