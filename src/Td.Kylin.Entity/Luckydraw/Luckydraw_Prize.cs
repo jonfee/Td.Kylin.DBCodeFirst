@@ -95,6 +95,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		///     有效时间(起)
 		/// </summary>
+		[Column(TypeName = "datetime")]
 		public DateTime StartTime
 		{
 			get;
@@ -104,6 +105,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		///     有效时间(止)
 		/// </summary>
+		[Column(TypeName = "datetime")]
 		public DateTime EndTime
 		{
 			get;
@@ -132,6 +134,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		///     发布时间
 		/// </summary>
+		[Column(TypeName = "datetime")]
 		public DateTime PublishedTime
 		{
 			get;
@@ -150,6 +153,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		///     创建时间
 		/// </summary>
+		[Column(TypeName = "datetime")]
 		public DateTime CreatedTime
 		{
 			get;
@@ -160,6 +164,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		///     更新时间
 		/// </summary>
+		[Column(TypeName = "datetime")]
 		public DateTime UpdatedTime
 		{
 			get;

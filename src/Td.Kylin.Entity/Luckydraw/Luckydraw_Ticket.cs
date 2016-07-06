@@ -60,6 +60,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 有效时间(起)
 		/// </summary>
+		[Column(TypeName = "datetime")]
 		public DateTime StartTime
 		{
 			get;
@@ -69,6 +70,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 有效时间(止)
 		/// </summary>
+		[Column(TypeName = "datetime")]
 		public DateTime EndTime
 		{
 			get;
@@ -85,6 +87,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		///  	获得时间
 		/// </summary>
+		[Column(TypeName = "datetime")]
 		public DateTime AcquiredTime
 		{
 			get;
@@ -103,6 +106,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 使用时间
 		/// </summary>
+		[Column(TypeName = "datetime")]
 		public DateTime UsedTime
 		{
 			get;

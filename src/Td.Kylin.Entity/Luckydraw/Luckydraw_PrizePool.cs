@@ -39,6 +39,7 @@ namespace Td.Kylin.Entity
 		///释放时间
 		/// <summary>
 		/// </summary>
+		[Column(TypeName = "datetime")]
 		public DateTime ReleaseTime
 		{
 			get;
