@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Td.Kylin.Entity
 {
-    [Table("User_RecommendRecord")]
+	[Table("User_RecommendRecord")]
     public class User_RecommendRecord
     {
         /// <summary>
