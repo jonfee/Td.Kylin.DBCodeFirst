@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Td.Kylin.Entity
 {
+    [Table("Merchant_Evaluate")]
     public class Merchant_Evaluate : BaseEntity
     {
         ///<summary>
