@@ -34,7 +34,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 通用券剩余量
 		/// </summary>
-		public long GlobalTicketBalance
+		public int GlobalTicketBalance
 		{
 			get;
 			set;
@@ -42,7 +42,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		/// 奖品券剩余量
 		/// </summary>
-		public long PrizeTicketBalance
+		public int PrizeTicketBalance
 		{
 			get;
 			set;

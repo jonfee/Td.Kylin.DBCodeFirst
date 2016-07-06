@@ -150,7 +150,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		///     创建时间
 		/// </summary>
-		public bool CreatedTime
+		public DateTime CreatedTime
 		{
 			get;
 			set;
