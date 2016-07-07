@@ -8,8 +8,8 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20160706085931_addLuckydraw")]
-    partial class addLuckydraw
+    [Migration("20160707013147_UpLuckydraw")]
+    partial class UpLuckydraw
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -1858,7 +1858,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("GlobalTicketBalance");
 
                     b.Property<string>("Introduction")
-                        .HasColumnType("nvarchar(MAX)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PrizeTicketBalance");
 
@@ -1899,6 +1899,8 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsDelivery");
 
                     b.Property<bool>("IsWinning");
+
+                    b.Property<long>("PrizeID");
 
                     b.Property<string>("ReceiptInfo")
                         .HasColumnType("nvarchar(200)");

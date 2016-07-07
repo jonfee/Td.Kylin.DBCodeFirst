@@ -1899,6 +1899,8 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<bool>("IsWinning");
 
+                    b.Property<long>("PrizeID");
+
                     b.Property<string>("ReceiptInfo")
                         .HasColumnType("nvarchar(200)");
 
