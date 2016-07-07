@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Td.Kylin.Entity
 {
+    /// <summary>
+    /// 商家配置
+    /// </summary>
 	[Table("Merchant_Config")]
     public class Merchant_Config : BaseEntity
     {

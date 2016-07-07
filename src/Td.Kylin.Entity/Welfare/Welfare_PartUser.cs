@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.Entity
 {
+    /// <summary>
+    /// 福利参与记录
+    /// </summary>
     [Table("Welfare_PartUser")]
     public class Welfare_PartUser : BaseEntity
     {
