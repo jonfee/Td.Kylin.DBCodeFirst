@@ -21,7 +21,7 @@ namespace Td.Kylin.Entity
 		/// <summary>
 		///     区域ID
 		/// </summary>
-		public long AreaID
+		public int AreaID
 		{
 			get;
 			set;
