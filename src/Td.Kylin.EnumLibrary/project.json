@@ -2,14 +2,16 @@
   "version": "1.2.1",
 
   "dependencies": {
+    "NETStandard.Library": "1.6.0",
     "Td.CoreLibrary": "1.1.0"
   },
-
   "frameworks": {
-    "net452": {},
     "net46": {},
     "netstandard1.6": {
       "imports": "dnxcore50"
     }
+  },
+  "buildOptions": {
+    "xmlDoc": true
   }
 }
