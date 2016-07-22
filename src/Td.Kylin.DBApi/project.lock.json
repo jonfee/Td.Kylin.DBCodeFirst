@@ -3762,6 +3762,15 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Td.AspNet.Upload/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.6/Td.AspNet.Upload.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Td.AspNet.Upload.dll": {}
+        }
+      },
       "Td.AspNet.Utils/1.1.0": {
         "type": "package",
         "compile": {
@@ -3769,6 +3778,15 @@
         },
         "runtime": {
           "lib/netstandard1.6/Td.AspNet.Utils.dll": {}
+        }
+      },
+      "Td.AspNet.WebApi/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.6/Td.AspNet.WebApi.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Td.AspNet.WebApi.dll": {}
         }
       },
       "Td.CoreLibrary/1.1.0": {
@@ -3801,8 +3819,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.6",
         "dependencies": {
-          "NETStandard.Library": "1.6.0",
-          "System.ComponentModel.Annotations": "4.1.0"
+          "NETStandard.Library": "1.6.0"
         },
         "compile": {
           "netstandard1.6/Td.Kylin.Entity.dll": {}
@@ -9929,6 +9946,18 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "Td.AspNet.Upload/1.1.0": {
+      "sha512": "OpId/ZT7zYQSKLpdwtveWsCC2EOTQQiOlyF+AuuJXKv1aNDU4xsp+SMe6CrFCRtm+VluMBGQ8Xpj2pBXnmaFOw==",
+      "type": "package",
+      "path": "Td.AspNet.Upload/1.1.0",
+      "files": [
+        "Td.AspNet.Upload.1.1.0.nupkg.sha512",
+        "Td.AspNet.Upload.nuspec",
+        "lib/netstandard1.6/Td.AspNet.Upload.deps.json",
+        "lib/netstandard1.6/Td.AspNet.Upload.dll",
+        "lib/netstandard1.6/Td.AspNet.Upload.xml"
+      ]
+    },
     "Td.AspNet.Utils/1.1.0": {
       "sha512": "krzZnpcZt1i2filR+Pj3TORmsPHNqEbCa4gC3j/eSyYARCSscHQdCgfGl1137elgOMgZYbERQvDIFzbjof2PJw==",
       "type": "package",
@@ -9939,6 +9968,18 @@
         "lib/netstandard1.6/Td.AspNet.Utils.deps.json",
         "lib/netstandard1.6/Td.AspNet.Utils.dll",
         "lib/netstandard1.6/Td.AspNet.Utils.xml"
+      ]
+    },
+    "Td.AspNet.WebApi/1.1.0": {
+      "sha512": "YqQ3Z6P76T/BXBkmN89MldCz24kek3Onl2/KYem41ZWywlNe9CJjQtwPZYcYmV94Fk2GtZR6ff7aZeDZLh7BUg==",
+      "type": "package",
+      "path": "Td.AspNet.WebApi/1.1.0",
+      "files": [
+        "Td.AspNet.WebApi.1.1.0.nupkg.sha512",
+        "Td.AspNet.WebApi.nuspec",
+        "lib/netstandard1.6/Td.AspNet.WebApi.deps.json",
+        "lib/netstandard1.6/Td.AspNet.WebApi.dll",
+        "lib/netstandard1.6/Td.AspNet.WebApi.pdb"
       ]
     },
     "Td.CoreLibrary/1.1.0": {

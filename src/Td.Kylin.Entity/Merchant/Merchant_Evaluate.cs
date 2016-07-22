@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Td.Kylin.Entity
 {
+    /// <summary>
+    /// 商家评价记录
+    /// </summary>
 	[Table("Merchant_Evaluate")]
     public class Merchant_Evaluate : BaseEntity
     {

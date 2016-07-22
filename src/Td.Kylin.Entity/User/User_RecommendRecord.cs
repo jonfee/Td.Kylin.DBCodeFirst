@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Td.Kylin.Entity
 {
+    /// <summary>
+    /// 用户推荐记录
+    /// </summary>
 	[Table("User_RecommendRecord")]
     public class User_RecommendRecord
     {
