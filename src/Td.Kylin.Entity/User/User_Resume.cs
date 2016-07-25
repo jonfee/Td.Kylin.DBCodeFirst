@@ -76,10 +76,13 @@ namespace Td.Kylin.Entity
         public string JobName { get; set; }
 
         /// <summary>
-        /// 期望薪资
+        /// 最小期望薪资
         /// </summary>
-        public int HopeSalary { get; set; }
-
+        public int MinHopeSalary { get; set; }
+        /// <summary>
+        /// 最大期望薪资
+        /// </summary>
+        public int MaxHopeSalary { get; set; }
         /// <summary>
         /// 到岗时间
         /// </summary>
