@@ -509,6 +509,10 @@ namespace Td.Kylin.SQLCodeFirst
             {
                 entity.HasKey(p => new { p.PromotionID, p.ProductID });
             });
+            modelBuilder.Entity<Mall_Config>(entity =>
+            {
+                entity.HasKey(p => new { p.AreaID,  });
+            });
             #endregion
 
             #region 投诉/举报

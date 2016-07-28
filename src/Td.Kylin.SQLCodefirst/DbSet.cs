@@ -413,6 +413,10 @@ namespace Td.Kylin.SQLCodeFirst
         /// </summary>
         public DbSet<Tao_ProductRecommend> Tao_ProductRecommend { get { return Set<Tao_ProductRecommend>(); } }
 
+        /// <summary>
+        /// 精品汇配置
+        /// </summary>
+        public DbSet<Mall_Config> Mall_Config { get { return Set<Mall_Config>(); } }
         #endregion
 
         #region 投诉/举报

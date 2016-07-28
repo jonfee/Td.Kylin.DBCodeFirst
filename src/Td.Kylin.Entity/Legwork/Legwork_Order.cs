@@ -334,5 +334,15 @@ namespace Td.Kylin.Entity
             get;
             set;
         }
+
+        /// <summary>
+        /// 获得方式，引用 LegworkOrderObtainedMethod 枚举
+        /// </summary>
+        public short ObtainedMethod { get; set; }
+        /// <summary>
+        /// 扩展数据
+        /// </summary>
+        [Column(TypeName = "nvarchar(500)")]
+        public string ExtraData { get; set; }
     }
 }

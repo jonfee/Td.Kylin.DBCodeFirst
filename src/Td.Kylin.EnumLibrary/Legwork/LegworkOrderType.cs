@@ -18,6 +18,12 @@ namespace Td.Kylin.EnumLibrary
 		/// 取送物品。
 		/// </summary>
 		[Description("取送物品")]
-		DeliveryGoods = 2
-	}
+		DeliveryGoods = 2,
+        /// <summary>
+        /// 精品汇订单
+        /// </summary>
+        [Description("精品汇订单")]
+        MallOrder = 3,
+
+    }
 }
