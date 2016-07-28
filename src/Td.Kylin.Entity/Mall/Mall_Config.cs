@@ -34,6 +34,11 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "nvarchar(100)")]
         public string WarehouseAddress { get; set; }
         /// <summary>
+        /// 仓库电话
+        /// </summary>
+        [Column(TypeName = "varchar(15)")]
+        public string WarehousePhone { get; set; }
+        /// <summary>
         /// 送达限定时间（默认24）
         /// </summary>
         public int DeliveryTimeLimit { get; set; }

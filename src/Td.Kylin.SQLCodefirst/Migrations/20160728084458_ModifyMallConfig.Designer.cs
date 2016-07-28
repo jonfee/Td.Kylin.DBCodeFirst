@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160728084458_ModifyMallConfig")]
+    partial class ModifyMallConfig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -1935,6 +1936,9 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<float?>("WarehouseLatitude");
 
                     b.Property<float?>("WarehouseLongitude");
+
+                    b.Property<string>("WarehouseName")
+                        .HasColumnType("varchar(10)");
 
                     b.Property<string>("WarehousePhone")
                         .HasColumnType("varchar(15)");
