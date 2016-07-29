@@ -13,8 +13,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                 name: "Mall_Config",
                 columns: table => new
                 {
-                    AreaID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    AreaID = table.Column<int>(nullable: false),
                     DeliveryTimeLimit = table.Column<int>(nullable: false),
                     DistributionMethod = table.Column<int>(nullable: false),
                     WarehouseAddress = table.Column<string>(type: "nvarchar(100)", nullable: true),
