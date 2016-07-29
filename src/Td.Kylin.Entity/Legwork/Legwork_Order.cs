@@ -342,7 +342,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 扩展数据
         /// </summary>
-        [Column(TypeName = "nvarchar(500)")]
+        [Column(TypeName = "nvarchar(MAX)")]
         public string ExtraData { get; set; }
     }
 }

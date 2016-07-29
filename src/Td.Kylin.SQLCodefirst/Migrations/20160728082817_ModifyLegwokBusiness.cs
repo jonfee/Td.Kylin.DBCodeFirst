@@ -29,7 +29,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
             migrationBuilder.AddColumn<string>(
                 name: "ExtraData",
                 table: "Legwork_Order",
-                type: "nvarchar(500)",
+                type: "nvarchar(MAX)",
                 nullable: true);
 
             migrationBuilder.AddColumn<short>(
