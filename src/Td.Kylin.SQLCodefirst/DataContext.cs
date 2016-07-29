@@ -511,6 +511,7 @@ namespace Td.Kylin.SQLCodeFirst
             });
             modelBuilder.Entity<Mall_Config>(entity =>
             {
+                entity.Property(p => p.AreaID).ValueGeneratedNever();
                 entity.HasKey(p => new { p.AreaID,  });
             });
             #endregion
