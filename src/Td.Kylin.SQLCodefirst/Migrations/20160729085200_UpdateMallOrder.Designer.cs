@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160729085200_UpdateMallOrder")]
+    partial class UpdateMallOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -1702,7 +1703,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<short?>("PaymentType");
 
-
                     b.Property<string>("Pictures")
                         .HasColumnType("nvarchar(400)");
 
@@ -2019,8 +2019,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<string>("DeliveryInfo")
                         .HasColumnType("nvarchar(200)");
-
-                    b.Property<int>("DistributionType");
 
                     b.Property<DateTime?>("EvaluateTime")
                         .HasColumnType("datetime");
