@@ -363,5 +363,11 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "nvarchar(MAX)")]
         public string ExtraData { get; set; }
 
+        /// <summary>
+        /// 订单确认时间
+        /// </summary>
+        [Column(TypeName = "datetime")]
+        public DateTime? WorkerConfirmTime { get; set; }
+
     }
 }
