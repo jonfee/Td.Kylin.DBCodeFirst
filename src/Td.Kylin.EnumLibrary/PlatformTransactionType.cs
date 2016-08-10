@@ -81,6 +81,16 @@ namespace Td.Kylin.EnumLibrary
         /// 充退回款
         /// </summary>
         [Description("充退回款")]
-        BackMoney = 15
+        BackMoney = 15,
+        /// <summary>
+        /// 配送支出
+        /// </summary>
+        [Description("配送支出")]
+        DistributionExpenditure = 16,
+        /// <summary>
+        /// 配送收入
+        /// </summary>
+        [Description("配送收入")]
+        DistributionIncome = 17
     }
 }
