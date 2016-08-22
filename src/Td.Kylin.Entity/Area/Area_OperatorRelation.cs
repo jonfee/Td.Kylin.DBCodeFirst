@@ -13,6 +13,7 @@ namespace Td.Kylin.Entity
         /// 运营商ID
         /// </summary>
         public long OperatorID { get; set; }
+
         /// <summary>
         /// 区域ID
         /// </summary>
@@ -20,14 +21,16 @@ namespace Td.Kylin.Entity
 
         /// <summary>
         /// 运营开始时间
-        /// </summary>
-        
-        [Column(TypeName = "datetime")]public DateTime StartTime { get; set; }
+        /// </summary>        
+        [Column(TypeName = "datetime")]
+        public DateTime StartTime { get; set; }
+
         /// <summary>
         /// 运营结束时间
-        /// </summary>
-        
-        [Column(TypeName = "datetime")]public DateTime EndTime { get; set; }
+        /// </summary>        
+        [Column(TypeName = "datetime")]
+        public DateTime EndTime { get; set; }
+
         /// <summary>
         /// 合同号
         /// </summary>
@@ -39,10 +42,10 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName = "nvarchar(300)")]
         public string Remark { get; set; }
+
         /// <summary>
         /// 创建日期
-        /// </summary>
-        
+        /// </summary>        
         [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
     }
 }

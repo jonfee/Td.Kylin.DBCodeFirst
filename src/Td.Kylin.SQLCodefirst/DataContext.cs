@@ -733,13 +733,18 @@ namespace Td.Kylin.SQLCodeFirst
             {
                 entity.HasKey(p => new { p.OperatorID, p.AreaID });
             });
-
+            //运营商交易记录
             modelBuilder.Entity<AreaOperator_TradeRecords>(entity =>
             {
                 entity.Property(p => p.TradeID).ValueGeneratedNever();
                 entity.HasKey(p => p.TradeID);
             });
-
+            //运营商子账号
+            modelBuilder.Entity<Area_OperatorSubAccount>(entity =>
+            {
+                entity.Property(p => p.SubID).ValueGeneratedNever();
+                entity.HasKey(p => p.SubID);
+            });
             #endregion
 
             #region 代理商

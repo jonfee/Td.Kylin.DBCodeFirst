@@ -4,15 +4,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Td.Kylin.Entity
 {
     /// <summary>
-    /// 运营商表信息
+    /// 区域运营商子账号
     /// </summary>
-    [Table("Area_Operator")]
-    public class Area_Operator:BaseEntity
+    [Table("Area_OperatorSubAccount")]
+    public class Area_OperatorSubAccount
     {
         /// <summary>
-        /// 运营商ID
-        /// </summary> 
-        public long OperatorID { get; set; }
+        /// 子账号ID
+        /// </summary>
+        public long SubID { get; set; }
+
+        /// <summary>
+        /// 所属运营商ID
+        /// </summary>
+        public long OpearatorID { get; set; }
 
         /// <summary>
         /// 登录账号
@@ -27,20 +32,21 @@ namespace Td.Kylin.Entity
         public string LoginPassword { get; set; }
 
         /// <summary>
-        /// 账户余额（不含冻结资金）
+        /// 管理员名称
         /// </summary>
-        public decimal Balance { get; set; }
+        [Column(TypeName = "nvarchar(20)")]
+        public string NickName { get; set; }
 
         /// <summary>
-        /// 冻结资金
+        /// 角色（枚举：OperatorSubAccountRole）
         /// </summary>
-        public decimal FreezeMoney { get; set; }
+        public int Role { get; set; }
 
         /// <summary>
-        /// 账户状态（枚举：OperatorAccountStatus）
+        /// 账户状态（枚举：OperatorSubAccountStatus）
         /// </summary>
         public int AccountStatus { get; set; }
-        
+
         /// <summary>
         /// 创建时间
         /// </summary>        

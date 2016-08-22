@@ -33,7 +33,7 @@ namespace Td.Kylin.Entity
         public string Realname { get; set; }
 
         ///<summary>
-        ///权限级别（10普通用户，20管理员，100超级管理员）
+        ///权限级别（枚举：AdminRole）
         ///</summary>
         public int PowerLevel { get; set; }
 
