@@ -35,7 +35,7 @@ namespace Td.Kylin.Entity
         /// 冻结资金
         /// </summary>
         public decimal FreezeMoney { get; set; }
-
+         
         /// <summary>
         /// 账户状态（枚举：OperatorAccountStatus）
         /// </summary>
