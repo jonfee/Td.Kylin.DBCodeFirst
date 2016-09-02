@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Td.Kylin.Entity;
 using Td.Kylin.SQLCodefirst;
 
@@ -712,6 +711,11 @@ namespace Td.Kylin.SQLCodeFirst
             modelBuilder.Entity<Area_RecommendIndustry>(entity =>
             {
                 entity.HasKey(p => new { p.AreaID, p.IndustryID });
+            });
+            modelBuilder.Entity<AreaProtocol>(entity =>
+            {
+                entity.Property(p => p.AreaID).ValueGeneratedNever();
+                entity.HasKey(p => p.AreaID);
             });
             #endregion
 

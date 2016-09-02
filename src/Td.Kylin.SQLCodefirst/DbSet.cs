@@ -233,10 +233,16 @@ namespace Td.Kylin.SQLCodeFirst
         /// 用户推荐记录表
         /// </summary>
         public DbSet<User_RecommendRecord> User_RecommendRecord { get { return Set<User_RecommendRecord>(); } }
+
         /// <summary>
         /// 用户经验记录
         /// </summary>
         public DbSet<User_EmpiricalRecords> User_EmpiricalRecords { get { return Set<User_EmpiricalRecords>(); } }
+
+        /// <summary>
+        /// 用户积分记录
+        /// </summary>
+        public DbSet<User_PointsRecords> User_PointsRecords { get { return Set<User_PointsRecords>(); } }
 
         #endregion
 
@@ -599,9 +605,9 @@ namespace Td.Kylin.SQLCodeFirst
         public DbSet<Area_RecommendIndustry> Area_RecommendIndustry { get { return Set<Area_RecommendIndustry>(); } }
 
         /// <summary>
-        /// 用户积分记录
+        /// 区域协议配置
         /// </summary>
-        public DbSet<User_PointsRecords> User_PointsRecords { get { return Set<User_PointsRecords>(); } }
+        public  DbSet<AreaProtocol> AreaProtocol { get { return Set<AreaProtocol>(); } }
         #endregion
 
         #region 运营商

@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Td.Kylin.Entity
 {
+    /// <summary>
+    /// 商家推荐记录
+    /// </summary>
 	[Table("Merchant_RecommendRecord")]
 
 	public class Merchant_RecommendRecord
