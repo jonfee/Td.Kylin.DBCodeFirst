@@ -717,6 +717,11 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.Property(p => p.AreaID).ValueGeneratedNever();
                 entity.HasKey(p => p.AreaID);
             });
+            modelBuilder.Entity<AreaOperator_SubAccountLoginRecords>(entity =>
+            {
+                entity.Property(p => p.SubID).ValueGeneratedNever();
+                entity.HasKey(p => p.SubID);
+            });
             #endregion
 
             #region 运营商

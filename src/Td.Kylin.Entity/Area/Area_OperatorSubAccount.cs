@@ -38,6 +38,18 @@ namespace Td.Kylin.Entity
         public string NickName { get; set; }
 
         /// <summary>
+        /// 手机号
+        /// </summary>
+        [Column(TypeName = "varchar(11)")]
+        public string Mobile { get; set; }
+
+        /// <summary>
+        /// 头像
+        /// </summary>
+        [Column(TypeName = "varchar(100)")]
+        public string Avatar { get; set; }
+
+        /// <summary>
         /// 角色（枚举：OperatorSubAccountRole）
         /// </summary>
         public int Role { get; set; }
@@ -48,9 +60,21 @@ namespace Td.Kylin.Entity
         public int AccountStatus { get; set; }
 
         /// <summary>
+        /// 最后登录时间
+        /// </summary>
+        [Column(TypeName = "datetime")]
+        public DateTime LastLoginTime { get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>        
         [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
+
+        /// <summary>
+        /// 资料更新时间（登录时不更新）
+        /// </summary>
+        [Column(TypeName = "datetime")]
+        public DateTime EditTime { get; set; }
     }
 }

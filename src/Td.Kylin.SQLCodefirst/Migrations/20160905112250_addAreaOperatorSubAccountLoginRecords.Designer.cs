@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160905112250_addAreaOperatorSubAccountLoginRecords")]
+    partial class addAreaOperatorSubAccountLoginRecords
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -458,16 +459,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<int>("AccountStatus");
 
-                    b.Property<string>("Avatar")
-                        .HasColumnType("varchar(100)");
-
                     b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<DateTime>("EditTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<DateTime>("LastLoginTime")
                         .HasColumnType("datetime");
 
                     b.Property<string>("LoginAccount")
@@ -475,9 +467,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<string>("LoginPassword")
                         .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Mobile")
-                        .HasColumnType("varchar(11)");
 
                     b.Property<string>("NickName")
                         .HasColumnType("nvarchar(20)");

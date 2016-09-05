@@ -607,7 +607,13 @@ namespace Td.Kylin.SQLCodeFirst
         /// <summary>
         /// 区域协议配置
         /// </summary>
-        public  DbSet<AreaProtocol> AreaProtocol { get { return Set<AreaProtocol>(); } }
+        public DbSet<AreaProtocol> AreaProtocol { get { return Set<AreaProtocol>(); } }
+
+        /// <summary>
+        /// 区域运营子账号登录日志记录
+        /// </summary>
+        public DbSet<AreaOperator_SubAccountLoginRecords> AreaOperator_SubAccountLoginRecords { get { return Set<AreaOperator_SubAccountLoginRecords>(); } }
+
         #endregion
 
         #region 运营商
