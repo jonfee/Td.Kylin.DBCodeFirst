@@ -647,6 +647,11 @@ namespace Td.Kylin.SQLCodeFirst
         /// </summary>
         public DbSet<Area_OperatorSubAccount> Area_OperatorSubAccount { get { return Set<Area_OperatorSubAccount>(); } }
 
+        /// <summary>
+        /// 运营商资产
+        /// </summary>
+        public  DbSet<AreaOperator_Assets> AreaOperator_Assets { get { return Set<AreaOperator_Assets>(); } }
+
         #endregion
 
         #region 代理商

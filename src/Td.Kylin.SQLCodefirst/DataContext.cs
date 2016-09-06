@@ -759,6 +759,11 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.Property(p => p.SubID).ValueGeneratedNever();
                 entity.HasKey(p => p.SubID);
             });
+            //运营商资产
+            modelBuilder.Entity<AreaOperator_Assets>(entity =>
+            {
+                entity.HasKey(p => new {p.OperatorID, p.AssetsType});
+            });
             #endregion
 
             #region 代理商
