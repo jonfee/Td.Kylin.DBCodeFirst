@@ -871,6 +871,13 @@ namespace Td.Kylin.SQLCodeFirst
             {
                 entity.HasKey(p => p.TransactionCode);
             });
+
+            //短信发送记录
+            modelBuilder.Entity<SmsSendRecords>(entity =>
+            {
+                entity.Property(p => p.SendID).ValueGeneratedNever();
+                entity.HasKey(p => p.SendID);
+            });
         }
     }
 }

@@ -748,5 +748,10 @@ namespace Td.Kylin.SQLCodeFirst
         /// 平台资金流水
         /// </summary>
         public DbSet<Platform_MoneyTransaction> Platform_MoneyTransaction { get { return Set<Platform_MoneyTransaction>(); } }
+
+        /// <summary>
+        /// 短信发送记录
+        /// </summary>
+        public  DbSet<SmsSendRecords> SmsSendRecords { get { return Set<SmsSendRecords>(); } }
     }
 }

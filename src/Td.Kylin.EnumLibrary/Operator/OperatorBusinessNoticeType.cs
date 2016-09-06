@@ -26,7 +26,7 @@ namespace Td.Kylin.EnumLibrary
         /// 商品库存预警通知
         /// </summary>
         [Description("商品库存预警通知")]
-        ProductInventoryWarning = 8
+        ProductInventoryWarning = 16
     }
 
     /// <summary>
