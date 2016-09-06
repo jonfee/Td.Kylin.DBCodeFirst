@@ -722,6 +722,11 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.Property(p => p.SubID).ValueGeneratedNever();
                 entity.HasKey(p => p.SubID);
             });
+            modelBuilder.Entity<AreaOperator_BusinessNoticeConfig>(entity =>
+            {
+                entity.Property(p => p.ConfigID).ValueGeneratedNever();
+                entity.HasKey(p => p.ConfigID);
+            });
             #endregion
 
             #region 运营商

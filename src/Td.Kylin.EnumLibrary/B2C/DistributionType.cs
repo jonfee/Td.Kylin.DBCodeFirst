@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace Td.Kylin.EnumLibrary.B2C
 {
+    /// <summary>
+    /// 配送方式
+    /// </summary>
     public enum DistributionType
     {
         /// <summary>

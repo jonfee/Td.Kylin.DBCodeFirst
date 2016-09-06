@@ -74,7 +74,6 @@ namespace Td.Kylin.EnumLibrary
         [Description("商家上门预约服务订单抽成")]
         MerchantServiceOrder = 2,
         /// <summary>
-        /// <summary>
         /// 个人服务者上门预约服务订单抽成
         /// </summary>
         [Description("个人服务者上门预约服务订单抽成")]
@@ -104,7 +103,6 @@ namespace Td.Kylin.EnumLibrary
     /// </summary>
     public enum AreaWorkerCommissionOption
     {
-        /// <summary>
         /// <summary>
         /// 上门预约服务订单抽成
         /// </summary>

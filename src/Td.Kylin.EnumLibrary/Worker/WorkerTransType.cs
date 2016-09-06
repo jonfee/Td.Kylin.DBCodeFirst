@@ -4,6 +4,9 @@ using Td.ComponentModel;
 
 namespace Td.Kylin.EnumLibrary
 {
+    /// <summary>
+    /// 工作人员交易类型
+    /// </summary>
     public enum WorkerTransType
     {
         /// <summary>

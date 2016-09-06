@@ -614,6 +614,11 @@ namespace Td.Kylin.SQLCodeFirst
         /// </summary>
         public DbSet<AreaOperator_SubAccountLoginRecords> AreaOperator_SubAccountLoginRecords { get { return Set<AreaOperator_SubAccountLoginRecords>(); } }
 
+        /// <summary>
+        /// 区域运营业务通知配置
+        /// </summary>
+        public DbSet<AreaOperator_BusinessNoticeConfig> AreaOperator_BusinessNoticeConfig { get { return Set<AreaOperator_BusinessNoticeConfig>(); } }
+
         #endregion
 
         #region 运营商

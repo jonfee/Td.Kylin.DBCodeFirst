@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Td.Kylin.EnumLibrary
 {
+    /// <summary>
+    /// 幸运抽奖奖券类型
+    /// </summary>
     public enum Luckydraw_TicketType
     {
 		/// <summary>

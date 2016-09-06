@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace Td.Kylin.EnumLibrary
 {
+    /// <summary>
+    /// 推荐业务类型
+    /// </summary>
     public enum ReferrerBusinessType
     {
         /// <summary>

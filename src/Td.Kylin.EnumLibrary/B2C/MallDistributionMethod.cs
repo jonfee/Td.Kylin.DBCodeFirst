@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Td.ComponentModel;
+﻿using Td.ComponentModel;
 
 namespace Td.Kylin.EnumLibrary.B2C
 {
+    /// <summary>
+    /// 订单配送方式
+    /// </summary>
     public enum MallDistributionMethod
     {
         /// <summary>
