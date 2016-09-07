@@ -25,6 +25,11 @@ namespace Td.Kylin.Entity
         public int SenderType { get; set; }
 
         /// <summary>
+        /// 短信业务类型（枚举：SmsTemplateOption）
+        /// </summary>
+        public int SmsType { get; set; }
+
+        /// <summary>
         /// 接收的手机号
         /// </summary>
         [Column(TypeName = "varchar(11)")]
