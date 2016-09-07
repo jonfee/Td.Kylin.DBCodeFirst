@@ -33,7 +33,12 @@ namespace Td.Kylin.EnumLibrary
         /// 区域抽成默认配置
         /// </summary>
         [Description("区域抽成默认配置")]
-        AreaCommission = 16
+        AreaCommission = 16,
+        /// <summary>
+        /// 推送消息模板
+        /// </summary>
+        [Description("推送消息模板")]
+        Push =32
     }
 
     /// <summary>
@@ -349,9 +354,9 @@ namespace Td.Kylin.EnumLibrary
         [Description("用户完成跑腿订单")]
         UserDoneLegworkOrder = 12,
         /// <summary>
-        /// 新直营订单通知
+        /// 订单下单后提示用户
         /// </summary>
-        [Description("新直营订单通知")]
-        NewMallOrderNotice = 13
+        [Description("订单下单后提示用户")]
+        UserOrderReminder = 13
     }
 }
