@@ -210,10 +210,10 @@ namespace Td.Kylin.EnumLibrary
         [Description("注册成功")]
         RegistrationSuccessful = 1,
         /// <summary>
-        /// 邀请好友注册成功
+        /// 邀请用户注册成功
         /// </summary>
-        [Description("邀请好友注册成功")]
-        InviteRegistrationSuccessful = 2,
+        [Description("邀请用户注册成功")]
+        InviteUserRegistrationSuccessful = 2,
         /// <summary>
         /// 实名认证审核通过
         /// </summary>

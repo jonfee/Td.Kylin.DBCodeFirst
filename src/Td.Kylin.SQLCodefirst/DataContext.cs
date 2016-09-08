@@ -759,6 +759,12 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.Property(p => p.SubID).ValueGeneratedNever();
                 entity.HasKey(p => p.SubID);
             });
+            //运营商通知管理配置
+            modelBuilder.Entity<AreaOperator_BusinessNoticeConfig>(entity =>
+            {
+                entity.Property(p => p.ConfigID).ValueGeneratedNever();
+                entity.HasKey(p => p.ConfigID);
+            });
             //运营商资产
             modelBuilder.Entity<AreaOperator_Assets>(entity =>
             {
