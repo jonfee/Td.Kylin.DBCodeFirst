@@ -452,6 +452,45 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.ToTable("Area_OperatorRelation");
                 });
 
+            modelBuilder.Entity("Td.Kylin.Entity.Area_OperatorSubAccount", b =>
+                {
+                    b.Property<long>("SubID");
+
+                    b.Property<int>("AccountStatus");
+
+                    b.Property<string>("Avatar")
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime");
+
+                    b.Property<DateTime>("EditTime")
+                        .HasColumnType("datetime");
+
+                    b.Property<DateTime>("LastLoginTime")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("LoginAccount")
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("LoginPassword")
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Mobile")
+                        .HasColumnType("varchar(11)");
+
+                    b.Property<string>("NickName")
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<long>("OpearatorID");
+
+                    b.Property<int>("Role");
+
+                    b.HasKey("SubID");
+
+                    b.ToTable("Area_OperatorSubAccount");
+                });
+
             modelBuilder.Entity("Td.Kylin.Entity.Area_RecommendIndustry", b =>
                 {
                     b.Property<int>("AreaID");
@@ -467,6 +506,67 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.HasKey("AreaID", "IndustryID");
 
                     b.ToTable("Area_RecommendIndustry");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.AreaOperator_Assets", b =>
+                {
+                    b.Property<long>("OperatorID");
+
+                    b.Property<int>("AssetsType");
+
+                    b.Property<int>("Balance");
+
+                    b.Property<DateTime?>("BeginTime")
+                        .HasColumnType("datetime");
+
+                    b.Property<DateTime?>("EndTime")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("Remark")
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime>("UpdateTime")
+                        .HasColumnType("datetime");
+
+                    b.Property<int>("UsedNumber");
+
+                    b.HasKey("OperatorID", "AssetsType");
+
+                    b.ToTable("AreaOperator_Assets");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.AreaOperator_BusinessNoticeConfig", b =>
+                {
+                    b.Property<long>("ConfigID");
+
+                    b.Property<int>("NoticeType");
+
+                    b.Property<int>("NoticeWay");
+
+                    b.Property<long>("OpearatorID");
+
+                    b.Property<long>("SubID");
+
+                    b.Property<DateTime>("UpdateTime")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("ConfigID");
+
+                    b.ToTable("AreaOperator_BusinessNoticeConfig");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.AreaOperator_SubAccountLoginRecords", b =>
+                {
+                    b.Property<long>("SubID");
+
+                    b.Property<string>("Ip");
+
+                    b.Property<DateTime>("LoginTime")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("SubID");
+
+                    b.ToTable("AreaOperator_SubAccountLoginRecords");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.AreaOperator_TradeRecords", b =>
@@ -503,6 +603,23 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.HasKey("TradeID");
 
                     b.ToTable("AreaOperator_TradeRecords");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.AreaProtocol", b =>
+                {
+                    b.Property<int>("AreaID");
+
+                    b.Property<string>("Contents")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProtocolType");
+
+                    b.Property<DateTime>("UpdateTime")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("AreaID");
+
+                    b.ToTable("Area_Protocol");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Circle_AreaForum", b =>
@@ -1671,6 +1788,9 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<DateTime?>("EvaluateTime")
                         .HasColumnType("datetime");
 
+                    b.Property<string>("ExtraData")
+                        .HasColumnType("nvarchar(MAX)");
+
                     b.Property<decimal>("GoodsAmount");
 
                     b.Property<string>("Introduction")
@@ -1679,6 +1799,8 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<bool>("IsDelete");
 
                     b.Property<bool>("IsWorkDelete");
+
+                    b.Property<short>("ObtainedMethod");
 
                     b.Property<DateTime?>("OfferAcceptTime")
                         .HasColumnType("datetime");
@@ -1700,10 +1822,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<string>("Pictures")
                         .HasColumnType("nvarchar(400)");
 
+                    b.Property<string>("RequiredDeliveryAddress")
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<long>("RequiredDeliveryAddressID");
 
                     b.Property<DateTime>("RequiredDeliveryTime")
                         .HasColumnType("datetime");
+
+                    b.Property<string>("RequiredPickAddress")
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<long?>("RequiredPickAddressID");
 
@@ -1725,6 +1853,9 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<long>("UserID");
+
+                    b.Property<DateTime?>("WorkerConfirmTime")
+                        .HasColumnType("datetime");
 
                     b.Property<long?>("WorkerID");
 
@@ -1850,198 +1981,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.ToTable("Library_ProductSKU");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_AreaConfig", b =>
-                {
-                    b.Property<int>("AreaID");
-
-                    b.Property<int>("GlobalTicketBalance");
-
-                    b.Property<string>("Introduction")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("PrizeTicketBalance");
-
-                    b.HasKey("AreaID");
-
-                    b.ToTable("Luckydraw_AreaConfig");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_AreaTicketGivingRules", b =>
-                {
-                    b.Property<int>("AreaID");
-
-                    b.Property<short>("Rule");
-
-                    b.Property<bool>("IsEnabled");
-
-                    b.Property<short>("Quantity");
-
-                    b.Property<string>("Values")
-                        .HasColumnType("varchar(200)");
-
-                    b.HasKey("AreaID", "Rule");
-
-                    b.ToTable("Luckydraw_AreaTicketGivingRules");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_LotteryRecord", b =>
-                {
-                    b.Property<long>("RecordID");
-
-                    b.Property<int>("AreaID");
-
-                    b.Property<long>("ConsignorID");
-
-                    b.Property<DateTime>("CreatedTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<bool>("IsDelivery");
-
-                    b.Property<bool>("IsWinning");
-
-                    b.Property<long>("PrizeID");
-
-                    b.Property<string>("ReceiptInfo")
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<string>("Remark")
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<long>("TicketID");
-
-                    b.Property<long>("UserID");
-
-                    b.HasKey("RecordID");
-
-                    b.ToTable("Luckydraw_LotteryRecord");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_PlatformConfig", b =>
-                {
-                    b.Property<long>("ConfigID");
-
-                    b.Property<TimeSpan>("ExclusionEndTime");
-
-                    b.Property<TimeSpan>("ExclusionStartTime");
-
-                    b.Property<short>("GlobalTicketProportion");
-
-                    b.Property<short>("Probability");
-
-                    b.HasKey("ConfigID");
-
-                    b.ToTable("Luckydraw_PlatformConfig");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_Prize", b =>
-                {
-                    b.Property<long>("PrizeID");
-
-                    b.Property<int>("AreaID");
-
-                    b.Property<int>("Balance");
-
-                    b.Property<string>("CoverImage")
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<DateTime>("CreatedTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<decimal>("Denomination");
-
-                    b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<int>("GlobalTicketBalance");
-
-                    b.Property<int>("GlobalTicketBuildCount");
-
-                    b.Property<string>("Introduction")
-                        .HasColumnType("nvarchar(MAX)");
-
-                    b.Property<bool>("IsDelete");
-
-                    b.Property<bool>("IsPublished");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("PrizeTicketBalance");
-
-                    b.Property<int>("PrizeTicketBuildCount");
-
-                    b.Property<DateTime>("PublishedTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<int>("Quantity");
-
-                    b.Property<int>("SortOrder");
-
-                    b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<DateTime>("UpdatedTime")
-                        .HasColumnType("datetime");
-
-                    b.HasKey("PrizeID");
-
-                    b.ToTable("Luckydraw_Prize");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_PrizePool", b =>
-                {
-                    b.Property<long>("ID");
-
-                    b.Property<int>("AreaID");
-
-                    b.Property<int>("Balance");
-
-                    b.Property<long>("PrizeID");
-
-                    b.Property<DateTime>("ReleaseTime")
-                        .HasColumnType("datetime");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Luckydraw_PrizePool");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Luckydraw_Ticket", b =>
-                {
-                    b.Property<long>("TicketID");
-
-                    b.Property<DateTime>("AcquiredTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<int>("AreaID");
-
-                    b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<bool>("IsUsed");
-
-                    b.Property<bool>("IsWinning");
-
-                    b.Property<long>("PrizeID");
-
-                    b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("TicketCode")
-                        .HasColumnType("varchar(50)");
-
-                    b.Property<short>("Type");
-
-                    b.Property<DateTime>("UsedTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<long>("UserID");
-
-                    b.HasKey("TicketID");
-
-                    b.ToTable("Luckydraw_Ticket");
-                });
-
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Category", b =>
                 {
                     b.Property<long>("CategoryID");
@@ -2105,6 +2044,29 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.HasKey("TagID");
 
                     b.ToTable("Mall_CategoryTag");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.Mall_Config", b =>
+                {
+                    b.Property<int>("AreaID");
+
+                    b.Property<int>("DeliveryTimeLimit");
+
+                    b.Property<int>("DistributionMethod");
+
+                    b.Property<string>("WarehouseAddress")
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<float?>("WarehouseLatitude");
+
+                    b.Property<float?>("WarehouseLongitude");
+
+                    b.Property<string>("WarehousePhone")
+                        .HasColumnType("varchar(15)");
+
+                    b.HasKey("AreaID");
+
+                    b.ToTable("Mall_Config");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Evaluate", b =>
@@ -2177,6 +2139,8 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<string>("DeliveryInfo")
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<int>("DistributionType");
+
                     b.Property<DateTime?>("EvaluateTime")
                         .HasColumnType("datetime");
 
@@ -2207,6 +2171,10 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<string>("ProductInfo")
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<float>("ReceivedLatitude");
+
+                    b.Property<float>("ReceivedLongitude");
 
                     b.Property<DateTime?>("ReceivedTime")
                         .HasColumnType("datetime");
@@ -3478,6 +3446,35 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.HasKey("RecordID");
 
                     b.ToTable("Shake_UserRecord");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.SmsSendRecords", b =>
+                {
+                    b.Property<long>("SendID");
+
+                    b.Property<bool>("IsSuccess");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Mobile")
+                        .HasColumnType("varchar(11)");
+
+                    b.Property<string>("Remark")
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("SendTime")
+                        .HasColumnType("datetime");
+
+                    b.Property<long>("SenderId");
+
+                    b.Property<int>("SenderType");
+
+                    b.Property<int>("SmsType");
+
+                    b.HasKey("SendID");
+
+                    b.ToTable("SmsSendRecords");
                 });
 
             modelBuilder.Entity("Td.Kylin.Entity.System_Area", b =>

@@ -50,22 +50,7 @@ namespace Td.Kylin.EnumLibrary
         /// 招聘
         /// </summary>
         [Description("招聘")]
-        Job = 4,
-        /// <summary>
-        /// 活动
-        /// </summary>
-        [Description("活动")]
-        Event = 5,
-        /// <summary>
-        /// 推广
-        /// </summary>
-        [Description("活动")]
-        Spread = 6,
-        /// <summary>
-        /// 其它
-        /// </summary>
-        [Description("其它")]
-        Other = 7
+        Job = 4
     }
 
     /// <summary>
@@ -112,16 +97,6 @@ namespace Td.Kylin.EnumLibrary
         /// 商家商品
         /// </summary>
         [Description("商家商品")]
-        MerchantProduct = 8,
-        /// <summary>
-        /// 平台现金红包
-        /// </summary>
-        [Description("平台现金红包")]
-        PlatformRedEnvelope = 9,
-        /// <summary>
-        /// 广告
-        /// </summary>
-        [Description("广告")]
-        AD = 10
+        MerchantProduct = 8
     }
 }

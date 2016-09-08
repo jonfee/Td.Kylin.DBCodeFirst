@@ -3,6 +3,9 @@ using Td.ComponentModel;
 
 namespace Td.Kylin.EnumLibrary
 {
+    /// <summary>
+    /// 配送评价等级
+    /// </summary>
 	public enum LegworkEvaluateLevel : short
 	{
 		/// <summary>

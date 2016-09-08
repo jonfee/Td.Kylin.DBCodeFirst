@@ -233,10 +233,16 @@ namespace Td.Kylin.SQLCodeFirst
         /// 用户推荐记录表
         /// </summary>
         public DbSet<User_RecommendRecord> User_RecommendRecord { get { return Set<User_RecommendRecord>(); } }
+
         /// <summary>
         /// 用户经验记录
         /// </summary>
         public DbSet<User_EmpiricalRecords> User_EmpiricalRecords { get { return Set<User_EmpiricalRecords>(); } }
+
+        /// <summary>
+        /// 用户积分记录
+        /// </summary>
+        public DbSet<User_PointsRecords> User_PointsRecords { get { return Set<User_PointsRecords>(); } }
 
         #endregion
 
@@ -599,9 +605,20 @@ namespace Td.Kylin.SQLCodeFirst
         public DbSet<Area_RecommendIndustry> Area_RecommendIndustry { get { return Set<Area_RecommendIndustry>(); } }
 
         /// <summary>
-        /// 用户积分记录
+        /// 区域协议配置
         /// </summary>
-        public DbSet<User_PointsRecords> User_PointsRecords { get { return Set<User_PointsRecords>(); } }
+        public DbSet<AreaProtocol> AreaProtocol { get { return Set<AreaProtocol>(); } }
+
+        /// <summary>
+        /// 区域运营子账号登录日志记录
+        /// </summary>
+        public DbSet<AreaOperator_SubAccountLoginRecords> AreaOperator_SubAccountLoginRecords { get { return Set<AreaOperator_SubAccountLoginRecords>(); } }
+
+        /// <summary>
+        /// 区域运营业务通知配置
+        /// </summary>
+        public DbSet<AreaOperator_BusinessNoticeConfig> AreaOperator_BusinessNoticeConfig { get { return Set<AreaOperator_BusinessNoticeConfig>(); } }
+
         #endregion
 
         #region 运营商
@@ -624,6 +641,16 @@ namespace Td.Kylin.SQLCodeFirst
         /// 运营商交易记录
         /// </summary>
         public DbSet<AreaOperator_TradeRecords> AreaOperator_TradeRecords { get { return Set<AreaOperator_TradeRecords>(); } }
+
+        /// <summary>
+        /// 运营商子账号
+        /// </summary>
+        public DbSet<Area_OperatorSubAccount> Area_OperatorSubAccount { get { return Set<Area_OperatorSubAccount>(); } }
+        
+        /// <summary>
+        /// 运营商资产
+        /// </summary>
+        public  DbSet<AreaOperator_Assets> AreaOperator_Assets { get { return Set<AreaOperator_Assets>(); } }
 
         #endregion
 
@@ -726,5 +753,10 @@ namespace Td.Kylin.SQLCodeFirst
         /// 平台资金流水
         /// </summary>
         public DbSet<Platform_MoneyTransaction> Platform_MoneyTransaction { get { return Set<Platform_MoneyTransaction>(); } }
+
+        /// <summary>
+        /// 短信发送记录
+        /// </summary>
+        public  DbSet<SmsSendRecords> SmsSendRecords { get { return Set<SmsSendRecords>(); } }
     }
 }

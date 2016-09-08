@@ -87,9 +87,19 @@ namespace Td.Kylin.Entity
         }
 
         /// <summary>
-        /// 用户要求取货地址。
+        /// 用户要求取货地址ID。
         /// </summary>
         public long? RequiredPickAddressID
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 用户要求取货地址。
+        /// </summary>
+        [Column(TypeName = "nvarchar(100)")]
+        public string RequiredPickAddress
         {
             get;
             set;
@@ -113,7 +123,15 @@ namespace Td.Kylin.Entity
             get;
             set;
         }
-
+        /// <summary>
+        /// 用户要求收货地址。
+        /// </summary>
+        [Column(TypeName = "nvarchar(100)")]
+        public string RequiredDeliveryAddress
+        {
+            get;
+            set;
+        }
         /// <summary>
         /// 用户要求收货时间。
         /// </summary>
@@ -342,7 +360,14 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 扩展数据
         /// </summary>
-        [Column(TypeName = "nvarchar(500)")]
+        [Column(TypeName = "nvarchar(MAX)")]
         public string ExtraData { get; set; }
+
+        /// <summary>
+        /// 订单确认时间
+        /// </summary>
+        [Column(TypeName = "datetime")]
+        public DateTime? WorkerConfirmTime { get; set; }
+
     }
 }

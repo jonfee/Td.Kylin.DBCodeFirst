@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Td.Kylin.Entity;
 using Td.Kylin.SQLCodefirst;
 
@@ -511,6 +510,7 @@ namespace Td.Kylin.SQLCodeFirst
             });
             modelBuilder.Entity<Mall_Config>(entity =>
             {
+                entity.Property(p => p.AreaID).ValueGeneratedNever();
                 entity.HasKey(p => new { p.AreaID,  });
             });
             #endregion
@@ -712,6 +712,21 @@ namespace Td.Kylin.SQLCodeFirst
             {
                 entity.HasKey(p => new { p.AreaID, p.IndustryID });
             });
+            modelBuilder.Entity<AreaProtocol>(entity =>
+            {
+                entity.Property(p => p.AreaID).ValueGeneratedNever();
+                entity.HasKey(p => p.AreaID);
+            });
+            modelBuilder.Entity<AreaOperator_SubAccountLoginRecords>(entity =>
+            {
+                entity.Property(p => p.SubID).ValueGeneratedNever();
+                entity.HasKey(p => p.SubID);
+            });
+            modelBuilder.Entity<AreaOperator_BusinessNoticeConfig>(entity =>
+            {
+                entity.Property(p => p.ConfigID).ValueGeneratedNever();
+                entity.HasKey(p => p.ConfigID);
+            });
             #endregion
 
             #region 运营商
@@ -732,13 +747,29 @@ namespace Td.Kylin.SQLCodeFirst
             {
                 entity.HasKey(p => new { p.OperatorID, p.AreaID });
             });
-
+            //运营商交易记录
             modelBuilder.Entity<AreaOperator_TradeRecords>(entity =>
             {
                 entity.Property(p => p.TradeID).ValueGeneratedNever();
                 entity.HasKey(p => p.TradeID);
             });
-
+            //运营商子账号
+            modelBuilder.Entity<Area_OperatorSubAccount>(entity =>
+            {
+                entity.Property(p => p.SubID).ValueGeneratedNever();
+                entity.HasKey(p => p.SubID);
+            });
+            //运营商通知管理配置
+            modelBuilder.Entity<AreaOperator_BusinessNoticeConfig>(entity =>
+            {
+                entity.Property(p => p.ConfigID).ValueGeneratedNever();
+                entity.HasKey(p => p.ConfigID);
+            });
+            //运营商资产
+            modelBuilder.Entity<AreaOperator_Assets>(entity =>
+            {
+                entity.HasKey(p => new {p.OperatorID, p.AssetsType});
+            });
             #endregion
 
             #region 代理商
@@ -850,6 +881,13 @@ namespace Td.Kylin.SQLCodeFirst
             modelBuilder.Entity<Platform_MoneyTransaction>(entity =>
             {
                 entity.HasKey(p => p.TransactionCode);
+            });
+
+            //短信发送记录
+            modelBuilder.Entity<SmsSendRecords>(entity =>
+            {
+                entity.Property(p => p.SendID).ValueGeneratedNever();
+                entity.HasKey(p => p.SendID);
             });
         }
     }

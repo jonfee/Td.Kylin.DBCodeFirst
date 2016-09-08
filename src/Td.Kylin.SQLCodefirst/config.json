@@ -4,7 +4,7 @@
     //"DefaultConnectionString": "data source=139.129.206.39;initial catalog=Kylin;persist security info=True;user id=kylin;password=tdkylin2016-[=_{+;MultipleActiveResultSets=True;"
     //"DefaultConnectionString": "data source=.;initial catalog=20160701;persist security info=True;user id=sa;password=sa123456;MultipleActiveResultSets=True;"
     //内部测试数据库
-    //"DefaultConnectionString": "data source=192.168.1.200;initial catalog=KylinTest;persist security info=True;user id=sa;password=sql100200;MultipleActiveResultSets=True;",
+    "DefaultConnectionString": "data source=192.168.1.200;initial catalog=KylinTest;user id=sa;password=sql100200;MultipleActiveResultSets=True;"
     //内部开发数据库
     //"DefaultConnectionString": "data source=192.168.1.200;initial catalog=KylinDevelop;persist security info=True;user id=sa;password=sql100200;MultipleActiveResultSets=True;"
     //外网测试数据库

@@ -35,16 +35,16 @@ namespace Td.Kylin.Entity
         /// 冻结资金
         /// </summary>
         public decimal FreezeMoney { get; set; }
-
+         
         /// <summary>
-        /// 账户状态
+        /// 账户状态（枚举：OperatorAccountStatus）
         /// </summary>
         public int AccountStatus { get; set; }
         
         /// <summary>
         /// 创建时间
-        /// </summary>
-        
-        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
+        /// </summary>        
+        [Column(TypeName = "datetime")]
+        public DateTime CreateTime { get; set; }
     }
 }

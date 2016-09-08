@@ -60,6 +60,11 @@ namespace Td.Kylin.EnumLibrary
         /// 已失效。
         /// </summary>
         [Description("已失效。")]
-        Invalid = 256
+        Invalid = 256,
+        /// <summary>
+        /// 待确认-精品会订单使用跑腿业务
+        /// </summary>
+        [Description("待确认")]
+        WaitingWorkerConfirm = 512
     }
 }

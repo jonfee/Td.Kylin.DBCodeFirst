@@ -151,6 +151,26 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "nvarchar(200)")]
         public string Remark { get; set; }
+        /// <summary>
+        /// 收货地经度
+        /// </summary>
+        public Single ReceivedLongitude
+        {
+            get;
+            set;
+        }
 
+        /// <summary>
+        /// 收获地纬度。
+        /// </summary>
+        public Single ReceivedLatitude
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// 配送类型
+        /// </summary>
+        public  int DistributionType { get; set; }
     }
 }

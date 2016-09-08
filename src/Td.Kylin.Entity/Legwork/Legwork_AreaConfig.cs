@@ -19,7 +19,7 @@ namespace Td.Kylin.Entity
         }
 
         /// <summary>
-        /// 业务须知。
+        /// 跑腿区域说明
         /// </summary>
         [Column(TypeName = "nvarchar(MAX)")]
         public string Instructions

@@ -20,7 +20,7 @@ namespace Td.Kylin.Entity
         public long UserID { get; set; }
 
         /// <summary>
-        /// 消息类型
+        /// 消息类型（枚举：MessageTemplateOption）
         /// </summary>
         public int MessageType { get; set; }
 

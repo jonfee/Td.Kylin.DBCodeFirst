@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Td.ComponentModel;
+﻿using Td.ComponentModel;
 
 namespace Td.Kylin.EnumLibrary.Legwork
 {
+    /// <summary>
+    /// 配送订单获取方式
+    /// </summary>
     public enum LegworkOrderObtainedMethod
     {
         /// <summary>
