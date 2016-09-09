@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace Td.Kylin.Entity
@@ -42,5 +43,17 @@ namespace Td.Kylin.Entity
         /// 送达限定时间（默认24）
         /// </summary>
         public int DeliveryTimeLimit { get; set; }
+
+        /// <summary>
+        /// 接受配送订单开始时间，格式：00:00:00
+        /// </summary>
+        [Column(TypeName = "char(8)")]
+        public string BeginLegworkOrderTime { get; set; }
+
+        /// <summary>
+        /// 接受配送订单结束时间，格式：23:59:59
+        /// </summary>
+        [Column(TypeName = "char(8)")]
+        public string EndLegworkOrderTime { get; set; }
     }
 }

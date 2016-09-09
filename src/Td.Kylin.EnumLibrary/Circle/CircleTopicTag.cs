@@ -19,16 +19,16 @@ namespace Td.Kylin.EnumLibrary
         /// </summary>
         [Description("推荐")]
         Recommend = 2,
-        /// <summary>
-        /// 精华
-        /// </summary>
-        [Description("精华")]
-        Essence = 4,
-        /// <summary>
-        /// 热帖
-        /// </summary>
-        [Description("热帖")]
-        Hot = 8,
+        ///// <summary>
+        ///// 精华
+        ///// </summary>
+        //[Description("精华")]
+        //Essence = 4,
+        ///// <summary>
+        ///// 热帖
+        ///// </summary>
+        //[Description("热帖")]
+        //Hot = 8,
         /// <summary>
         /// 摇一摇申请中
         /// </summary>

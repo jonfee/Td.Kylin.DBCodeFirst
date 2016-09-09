@@ -14,11 +14,11 @@ namespace Td.Kylin.EnumLibrary
         /// </summary>
         [Description("话题帖")]
         HuaTi = 1,
-        /// <summary>
-        /// 活动帖
-        /// </summary>
-        [Description("活动帖")]
-        Event = 2,
+        ///// <summary>
+        ///// 活动帖
+        ///// </summary>
+        //[Description("活动帖")]
+        //Event = 2,
         /// <summary>
         /// 商品帖
         /// </summary>

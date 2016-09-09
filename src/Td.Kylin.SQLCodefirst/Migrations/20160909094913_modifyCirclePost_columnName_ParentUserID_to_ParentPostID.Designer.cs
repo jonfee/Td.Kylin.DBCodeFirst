@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160909094913_modifyCirclePost_columnName_ParentUserID_to_ParentPostID")]
+    partial class modifyCirclePost_columnName_ParentUserID_to_ParentPostID
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -2052,15 +2053,9 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                 {
                     b.Property<int>("AreaID");
 
-                    b.Property<string>("BeginLegworkOrderTime")
-                        .HasColumnType("char(8)");
-
                     b.Property<int>("DeliveryTimeLimit");
 
                     b.Property<int>("DistributionMethod");
-
-                    b.Property<string>("EndLegworkOrderTime")
-                        .HasColumnType("char(8)");
 
                     b.Property<string>("WarehouseAddress")
                         .HasColumnType("nvarchar(100)");

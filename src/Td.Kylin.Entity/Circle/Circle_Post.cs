@@ -23,7 +23,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 评论父ID
         /// </summary>
-        public long ParentUserID { get; set; }
+        public long ParentPostID { get; set; }
         ///<summary>
         ///用户ID
         ///</summary>
