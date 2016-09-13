@@ -89,7 +89,7 @@ namespace Td.Kylin.Entity
         public int OrderNo { get; set; }
 
         ///<summary>
-        ///发帖类型2n次方
+        ///发帖类型（枚举：CircleTopicType，用2的n次方值累加）
         ///</summary>
         public int PostType { get; set; }
 

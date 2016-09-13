@@ -41,11 +41,11 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "nvarchar(20)")]
         public string Username{get;set;}
-				
-		///<summary>
-		///帖子类型（普通、活动、商品、投票）
-		///</summary>
-		public int TopicType{get;set;}
+
+        ///<summary>
+        ///帖子类型（枚举：CircleTopicType）
+        ///</summary>
+        public int TopicType{get;set;}
 
         ///<summary>
         ///帖子标题
