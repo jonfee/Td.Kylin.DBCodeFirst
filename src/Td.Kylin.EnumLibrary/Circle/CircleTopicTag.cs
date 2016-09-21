@@ -10,6 +10,11 @@ namespace Td.Kylin.EnumLibrary
     public enum CircleTopicTag
     {
         /// <summary>
+        /// 区域置顶
+        /// </summary>
+        [Description("区域置顶")]
+        AreaTop = 1024,
+        /// <summary>
         /// 置顶
         /// </summary>
         [Description("置顶")]

@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.4.1",
   "dependencies": {
     "NETStandard.Library": "1.6.0",
     "Td.CoreLibrary": "1.1.0"
