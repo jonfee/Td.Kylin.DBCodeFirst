@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Td.ComponentModel;
 
 namespace Td.Kylin.EnumLibrary.B2C
 {
@@ -11,12 +12,14 @@ namespace Td.Kylin.EnumLibrary.B2C
     public enum DistributionType
     {
         /// <summary>
-        /// 跑腿配送
+        /// 同城配送
         /// </summary>
-        Legworker=1,
+        [Description("同城配送")]
+        Legwork = 1,
         /// <summary>
-        /// 物流配送
+        /// 快递物流
         /// </summary>
-        Logistics=2,
+        [Description("快递物流")]
+        Express = 2,
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using Td.Kylin.Entity;
 
 namespace Td.Kylin.SQLCodeFirst
@@ -423,6 +424,12 @@ namespace Td.Kylin.SQLCodeFirst
         /// 精品汇配置
         /// </summary>
         public DbSet<Mall_Config> Mall_Config { get { return Set<Mall_Config>(); } }
+
+        /// <summary>
+        /// 全心直营订单包裹
+        /// </summary>
+        public DbSet<Mall_OrderPackage> Mall_OrderPackage { get { return Set<Mall_OrderPackage>(); } }
+
         #endregion
 
         #region 投诉/举报
@@ -646,11 +653,11 @@ namespace Td.Kylin.SQLCodeFirst
         /// 运营商子账号
         /// </summary>
         public DbSet<Area_OperatorSubAccount> Area_OperatorSubAccount { get { return Set<Area_OperatorSubAccount>(); } }
-        
+
         /// <summary>
         /// 运营商资产
         /// </summary>
-        public  DbSet<AreaOperator_Assets> AreaOperator_Assets { get { return Set<AreaOperator_Assets>(); } }
+        public DbSet<AreaOperator_Assets> AreaOperator_Assets { get { return Set<AreaOperator_Assets>(); } }
 
         #endregion
 
@@ -757,6 +764,6 @@ namespace Td.Kylin.SQLCodeFirst
         /// <summary>
         /// 短信发送记录
         /// </summary>
-        public  DbSet<SmsSendRecords> SmsSendRecords { get { return Set<SmsSendRecords>(); } }
+        public DbSet<SmsSendRecords> SmsSendRecords { get { return Set<SmsSendRecords>(); } }
     }
 }

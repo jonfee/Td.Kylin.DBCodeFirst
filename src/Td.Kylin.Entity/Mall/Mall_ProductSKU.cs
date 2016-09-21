@@ -35,11 +35,16 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "nvarchar(100)")]
         public string Img{get;set;}
-				
-		///<summary>
-		///库存
-		///</summary>
-		public int Inventory{get;set;}
+
+        /// <summary>
+        /// 重量
+        /// </summary>
+        public float Weight { get; set; }
+
+        ///<summary>
+        ///库存
+        ///</summary>
+        public int Inventory{get;set;}
 				
 		///<summary>
 		///销售量
@@ -52,7 +57,7 @@ namespace Td.Kylin.Entity
 		public decimal SalePrice{get;set;}
 
         ///<summary>
-        ///销售状态
+        ///销售状态（暂忽略）
         ///</summary>
         public int SalesStatus { get; set; }
 

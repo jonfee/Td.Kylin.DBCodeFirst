@@ -20,7 +20,7 @@ namespace Td.Kylin.Entity
         public int AreaID { get; set; }
 
         ///<summary>
-        ///订单类型
+        ///订单类型（枚举：B2COrderType）
         ///</summary>
         public int OrderType { get; set; }
 
@@ -73,50 +73,50 @@ namespace Td.Kylin.Entity
         public string DeliveryInfo { get; set; }
 
         ///<summary>
-        ///支付类型
+        ///支付类型（枚举：OnlinePaymentType）
         ///</summary>
         public int PaymentType { get; set; }
 
         ///<summary>
-        ///订单状态
+        ///订单状态（枚举：B2COrderStatus）
         ///</summary>
         public int OrderStatus { get; set; }
 
         ///<summary>
         ///下单时间
         ///</summary>
-
-        [Column(TypeName = "datetime")]public DateTime CreateTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///支付时间
         ///</summary>
-
-        [Column(TypeName = "datetime")]public DateTime? PayTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? PayTime { get; set; }
 
         ///<summary>
         ///取消时间
         ///</summary>
-
-        [Column(TypeName = "datetime")]public DateTime? CancelTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? CancelTime { get; set; }
 
         ///<summary>
         ///发货时间
         ///</summary>
-
-        [Column(TypeName = "datetime")]public DateTime? ShipTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? ShipTime { get; set; }
 
         ///<summary>
         ///收货时间
         ///</summary>
-
-        [Column(TypeName = "datetime")]public DateTime? ReceivedTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? ReceivedTime { get; set; }
 
         ///<summary>
         ///评价时间
         ///</summary>
-
-        [Column(TypeName = "datetime")]public DateTime? EvaluateTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? EvaluateTime { get; set; }
 
         ///<summary>
         ///买家已删除
@@ -131,17 +131,17 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///必须支付的时间
         ///</summary>
-
-        [Column(TypeName = "datetime")]public DateTime? NeedPayTime { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? NeedPayTime { get; set; }
 
         ///<summary>
-        ///物流承运公司
+        ///物流/配送承运公司（同城配送时为当前运营商旗下的跑腿团队）
         ///</summary>
         [Column(TypeName = "nvarchar(20)")]
         public string ExpressCompany { get; set; }
 
         ///<summary>
-        ///物流单号
+        ///物流/配送单号（同城配送时为当前订单对应的跑腿订单）
         ///</summary>
         [Column(TypeName = "nvarchar(30)")]
         public string ExpressNumber { get; set; }
@@ -168,9 +168,16 @@ namespace Td.Kylin.Entity
             get;
             set;
         }
+
         /// <summary>
-        /// 配送类型
+        /// 配送方式（枚举：DistributionType）
         /// </summary>
-        public  int DistributionType { get; set; }
+        public int DistributionType { get; set; }
+
+        /// <summary>
+        /// 订单描述说明
+        /// </summary>
+        [Column(TypeName = "nvarchar(300)")]
+        public string Desc { get; set; }
     }
 }

@@ -513,6 +513,11 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.Property(p => p.AreaID).ValueGeneratedNever();
                 entity.HasKey(p => new { p.AreaID,  });
             });
+            modelBuilder.Entity<Mall_OrderPackage>(entity =>
+            {
+                entity.Property(p => p.PackageId).ValueGeneratedNever();
+                entity.HasKey(p => p.PackageId);
+            });
             #endregion
 
             #region 投诉/举报

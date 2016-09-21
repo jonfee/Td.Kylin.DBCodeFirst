@@ -36,8 +36,6 @@ namespace Td.Kylin.Entity
         /// </summary>
         public int AreaID { get; set; }
 
-
-
         ///<summary>
         ///标签ID集合
         ///</summary>
@@ -57,9 +55,24 @@ namespace Td.Kylin.Entity
         public string Publisher { get; set; }
 
         ///<summary>
-        ///配送费
+        ///配送费（拓展属性，暂时忽略）
         ///</summary>
         public decimal DeliveryFee { get; set; }
+
+        /// <summary>
+        /// 运费模板Id
+        /// </summary>
+        public long FreightTemplateId { get; set; }
+
+        /// <summary>
+        /// 是否独立包裹配送（即不与其它任何商品放置在同一包裹中）
+        /// </summary>
+        public bool IsSinglePackage { get; set; }
+
+        /// <summary>
+        /// 是否同城及时达
+        /// </summary>
+        public  bool IsTimelyDelivery { get; set; }
 
         ///<summary>
         ///主图
@@ -117,16 +130,20 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///数据建立时间
         ///</summary>
-
         [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
 
         ///<summary>
         ///最后更新时间
         ///</summary>
-
         [Column(TypeName = "datetime")]
         public DateTime UpdateTime { get; set; }
+
+        /// <summary>
+        /// 最后成单时间
+        /// </summary>
+        [Column(TypeName = "datetime")]
+        public DateTime LastOrderTime { get; set; }
 
         ///<summary>
         ///促销ID
