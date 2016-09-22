@@ -18,8 +18,9 @@ namespace Td.Kylin.Entity
         /// </summary>
         public int AreaID { get; set; }
         /// <summary>
-        /// 配送方式，引用 MallDistributionMethod 枚举
+        /// 配送方式（枚举：DistributionType）
         /// </summary>
+        [Obsolete("忽略，不需要此属性")]
         public int DistributionMethod { get; set; }
         /// <summary>
         /// 仓库所在经度
@@ -40,9 +41,14 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "varchar(15)")]
         public string WarehousePhone { get; set; }
         /// <summary>
-        /// 送达限定时间（默认24）
+        /// 普通配送预计送达时间（单位：小时）
         /// </summary>
         public int DeliveryTimeLimit { get; set; }
+
+        /// <summary>
+        /// 即时达预计送达时间（单位：分钟）
+        /// </summary>
+        public int InstantDeliveryMinutes { get; set; }
 
         /// <summary>
         /// 接受配送订单开始时间，格式：00:00:00
