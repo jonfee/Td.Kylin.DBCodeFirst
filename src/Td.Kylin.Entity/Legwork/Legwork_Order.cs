@@ -357,6 +357,12 @@ namespace Td.Kylin.Entity
         /// 获得方式，引用 LegworkOrderObtainedMethod 枚举
         /// </summary>
         public short ObtainedMethod { get; set; }
+
+        /// <summary>
+        /// 是否同城即时达
+        /// </summary>
+        public bool IsTimelyDelivery { get; set; }
+
         /// <summary>
         /// 扩展数据
         /// </summary>
