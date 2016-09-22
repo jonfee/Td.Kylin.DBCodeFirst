@@ -79,6 +79,9 @@ namespace Td.Kylin.Entity
 
         ///<summary>
         ///订单状态（枚举：B2COrderStatus）
+        /// <remarks>
+        /// 说明：1、订单下任意包裹发货，即视为订单已发货；
+        /// </remarks>
         ///</summary>
         public int OrderStatus { get; set; }
 

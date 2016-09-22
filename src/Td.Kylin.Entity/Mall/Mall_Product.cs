@@ -70,7 +70,7 @@ namespace Td.Kylin.Entity
         public bool IsSinglePackage { get; set; }
 
         /// <summary>
-        /// 是否同城及时达
+        /// 是否同城即时达
         /// </summary>
         public  bool IsTimelyDelivery { get; set; }
 

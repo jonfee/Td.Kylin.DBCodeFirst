@@ -518,6 +518,21 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.Property(p => p.PackageId).ValueGeneratedNever();
                 entity.HasKey(p => p.PackageId);
             });
+            modelBuilder.Entity<Mall_FreightTemplate>(entity =>
+            {
+                entity.Property(p => p.FreightId).ValueGeneratedNever();
+                entity.HasKey(p => p.FreightId);
+            });
+            modelBuilder.Entity<Mall_FreightTemplateOptions>(entity =>
+            {
+                entity.Property(p => p.OptionId).ValueGeneratedNever();
+                entity.HasKey(p => p.OptionId);
+            });
+            modelBuilder.Entity<Mall_FreightTemplateFreeCondition>(entity =>
+            {
+                entity.Property(p => p.ConditionId).ValueGeneratedNever();
+                entity.HasKey(p => p.ConditionId);
+            });
             #endregion
 
             #region 投诉/举报

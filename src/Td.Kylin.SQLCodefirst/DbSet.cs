@@ -430,6 +430,21 @@ namespace Td.Kylin.SQLCodeFirst
         /// </summary>
         public DbSet<Mall_OrderPackage> Mall_OrderPackage { get { return Set<Mall_OrderPackage>(); } }
 
+        /// <summary>
+        /// 运费模板
+        /// </summary>
+        public DbSet<Mall_FreightTemplate> Mall_FreightTemplate { get { return Set<Mall_FreightTemplate>(); } }
+
+        /// <summary>
+        /// 运费模板配置项
+        /// </summary>
+        public DbSet<Mall_FreightTemplateOptions> Mall_FreightTemplateConfig { get { return Set<Mall_FreightTemplateOptions>(); } }
+
+        /// <summary>
+        /// 运费模板的免邮条件
+        /// </summary>
+        public DbSet<Mall_FreightTemplateFreeCondition> Mall_FreightTemplateFreeCondition { get { return Set<Mall_FreightTemplateFreeCondition>(); } }
+
         #endregion
 
         #region 投诉/举报

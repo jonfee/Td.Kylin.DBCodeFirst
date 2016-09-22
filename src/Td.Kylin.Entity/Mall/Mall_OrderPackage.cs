@@ -51,7 +51,7 @@ namespace Td.Kylin.Entity
         public string ExpressCompany { get; set; }
 
         ///<summary>
-        ///物流/配送单号（同城配送时为当前订单对应的跑腿订单）
+        ///物流/配送单号（同城配送时为当前订单对应的跑腿订单订单编号）
         ///</summary>
         [Column(TypeName = "nvarchar(30)")]
         public string ExpressNumber { get; set; }
