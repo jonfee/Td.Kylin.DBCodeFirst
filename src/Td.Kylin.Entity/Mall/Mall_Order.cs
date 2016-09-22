@@ -138,15 +138,17 @@ namespace Td.Kylin.Entity
         public DateTime? NeedPayTime { get; set; }
 
         ///<summary>
-        ///物流/配送承运公司（同城配送时为当前运营商旗下的跑腿团队）
+        ///物流/配送承运公司（忽略）
         ///</summary>
         [Column(TypeName = "nvarchar(20)")]
+        [Obsolete("忽略此属性，配送信息迁移至包裹")]
         public string ExpressCompany { get; set; }
 
         ///<summary>
-        ///物流/配送单号（同城配送时为当前订单对应的跑腿订单）
+        ///物流/配送单号（忽略）
         ///</summary>
         [Column(TypeName = "nvarchar(30)")]
+        [Obsolete("忽略此属性，配送信息迁移至包裹")]
         public string ExpressNumber { get; set; }
 
         ///<summary>
@@ -173,8 +175,9 @@ namespace Td.Kylin.Entity
         }
 
         /// <summary>
-        /// 配送方式（枚举：DistributionType）
+        /// 配送方式（枚举：DistributionType，忽略）
         /// </summary>
+        [Obsolete("忽略此属性，配送信息迁移至包裹")]
         public int DistributionType { get; set; }
 
         /// <summary>
