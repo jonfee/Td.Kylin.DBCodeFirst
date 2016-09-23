@@ -45,7 +45,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///内容
         ///</summary>
-        [Column(TypeName = "nvarchar(255)")]
+        [Column(TypeName = "nvarchar(1000)")]
         public string Content{get;set;}
 				
 		///<summary>
