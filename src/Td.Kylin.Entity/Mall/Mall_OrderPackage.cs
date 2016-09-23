@@ -44,6 +44,11 @@ namespace Td.Kylin.Entity
         /// </summary>
         public int DistributionType { get; set; }
 
+        /// <summary>
+        /// 是否同城即时达
+        /// </summary>
+        public bool IsTimelyDelivery { get; set; }
+
         ///<summary>
         ///物流/配送承运公司（同城配送时为当前运营商旗下的跑腿团队）
         ///</summary>
