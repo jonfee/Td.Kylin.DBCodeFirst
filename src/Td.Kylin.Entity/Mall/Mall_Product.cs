@@ -57,6 +57,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///配送费（拓展属性，暂时忽略）
         ///</summary>
+        [Obsolete("暂时忽略")]
         public decimal DeliveryFee { get; set; }
 
         /// <summary>

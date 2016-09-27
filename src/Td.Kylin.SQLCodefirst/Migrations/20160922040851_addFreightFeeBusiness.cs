@@ -114,7 +114,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                 table: "Mall_Product",
                 type: "datetime",
                 nullable: false,
-                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+                defaultValue: new DateTime(2016, 9,27, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<long>(
                 name: "FreightTemplateId",

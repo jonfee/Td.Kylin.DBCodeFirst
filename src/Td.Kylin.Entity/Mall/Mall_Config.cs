@@ -53,13 +53,13 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 接受配送订单开始时间，格式：00:00:00
         /// </summary>
-        [Column(TypeName = "char(8)")]
+        [Column(TypeName = "varchar(8)")]
         public string BeginLegworkOrderTime { get; set; }
 
         /// <summary>
         /// 接受配送订单结束时间，格式：23:59:59
         /// </summary>
-        [Column(TypeName = "char(8)")]
+        [Column(TypeName = "varchar(8)")]
         public string EndLegworkOrderTime { get; set; }
     }
 }

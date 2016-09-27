@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Td.Kylin.Entity
 {
@@ -59,6 +60,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///销售状态（暂忽略）
         ///</summary>
+        [Obsolete("暂时忽略")]
         public int SalesStatus { get; set; }
 
         /// <summary>
