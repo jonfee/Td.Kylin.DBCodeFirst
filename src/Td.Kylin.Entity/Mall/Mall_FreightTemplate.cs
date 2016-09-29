@@ -46,6 +46,16 @@ namespace Td.Kylin.Entity
         public int FreightValuationType { get; set; }
 
         /// <summary>
+        /// 是否已被删除
+        /// </summary>
+        public bool IsDeleted { get; set; }
+
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bool Enabled { get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [Column(TypeName = "datetime")]
