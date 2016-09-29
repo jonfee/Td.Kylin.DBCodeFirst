@@ -42,7 +42,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///评价内容
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "nvarchar(500)")]
         public string Contents { get; set; }
 
         ///<summary>
