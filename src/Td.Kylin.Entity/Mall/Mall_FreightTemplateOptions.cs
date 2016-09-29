@@ -32,7 +32,14 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 区域Id集合（多个用英文逗号分隔，默认配置忽略此属性）
         /// </summary>
+        [Column(TypeName = "varchar(2000)")]
         public string AreaIds { get; set; }
+
+        /// <summary>
+        /// 区域ID对应的区域名称集合（多个用英文逗号分隔）
+        /// </summary>
+        [Column(TypeName = "nvarchar(4000)")]
+        public string AreaNames { get; set; }
 
         /// <summary>
         /// 首价范围内的计价数量

@@ -49,6 +49,18 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "char(6)")]
         public string PostCode { get; set; }
 
+        /// <summary>
+        /// 收货地址区域ID路径,如：440000,440300,440301
+        /// </summary>
+        [Column(TypeName = "varchar(40)")]
+        public string AreaPath { get; set; }
+
+        /// <summary>
+        /// 收货地址区域名称路径，如：广东省,深圳市,罗湖区
+        /// </summary>
+        [Column(TypeName = "nvarchar(50)")]
+        public string AreaNamePath { get; set; }
+
         ///<summary>
         ///纬度
         ///</summary>

@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160929084305_addColumnForAddress_UserAddress_and_MallFreightTemplateOptions")]
+    partial class addColumnForAddress_UserAddress_and_MallFreightTemplateOptions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -2193,7 +2194,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("OptionId");
 
                     b.Property<string>("AreaIds")
-                        .HasColumnType("varchar(2000)");
+                        .HasColumnType("varchar(2000");
 
                     b.Property<string>("AreaNames")
                         .HasColumnType("nvarchar(4000)");
