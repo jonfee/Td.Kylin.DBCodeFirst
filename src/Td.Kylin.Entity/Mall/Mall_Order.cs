@@ -154,7 +154,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///买家备注
         ///</summary>
-        [Column(TypeName = "nvarchar(200)")]
+        [Column(TypeName = "nvarchar(300)")]
         public string Remark { get; set; }
         /// <summary>
         /// 收货地经度
