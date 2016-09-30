@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20160930080211_MallOrderModifyRemarkLength")]
+    partial class MallOrderModifyRemarkLength
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -1800,6 +1801,8 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<bool>("IsDelete");
 
+                    b.Property<bool>("IsTimelyDelivery");
+
                     b.Property<bool>("IsWorkDelete");
 
                     b.Property<short>("ObtainedMethod");
@@ -2053,14 +2056,16 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AreaID");
 
                     b.Property<string>("BeginLegworkOrderTime")
-                        .HasColumnType("char(8)");
+                        .HasColumnType("varchar(8)");
 
                     b.Property<int>("DeliveryTimeLimit");
 
                     b.Property<int>("DistributionMethod");
 
                     b.Property<string>("EndLegworkOrderTime")
-                        .HasColumnType("char(8)");
+                        .HasColumnType("varchar(8)");
+
+                    b.Property<int>("InstantDeliveryMinutes");
 
                     b.Property<string>("WarehouseAddress")
                         .HasColumnType("nvarchar(100)");
@@ -2130,6 +2135,92 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.ToTable("Mall_EvaluateStatistics");
                 });
 
+            modelBuilder.Entity("Td.Kylin.Entity.Mall_FreightTemplate", b =>
+                {
+                    b.Property<long>("FreightId");
+
+                    b.Property<int>("AreaId");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime");
+
+                    b.Property<int>("DistributionType");
+
+                    b.Property<bool>("Enabled");
+
+                    b.Property<int>("FreightValuationType");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<bool>("IsFreeShip");
+
+                    b.Property<bool>("IsSinglePackageFreight");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<DateTime>("UpdateTime")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("FreightId");
+
+                    b.ToTable("Mall_FreightTemplate");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.Mall_FreightTemplateFreeCondition", b =>
+                {
+                    b.Property<long>("ConditionId");
+
+                    b.Property<string>("AreaIds");
+
+                    b.Property<decimal>("BuyMinMoney");
+
+                    b.Property<float>("BuyMinimum");
+
+                    b.Property<int>("DistributionType");
+
+                    b.Property<long>("FreightId");
+
+                    b.Property<DateTime>("UpdateTime")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("ConditionId");
+
+                    b.ToTable("Mall_FreightTemplateFreeCondition");
+                });
+
+            modelBuilder.Entity("Td.Kylin.Entity.Mall_FreightTemplateOptions", b =>
+                {
+                    b.Property<long>("OptionId");
+
+                    b.Property<string>("AreaIds")
+                        .HasColumnType("varchar(2000)");
+
+                    b.Property<string>("AreaNames")
+                        .HasColumnType("nvarchar(4000)");
+
+                    b.Property<int>("DistributionType");
+
+                    b.Property<decimal>("FirstFee");
+
+                    b.Property<float>("FirstNumber");
+
+                    b.Property<long>("FreightId");
+
+                    b.Property<decimal>("IncrementUnitFee");
+
+                    b.Property<float>("IncrementUnitNumber");
+
+                    b.Property<bool>("IsDefault");
+
+                    b.Property<DateTime>("UpdateTime")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("OptionId");
+
+                    b.ToTable("Mall_FreightTemplateOptions");
+                });
+
             modelBuilder.Entity("Td.Kylin.Entity.Mall_Order", b =>
                 {
                     b.Property<long>("OrderID");
@@ -2146,6 +2237,9 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<string>("DeliveryInfo")
                         .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Desc")
+                        .HasColumnType("nvarchar(300)");
 
                     b.Property<int>("DistributionType");
 
@@ -2212,6 +2306,41 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.ToTable("Mall_Order");
                 });
 
+            modelBuilder.Entity("Td.Kylin.Entity.Mall_OrderPackage", b =>
+                {
+                    b.Property<long>("PackageId");
+
+                    b.Property<string>("Desc")
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("DistributionType");
+
+                    b.Property<string>("ExpressCompany")
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("ExpressNumber")
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<DateTime?>("ExpressTime")
+                        .HasColumnType("datetime");
+
+                    b.Property<bool>("IsTimelyDelivery");
+
+                    b.Property<long>("OrderId");
+
+                    b.Property<int>("PackageNo");
+
+                    b.Property<string>("SnapshotIDs");
+
+                    b.Property<decimal>("TotalDeliveryFee");
+
+                    b.Property<decimal>("TotalProductAmount");
+
+                    b.HasKey("PackageId");
+
+                    b.ToTable("Mall_OrderPackage");
+                });
+
             modelBuilder.Entity("Td.Kylin.Entity.Mall_OrderProductSnapshot", b =>
                 {
                     b.Property<long>("SnapshotID");
@@ -2226,7 +2355,13 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
+                    b.Property<long>("FreightTemplateId");
+
                     b.Property<bool>("HasEvaluate");
+
+                    b.Property<bool>("IsSinglePackage");
+
+                    b.Property<bool>("IsTimelyDelivery");
 
                     b.Property<string>("MainPic")
                         .HasColumnType("nvarchar(100)");
@@ -2237,6 +2372,8 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<long>("OrderID");
+
+                    b.Property<long>("PackageId");
 
                     b.Property<string>("Pics")
                         .HasColumnType("nvarchar(500)");
@@ -2272,6 +2409,8 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<string>("VenderName")
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<float>("Weight");
+
                     b.HasKey("SnapshotID");
 
                     b.ToTable("Mall_OrderProductSnapshot");
@@ -2300,9 +2439,18 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<double>("EvaluateScore");
 
+                    b.Property<long>("FreightTemplateId");
+
                     b.Property<int>("Inventory");
 
                     b.Property<bool>("IsDelete");
+
+                    b.Property<bool>("IsSinglePackage");
+
+                    b.Property<bool>("IsTimelyDelivery");
+
+                    b.Property<DateTime>("LastOrderTime")
+                        .HasColumnType("datetime");
 
                     b.Property<long>("LibraryCategoryID");
 
@@ -2380,6 +2528,8 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("TagStatus");
+
+                    b.Property<float>("Weight");
 
                     b.HasKey("SkuID");
 
@@ -3760,6 +3910,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<int>("AddressType");
 
                     b.Property<int>("AddressUseType");
+
+                    b.Property<string>("AreaNamePath")
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("AreaPath")
+                        .HasColumnType("varchar(40)");
 
                     b.Property<string>("Community")
                         .HasColumnType("nvarchar(50)");
