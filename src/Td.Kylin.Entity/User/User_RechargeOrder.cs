@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Td.Kylin.Entity.User
+namespace Td.Kylin.Entity
 {
     /// <summary>
     /// 用户充值订单
