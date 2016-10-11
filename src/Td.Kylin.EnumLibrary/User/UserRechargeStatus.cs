@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Td.Kylin.EnumLibrary.User
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 用户充值状态

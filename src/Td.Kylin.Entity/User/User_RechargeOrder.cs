@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,6 +18,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 订单编号
         /// </summary>
+        [Column(TypeName ="varchar(24)")]
         public string OrderCode { get; set; }
         /// <summary>
         /// 充值金额
@@ -25,6 +27,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 用户名称
         /// </summary>
+        [Column(TypeName ="varchar(24)")]
         public string UserName { get; set; }
         /// <summary>
         /// 用户ID
@@ -37,14 +40,17 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
+        [Column(TypeName ="datetime")]
         public DateTime CreateTime { get; set; }
         /// <summary>
         /// 充值完成时间
         /// </summary>
+        [Column(TypeName ="datetime")]
         public DateTime? CompleteTime { get; set; }
         /// <summary>
         /// 拓展数据
         /// </summary>
+        [Column(TypeName ="nvarchar(100)")]
         public string ExpandData { get; set; }
     }
 }
