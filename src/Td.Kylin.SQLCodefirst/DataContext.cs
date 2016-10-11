@@ -318,6 +318,11 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.Property(p => p.RecordsID).ValueGeneratedNever();
                 entity.HasKey(p => p.RecordsID);
             });
+            modelBuilder.Entity<User_RechargeOrder>(entity =>
+            {
+                entity.Property(p => p.OrderID).ValueGeneratedNever();
+                entity.HasKey(p => p.OrderID);
+            });
             #endregion
 
             #region 摇一摇

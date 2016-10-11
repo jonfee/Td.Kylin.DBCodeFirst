@@ -244,6 +244,10 @@ namespace Td.Kylin.SQLCodeFirst
         /// 用户积分记录
         /// </summary>
         public DbSet<User_PointsRecords> User_PointsRecords { get { return Set<User_PointsRecords>(); } }
+        /// <summary>
+        /// 用户充值订单
+        /// </summary>
+        public DbSet<User_RechargeOrder> User_RechargeOrder { get { return Set<User_RechargeOrder>(); } }
 
         #endregion
 
