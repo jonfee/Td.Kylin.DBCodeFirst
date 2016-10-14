@@ -50,7 +50,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 拓展数据
         /// </summary>
-        [Column(TypeName ="nvarchar(100)")]
+        [Column(TypeName ="nvarchar(1000)")]
         public string ExpandData { get; set; }
     }
 }
