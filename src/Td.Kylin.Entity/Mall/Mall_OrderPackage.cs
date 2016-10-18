@@ -62,11 +62,6 @@ namespace Td.Kylin.Entity
         public string ExpressNumber { get; set; }
 
         /// <summary>
-        /// 是否包邮
-        /// </summary>
-        public bool IsDeliveryFree { get; set; }
-
-        /// <summary>
         /// 快递/配送时间
         /// </summary>
         [Column(TypeName = "datetime")]
