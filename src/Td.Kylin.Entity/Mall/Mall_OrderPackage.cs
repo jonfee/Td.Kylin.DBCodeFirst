@@ -66,7 +66,10 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName = "datetime")]
         public DateTime? ExpressTime { get; set; }
-
+        /// <summary>
+        /// 是否包邮
+        /// </summary>
+        public bool IsDeliveryFree { get; set; }
         /// <summary>
         /// 描述说明（拓展属性）
         /// </summary>
