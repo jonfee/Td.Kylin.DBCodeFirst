@@ -32,7 +32,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 面值
         /// </summary>
-        public decimal Denomination { get; set; }
+        public int Denomination { get; set; }
         /// <summary>
         /// 发放数量
         /// </summary>
