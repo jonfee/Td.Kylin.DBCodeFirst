@@ -71,5 +71,27 @@ namespace Td.Kylin.Entity
         [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
 
+        /// <summary>
+        ///   限定宽（单位：PX） 
+        /// </summary>
+        [Column(TypeName = "int")]
+        public int LimitWidth { get; set; }
+
+        /// <summary>
+        ///   限定高（单位：PX） 
+        /// </summary>
+        [Column(TypeName = "int")]
+        public int LimitHeight { get; set; }
+        /// <summary>
+        ///  排序 
+        /// </summary>
+        [Column(TypeName = "int")]
+        public int SorderOrder { get; set; } = 0;
+        /// <summary>
+        /// 预览样式，后台使用
+        /// </summary>
+        [Column(TypeName = "nvarchar(100)")]
+        public string PreviewStyle { get; set; }
+
     }
 }
