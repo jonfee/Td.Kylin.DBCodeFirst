@@ -21,7 +21,7 @@ namespace Td.Kylin.Entity
         /// <summary>
         /// 订单编号。
         /// </summary>
-        [Column(TypeName = "nvarchar(18)")]
+        [Column(TypeName = "nvarchar(25)")]
         public string OrderCode
         {
             get;
