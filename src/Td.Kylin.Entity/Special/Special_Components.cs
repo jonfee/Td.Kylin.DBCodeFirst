@@ -49,10 +49,10 @@ namespace Td.Kylin.Entity
         public long DefaultStyleId { get; set; }
 
         /// <summary>
-        /// 默认配置（Json存储，如：{source:{categoryid:12312,num:6}}，表示数据源配置，分类为12312，数量6条）
+        /// 配置（Json存储，如：{source:{categoryid:12312,num:6}}，表示数据源配置，分类为12312，数量6条）
         /// </summary>
         [Column(TypeName = "nvarchar(2000)")]
-        public string DefaultConfig { get; set; }
+        public string Config { get; set; }
 
         /// <summary>
         /// 默认数据（Json存储，如：{ header:{ title:"商品组件名称"},content:[{productId:"1001",name:"商品名称"}],footer:{text:"这是底部说明文字"}}）

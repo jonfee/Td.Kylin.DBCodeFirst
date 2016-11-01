@@ -3626,7 +3626,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "Td.Kylin.Entity/1.6.0": {
+      "Td.Kylin.Entity/1.8.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v1.6",
         "dependencies": {
@@ -5223,7 +5223,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Td.Kylin.Entity/1.6.0": {
+      "Td.Kylin.Entity/1.8.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.6",
         "dependencies": {
@@ -11248,7 +11248,7 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "Td.Kylin.Entity/1.6.0": {
+    "Td.Kylin.Entity/1.8.0": {
       "type": "project",
       "path": "../Td.Kylin.Entity/project.json",
       "msbuildProject": "../Td.Kylin.Entity/Td.Kylin.Entity.xproj"
@@ -11267,7 +11267,7 @@
       "Microsoft.Extensions.Configuration.Json >= 1.0.0",
       "Microsoft.Extensions.Logging.Console >= 1.0.0",
       "NETStandard.Library >= 1.6.0",
-      "Td.Kylin.Entity >= 1.6.0"
+      "Td.Kylin.Entity >= 1.8.0"
     ],
     ".NETCoreApp,Version=v1.0": [
       "Microsoft.NETCore.App >= 1.0.0"
