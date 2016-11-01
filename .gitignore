@@ -113,3 +113,4 @@ UpgradeLog*.XML
 Td.Kylin.PostgreSQLCodeFirst/Properties/launchSettings.json
 /src/Td.Kylin.SQLCodefirst/Migrations/20160704022318_Luckydraw.cs
 /src/Td.Kylin.SQLCodefirst/config.json
+src/Td.Kylin.DataTools/Properties/launchSettings.json
