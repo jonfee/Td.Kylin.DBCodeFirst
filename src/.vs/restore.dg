@@ -1,1 +1,4 @@
 #:D:\Work\01-Projects\Td.Kylin.DBCodeFirst\src\Td.Kylin.EnumLibrary\Td.Kylin.EnumLibrary.xproj
+#:D:\Work\01-Projects\Td.Kylin.DBCodeFirst\src\Td.Kylin.DataTools\Td.Kylin.DataTools.xproj
+D:\Work\01-Projects\Td.Kylin.DBCodeFirst\src\Td.Kylin.DataTools\Td.Kylin.DataTools.xproj|D:\Work\01-Projects\Td.Kylin.DBCodeFirst\src\Td.Kylin.Entity\Td.Kylin.Entity.xproj
+D:\Work\01-Projects\Td.Kylin.DBCodeFirst\src\Td.Kylin.DataTools\Td.Kylin.DataTools.xproj|D:\Work\01-Projects\Td.Kylin.DBCodeFirst\src\Td.Kylin.EnumLibrary\Td.Kylin.EnumLibrary.xproj
