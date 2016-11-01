@@ -784,5 +784,44 @@ namespace Td.Kylin.SQLCodeFirst
         /// 短信发送记录
         /// </summary>
         public DbSet<SmsSendRecords> SmsSendRecords { get { return Set<SmsSendRecords>(); } }
+
+        #region 专题页
+
+        /// <summary>
+        /// 专题页模板
+        /// </summary>
+        public DbSet<Special_Templates> Special_Templates { get { return Set<Special_Templates>(); } }
+
+        /// <summary>
+        /// 专题页模板皮肤
+        /// </summary>
+        public DbSet<Special_TemplateSkin> Special_TemplateSkin { get { return Set<Special_TemplateSkin>(); } }
+
+        /// <summary>
+        /// 专题组件库
+        /// </summary>
+        public DbSet<Special_Components> Special_Components { get { return Set<Special_Components>(); } }
+
+        /// <summary>
+        /// 组件风格
+        /// </summary>
+        public DbSet<Special_ComponentStyle> Special_ComponentStyle { get { return Set<Special_ComponentStyle>(); } }
+
+        /// <summary>
+        /// 专题模板组件关联
+        /// </summary>
+        public DbSet<Special_TemplateComponents> Special_TemplateComponents { get { return Set<Special_TemplateComponents>(); } }
+
+        /// <summary>
+        /// 专题页
+        /// </summary>
+        public DbSet<Special_Page> Special_Page { get { return Set<Special_Page>(); } }
+
+        /// <summary>
+        /// 专题页组件
+        /// </summary>
+        public DbSet<Special_PageComponents> Special_PageComponents { get { return Set<Special_PageComponents>(); } }
+
+        #endregion
     }
 }
