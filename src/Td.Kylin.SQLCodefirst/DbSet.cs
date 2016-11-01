@@ -775,6 +775,15 @@ namespace Td.Kylin.SQLCodeFirst
         public DbSet<Library_ProductSKU> Library_ProductSKU { get { return Set<Library_ProductSKU>(); } }
 
         #endregion
+
+
+        #region 优惠卷
+        public DbSet<Coupon_Ticket> Coupon_Ticket { get { return Set<Coupon_Ticket>(); } }
+        public DbSet<Coupon_Define_Rules> Coupon_Define_Rules { get { return Set<Coupon_Define_Rules>(); } }
+        public DbSet<Coupon_Define> Coupon_Define { get { return Set<Coupon_Define>(); } }
+
+        #endregion
+
         /// <summary>
         /// 平台资金流水
         /// </summary>

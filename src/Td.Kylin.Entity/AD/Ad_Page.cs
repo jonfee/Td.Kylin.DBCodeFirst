@@ -17,7 +17,7 @@ namespace Td.Kylin.Entity
         ///<summary>
         ///所属平台（客户端、商家端、员工端）
         ///</summary>
-        [Column(TypeName ="int")]
+        [Column(TypeName = "int")]
         public int PlatformType { get; set; }
 
         ///<summary>
@@ -25,6 +25,11 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "nvarchar(20)")]
         public string PageName { get; set; }
+        /// <summary>
+        /// 预览图
+        /// </summary>
+        [Column(TypeName = "varchar(200) ")]
+        public string PreviewImage { get; set; }
 
     }
 }

@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20161018091250_updateConponDefine")]
+    partial class updateConponDefine
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -29,14 +30,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<int>("AreaID");
 
-                    b.Property<long>("Clicks");
-
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime");
 
                     b.Property<bool>("Enable");
 
-                    b.Property<DateTime?>("EndTime")
+                    b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime");
 
                     b.Property<string>("LinkData");
@@ -48,7 +47,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("PositionID")
                         .HasColumnType("bigint");
 
-                    b.Property<DateTime?>("StartTime")
+                    b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Title")
@@ -68,9 +67,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<int>("PlatformType")
                         .HasColumnType("int");
-
-                    b.Property<string>("PreviewImage")
-                        .HasColumnType("varchar(200) ");
 
                     b.HasKey("PageID");
 
@@ -162,12 +158,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<string>("Intro")
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int>("LimitHeight")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LimitWidth")
-                        .HasColumnType("int");
-
                     b.Property<int>("MaxCount")
                         .HasColumnType("int");
 
@@ -178,12 +168,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<string>("PreviewPicture")
                         .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("PreviewStyle")
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int>("SorderOrder")
-                        .HasColumnType("int");
 
                     b.HasKey("PositionID");
 
@@ -1912,7 +1896,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long?>("OfferID");
 
                     b.Property<string>("OrderCode")
-                        .HasColumnType("nvarchar(25)");
+                        .HasColumnType("nvarchar(18)");
 
                     b.Property<short>("OrderType");
 
@@ -3734,207 +3718,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.ToTable("SmsSendRecords");
                 });
 
-            modelBuilder.Entity("Td.Kylin.Entity.Special_Components", b =>
-                {
-                    b.Property<long>("ComponentId");
-
-                    b.Property<string>("Code")
-                        .HasColumnType("varchar(20)");
-
-                    b.Property<int>("ComponentType");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("DefaultConfig")
-                        .HasColumnType("nvarchar(2000)");
-
-                    b.Property<string>("DefaultData")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<long>("DefaultStyleId");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("PreviewImage")
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("TemplateHtml")
-                        .HasColumnType("nvarchar(4000)");
-
-                    b.HasKey("ComponentId");
-
-                    b.ToTable("Special_Components");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Special_ComponentStyle", b =>
-                {
-                    b.Property<long>("StyleId");
-
-                    b.Property<string>("Code")
-                        .HasColumnType("varchar(20)");
-
-                    b.Property<long>("ComponentId");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("PreviewImage")
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("StyleText")
-                        .HasColumnType("varchar(4000)");
-
-                    b.HasKey("StyleId");
-
-                    b.ToTable("Special_ComponentStyle");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Special_Page", b =>
-                {
-                    b.Property<long>("PageId");
-
-                    b.Property<int>("AreaId");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("Desc")
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<DateTime?>("EndTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("ExtendData")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsEnabled");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<long>("SkinId");
-
-                    b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<long>("TemplateId");
-
-                    b.Property<int>("Views");
-
-                    b.HasKey("PageId");
-
-                    b.ToTable("Special_Page");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Special_PageComponents", b =>
-                {
-                    b.Property<long>("PageComponentId");
-
-                    b.Property<long>("ComponentId");
-
-                    b.Property<int>("ComponentType");
-
-                    b.Property<string>("Config")
-                        .HasColumnType("nvarchar(2000)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("Data")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<long>("PageId");
-
-                    b.Property<string>("PreviewImage")
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<long>("StyleId");
-
-                    b.HasKey("PageComponentId");
-
-                    b.ToTable("Special_PageComponents");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Special_TemplateComponents", b =>
-                {
-                    b.Property<long>("TemplateId");
-
-                    b.Property<long>("ComponentId");
-
-                    b.Property<long>("ComponentStyleId");
-
-                    b.Property<string>("PreviewImage")
-                        .HasColumnType("varchar(200)");
-
-                    b.HasKey("TemplateId", "ComponentId");
-
-                    b.ToTable("Special_TemplateComponents");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Special_Templates", b =>
-                {
-                    b.Property<long>("TemplateId");
-
-                    b.Property<int>("BuyCounts");
-
-                    b.Property<string>("Code")
-                        .HasColumnType("varchar(20)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<long>("DefaultSkinId");
-
-                    b.Property<bool>("IsEnabled");
-
-                    b.Property<bool>("IsFree");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("PreviewImage")
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<decimal>("Price");
-
-                    b.Property<string>("TemplateHtml")
-                        .HasColumnType("text");
-
-                    b.HasKey("TemplateId");
-
-                    b.ToTable("Special_Templates");
-                });
-
-            modelBuilder.Entity("Td.Kylin.Entity.Special_TemplateSkin", b =>
-                {
-                    b.Property<long>("SkinId");
-
-                    b.Property<string>("Code")
-                        .HasColumnType("varchar(20)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("PreviewImage")
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<long>("TemplateId");
-
-                    b.Property<int>("UseCounts");
-
-                    b.HasKey("SkinId");
-
-                    b.ToTable("Special_TemplateSkin");
-                });
-
             modelBuilder.Entity("Td.Kylin.Entity.System_Area", b =>
                 {
                     b.Property<int>("AreaID");
@@ -4543,7 +4326,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<string>("ExpandData")
-                        .HasColumnType("nvarchar(1000)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("OrderCode")
                         .HasColumnType("varchar(24)");
