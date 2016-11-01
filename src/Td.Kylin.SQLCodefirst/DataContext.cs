@@ -516,7 +516,7 @@ namespace Td.Kylin.SQLCodeFirst
             modelBuilder.Entity<Mall_Config>(entity =>
             {
                 entity.Property(p => p.AreaID).ValueGeneratedNever();
-                entity.HasKey(p => new { p.AreaID,  });
+                entity.HasKey(p => new { p.AreaID, });
             });
             modelBuilder.Entity<Mall_OrderPackage>(entity =>
             {
@@ -793,7 +793,7 @@ namespace Td.Kylin.SQLCodeFirst
             //运营商资产
             modelBuilder.Entity<AreaOperator_Assets>(entity =>
             {
-                entity.HasKey(p => new {p.OperatorID, p.AssetsType});
+                entity.HasKey(p => new { p.OperatorID, p.AssetsType });
             });
             #endregion
 
@@ -899,6 +899,25 @@ namespace Td.Kylin.SQLCodeFirst
             {
                 entity.Property(p => p.ProductID).ValueGeneratedNever();
                 entity.HasKey(p => p.ProductID);
+            });
+            #endregion
+
+            #region 优惠卷
+            modelBuilder.Entity<Coupon_Define>(entity =>
+            {
+                entity.Property(p => p.DefineID).ValueGeneratedNever();
+                entity.HasKey(p => p.DefineID);
+            });
+
+            modelBuilder.Entity<Coupon_Define_Rules>(entity =>
+            {
+                entity.HasKey(p => new { p.DefineID, p.Rule });
+            });
+
+            modelBuilder.Entity<Coupon_Ticket>(entity =>
+            {
+                entity.Property(p => p.TicketID).ValueGeneratedNever();
+                entity.HasKey(p => p.TicketID);
             });
             #endregion
 

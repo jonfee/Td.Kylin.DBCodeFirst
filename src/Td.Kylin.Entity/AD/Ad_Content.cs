@@ -65,13 +65,13 @@ namespace Td.Kylin.Entity
         ///开始时间
         ///</summary>        
         [Column(TypeName = "datetime")]
-        public DateTime StartTime { get; set; }
+        public DateTime? StartTime { get; set; }
 
         ///<summary>
         ///过期时间
         ///</summary>        
         [Column(TypeName = "datetime")]
-        public DateTime EndTime { get; set; }
+        public DateTime? EndTime { get; set; }
 
         ///<summary>
 		///排序值
@@ -83,6 +83,10 @@ namespace Td.Kylin.Entity
         ///</summary>
         [Column(TypeName = "datetime")]
         public DateTime CreateTime { get; set; }
+        /// <summary>
+        /// 点击数
+        /// </summary>
+        public long Clicks { get; set; }
 
     }
 }

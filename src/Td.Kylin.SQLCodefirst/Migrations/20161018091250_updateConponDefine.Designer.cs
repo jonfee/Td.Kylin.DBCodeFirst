@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20161018091250_updateConponDefine")]
+    partial class updateConponDefine
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -29,14 +30,12 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<int>("AreaID");
 
-                    b.Property<long>("Clicks");
-
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime");
 
                     b.Property<bool>("Enable");
 
-                    b.Property<DateTime?>("EndTime")
+                    b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime");
 
                     b.Property<string>("LinkData");
@@ -48,7 +47,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<long>("PositionID")
                         .HasColumnType("bigint");
 
-                    b.Property<DateTime?>("StartTime")
+                    b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Title")
@@ -68,9 +67,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<int>("PlatformType")
                         .HasColumnType("int");
-
-                    b.Property<string>("PreviewImage")
-                        .HasColumnType("varchar(200) ");
 
                     b.HasKey("PageID");
 
@@ -162,12 +158,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                     b.Property<string>("Intro")
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int>("LimitHeight")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LimitWidth")
-                        .HasColumnType("int");
-
                     b.Property<int>("MaxCount")
                         .HasColumnType("int");
 
@@ -178,12 +168,6 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<string>("PreviewPicture")
                         .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("PreviewStyle")
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int>("SorderOrder")
-                        .HasColumnType("int");
 
                     b.HasKey("PositionID");
 
@@ -4342,7 +4326,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<string>("ExpandData")
-                        .HasColumnType("nvarchar(1000)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("OrderCode")
                         .HasColumnType("varchar(24)");

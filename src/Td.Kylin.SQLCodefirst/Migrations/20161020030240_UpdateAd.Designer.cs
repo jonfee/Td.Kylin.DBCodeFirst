@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20161020030240_UpdateAd")]
+    partial class UpdateAd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -4342,7 +4343,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<string>("ExpandData")
-                        .HasColumnType("nvarchar(1000)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("OrderCode")
                         .HasColumnType("varchar(24)");
