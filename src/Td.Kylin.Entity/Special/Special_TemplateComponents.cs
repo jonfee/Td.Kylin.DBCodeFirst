@@ -19,6 +19,11 @@ namespace Td.Kylin.Entity
         public long ComponentId { get; set; }
 
         /// <summary>
+        /// 组件在页面中的位置
+        /// </summary>
+        public int Index { get; set; }
+
+        /// <summary>
         /// 组件风格ID
         /// </summary>
         public long ComponentStyleId { get; set; }
