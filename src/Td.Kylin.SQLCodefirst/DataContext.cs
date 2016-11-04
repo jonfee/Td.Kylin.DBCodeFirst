@@ -967,7 +967,8 @@ namespace Td.Kylin.SQLCodeFirst
             //专题模板组件关联
             modelBuilder.Entity<Special_TemplateComponents>(entity =>
             {
-                entity.HasKey(p => new { p.TemplateId, p.ComponentId });
+                entity.Property(p => p.TemplateComponentId).ValueGeneratedNever();
+                entity.HasKey(p => p.TemplateComponentId);
             });
 
             //专题页

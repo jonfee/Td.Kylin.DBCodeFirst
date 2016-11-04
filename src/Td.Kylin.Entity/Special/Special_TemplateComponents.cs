@@ -9,6 +9,11 @@ namespace Td.Kylin.Entity
     public class Special_TemplateComponents
     {
         /// <summary>
+        /// 模板组件ID
+        /// </summary>
+        public long TemplateComponentId { get; set; }
+
+        /// <summary>
         /// 模板ID
         /// </summary>
         public long TemplateId { get; set; }

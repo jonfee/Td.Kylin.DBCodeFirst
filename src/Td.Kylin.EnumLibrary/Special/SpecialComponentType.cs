@@ -21,6 +21,16 @@ namespace Td.Kylin.EnumLibrary
         /// 普通商品
         /// </summary>
         [Description("普通商品")]
-        OrdinaryProduct = 30
+        OrdinaryProduct = 30,
+        /// <summary>
+        /// 栏目导航
+        /// </summary>
+        [Description("栏目导航")]
+        Navigation = 40,
+        /// <summary>
+        /// 底部说明
+        /// </summary>
+        [Description("底部说明")]
+        Foot = 50
     }
 }

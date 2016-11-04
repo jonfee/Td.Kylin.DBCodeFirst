@@ -44,6 +44,11 @@ namespace Td.Kylin.Entity
         public string StyleText { get; set; }
 
         /// <summary>
+        /// 风格规则(JSON,如：约定图片的尺寸等）
+        /// </summary>
+        public string Rules { get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [Column(TypeName = "datetime")]
