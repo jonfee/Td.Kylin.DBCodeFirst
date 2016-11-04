@@ -187,6 +187,10 @@ namespace Td.Kylin.EnumLibrary
         /// </summary>
         [Description("当日可摇次数用完")]
         NotShake = 1123,
-
-    }
+		/// <summary>
+		/// 当日可摇次数用完
+		/// </summary>
+		[Description("当前收货地址不支持配送")]
+		NotLegworkAddress = 1124,
+	}
 }
