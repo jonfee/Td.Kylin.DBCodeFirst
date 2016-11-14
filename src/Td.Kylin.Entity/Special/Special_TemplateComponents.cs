@@ -38,5 +38,11 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName = "varchar(200)")]
         public string PreviewImage { get; set; }
+
+        /// <summary>
+        /// 默认数据（Json存储，如：{ header:{ title:"商品组件名称"},content:[{productId:"1001",name:"商品名称"}],footer:{text:"这是底部说明文字"}}）
+        /// </summary>
+        [Column(TypeName = "nvarchar(max)")]
+        public string DefaultData { get; set; }
     }
 }
