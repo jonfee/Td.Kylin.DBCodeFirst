@@ -933,6 +933,59 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.Property(p => p.SendID).ValueGeneratedNever();
                 entity.HasKey(p => p.SendID);
             });
+
+            #region 专题页
+
+            //专题页模板
+            modelBuilder.Entity<Special_Templates>(entity =>
+            {
+                entity.Property(p => p.TemplateId).ValueGeneratedNever();
+                entity.HasKey(p => p.TemplateId);
+            });
+
+            //专题页模板皮肤
+            modelBuilder.Entity<Special_TemplateSkin>(entity =>
+            {
+                entity.Property(p => p.SkinId).ValueGeneratedNever();
+                entity.HasKey(p => p.SkinId);
+            });
+
+            //专题组件库
+            modelBuilder.Entity<Special_Components>(entity =>
+            {
+                entity.Property(p => p.ComponentId).ValueGeneratedNever();
+                entity.HasKey(p => p.ComponentId);
+            });
+
+            //组件风格
+            modelBuilder.Entity<Special_ComponentStyle>(entity =>
+            {
+                entity.Property(p => p.StyleId).ValueGeneratedNever();
+                entity.HasKey(p => p.StyleId);
+            });
+
+            //专题模板组件关联
+            modelBuilder.Entity<Special_TemplateComponents>(entity =>
+            {
+                entity.Property(p => p.TemplateComponentId).ValueGeneratedNever();
+                entity.HasKey(p => p.TemplateComponentId);
+            });
+
+            //专题页
+            modelBuilder.Entity<Special_Page>(entity =>
+            {
+                entity.Property(p => p.PageId).ValueGeneratedNever();
+                entity.HasKey(p => p.PageId);
+            });
+
+            //专题页组件
+            modelBuilder.Entity<Special_PageComponents>(entity =>
+            {
+                entity.Property(p => p.PageComponentId).ValueGeneratedNever();
+                entity.HasKey(p => p.PageComponentId);
+            });
+
+            #endregion
         }
     }
 }

@@ -67,12 +67,12 @@ namespace Td.Kylin.EnumLibrary
         /// 滑动跳过
         /// </summary>
         [Description("滑动跳过")]
-        SlidePass =4,
+        SlidePass = 4,
         /// <summary>
         /// 定时跳过
         /// </summary>
         [Description("定时跳过")]
-        TimerPass =8
+        TimerPass = 8
     }
 
     /// <summary>
@@ -81,29 +81,91 @@ namespace Td.Kylin.EnumLibrary
     public enum ADLinkType
     {
         /// <summary>
-        /// 网址
+        /// 外部链接
         /// </summary>
-        [Description("网址")]
+        [Description("外部链接")]
         UrlLink = 1,
         /// <summary>
-        /// 精品汇商品
+        /// 全心直营商品
         /// </summary>
-        [Description("精品汇商品")]
+        [Description("全心直营商品")]
         B2CProduct = 2,
         /// <summary>
-        /// 商家商品
+        /// 直营分类商品
         /// </summary>
-        [Description("商家商品")]
-        MerchantProduct = 4,
+        [Description("直营分类商品")]
+        B2CCategoryProduct = 3,
+        ///// <summary>
+        ///// 商家商品
+        ///// </summary>
+        //[Description("商家商品")]
+        //MerchantProduct = 4,
+        ///// <summary>
+        ///// 商家
+        ///// </summary>
+        //[Description("商家")]
+        //MerchantDetails = 8,
         /// <summary>
-        /// 商家
+        /// 社区圈子
         /// </summary>
-        [Description("商家")]
-        MerchantDetails = 8,
+        [Description("社区圈子")]
+        CircleFourm = 15,
         /// <summary>
-        /// 社区活动帖
+        /// 社区帖子
         /// </summary>
-        [Description("社区活动帖")]
-        CircleEvent = 16
+        [Description("社区帖子")]
+        CircleTopic = 16,
+        /// <summary>
+        /// 专题
+        /// </summary>
+        [Description("专题")]
+        Special = 18,
+        /// <summary>
+        /// 频道页
+        /// </summary>
+        [Description("频道页")]
+        ChannelnPage = 99,
+    }
+
+    /// <summary>
+    /// 广告频道页枚举
+    /// </summary>
+    public enum AdChannelnPage
+    {
+        /// <summary>
+        /// 摇一摇
+        /// </summary>
+        [Description("摇一摇")]
+        Shake = 1,
+        /// <summary>
+        /// 领券中心
+        /// </summary>
+        [Description("领券中心")]
+        CouponCenter = 2,
+        /// <summary>
+        /// 全心直营
+        /// </summary>
+        [Description("全心直营")]
+        QmallZY = 3,
+        /// <summary>
+        /// 精选实惠
+        /// </summary>
+        [Description("精选实惠")]
+        QmallJXSH = 4,
+        /// <summary>
+        /// 限时抢购
+        /// </summary>
+        [Description("限时抢购")]
+        QmallXSQG = 5,
+        /// <summary>
+        /// 此刻推荐
+        /// </summary>
+        [Description("此刻推荐")]
+        MomentRecommend = 6,
+        /// <summary>
+        /// 同城跑腿
+        /// </summary>
+        [Description("同城跑腿")]
+        RunErrands = 7
     }
 }
