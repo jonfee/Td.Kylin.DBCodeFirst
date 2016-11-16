@@ -25,7 +25,7 @@ namespace Td.Kylin.Entity
         /// </summary>
         public short Type { get; set; }
         /// <summary>
-        /// 	优惠券名称
+        /// 优惠券名称
         /// </summary>
         [Column(TypeName ="nvarchar(50)")]
         public string Name { get; set; }
@@ -65,6 +65,10 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName ="datetime")]
         public DateTime UpdatedTime { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bool IsEnabled { get; set; }
         /// <summary>
         /// 是否删除
         /// </summary>

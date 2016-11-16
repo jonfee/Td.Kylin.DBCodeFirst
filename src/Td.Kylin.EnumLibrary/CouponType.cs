@@ -33,6 +33,11 @@ namespace Td.Kylin.EnumLibrary
         /// </summary>
         [Description("运费券")]
         Freight = 4,
+        /// <summary>
+        /// 首单券，仅针对首单有效
+        /// </summary>
+        [Description("首单券")]
+        FirstOrder = 5
     }
 
     /// <summary>
@@ -64,5 +69,11 @@ namespace Td.Kylin.EnumLibrary
         [Alias("{ SpecificGoods: {0} }")]
         [Description("仅支持特定商品")]
         SpecificGoods = 4,
+        /// <summary>
+        /// 仅支持首单使用
+        /// </summary>
+        [Alias("{ SupportFirstOrder: {0} }")]
+        [Description("仅支持首单使用")]
+        SupportFirstOrder =5
     }
 }

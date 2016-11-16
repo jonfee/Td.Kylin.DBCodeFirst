@@ -30,6 +30,10 @@ namespace Td.Kylin.Entity
         /// </summary>
         public long DefineID { get; set; }
         /// <summary>
+        /// 优惠券类型，引用 Coupon_Type 枚举
+        /// </summary>
+        public short Type { get; set; }
+        /// <summary>
         ///获得用户ID
         /// </summary>
         public long UserID { get; set; }
@@ -52,5 +56,19 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName = "varchar(50)")]
         public string UsedOrder { get; set; }
+        /// <summary>
+        /// 面值
+        /// </summary>
+        public int Denomination { get; set; }
+        /// <summary>
+        /// 有效时间(起)
+        /// </summary>
+        [Column(TypeName = "datetime")]
+        public DateTime StartTime { get; set; }
+        /// <summary>
+        /// 有效时间(止)
+        /// </summary>
+        [Column(TypeName = "datetime")]
+        public DateTime EndTime { get; set; }
     }
 }
