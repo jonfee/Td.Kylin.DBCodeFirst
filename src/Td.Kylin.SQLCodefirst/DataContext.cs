@@ -919,6 +919,10 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.Property(p => p.TicketID).ValueGeneratedNever();
                 entity.HasKey(p => p.TicketID);
             });
+            modelBuilder.Entity<Coupon_Ticket_Rules>(entity =>
+            {
+                entity.HasKey(p => new { p.TicketID, p.Rule });
+            });
             #endregion
 
             //平台流水

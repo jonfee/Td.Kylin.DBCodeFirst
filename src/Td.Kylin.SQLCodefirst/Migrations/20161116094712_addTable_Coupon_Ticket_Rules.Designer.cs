@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20161116094712_addTable_Coupon_Ticket_Rules")]
+    partial class addTable_Coupon_Ticket_Rules
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")

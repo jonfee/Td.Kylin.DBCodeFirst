@@ -778,6 +778,7 @@ namespace Td.Kylin.SQLCodeFirst
 
 
         #region 优惠卷
+        public DbSet<Coupon_Ticket_Rules> Coupon_Ticket_Rules { get { return Set<Coupon_Ticket_Rules>(); } }
         public DbSet<Coupon_Ticket> Coupon_Ticket { get { return Set<Coupon_Ticket>(); } }
         public DbSet<Coupon_Define_Rules> Coupon_Define_Rules { get { return Set<Coupon_Define_Rules>(); } }
         public DbSet<Coupon_Define> Coupon_Define { get { return Set<Coupon_Define>(); } }
