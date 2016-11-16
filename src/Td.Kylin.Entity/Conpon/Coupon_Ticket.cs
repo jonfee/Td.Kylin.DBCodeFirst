@@ -50,7 +50,7 @@ namespace Td.Kylin.Entity
         /// 使用时间
         /// </summary>
         [Column(TypeName = "datetime")]
-        public DateTime UsedTime { get; set; }
+        public DateTime? UsedTime { get; set; }
         /// <summary>
         /// 使用的订单号
         /// </summary>
