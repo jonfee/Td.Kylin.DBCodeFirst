@@ -777,7 +777,7 @@ namespace Td.Kylin.SQLCodeFirst
         #endregion
 
 
-        #region 优惠卷
+        #region 优惠券
         public DbSet<Coupon_Ticket_Rules> Coupon_Ticket_Rules { get { return Set<Coupon_Ticket_Rules>(); } }
         public DbSet<Coupon_Ticket> Coupon_Ticket { get { return Set<Coupon_Ticket>(); } }
         public DbSet<Coupon_Define_Rules> Coupon_Define_Rules { get { return Set<Coupon_Define_Rules>(); } }
@@ -831,6 +831,20 @@ namespace Td.Kylin.SQLCodeFirst
         /// 专题页组件
         /// </summary>
         public DbSet<Special_PageComponents> Special_PageComponents { get { return Set<Special_PageComponents>(); } }
+
+        #endregion
+
+        #region 退款
+
+        /// <summary>
+        /// 直营退款订单
+        /// </summary>
+        public DbSet<Mall_RefundOrder> Mall_RefundOrder { get { return Set<Mall_RefundOrder>(); } }
+
+        /// <summary>
+        /// 直营退款订单操作日志
+        /// </summary>
+        public DbSet<Mall_RefundOrderActiveLog> Mall_RefundOrderActiveLog { get { return Set<Mall_RefundOrderActiveLog>(); } }
 
         #endregion
     }

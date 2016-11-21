@@ -902,7 +902,7 @@ namespace Td.Kylin.SQLCodeFirst
             });
             #endregion
 
-            #region 优惠卷
+            #region 优惠券
             modelBuilder.Entity<Coupon_Define>(entity =>
             {
                 entity.Property(p => p.DefineID).ValueGeneratedNever();
@@ -989,6 +989,20 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.HasKey(p => p.PageComponentId);
             });
 
+            #endregion
+
+            #region 退款
+            //退款订单
+            modelBuilder.Entity<Mall_RefundOrder>(entity =>
+            {
+                entity.HasKey(p => p.RefundOrderCode);
+            });
+            //退款订单操作记录
+            modelBuilder.Entity<Mall_RefundOrderActiveLog>(entity =>
+            {
+                entity.Property(p => p.ActionLogId).ValueGeneratedNever();
+                entity.HasKey(p => p.ActionLogId);
+            });
             #endregion
         }
     }

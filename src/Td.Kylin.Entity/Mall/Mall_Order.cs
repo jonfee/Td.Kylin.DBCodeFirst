@@ -185,5 +185,16 @@ namespace Td.Kylin.Entity
         /// </summary>
         [Column(TypeName = "nvarchar(300)")]
         public string Desc { get; set; }
+
+        ///<summary>
+        /// 退款订单编号
+        ///</summary>
+        [Column(TypeName = "varchar(18)")]
+        public string RefundOrderCode { get; set; }
+
+        /// <summary>
+        /// 退款订单状态
+        /// </summary>
+        public int RefundStatus { get; set; }
     }
 }

@@ -8,9 +8,10 @@ using Td.Kylin.SQLCodeFirst;
 namespace Td.Kylin.SQLCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20161121111044_addTableForMallOrderRefund")]
+    partial class addTableForMallOrderRefund
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -2762,8 +2763,7 @@ namespace Td.Kylin.SQLCodefirst.Migrations
 
                     b.Property<decimal>("Amount");
 
-                    b.Property<string>("CheckRemark")
-                        .HasColumnType("nvarchar(300)");
+                    b.Property<string>("CheckRemark");
 
                     b.Property<DateTime?>("CheckedTime")
                         .HasColumnType("datetime");
