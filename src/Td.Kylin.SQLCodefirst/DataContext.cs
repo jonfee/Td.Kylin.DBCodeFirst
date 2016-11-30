@@ -1004,6 +1004,68 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.HasKey(p => p.ActionLogId);
             });
             #endregion
+
+            #region 配送
+            modelBuilder.Entity<Distribution_AreaConfig>(entity =>
+            {
+                entity.Property(p => p.AreaId).ValueGeneratedNever();
+                entity.HasKey(p => p.AreaId);
+            });
+            modelBuilder.Entity<Distribution_ExpressCompany>(entity =>
+            {
+                entity.Property(p => p.CompanyId).ValueGeneratedNever();
+                entity.HasKey(p => p.CompanyId);
+            });
+            modelBuilder.Entity<Distribution_Member>(entity =>
+            {
+                entity.Property(p => p.MemberId).ValueGeneratedNever();
+                entity.HasKey(p => p.MemberId);
+            });
+            modelBuilder.Entity<Distribution_MemberMessage>(entity =>
+            {
+                entity.Property(p => p.MessageId).ValueGeneratedNever();
+                entity.HasKey(p => p.MessageId);
+            });
+            modelBuilder.Entity<Distribution_MemberOperationRecord>(entity =>
+            {
+                entity.Property(p => p.RecordId).ValueGeneratedNever();
+                entity.HasKey(p => p.RecordId);
+            });
+            modelBuilder.Entity<Distribution_MemberWarehouseRelation>(entity =>
+            {
+                entity.HasKey(p => new { p.MemberId, p.WarehouseId });
+            });
+            modelBuilder.Entity<Distribution_Order>(entity =>
+            {
+                entity.Property(p => p.OrderId).ValueGeneratedNever();
+                entity.HasKey(p => p.OrderId);
+            });
+            modelBuilder.Entity<Distribution_OrderDetail>(entity =>
+            {
+                entity.Property(p => p.DetailId).ValueGeneratedNever();
+                entity.HasKey(p => p.DetailId);
+            });
+            modelBuilder.Entity<Distribution_OrderNotify>(entity =>
+            {
+                entity.Property(p => p.NotifyId).ValueGeneratedNever();
+                entity.HasKey(p => p.NotifyId);
+            });
+            modelBuilder.Entity<Distribution_OrderRecord>(entity =>
+            {
+                entity.Property(p => p.RecordId).ValueGeneratedNever();
+                entity.HasKey(p => p.RecordId);
+            });
+            modelBuilder.Entity<Distribution_OrderSchedule>(entity =>
+            {
+                entity.Property(p => p.ScheduleId).ValueGeneratedNever();
+                entity.HasKey(p => p.ScheduleId);
+            });
+            modelBuilder.Entity<Distribution_Warehouse>(entity =>
+            {
+                entity.Property(p => p.WarehouseId).ValueGeneratedNever();
+                entity.HasKey(p => p.WarehouseId);
+            });
+            #endregion
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Td.ComponentModel;
 
-namespace Td.Kylin.EnumLibrary.Distribution
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 订单业务类型

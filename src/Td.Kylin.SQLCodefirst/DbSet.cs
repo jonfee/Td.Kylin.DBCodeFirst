@@ -847,5 +847,20 @@ namespace Td.Kylin.SQLCodeFirst
         public DbSet<Mall_RefundOrderActiveLog> Mall_RefundOrderActiveLog { get { return Set<Mall_RefundOrderActiveLog>(); } }
 
         #endregion
+
+        #region 配送
+        public DbSet<Distribution_AreaConfig> Distribution_AreaConfig { get { return Set<Distribution_AreaConfig>(); } }
+        public DbSet<Distribution_ExpressCompany> Distribution_ExpressCompany { get { return Set<Distribution_ExpressCompany>(); } }
+        public DbSet<Distribution_Member> Distribution_Member { get { return Set<Distribution_Member>(); } }
+        public DbSet<Distribution_MemberMessage> Distribution_MemberMessage { get { return Set<Distribution_MemberMessage>(); } }
+        public DbSet<Distribution_MemberOperationRecord> Distribution_MemberOperationRecord { get { return Set<Distribution_MemberOperationRecord>(); } }
+        public DbSet<Distribution_MemberWarehouseRelation> Distribution_MemberWarehouseRelation { get { return Set<Distribution_MemberWarehouseRelation>(); } }
+        public DbSet<Distribution_Order> Distribution_Order { get { return Set<Distribution_Order>(); } }
+        public DbSet<Distribution_OrderDetail> Distribution_OrderDetail { get { return Set<Distribution_OrderDetail>(); } }
+        public DbSet<Distribution_OrderNotify> Distribution_OrderNotify { get { return Set<Distribution_OrderNotify>(); } }
+        public DbSet<Distribution_OrderRecord> Distribution_OrderRecord { get { return Set<Distribution_OrderRecord>(); } }
+        public DbSet<Distribution_OrderSchedule> Distribution_OrderSchedule { get { return Set<Distribution_OrderSchedule>(); } }
+        public DbSet<Distribution_Warehouse> Distribution_Warehouse { get { return Set<Distribution_Warehouse>(); } }
+        #endregion
     }
 }

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Td.Kylin.Entity.Distribution
+namespace Td.Kylin.Entity
 {
     /// <summary>
     ///  配送员所属仓库
@@ -29,5 +29,10 @@ namespace Td.Kylin.Entity.Distribution
             get;
             set;
         }
+
+        /// <summary>
+        /// 状态
+        /// </summary>
+        public int Status { get; set; }
     }
 }

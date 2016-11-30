@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Td.ComponentModel;
 
-namespace Td.Kylin.EnumLibrary.B2C
+namespace Td.Kylin.EnumLibrary
 {
     /// <summary>
     /// 配送方式

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Td.Kylin.Entity.Distribution
+namespace Td.Kylin.Entity
 {
     /// <summary>
     ///     配送订单
