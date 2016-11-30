@@ -847,5 +847,12 @@ namespace Td.Kylin.SQLCodeFirst
         public DbSet<Mall_RefundOrderActiveLog> Mall_RefundOrderActiveLog { get { return Set<Mall_RefundOrderActiveLog>(); } }
 
         #endregion
+
+        #region 令牌
+        /// <summary>
+        /// 用户令牌
+        /// </summary>
+        public DbSet<Token_User> Token_User { get { return Set<Token_User>(); } }
+        #endregion
     }
 }

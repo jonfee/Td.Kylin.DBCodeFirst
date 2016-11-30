@@ -1004,6 +1004,15 @@ namespace Td.Kylin.SQLCodeFirst
                 entity.HasKey(p => p.ActionLogId);
             });
             #endregion
+
+            #region 令牌
+            //用户令牌
+            modelBuilder.Entity<Token_User>(entity =>
+            {
+                entity.Property(p => p.UserId).ValueGeneratedNever();
+                entity.HasKey(p => p.UserId);
+            });
+            #endregion
         }
     }
 }
